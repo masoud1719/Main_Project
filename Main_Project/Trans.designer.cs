@@ -64,6 +64,8 @@ namespace trans_1
             this.txt_tr = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtSLL = new System.Windows.Forms.MaskedTextBox();
+            this.label56 = new System.Windows.Forms.Label();
             this.txt_Stackingfactor = new System.Windows.Forms.MaskedTextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.txt_Kfactor = new System.Windows.Forms.MaskedTextBox();
@@ -71,7 +73,7 @@ namespace trans_1
             this.txt_KwValue = new System.Windows.Forms.MaskedTextBox();
             this.txt_Kw = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txt_Ks = new System.Windows.Forms.MaskedTextBox();
+            this.txt_Kc = new System.Windows.Forms.MaskedTextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
@@ -92,7 +94,7 @@ namespace trans_1
             this.label30 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.txt_Φmmmf = new System.Windows.Forms.MaskedTextBox();
+            this.txt_y = new System.Windows.Forms.MaskedTextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.txt_AcuAi = new System.Windows.Forms.MaskedTextBox();
             this.label39 = new System.Windows.Forms.Label();
@@ -111,35 +113,40 @@ namespace trans_1
             this.txt_AiValue = new System.Windows.Forms.MaskedTextBox();
             this.txt_Ai = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.txt_b1 = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.txt_b0 = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.txt_b2 = new System.Windows.Forms.TextBox();
-            this.label49 = new System.Windows.Forms.Label();
-            this.txt_Leakageresistancewinding = new System.Windows.Forms.ComboBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.txt_LmtLv = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.txt_Lmthv = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
             this.txt_Wi = new System.Windows.Forms.MaskedTextBox();
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.txt_calculate = new System.Windows.Forms.Button();
+            this.label57 = new System.Windows.Forms.Label();
+            this.txtWcu = new System.Windows.Forms.MaskedTextBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.txt_diHv = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.txt_Leakageresistancewinding = new System.Windows.Forms.ComboBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txt_b2 = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.txt_b0 = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.txt_b1 = new System.Windows.Forms.TextBox();
+            this.textLmt = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.texthc = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.textw = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.textnvalue = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.txt_doHv = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.txt_diLv = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.txt_doLv = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -330,6 +337,8 @@ namespace trans_1
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtSLL);
+            this.groupBox2.Controls.Add(this.label56);
             this.groupBox2.Controls.Add(this.txt_Stackingfactor);
             this.groupBox2.Controls.Add(this.label31);
             this.groupBox2.Controls.Add(this.txt_Kfactor);
@@ -343,6 +352,16 @@ namespace trans_1
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // txtSLL
+            // 
+            resources.ApplyResources(this.txtSLL, "txtSLL");
+            this.txtSLL.Name = "txtSLL";
+            // 
+            // label56
+            // 
+            resources.ApplyResources(this.label56, "label56");
+            this.label56.Name = "label56";
             // 
             // txt_Stackingfactor
             // 
@@ -381,7 +400,7 @@ namespace trans_1
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txt_Ks);
+            this.groupBox3.Controls.Add(this.txt_Kc);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.comboBox5);
@@ -389,10 +408,10 @@ namespace trans_1
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
-            // txt_Ks
+            // txt_Kc
             // 
-            resources.ApplyResources(this.txt_Ks, "txt_Ks");
-            this.txt_Ks.Name = "txt_Ks";
+            resources.ApplyResources(this.txt_Kc, "txt_Kc");
+            this.txt_Kc.Name = "txt_Kc";
             // 
             // label22
             // 
@@ -544,7 +563,7 @@ namespace trans_1
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label42);
-            this.groupBox5.Controls.Add(this.txt_Φmmmf);
+            this.groupBox5.Controls.Add(this.txt_y);
             this.groupBox5.Controls.Add(this.label40);
             this.groupBox5.Controls.Add(this.txt_AcuAi);
             this.groupBox5.Controls.Add(this.label39);
@@ -572,10 +591,10 @@ namespace trans_1
             resources.ApplyResources(this.label42, "label42");
             this.label42.Name = "label42";
             // 
-            // txt_Φmmmf
+            // txt_y
             // 
-            resources.ApplyResources(this.txt_Φmmmf, "txt_Φmmmf");
-            this.txt_Φmmmf.Name = "txt_Φmmmf";
+            resources.ApplyResources(this.txt_y, "txt_y");
+            this.txt_y.Name = "txt_y";
             // 
             // label40
             // 
@@ -675,164 +694,6 @@ namespace trans_1
             resources.ApplyResources(this.label32, "label32");
             this.label32.Name = "label32";
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.label53);
-            this.groupBox6.Controls.Add(this.textBox10);
-            this.groupBox6.Controls.Add(this.comboBox12);
-            this.groupBox6.Controls.Add(this.label52);
-            this.groupBox6.Controls.Add(this.textBox9);
-            this.groupBox6.Controls.Add(this.label51);
-            this.groupBox6.Controls.Add(this.textBox8);
-            this.groupBox6.Controls.Add(this.label50);
-            this.groupBox6.Controls.Add(this.label48);
-            this.groupBox6.Controls.Add(this.textBox7);
-            this.groupBox6.Controls.Add(this.label47);
-            this.groupBox6.Controls.Add(this.textBox6);
-            this.groupBox6.Controls.Add(this.txt_b1);
-            this.groupBox6.Controls.Add(this.label46);
-            this.groupBox6.Controls.Add(this.txt_b0);
-            this.groupBox6.Controls.Add(this.label45);
-            this.groupBox6.Controls.Add(this.txt_b2);
-            this.groupBox6.Controls.Add(this.label49);
-            this.groupBox6.Controls.Add(this.txt_Leakageresistancewinding);
-            this.groupBox6.Controls.Add(this.label44);
-            this.groupBox6.Controls.Add(this.txt_LmtLv);
-            this.groupBox6.Controls.Add(this.label43);
-            this.groupBox6.Controls.Add(this.txt_Lmthv);
-            this.groupBox6.Controls.Add(this.label41);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.TabStop = false;
-            // 
-            // label53
-            // 
-            resources.ApplyResources(this.label53, "label53");
-            this.label53.Name = "label53";
-            // 
-            // textBox10
-            // 
-            resources.ApplyResources(this.textBox10, "textBox10");
-            this.textBox10.Name = "textBox10";
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            resources.GetString("comboBox12.Items"),
-            resources.GetString("comboBox12.Items1")});
-            resources.ApplyResources(this.comboBox12, "comboBox12");
-            this.comboBox12.Name = "comboBox12";
-            // 
-            // label52
-            // 
-            resources.ApplyResources(this.label52, "label52");
-            this.label52.Name = "label52";
-            // 
-            // textBox9
-            // 
-            resources.ApplyResources(this.textBox9, "textBox9");
-            this.textBox9.Name = "textBox9";
-            // 
-            // label51
-            // 
-            resources.ApplyResources(this.label51, "label51");
-            this.label51.Name = "label51";
-            // 
-            // textBox8
-            // 
-            resources.ApplyResources(this.textBox8, "textBox8");
-            this.textBox8.Name = "textBox8";
-            // 
-            // label50
-            // 
-            resources.ApplyResources(this.label50, "label50");
-            this.label50.Name = "label50";
-            // 
-            // label48
-            // 
-            resources.ApplyResources(this.label48, "label48");
-            this.label48.Name = "label48";
-            // 
-            // textBox7
-            // 
-            resources.ApplyResources(this.textBox7, "textBox7");
-            this.textBox7.Name = "textBox7";
-            // 
-            // label47
-            // 
-            resources.ApplyResources(this.label47, "label47");
-            this.label47.Name = "label47";
-            // 
-            // textBox6
-            // 
-            resources.ApplyResources(this.textBox6, "textBox6");
-            this.textBox6.Name = "textBox6";
-            // 
-            // txt_b1
-            // 
-            resources.ApplyResources(this.txt_b1, "txt_b1");
-            this.txt_b1.Name = "txt_b1";
-            // 
-            // label46
-            // 
-            resources.ApplyResources(this.label46, "label46");
-            this.label46.Name = "label46";
-            // 
-            // txt_b0
-            // 
-            resources.ApplyResources(this.txt_b0, "txt_b0");
-            this.txt_b0.Name = "txt_b0";
-            // 
-            // label45
-            // 
-            resources.ApplyResources(this.label45, "label45");
-            this.label45.Name = "label45";
-            // 
-            // txt_b2
-            // 
-            resources.ApplyResources(this.txt_b2, "txt_b2");
-            this.txt_b2.Name = "txt_b2";
-            // 
-            // label49
-            // 
-            resources.ApplyResources(this.label49, "label49");
-            this.label49.Name = "label49";
-            // 
-            // txt_Leakageresistancewinding
-            // 
-            this.txt_Leakageresistancewinding.FormattingEnabled = true;
-            this.txt_Leakageresistancewinding.Items.AddRange(new object[] {
-            resources.GetString("txt_Leakageresistancewinding.Items"),
-            resources.GetString("txt_Leakageresistancewinding.Items1")});
-            resources.ApplyResources(this.txt_Leakageresistancewinding, "txt_Leakageresistancewinding");
-            this.txt_Leakageresistancewinding.Name = "txt_Leakageresistancewinding";
-            // 
-            // label44
-            // 
-            resources.ApplyResources(this.label44, "label44");
-            this.label44.Name = "label44";
-            // 
-            // txt_LmtLv
-            // 
-            resources.ApplyResources(this.txt_LmtLv, "txt_LmtLv");
-            this.txt_LmtLv.Name = "txt_LmtLv";
-            // 
-            // label43
-            // 
-            resources.ApplyResources(this.label43, "label43");
-            this.label43.Name = "label43";
-            // 
-            // txt_Lmthv
-            // 
-            resources.ApplyResources(this.txt_Lmthv, "txt_Lmthv");
-            this.txt_Lmthv.Name = "txt_Lmthv";
-            // 
-            // label41
-            // 
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.Name = "label41";
-            // 
             // txt_Wi
             // 
             resources.ApplyResources(this.txt_Wi, "txt_Wi");
@@ -855,10 +716,198 @@ namespace trans_1
             this.txt_calculate.UseVisualStyleBackColor = true;
             this.txt_calculate.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label57
+            // 
+            resources.ApplyResources(this.label57, "label57");
+            this.label57.Name = "label57";
+            // 
+            // txtWcu
+            // 
+            resources.ApplyResources(this.txtWcu, "txtWcu");
+            this.txtWcu.Name = "txtWcu";
+            // 
+            // label58
+            // 
+            resources.ApplyResources(this.label58, "label58");
+            this.label58.Name = "label58";
+            // 
+            // label41
+            // 
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.Name = "label41";
+            // 
+            // txt_diHv
+            // 
+            resources.ApplyResources(this.txt_diHv, "txt_diHv");
+            this.txt_diHv.Name = "txt_diHv";
+            // 
+            // label44
+            // 
+            resources.ApplyResources(this.label44, "label44");
+            this.label44.Name = "label44";
+            // 
+            // txt_Leakageresistancewinding
+            // 
+            this.txt_Leakageresistancewinding.FormattingEnabled = true;
+            this.txt_Leakageresistancewinding.Items.AddRange(new object[] {
+            resources.GetString("txt_Leakageresistancewinding.Items"),
+            resources.GetString("txt_Leakageresistancewinding.Items1")});
+            resources.ApplyResources(this.txt_Leakageresistancewinding, "txt_Leakageresistancewinding");
+            this.txt_Leakageresistancewinding.Name = "txt_Leakageresistancewinding";
+            // 
+            // label49
+            // 
+            resources.ApplyResources(this.label49, "label49");
+            this.label49.Name = "label49";
+            // 
+            // txt_b2
+            // 
+            resources.ApplyResources(this.txt_b2, "txt_b2");
+            this.txt_b2.Name = "txt_b2";
+            // 
+            // label45
+            // 
+            resources.ApplyResources(this.label45, "label45");
+            this.label45.Name = "label45";
+            // 
+            // txt_b0
+            // 
+            resources.ApplyResources(this.txt_b0, "txt_b0");
+            this.txt_b0.Name = "txt_b0";
+            // 
+            // label46
+            // 
+            resources.ApplyResources(this.label46, "label46");
+            this.label46.Name = "label46";
+            // 
+            // txt_b1
+            // 
+            resources.ApplyResources(this.txt_b1, "txt_b1");
+            this.txt_b1.Name = "txt_b1";
+            // 
+            // textLmt
+            // 
+            resources.ApplyResources(this.textLmt, "textLmt");
+            this.textLmt.Name = "textLmt";
+            // 
+            // label47
+            // 
+            resources.ApplyResources(this.label47, "label47");
+            this.label47.Name = "label47";
+            // 
+            // label50
+            // 
+            resources.ApplyResources(this.label50, "label50");
+            this.label50.Name = "label50";
+            // 
+            // texthc
+            // 
+            resources.ApplyResources(this.texthc, "texthc");
+            this.texthc.Name = "texthc";
+            // 
+            // label51
+            // 
+            resources.ApplyResources(this.label51, "label51");
+            this.label51.Name = "label51";
+            // 
+            // textw
+            // 
+            resources.ApplyResources(this.textw, "textw");
+            this.textw.Name = "textw";
+            // 
+            // label52
+            // 
+            resources.ApplyResources(this.label52, "label52");
+            this.label52.Name = "label52";
+            // 
+            // comboBox12
+            // 
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Items.AddRange(new object[] {
+            resources.GetString("comboBox12.Items"),
+            resources.GetString("comboBox12.Items1")});
+            resources.ApplyResources(this.comboBox12, "comboBox12");
+            this.comboBox12.Name = "comboBox12";
+            // 
+            // textnvalue
+            // 
+            resources.ApplyResources(this.textnvalue, "textnvalue");
+            this.textnvalue.Name = "textnvalue";
+            // 
+            // label53
+            // 
+            resources.ApplyResources(this.label53, "label53");
+            this.label53.Name = "label53";
+            // 
+            // label60
+            // 
+            resources.ApplyResources(this.label60, "label60");
+            this.label60.Name = "label60";
+            // 
+            // txt_doHv
+            // 
+            resources.ApplyResources(this.txt_doHv, "txt_doHv");
+            this.txt_doHv.Name = "txt_doHv";
+            // 
+            // label61
+            // 
+            resources.ApplyResources(this.label61, "label61");
+            this.label61.Name = "label61";
+            // 
+            // txt_diLv
+            // 
+            resources.ApplyResources(this.txt_diLv, "txt_diLv");
+            this.txt_diLv.Name = "txt_diLv";
+            // 
+            // label43
+            // 
+            resources.ApplyResources(this.label43, "label43");
+            this.label43.Name = "label43";
+            // 
+            // txt_doLv
+            // 
+            resources.ApplyResources(this.txt_doLv, "txt_doLv");
+            this.txt_doLv.Name = "txt_doLv";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.txt_doLv);
+            this.groupBox6.Controls.Add(this.label43);
+            this.groupBox6.Controls.Add(this.txt_diLv);
+            this.groupBox6.Controls.Add(this.label61);
+            this.groupBox6.Controls.Add(this.txt_doHv);
+            this.groupBox6.Controls.Add(this.label60);
+            this.groupBox6.Controls.Add(this.label53);
+            this.groupBox6.Controls.Add(this.textnvalue);
+            this.groupBox6.Controls.Add(this.comboBox12);
+            this.groupBox6.Controls.Add(this.label52);
+            this.groupBox6.Controls.Add(this.textw);
+            this.groupBox6.Controls.Add(this.label51);
+            this.groupBox6.Controls.Add(this.texthc);
+            this.groupBox6.Controls.Add(this.label50);
+            this.groupBox6.Controls.Add(this.label47);
+            this.groupBox6.Controls.Add(this.textLmt);
+            this.groupBox6.Controls.Add(this.txt_b1);
+            this.groupBox6.Controls.Add(this.label46);
+            this.groupBox6.Controls.Add(this.txt_b0);
+            this.groupBox6.Controls.Add(this.label45);
+            this.groupBox6.Controls.Add(this.txt_b2);
+            this.groupBox6.Controls.Add(this.label49);
+            this.groupBox6.Controls.Add(this.txt_Leakageresistancewinding);
+            this.groupBox6.Controls.Add(this.label44);
+            this.groupBox6.Controls.Add(this.txt_diHv);
+            this.groupBox6.Controls.Add(this.label41);
+            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.TabStop = false;
+            // 
             // SinglePhaseTransformer
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label57);
+            this.Controls.Add(this.txtWcu);
+            this.Controls.Add(this.label58);
             this.Controls.Add(this.txt_calculate);
             this.Controls.Add(this.label55);
             this.Controls.Add(this.txt_Wi);
@@ -967,7 +1016,7 @@ namespace trans_1
         private Label label27;
         private ComboBox txt_insulation;
         private Label label23;
-        private MaskedTextBox txt_Ks;
+        private MaskedTextBox txt_Kc;
         private Label label22;
         private ComboBox txt_Kw;
         private MaskedTextBox txt_Kfactor;
@@ -992,41 +1041,48 @@ namespace trans_1
         private ComboBox txt_Ai;
         private Label label32;
         private Label label42;
-        private MaskedTextBox txt_Φmmmf;
+        private MaskedTextBox txt_y;
         private Label label40;
         private MaskedTextBox txt_AcuAi;
         private Label label39;
         private MaskedTextBox txt_Da;
         private Label label38;
         private MaskedTextBox txt_Load;
-        private GroupBox groupBox6;
-        private TextBox textBox9;
-        private Label label51;
-        private TextBox textBox8;
-        private Label label50;
-        private Label label48;
-        private TextBox textBox7;
-        private Label label47;
-        private TextBox textBox6;
-        private TextBox txt_b1;
-        private Label label46;
-        private TextBox txt_b0;
-        private Label label45;
-        private TextBox txt_b2;
-        private Label label49;
-        private ComboBox txt_Leakageresistancewinding;
-        private Label label44;
-        private TextBox txt_LmtLv;
-        private Label label43;
-        private TextBox txt_Lmthv;
-        private Label label41;
-        private Label label53;
-        private TextBox textBox10;
-        private ComboBox comboBox12;
-        private Label label52;
         private MaskedTextBox txt_Wi;
         private Label label54;
         private Label label55;
         private Button txt_calculate;
+        private MaskedTextBox txtSLL;
+        private Label label56;
+        private Label label57;
+        private MaskedTextBox txtWcu;
+        private Label label58;
+        private Label label41;
+        private TextBox txt_diHv;
+        private Label label44;
+        private ComboBox txt_Leakageresistancewinding;
+        private Label label49;
+        private TextBox txt_b2;
+        private Label label45;
+        private TextBox txt_b0;
+        private Label label46;
+        private TextBox txt_b1;
+        private TextBox textLmt;
+        private Label label47;
+        private Label label50;
+        private TextBox texthc;
+        private Label label51;
+        private TextBox textw;
+        private Label label52;
+        private ComboBox comboBox12;
+        private TextBox textnvalue;
+        private Label label53;
+        private Label label60;
+        private TextBox txt_doHv;
+        private Label label61;
+        private TextBox txt_diLv;
+        private Label label43;
+        private TextBox txt_doLv;
+        private GroupBox groupBox6;
     }
 }
