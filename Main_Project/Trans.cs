@@ -47,7 +47,7 @@ namespace trans_1
             highVoltage = Double.Parse(txt_HighVoltage.Text);
             lowVoltage = Double.Parse(txt_LowVoltage.Text);
 
-
+            // you should add the rest of them
         }
     }
 }
