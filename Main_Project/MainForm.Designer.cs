@@ -35,6 +35,7 @@ namespace Main
             this.btnPlunger = new System.Windows.Forms.Button();
             this.btnHorseShoe = new System.Windows.Forms.Button();
             this.btnFlatArmature = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -50,6 +51,7 @@ namespace Main
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.btnHome);
             this.splitContainer1.Panel1.Controls.Add(this.btnExcitatioCoil);
             this.splitContainer1.Panel1.Controls.Add(this.btnPlunger);
@@ -61,26 +63,26 @@ namespace Main
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitContainer1.Panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.splitContainer1.Size = new System.Drawing.Size(1184, 561);
-            this.splitContainer1.SplitterDistance = 267;
+            this.splitContainer1.Size = new System.Drawing.Size(1015, 486);
+            this.splitContainer1.SplitterDistance = 228;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnHome
             // 
             this.btnHome.ForeColor = System.Drawing.SystemColors.Highlight;
-            // this.btnHome.Image = global::Main.Properties.Resources.download_32;
-            this.btnHome.Location = new System.Drawing.Point(33, 12);
+            this.btnHome.Location = new System.Drawing.Point(28, 10);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(166, 52);
+            this.btnHome.Size = new System.Drawing.Size(142, 45);
             this.btnHome.TabIndex = 4;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnExcitatioCoil
             // 
-            this.btnExcitatioCoil.Location = new System.Drawing.Point(33, 335);
+            this.btnExcitatioCoil.Location = new System.Drawing.Point(28, 290);
             this.btnExcitatioCoil.Name = "btnExcitatioCoil";
-            this.btnExcitatioCoil.Size = new System.Drawing.Size(166, 56);
+            this.btnExcitatioCoil.Size = new System.Drawing.Size(142, 49);
             this.btnExcitatioCoil.TabIndex = 3;
             this.btnExcitatioCoil.Text = "Excitation Coil";
             this.btnExcitatioCoil.UseVisualStyleBackColor = true;
@@ -88,11 +90,10 @@ namespace Main
             // 
             // btnPlunger
             // 
-            // this.btnPlunger.Image = global::Main.Properties.Resources.Inkedplunger_LI_32;
             this.btnPlunger.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlunger.Location = new System.Drawing.Point(33, 252);
+            this.btnPlunger.Location = new System.Drawing.Point(28, 218);
             this.btnPlunger.Name = "btnPlunger";
-            this.btnPlunger.Size = new System.Drawing.Size(166, 46);
+            this.btnPlunger.Size = new System.Drawing.Size(142, 40);
             this.btnPlunger.TabIndex = 2;
             this.btnPlunger.Text = "Plunger";
             this.btnPlunger.UseVisualStyleBackColor = true;
@@ -100,11 +101,10 @@ namespace Main
             // 
             // btnHorseShoe
             // 
-            // this.btnHorseShoe.Image = global::Main.Properties.Resources.horse_shoe_32;
             this.btnHorseShoe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHorseShoe.Location = new System.Drawing.Point(33, 170);
+            this.btnHorseShoe.Location = new System.Drawing.Point(28, 147);
             this.btnHorseShoe.Name = "btnHorseShoe";
-            this.btnHorseShoe.Size = new System.Drawing.Size(166, 46);
+            this.btnHorseShoe.Size = new System.Drawing.Size(142, 40);
             this.btnHorseShoe.TabIndex = 1;
             this.btnHorseShoe.Text = "Horse Shoe";
             this.btnHorseShoe.UseVisualStyleBackColor = true;
@@ -113,21 +113,30 @@ namespace Main
             // btnFlatArmature
             // 
             this.btnFlatArmature.ForeColor = System.Drawing.SystemColors.Highlight;
-            // this.btnFlatArmature.Image = global::Main.Properties.Resources.flat_armature_32;
             this.btnFlatArmature.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFlatArmature.Location = new System.Drawing.Point(33, 89);
+            this.btnFlatArmature.Location = new System.Drawing.Point(28, 77);
             this.btnFlatArmature.Name = "btnFlatArmature";
-            this.btnFlatArmature.Size = new System.Drawing.Size(166, 52);
+            this.btnFlatArmature.Size = new System.Drawing.Size(142, 45);
             this.btnFlatArmature.TabIndex = 0;
             this.btnFlatArmature.Text = "Flat Armature";
             this.btnFlatArmature.UseVisualStyleBackColor = true;
             this.btnFlatArmature.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(28, 368);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 49);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Trans";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.ClientSize = new System.Drawing.Size(1015, 486);
             this.Controls.Add(this.splitContainer1);
             this.Name = "MainForm";
             this.Text = "Form1";
@@ -147,5 +156,6 @@ namespace Main
         private Button btnHorseShoe;
         private Button btnFlatArmature;
         private Button btnHome;
+        private Button button1;
     }
 }

@@ -119,6 +119,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Type.cs" />
+    <Compile Include="TransFrontPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransFrontPage.Designer.cs">
+      <DependentUpon>TransFrontPage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Exsitationcoil.resx">
       <DependentUpon>Exsitationcoil.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +168,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TransFrontPage.resx">
+      <DependentUpon>TransFrontPage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

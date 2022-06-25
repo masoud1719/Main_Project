@@ -31,20 +31,20 @@ namespace trans_1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinglePhaseTransformer));
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_structure = new System.Windows.Forms.ComboBox();
+            this.combo_structure = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_conductor = new System.Windows.Forms.ComboBox();
+            this.combo_conductor = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_application = new System.Windows.Forms.ComboBox();
-            this.txt_rairingvalue = new System.Windows.Forms.MaskedTextBox();
+            this.combo_application = new System.Windows.Forms.ComboBox();
+            this.txt_ratingvalue = new System.Windows.Forms.MaskedTextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_voltageperturnvalue = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_HighVoltage = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txt_raiting = new System.Windows.Forms.RadioButton();
-            this.txt_voltageperturn = new System.Windows.Forms.RadioButton();
+            this.rdbRaiting = new System.Windows.Forms.RadioButton();
+            this.rdbVoltagePerTurn = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_LowVoltage = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -68,15 +68,14 @@ namespace trans_1
             this.label56 = new System.Windows.Forms.Label();
             this.txt_Stackingfactor = new System.Windows.Forms.MaskedTextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.txt_Kfactor = new System.Windows.Forms.MaskedTextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.txt_KwValue = new System.Windows.Forms.MaskedTextBox();
-            this.txt_Kw = new System.Windows.Forms.ComboBox();
+            this.combo_Kw = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_Kc = new System.Windows.Forms.MaskedTextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboCrossSection = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.maskedTextBox10 = new System.Windows.Forms.MaskedTextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -111,7 +110,7 @@ namespace trans_1
             this.txt_Gi_Gcu = new System.Windows.Forms.MaskedTextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.txt_AiValue = new System.Windows.Forms.MaskedTextBox();
-            this.txt_Ai = new System.Windows.Forms.ComboBox();
+            this.combo_Ai = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.txt_Wi = new System.Windows.Forms.MaskedTextBox();
             this.label54 = new System.Windows.Forms.Label();
@@ -123,7 +122,7 @@ namespace trans_1
             this.label41 = new System.Windows.Forms.Label();
             this.txt_diHv = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.txt_Leakageresistancewinding = new System.Windows.Forms.ComboBox();
+            this.combo_Leakageresistancewinding = new System.Windows.Forms.ComboBox();
             this.label49 = new System.Windows.Forms.Label();
             this.txt_b2 = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
@@ -137,7 +136,7 @@ namespace trans_1
             this.label51 = new System.Windows.Forms.Label();
             this.textw = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.comboGroup = new System.Windows.Forms.ComboBox();
             this.textnvalue = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
@@ -147,6 +146,7 @@ namespace trans_1
             this.label43 = new System.Windows.Forms.Label();
             this.txt_doLv = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txt_kFactor = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -160,48 +160,51 @@ namespace trans_1
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // txt_structure
+            // combo_structure
             // 
-            this.txt_structure.FormattingEnabled = true;
-            this.txt_structure.Items.AddRange(new object[] {
-            resources.GetString("txt_structure.Items"),
-            resources.GetString("txt_structure.Items1")});
-            resources.ApplyResources(this.txt_structure, "txt_structure");
-            this.txt_structure.Name = "txt_structure";
+            this.combo_structure.FormattingEnabled = true;
+            this.combo_structure.Items.AddRange(new object[] {
+            resources.GetString("combo_structure.Items"),
+            resources.GetString("combo_structure.Items1")});
+            resources.ApplyResources(this.combo_structure, "combo_structure");
+            this.combo_structure.Name = "combo_structure";
+            this.combo_structure.SelectedIndexChanged += new System.EventHandler(this.combo_structure_SelectedIndexChanged);
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // txt_conductor
+            // combo_conductor
             // 
-            this.txt_conductor.FormattingEnabled = true;
-            this.txt_conductor.Items.AddRange(new object[] {
-            resources.GetString("txt_conductor.Items"),
-            resources.GetString("txt_conductor.Items1")});
-            resources.ApplyResources(this.txt_conductor, "txt_conductor");
-            this.txt_conductor.Name = "txt_conductor";
+            this.combo_conductor.FormattingEnabled = true;
+            this.combo_conductor.Items.AddRange(new object[] {
+            resources.GetString("combo_conductor.Items"),
+            resources.GetString("combo_conductor.Items1")});
+            resources.ApplyResources(this.combo_conductor, "combo_conductor");
+            this.combo_conductor.Name = "combo_conductor";
+            this.combo_conductor.SelectedIndexChanged += new System.EventHandler(this.combo_conductor_SelectedIndexChanged);
             // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
-            // txt_application
+            // combo_application
             // 
-            this.txt_application.FormattingEnabled = true;
-            this.txt_application.Items.AddRange(new object[] {
-            resources.GetString("txt_application.Items"),
-            resources.GetString("txt_application.Items1"),
-            resources.GetString("txt_application.Items2")});
-            resources.ApplyResources(this.txt_application, "txt_application");
-            this.txt_application.Name = "txt_application";
+            this.combo_application.FormattingEnabled = true;
+            this.combo_application.Items.AddRange(new object[] {
+            resources.GetString("combo_application.Items"),
+            resources.GetString("combo_application.Items1"),
+            resources.GetString("combo_application.Items2")});
+            resources.ApplyResources(this.combo_application, "combo_application");
+            this.combo_application.Name = "combo_application";
+            this.combo_application.SelectedIndexChanged += new System.EventHandler(this.combo_application_SelectedIndexChanged);
             // 
-            // txt_rairingvalue
+            // txt_ratingvalue
             // 
-            resources.ApplyResources(this.txt_rairingvalue, "txt_rairingvalue");
-            this.txt_rairingvalue.Name = "txt_rairingvalue";
+            resources.ApplyResources(this.txt_ratingvalue, "txt_ratingvalue");
+            this.txt_ratingvalue.Name = "txt_ratingvalue";
             // 
             // label26
             // 
@@ -233,17 +236,21 @@ namespace trans_1
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
             // 
-            // txt_raiting
+            // rdbRaiting
             // 
-            resources.ApplyResources(this.txt_raiting, "txt_raiting");
-            this.txt_raiting.Name = "txt_raiting";
-            this.txt_raiting.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.rdbRaiting, "rdbRaiting");
+            this.rdbRaiting.Checked = true;
+            this.rdbRaiting.Name = "rdbRaiting";
+            this.rdbRaiting.TabStop = true;
+            this.rdbRaiting.UseVisualStyleBackColor = true;
+            this.rdbRaiting.CheckedChanged += new System.EventHandler(this.rdbRaiting_CheckedChanged);
             // 
-            // txt_voltageperturn
+            // rdbVoltagePerTurn
             // 
-            resources.ApplyResources(this.txt_voltageperturn, "txt_voltageperturn");
-            this.txt_voltageperturn.Name = "txt_voltageperturn";
-            this.txt_voltageperturn.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.rdbVoltagePerTurn, "rdbVoltagePerTurn");
+            this.rdbVoltagePerTurn.Name = "rdbVoltagePerTurn";
+            this.rdbVoltagePerTurn.UseVisualStyleBackColor = true;
+            this.rdbVoltagePerTurn.CheckedChanged += new System.EventHandler(this.rdbVoltagePerTurn_CheckedChanged);
             // 
             // label6
             // 
@@ -337,14 +344,14 @@ namespace trans_1
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_kFactor);
             this.groupBox2.Controls.Add(this.txtSLL);
             this.groupBox2.Controls.Add(this.label56);
             this.groupBox2.Controls.Add(this.txt_Stackingfactor);
             this.groupBox2.Controls.Add(this.label31);
-            this.groupBox2.Controls.Add(this.txt_Kfactor);
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.txt_KwValue);
-            this.groupBox2.Controls.Add(this.txt_Kw);
+            this.groupBox2.Controls.Add(this.combo_Kw);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.label25);
@@ -373,11 +380,6 @@ namespace trans_1
             resources.ApplyResources(this.label31, "label31");
             this.label31.Name = "label31";
             // 
-            // txt_Kfactor
-            // 
-            resources.ApplyResources(this.txt_Kfactor, "txt_Kfactor");
-            this.txt_Kfactor.Name = "txt_Kfactor";
-            // 
             // label24
             // 
             resources.ApplyResources(this.label24, "label24");
@@ -388,22 +390,23 @@ namespace trans_1
             resources.ApplyResources(this.txt_KwValue, "txt_KwValue");
             this.txt_KwValue.Name = "txt_KwValue";
             // 
-            // txt_Kw
+            // combo_Kw
             // 
-            this.txt_Kw.FormattingEnabled = true;
-            this.txt_Kw.Items.AddRange(new object[] {
-            resources.GetString("txt_Kw.Items"),
-            resources.GetString("txt_Kw.Items1"),
-            resources.GetString("txt_Kw.Items2")});
-            resources.ApplyResources(this.txt_Kw, "txt_Kw");
-            this.txt_Kw.Name = "txt_Kw";
+            this.combo_Kw.FormattingEnabled = true;
+            this.combo_Kw.Items.AddRange(new object[] {
+            resources.GetString("combo_Kw.Items"),
+            resources.GetString("combo_Kw.Items1"),
+            resources.GetString("combo_Kw.Items2")});
+            resources.ApplyResources(this.combo_Kw, "combo_Kw");
+            this.combo_Kw.Name = "combo_Kw";
+            this.combo_Kw.SelectedIndexChanged += new System.EventHandler(this.combo_Kw_SelectedIndexChanged);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txt_Kc);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.comboBox5);
+            this.groupBox3.Controls.Add(this.comboCrossSection);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
@@ -423,22 +426,17 @@ namespace trans_1
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
             // 
-            // comboBox5
+            // comboCrossSection
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            resources.GetString("comboBox5.Items"),
-            resources.GetString("comboBox5.Items1"),
-            resources.GetString("comboBox5.Items2"),
-            resources.GetString("comboBox5.Items3"),
-            resources.GetString("comboBox5.Items4"),
-            resources.GetString("comboBox5.Items5"),
-            resources.GetString("comboBox5.Items6"),
-            resources.GetString("comboBox5.Items7"),
-            resources.GetString("comboBox5.Items8"),
-            resources.GetString("comboBox5.Items9")});
-            resources.ApplyResources(this.comboBox5, "comboBox5");
-            this.comboBox5.Name = "comboBox5";
+            this.comboCrossSection.FormattingEnabled = true;
+            this.comboCrossSection.Items.AddRange(new object[] {
+            resources.GetString("comboCrossSection.Items"),
+            resources.GetString("comboCrossSection.Items1"),
+            resources.GetString("comboCrossSection.Items2"),
+            resources.GetString("comboCrossSection.Items3")});
+            resources.ApplyResources(this.comboCrossSection, "comboCrossSection");
+            this.comboCrossSection.Name = "comboCrossSection";
+            this.comboCrossSection.SelectedIndexChanged += new System.EventHandler(this.comboCrossSection_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -533,10 +531,10 @@ namespace trans_1
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.txt_rairingvalue);
+            this.groupBox4.Controls.Add(this.txt_ratingvalue);
             this.groupBox4.Controls.Add(this.txt_voltageperturnvalue);
-            this.groupBox4.Controls.Add(this.txt_raiting);
-            this.groupBox4.Controls.Add(this.txt_voltageperturn);
+            this.groupBox4.Controls.Add(this.rdbRaiting);
+            this.groupBox4.Controls.Add(this.rdbVoltagePerTurn);
             this.groupBox4.Controls.Add(this.label26);
             this.groupBox4.Controls.Add(this.label7);
             resources.ApplyResources(this.groupBox4, "groupBox4");
@@ -580,7 +578,7 @@ namespace trans_1
             this.groupBox5.Controls.Add(this.txt_Gi_Gcu);
             this.groupBox5.Controls.Add(this.label33);
             this.groupBox5.Controls.Add(this.txt_AiValue);
-            this.groupBox5.Controls.Add(this.txt_Ai);
+            this.groupBox5.Controls.Add(this.combo_Ai);
             this.groupBox5.Controls.Add(this.label32);
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
@@ -676,18 +674,19 @@ namespace trans_1
             resources.ApplyResources(this.txt_AiValue, "txt_AiValue");
             this.txt_AiValue.Name = "txt_AiValue";
             // 
-            // txt_Ai
+            // combo_Ai
             // 
-            this.txt_Ai.FormattingEnabled = true;
-            this.txt_Ai.Items.AddRange(new object[] {
-            resources.GetString("txt_Ai.Items"),
-            resources.GetString("txt_Ai.Items1"),
-            resources.GetString("txt_Ai.Items2"),
-            resources.GetString("txt_Ai.Items3"),
-            resources.GetString("txt_Ai.Items4"),
-            resources.GetString("txt_Ai.Items5")});
-            resources.ApplyResources(this.txt_Ai, "txt_Ai");
-            this.txt_Ai.Name = "txt_Ai";
+            this.combo_Ai.FormattingEnabled = true;
+            this.combo_Ai.Items.AddRange(new object[] {
+            resources.GetString("combo_Ai.Items"),
+            resources.GetString("combo_Ai.Items1"),
+            resources.GetString("combo_Ai.Items2"),
+            resources.GetString("combo_Ai.Items3"),
+            resources.GetString("combo_Ai.Items4"),
+            resources.GetString("combo_Ai.Items5")});
+            resources.ApplyResources(this.combo_Ai, "combo_Ai");
+            this.combo_Ai.Name = "combo_Ai";
+            this.combo_Ai.SelectedIndexChanged += new System.EventHandler(this.combo_Ai_SelectedIndexChanged);
             // 
             // label32
             // 
@@ -746,14 +745,15 @@ namespace trans_1
             resources.ApplyResources(this.label44, "label44");
             this.label44.Name = "label44";
             // 
-            // txt_Leakageresistancewinding
+            // combo_Leakageresistancewinding
             // 
-            this.txt_Leakageresistancewinding.FormattingEnabled = true;
-            this.txt_Leakageresistancewinding.Items.AddRange(new object[] {
-            resources.GetString("txt_Leakageresistancewinding.Items"),
-            resources.GetString("txt_Leakageresistancewinding.Items1")});
-            resources.ApplyResources(this.txt_Leakageresistancewinding, "txt_Leakageresistancewinding");
-            this.txt_Leakageresistancewinding.Name = "txt_Leakageresistancewinding";
+            this.combo_Leakageresistancewinding.FormattingEnabled = true;
+            this.combo_Leakageresistancewinding.Items.AddRange(new object[] {
+            resources.GetString("combo_Leakageresistancewinding.Items"),
+            resources.GetString("combo_Leakageresistancewinding.Items1")});
+            resources.ApplyResources(this.combo_Leakageresistancewinding, "combo_Leakageresistancewinding");
+            this.combo_Leakageresistancewinding.Name = "combo_Leakageresistancewinding";
+            this.combo_Leakageresistancewinding.SelectedIndexChanged += new System.EventHandler(this.combo_Leakageresistancewinding_SelectedIndexChanged);
             // 
             // label49
             // 
@@ -820,14 +820,14 @@ namespace trans_1
             resources.ApplyResources(this.label52, "label52");
             this.label52.Name = "label52";
             // 
-            // comboBox12
+            // comboGroup
             // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            resources.GetString("comboBox12.Items"),
-            resources.GetString("comboBox12.Items1")});
-            resources.ApplyResources(this.comboBox12, "comboBox12");
-            this.comboBox12.Name = "comboBox12";
+            this.comboGroup.FormattingEnabled = true;
+            this.comboGroup.Items.AddRange(new object[] {
+            resources.GetString("comboGroup.Items"),
+            resources.GetString("comboGroup.Items1")});
+            resources.ApplyResources(this.comboGroup, "comboGroup");
+            this.comboGroup.Name = "comboGroup";
             // 
             // textnvalue
             // 
@@ -879,7 +879,7 @@ namespace trans_1
             this.groupBox6.Controls.Add(this.label60);
             this.groupBox6.Controls.Add(this.label53);
             this.groupBox6.Controls.Add(this.textnvalue);
-            this.groupBox6.Controls.Add(this.comboBox12);
+            this.groupBox6.Controls.Add(this.comboGroup);
             this.groupBox6.Controls.Add(this.label52);
             this.groupBox6.Controls.Add(this.textw);
             this.groupBox6.Controls.Add(this.label51);
@@ -893,13 +893,20 @@ namespace trans_1
             this.groupBox6.Controls.Add(this.label45);
             this.groupBox6.Controls.Add(this.txt_b2);
             this.groupBox6.Controls.Add(this.label49);
-            this.groupBox6.Controls.Add(this.txt_Leakageresistancewinding);
+            this.groupBox6.Controls.Add(this.combo_Leakageresistancewinding);
             this.groupBox6.Controls.Add(this.label44);
             this.groupBox6.Controls.Add(this.txt_diHv);
             this.groupBox6.Controls.Add(this.label41);
             resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
+            // 
+            // txt_kFactor
+            // 
+            resources.ApplyResources(this.txt_kFactor, "txt_kFactor");
+            this.txt_kFactor.Name = "txt_kFactor";
+            this.txt_kFactor.TextChanged += new System.EventHandler(this.txt_kFactor_TextChanged);
+            this.txt_kFactor.Validated += new System.EventHandler(this.txt_kFactor_Validated);
             // 
             // SinglePhaseTransformer
             // 
@@ -942,12 +949,13 @@ namespace trans_1
             this.Controls.Add(this.txt_HighVoltage);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txt_application);
+            this.Controls.Add(this.combo_application);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_conductor);
+            this.Controls.Add(this.combo_conductor);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_structure);
+            this.Controls.Add(this.combo_structure);
             this.Name = "SinglePhaseTransformer";
+            this.Load += new System.EventHandler(this.SinglePhaseTransformer_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -968,20 +976,20 @@ namespace trans_1
         #endregion
 
         private Label label1;
-        private ComboBox txt_structure;
+        private ComboBox combo_structure;
         private Label label2;
-        private ComboBox txt_conductor;
+        private ComboBox combo_conductor;
         private Label label4;
-        private ComboBox txt_application;
-        private MaskedTextBox txt_rairingvalue;
+        private ComboBox combo_application;
+        private MaskedTextBox txt_ratingvalue;
         private Label label26;
         private Label label7;
         private MaskedTextBox txt_voltageperturnvalue;
         private Label label9;
         private MaskedTextBox txt_HighVoltage;
         private Label label10;
-        private RadioButton txt_raiting;
-        private RadioButton txt_voltageperturn;
+        private RadioButton rdbRaiting;
+        private RadioButton rdbVoltagePerTurn;
         private Label label6;
         private MaskedTextBox txt_LowVoltage;
         private Label label8;
@@ -1005,7 +1013,7 @@ namespace trans_1
         private Label label21;
         private GroupBox groupBox3;
         private Label label5;
-        private ComboBox comboBox5;
+        private ComboBox comboCrossSection;
         private GroupBox groupBox1;
         private Label label3;
         private ComboBox txt_Steel;
@@ -1018,8 +1026,7 @@ namespace trans_1
         private Label label23;
         private MaskedTextBox txt_Kc;
         private Label label22;
-        private ComboBox txt_Kw;
-        private MaskedTextBox txt_Kfactor;
+        private ComboBox combo_Kw;
         private Label label24;
         private MaskedTextBox txt_KwValue;
         private GroupBox groupBox4;
@@ -1038,7 +1045,7 @@ namespace trans_1
         private MaskedTextBox txt_Gi_Gcu;
         private Label label33;
         private MaskedTextBox txt_AiValue;
-        private ComboBox txt_Ai;
+        private ComboBox combo_Ai;
         private Label label32;
         private Label label42;
         private MaskedTextBox txt_y;
@@ -1060,7 +1067,7 @@ namespace trans_1
         private Label label41;
         private TextBox txt_diHv;
         private Label label44;
-        private ComboBox txt_Leakageresistancewinding;
+        private ComboBox combo_Leakageresistancewinding;
         private Label label49;
         private TextBox txt_b2;
         private Label label45;
@@ -1074,7 +1081,7 @@ namespace trans_1
         private Label label51;
         private TextBox textw;
         private Label label52;
-        private ComboBox comboBox12;
+        private ComboBox comboGroup;
         private TextBox textnvalue;
         private Label label53;
         private Label label60;
@@ -1084,5 +1091,6 @@ namespace trans_1
         private Label label43;
         private TextBox txt_doLv;
         private GroupBox groupBox6;
+        private TextBox txt_kFactor;
     }
 }

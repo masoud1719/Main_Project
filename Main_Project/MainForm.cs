@@ -1,8 +1,10 @@
 using System;
 using System.Windows.Forms;
 using Excitation_Coil;
+using Main_Project;
 using second;
 using testmna;
+using trans_1;
 
 namespace Main
 {
@@ -183,5 +185,16 @@ namespace Main
             splitContainer1.Panel2.Controls.Add(new HomeFrontPage());
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            splitContainer1.Panel2.Controls.Add(new TransFrontPage());
+        }
+
+        public static void openTrans()
+        {
+            SinglePhaseTransformer f = new SinglePhaseTransformer();
+            f.ShowDialog();
+        }
     }
 }
