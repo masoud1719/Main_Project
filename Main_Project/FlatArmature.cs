@@ -113,7 +113,7 @@ namespace testmna
 
         private double P;
 
-        private double TotalMMF;
+        private double actualMMF;
 
 
         private List<double> errors = new List<double>();
@@ -278,10 +278,12 @@ namespace testmna
             return Interpolate.CubicSpline(x.AsEnumerable(), y.AsEnumerable());
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            // change by vahidd mirzaie
-            // second linevv
+            
+
             getValues();
             for (int i = 0; i < iteration; i++)
             {
@@ -334,7 +336,7 @@ namespace testmna
 
 
                 // TODO landa bayad az nemoydar khiz va dama 
-                // double landa = 0.00121;
+               
                 double lambda = getModel(@"Resources\\lambda.txt").Interpolate(temperature);
 
 
@@ -445,8 +447,9 @@ namespace testmna
 
 
 
-                TotalMMF = N * I;
-                double error = ((TotalMMF - mmf) / mmf) * 100;
+                actualMMF = N * I;
+
+                double error = ((actualMMF - mmf) / mmf) * 100;
                 errors.Add(error);
                 if (error < accurcy)
                 {
@@ -474,54 +477,69 @@ namespace testmna
                 }
             }
 
-            dataGridView3.Rows.Add("pho2", "ohm_cm", string.Format("{0:0.00000000}", pho2));
-            lblPicr1.Text = "= " + Convert.ToString(r1);
-            lblPicr2.Text = "= " + Convert.ToString(r2);
-            lblPicr3.Text = "= " + Convert.ToString(r3);
-            lblPicT1.Text = "= " + Convert.ToString(t1);
-            lblPicT2.Text = "= " + Convert.ToString(t2);
-            lblPicStroke.Text = "= " + Convert.ToString(stroke);
-            lblPicN2.Text = "= " + Convert.ToString(N);
-            lblPicH.Text = "= " + Convert.ToString(h);
-            lbldc.Text = "= " + Convert.ToString(dc);
 
-            dataGridView3.Rows.Add("h", "cm", string.Format("{0:0.0000}", h));
+            lblPicr1.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r1));
 
-            dataGridView3.Rows.Add("dc", "cm", string.Format("{0:0.0000}", dc));
+            lblPicr2.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r2));
 
-            dataGridView3.Rows.Add("r1", "cm", string.Format("{0:0.0000}", r1));
+            lblPicr3.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r3));
 
-            dataGridView3.Rows.Add("r2", "cm", string.Format("{0:0.0000}", r2));
+            lblPicT1.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t1));
 
-            dataGridView3.Rows.Add("r3", "cm", string.Format("{0:0.0000}", r3));
+            lblPicT2.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t2));
 
-            dataGridView3.Rows.Add("t1", "cm", string.Format("{0:0.0000}", t1));
+            lblPicStroke.Text = "= " + Convert.ToString(string.Format("{0:0.00}", stroke));
 
-            dataGridView3.Rows.Add("t2", "cm", string.Format("{0:0.0000}", t2));
+            lblPicN2.Text = "= " + Convert.ToString(string.Format("{0:0}", N));
 
-            dataGridView3.Rows.Add("d", "cm", string.Format("{0:0.0000}", d));
+            lblPicH.Text = "= " + Convert.ToString(string.Format("{0:0.00}", h));
 
-            dataGridView3.Rows.Add("di", "cm", string.Format("{0:0.0000}", di));
+            lbldc.Text = "= " + Convert.ToString(string.Format("{0:0.00}", dc));
 
-            dataGridView3.Rows.Add("NetheightOfCoil", "", string.Format("{0:0.0000}", NetheightOfCoil));
 
-            dataGridView3.Rows.Add("Numberofroundsperlayer", "", string.Format("{0:0.0000}", Numberofroundsperlayer));
 
-            dataGridView3.Rows.Add("NetDepthOfCoil", "", string.Format("{0:0.0000}", NetDepthOfCoil));
 
-            dataGridView3.Rows.Add("NumberOfLayer", "", string.Format("{0:0.0000}", NumberOfLayer));
+            dataGridView3.Rows.Add("  pho2", "  ohm_cm", string.Format("  {0:0.00000000}", pho2));
 
-            dataGridView3.Rows.Add("N", "", string.Format("{0:0.0000}", N));
+            dataGridView3.Rows.Add("  h", "  cm", string.Format("  {0:0.0000}", h));
 
-            dataGridView3.Rows.Add("az", "cm^2", string.Format("{0:0.0000}", az));
+            dataGridView3.Rows.Add("  dc", "  cm", string.Format("  {0:0.0000}", dc));
 
-            dataGridView3.Rows.Add("lmt", "cm", string.Format("{0:0.0000}", lmt));
+            dataGridView3.Rows.Add("  r1", "  cm", string.Format("  {0:0.0000}", r1));
 
-            dataGridView3.Rows.Add("R", "ohm", string.Format("{0:0.0000}", R));
+            dataGridView3.Rows.Add("  r2", "  cm", string.Format("  {0:0.0000}", r2));
 
-            dataGridView3.Rows.Add("I", "Amper", string.Format("{0:0.0000}", I));
+            dataGridView3.Rows.Add("  r3", "  cm", string.Format("  {0:0.0000}", r3));
 
-            dataGridView3.Rows.Add("TotalMMF", "A", string.Format("{0:0.0000}", TotalMMF));
+            dataGridView3.Rows.Add("  t1", "  cm", string.Format("  {0:0.0000}", t1));
+
+            dataGridView3.Rows.Add("  t2", "  cm", string.Format("  {0:0.0000}", t2));
+
+            dataGridView3.Rows.Add("  d", "  cm", string.Format("  {0:0.0000}", d));
+
+            dataGridView3.Rows.Add("  di", "  cm", string.Format("  {0:0.0000}", di));
+
+            dataGridView3.Rows.Add("  NetheightOfCoil", "", string.Format("  {0:0}", NetheightOfCoil));
+
+            dataGridView3.Rows.Add("  Numberofroundsperlayer", "", string.Format("  {0:0}", Numberofroundsperlayer));
+
+            dataGridView3.Rows.Add("  NetDepthOfCoil", "", string.Format("  {0:0}", NetDepthOfCoil));
+
+            dataGridView3.Rows.Add("  NumberOfLayer", "", string.Format("  {0:0}", NumberOfLayer));
+
+            dataGridView3.Rows.Add("  N", "", string.Format("  {0:0.0000}", N));
+
+            dataGridView3.Rows.Add("  az", "  cm^2", string.Format("  {0:0.0000}", az));
+
+            dataGridView3.Rows.Add("  lmt", "  cm", string.Format("  {0:0.0000}", lmt));
+
+            dataGridView3.Rows.Add("  R", "  ohm", string.Format("  {0:0.0000}", R));
+
+            dataGridView3.Rows.Add("  I", "  Amper", string.Format("  {0:0.0000}", I));
+
+            dataGridView3.Rows.Add("  actualMMF", "  A", string.Format("  {0:0}", actualMMF));
+
+
             for (int i = 0; i < errors.Count; i++)
             {
                 chart1.Series["error"].Points.AddXY(i, errors[i]);
@@ -622,53 +640,84 @@ namespace testmna
                     try
                     {
                         Document doc = new Document(iTextSharp.text.PageSize.A4, 10, 10, 42, 35);
+
                         PdfWriter pdfWriter = PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+
                         doc.Open();
+
                         PdfContentByte pdfContent = pdfWriter.DirectContent;
+
                         iTextSharp.text.Rectangle rectangle = new iTextSharp.text.Rectangle(doc.PageSize);
+
                         //customized border sizes
                         rectangle.Left += doc.LeftMargin - 5;
+
                         rectangle.Right -= doc.RightMargin - 5;
+
                         rectangle.Top -= doc.TopMargin - 5;
+
                         rectangle.Bottom += doc.BottomMargin - 5;
+
                         pdfContent.SetColorStroke(BaseColor.WHITE);//setting the color of the border to white
+
                         pdfContent.Rectangle(rectangle.Left, rectangle.Bottom, rectangle.Width, rectangle.Height);
+
                         pdfContent.Stroke();
 
                         using (Bitmap bmp = new Bitmap(tabPage1.Size.Width, tabPage1.Size.Height))
                         {
 
                             tabPage1.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, tabPage1.Size.Width, tabPage1.Size.Height));
+
                             bmp.Save(@"Resources\report.jpg", ImageFormat.Png);
+
                             iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(@"Resources\report.jpg");
+
                             doc.Add(img);
                         }
                         //setting font type, font size and font color
                         iTextSharp.text.Font headerFont = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 25, BaseColor.LIGHT_GRAY);
+
                         Paragraph p = new Paragraph();
+
                         p.Alignment = Element.ALIGN_CENTER;//adjust the alignment of the heading
+
                         p.Add(new Chunk("Report", headerFont));//adding a heading to the PDF
+
                         doc.Add(p);//adding component to the document
+
                         Paragraph p2 = new Paragraph();
+
                         p2.Add(new Chunk("                      ", headerFont));//adding a heading to the PDF
+
                         doc.Add(p2);//adding component to the document
+
                         iTextSharp.text.Font font = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 12, BaseColor.LIGHT_GRAY);
+
                         //creating pdf table
                         PdfPTable table = new PdfPTable(dataGridView3.Columns.Count);
+
                         for (int j = 0; j < dataGridView3.Columns.Count; j++)
+
                         {
                             PdfPCell cell = new PdfPCell(); //create object from the pdfpcell
+
                             cell.BackgroundColor = BaseColor.WHITE;//set color of cells
+
                             cell.AddElement(new Chunk(dataGridView3.Columns[j].HeaderText.ToUpper(), font));
+
                             table.AddCell(cell);
                         }
+
                         //adding rows from gridview to table
                         for (int i = 0; i < dataGridView3.Rows.Count; i++)
                         {
                             table.WidthPercentage = 100;//set width of the table
+
                             for (int j = 0; j < dataGridView3.Columns.Count; j++)
                             {
                                 if (dataGridView3[j, i].Value != null)
+
                                     table.AddCell(new Phrase(dataGridView3[j, i].Value.ToString()));
                             }
                         }
@@ -686,6 +735,9 @@ namespace testmna
                 }
             }
         }
+
+     
+    }
     }
 
-}
+

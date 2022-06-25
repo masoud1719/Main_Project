@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Windows.Forms;
 
 namespace trans_1
@@ -99,7 +99,7 @@ namespace trans_1
 
 
             // s and Et
-            double voltagePerTurn = kFactor / Math.Sqrt(rating);
+             voltagePerTurn = kFactor / Math.Sqrt(rating);
 
             double raiting = Math.Pow((kFactor / voltagePerTurn), 2);
 
@@ -201,28 +201,28 @@ namespace trans_1
 
 
             
-            // åÓÊå ãÑÈÚ?
+            // Ù‡Ø³ØªÙ‡ Ù…Ø±Ø¨Ø¹ÛŒ
             double a = 0.71 * d;
             double b = a;
-            // ÏÑÊÑÇäÓ åÇ? ÓÊæä? ˜æ˜ åÓÊå ãÓÊØ?á? ÓÇÏå Èå ˜ÇÑ ã?ÈÑäÏ ÈÇ ÇİÒÇ?Ô ÇäÏÇÒå ãÑÈÚ? È˜ÇÑ ã?ÈÑäÏ
+            // Ø¯Ø±ØªØ±Ø§Ù†Ø³ Ù‡Ø§ÛŒ Ø³ØªÙˆÙ†ÛŒ Ú©ÙˆÚ†Ú© Ù‡Ø³ØªÙ‡ Ù…Ø³ØªØ·ÛŒÙ„ÛŒ Ø³Ø§Ø¯Ù‡ Ø¨Ù‡ Ú©Ø§Ø± Ù…ÛŒØ¨Ø±Ù†Ø¯ Ø¨Ø§ Ø§ÙØ²Ø§ÛŒØ´ Ø§Ù†Ø¯Ø§Ø²Ù‡ Ù…Ø±Ø¨Ø¹ÛŒ Ø¨Ú©Ø§Ø± Ù…ÛŒØ¨Ø±Ù†Ø¯
 
-            // åÓÊå Õá?È?
+            // Ù‡Ø³ØªÙ‡ ØµÙ„ÛŒØ¨ÛŒ
             a = 0.85 * d;
             b = 0.53 * d;
 
             
-            // åÓÊå Óå ÏäÏÇäå
+            // Ù‡Ø³ØªÙ‡ Ø³Ù‡ Ø¯Ù†Ø¯Ø§Ù†Ù‡
             a = 0.9 * d;
-            //b      ÏÑ Ç?äÍÇ æ 4 ÏäÏÇäå Ç? Ç?ä ãŞÏÇÑ  ÇÒ äæÚ ÓÊæä? æ ÒÑå? ÈÏÓÊ ã? Â?äÏ
+            //b      Ø¯Ø± Ø§ÛŒÙ†Ø­Ø§ Ùˆ 4 Ø¯Ù†Ø¯Ø§Ù†Ù‡ Ø§ÛŒ Ø§ÛŒÙ† Ù…Ù‚Ø¯Ø§Ø±  Ø§Ø² Ù†ÙˆØ¹ Ø³ØªÙˆÙ†ÛŒ Ùˆ Ø²Ø±Ù‡ÛŒ Ø¨Ø¯Ø³Øª Ù…ÛŒ Ø¢ÛŒÙ†Ø¯
 
 
-            // åÓÊå åÇÑ ÏäÏÇäå
+            // Ù‡Ø³ØªÙ‡ Ú†Ù‡Ø§Ø± Ø¯Ù†Ø¯Ø§Ù†Ù‡
             a = 0.91 * d;
 
 
 
 
-            // D ÓÊæä?
+            // D Ø³ØªÙˆÙ†ÛŒ
 
             double D = DPera * a;
 
@@ -241,7 +241,7 @@ namespace trans_1
             b = a / 1.5;
 
 
-            // D ÒÑå?
+            // D Ø²Ø±Ù‡ÛŒ
 
             D = DPera * a;
 
@@ -263,7 +263,7 @@ namespace trans_1
 
 
 
-            // ØÑÇÍ? Ó?ã ? åÇ
+            // Ø·Ø±Ø§Ø­ÛŒ Ø³ÛŒÙ… Ù¾ÛŒÚ† Ù‡Ø§
 
             double NHv = highVoltage / voltagePerTurn;
 
@@ -273,7 +273,7 @@ namespace trans_1
 
             double dHv = Math.Sqrt((4 * aHv) / Math.PI);
 
-            double diHv = dHv + wiregauge;
+            double diHv = dHv;
 
             double LmtHv = (Math.PI * (DiHv + DiLv)) / 2;
 
@@ -282,7 +282,7 @@ namespace trans_1
 
 
 
-            // ØÑÇÍ? Ó?ã ? åÇ
+            // Ø·Ø±Ø§Ø­ÛŒ Ø³ÛŒÙ… Ù¾ÛŒÚ† Ù‡Ø§
 
             double NLv = lowVoltage / voltagePerTurn;
 
@@ -292,7 +292,7 @@ namespace trans_1
 
             double dLv = Math.Sqrt((4 * aHv) / Math.PI);
 
-            double diLv = dHv + wiregauge;
+            double diLv = dHv;
 
             double LmtLv = (Math.PI * (DiHv + DiLv)) / 2;
 
@@ -301,7 +301,7 @@ namespace trans_1
 
 
 
-            // Concentric  ÈÑÇ? ÊÑÇäÓ ÓÊæä?
+            // Concentric  Ø¨Ø±Ø§ÛŒ ØªØ±Ø§Ù†Ø³ Ø³ØªÙˆÙ†ÛŒ
 
             double xHv = 2 * Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI * Math.Pow(NHv, 2) * (Lmt / hc) * ((bhv / 3) + (b0 / 2));
 
@@ -313,20 +313,20 @@ namespace trans_1
 
             double mmf = (4.44 * frequency * Ai * fluxDensity * 1000) / (kFactor * kFactor);
 
-            double ?x_Concentric = ((2 * Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI) / voltagePerTurn) * mmf * (Lmt / hc) * (((bhv + blv) / 3) + b0);
+            double Îµx_Concentric = ((2 * Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI) / voltagePerTurn) * mmf * (Lmt / hc) * (((bhv + blv) / 3) + b0);
 
 
 
-            // Sandwitch  ÈÑÇ? ÊÑÇäÓ ÕÏİ?
+            // Sandwitch  Ø¨Ø±Ø§ÛŒ ØªØ±Ø§Ù†Ø³ ØµØ¯ÙÛŒ
 
-            // ÈÑÇ? ?˜ Ñæå
+            // Ø¨Ø±Ø§ÛŒ ÛŒÚ© Ú¯Ø±ÙˆÙ‡
 
             xHv = 2 * Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI * Math.Pow((NHv / 2), 2) * (Lmt / w) * (((bhv + blv) / 6) + b0);
 
             xLv = 2 * Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI * Math.Pow((NLv / 2), 2) * (Lmt / w) * (((bhv + blv) / 6) + b0);
 
 
-            //  Ñæå    n2 ÈÑÇ?
+            //  Ú¯Ø±ÙˆÙ‡    n2 Ø¨Ø±Ø§ÛŒ
 
             double XHv_2n = ((Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI * Math.Pow(NHv, 2)) / n) * (Lmt / w) * (((bhv + blv) / 6) + b0);
 
@@ -334,7 +334,7 @@ namespace trans_1
 
             mmf = (4.44 * frequency * Ai * fluxDensity * 1000) / (kFactor * kFactor);
 
-            double ?x_Sandwitch = ((Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI) / (n * voltagePerTurn)) * mmf * (Lmt / w) * (((bhv + blv) / 6) + b0);
+            double Îµx_Sandwitch = ((Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI) / (n * voltagePerTurn)) * mmf * (Lmt / w) * (((bhv + blv) / 6) + b0);
 
 
 

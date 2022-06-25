@@ -63,9 +63,39 @@ namespace Main_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flat_armature {
+            get {
+                object obj = ResourceManager.GetObject("flat armature", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FlatArmature {
             get {
                 object obj = ResourceManager.GetObject("FlatArmature", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__567_ {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot (567)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__568_ {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot (568)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

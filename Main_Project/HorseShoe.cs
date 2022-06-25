@@ -57,30 +57,203 @@ namespace second
 
         private double faceofPoleThickness;
 
-        private double accuracy;
+        private double accurcy;
 
         private double maximumIteration;
 
         private double intermittentRating;
+
         private bool isNeuton;
 
-        private double u0 = 4 * Math.PI * Math.Pow(10, -7); 
+        private double nextIterVal;
+        private double pho2;
+        private double r1;
+        private double radiusofPoleCore;
+        private double r2;
+        private double t;
+        private double t1;
+        private double t2;
+        private double rDiff;
+        private double h;
+        private double d;
+        private double di;
+        private double netHeightofCoil;
+        private double numberofLayerDepth;
+        private double netwindingDepth;
+        private double numberofLayerHeightWise;
+        private double N;
+        private double az;
+        private double lmt;
+        private double R;
+        private double I;
+
+
+
+
+
+        private double u0 = 4 * Math.PI * Math.Pow(10, -7);
+
+        private int SWGAWGBWGIndex = -1;
+
+        private List<double> swgInsulations = new List<double>();
+        private List<double> awgInsulations = new List<double>();
+
+
+        private List<double> errors = new List<double>();
+        private List<double> mmfs = new List<double>();
+        private List<double> hratios = new List<double>();
+
+
+
+
+
+
+
+
         public HorseShoe(double force, double stroke, bool isMass)
         {
+
             InitializeComponent();
+
             isNeuton = !isMass;
+
             force *= isMass ? 1 : 9.81;
+
             txtForce.Text = Convert.ToString(force);
+
             txtStroke.Text = Convert.ToString(stroke);
+
             forceTypeCombo.SelectedIndex = isMass ? 0 : 1;
+
+            creteSWGInsulations();
+            cretwAWGInsulation();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cretwAWGInsulation()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                awgInsulations.Add(0.41);
+            }
+
+            awgInsulations.Add(0.4);
+
+            awgInsulations.Add(0.4);
+
+            awgInsulations.Add(0.4);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+
+
+            for (int i = 23; i < 37; i++)
+            {
+                awgInsulations.Add(0.25);
+            }
+
+            for (int i = 37; i < 41; i++)
+            {
+                awgInsulations.Add(0.2);
+            }
+        }
+
+        private void creteSWGInsulations()
+        {
+            for (int i = 0; i < 16; i++)
+            {
+
+                swgInsulations.Add(0.074);
+
+            }
+
+            swgInsulations.Add(0.075);
+
+            swgInsulations.Add(0.075);
+
+            swgInsulations.Add(0.075);
+
+            swgInsulations.Add(0.263);
+
+            swgInsulations.Add(0.263);
+
+            swgInsulations.Add(0.05);
+
+            swgInsulations.Add(0.05);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.033);
+
+            swgInsulations.Add(0.033);
+
+            swgInsulations.Add(0.033);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.013);
+
+            swgInsulations.Add(0.013);
+        }
+
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
+            
+            wireGauge.SelectedIndex = 0;
         }
 
-        private void btncalc_Click(object sender, EventArgs e)
+
+
+        
+
+
+
+
+
+        
+
+        private void btncalc_Click(object sender, EventArgs e, int SWGAWGBWGIndex)
         {
             getValues();
             // addad shakhes ra hesab mikonim
@@ -88,8 +261,7 @@ namespace second
 
 
 
-            double Bg = 0.6258 * Math.Pow(Math.E,
-                ((4.141 * IndexNumber * Math.Pow(10, -5)) - 0.5387 * Math.Pow(Math.E, 0.0003963 * IndexNumber)));
+            double Bg = getModel(@"Resources\\Bg.txt").Interpolate(IndexNumber);
 
             // A....m^2
             double areaofEachPoleFace = ((force * u0) / (0.102 * Math.Pow(Bg, 2)));
@@ -110,23 +282,12 @@ namespace second
             double areaofPoleCore = fluxatTheBaseofPoles / fluxDensityofCore;
 
             //r1..........mm
-            double radiusofPoleCore = Math.Sqrt(areaofPoleCore / Math.PI) *1000;
+            radiusofPoleCore = Math.Sqrt(areaofPoleCore / Math.PI) *1000;
 
 
-            double mmf;
-            if (method1.Checked)
-            {
-                // 1.1 -> 1.2
-                mmf = 16e5 * stroke / 100 * Bg * 1.1;
-            }
-            else if (method2.Checked)
-            {
-                mmf = (16e5 * stroke / 100 * Bg + 8000 * radiusofPoleCore / 100);
-            }
-            else
-            {
-                mmf = getMMFFromBHCurve();
-            }
+            // 1.1 ---- 1.2
+            double value = nextIterVal == 0 ? 1.1 : nextIterVal;
+            double mmf = 16e5 * stroke / 100 * Bg * 1.1;
 
 
 
@@ -146,28 +307,59 @@ namespace second
 
 
 
+            if (!rdbfixTheFactor.Checked)
+            {
+                heightTODepthRation = nextIterVal == 0 ? heightTODepthRation : heightTODepthRation + nextIterVal;
+            }
+
+            hratios.Add(heightTODepthRation);
+
+
             double lambda = getModel(@"Resources\\lambda.txt").Interpolate(temp);
 
             //cm
             double vahidValue = (intermittentRating * pho2 * Math.Pow(mmf, 2)) / (2 * lambda * slotSpaceFactor * temp);
 
 
-            double rDiff = Math.Pow(vahidValue / (heightTODepthRation * heightTODepthRation), (double)1 / 3);
+            rDiff = Math.Pow(vahidValue / (heightTODepthRation * heightTODepthRation), (double)1 / 3);
 
 
-            double r2 = rDiff + radiusofPoleCore;
+            r2 = rDiff + radiusofPoleCore;
 
 
-            double h = heightTODepthRation * rDiff;
+            h = heightTODepthRation * rDiff;
 
 
-            double t2 = (Math.Pow(radiusofPoleCore, 2) * Math.PI) / widthofPoleFace;
+            t2 = (Math.Pow(radiusofPoleCore, 2) * Math.PI) / widthofPoleFace;
 
             // d.............mm
-            double d = Math.Sqrt((4 * pho2 * (radiusofPoleCore + r2) * mmf) / voltage) * 10;
+            d = Math.Sqrt((4 * pho2 * (radiusofPoleCore + r2) * mmf) / voltage) * 10;
 
-            // اینجا جدول سیم های استاندارد را وارد کن
-            double di = d + 0.046;
+
+
+            double fileD;
+            if (wireGauge.SelectedIndex == 0)
+            {
+                fileD = getDFromFile(@"Resources\\SWG.txt", d);
+            }
+            else if (wireGauge.SelectedIndex == 1)
+            {
+                fileD = getDFromFile(@"Resources\\AWG.txt", d);
+            }
+            else
+            {
+                fileD = getDFromFile(@"Resources\\BWG.txt", d);
+            }
+
+
+
+            double plus = 0.2;
+            if (wireGauge.SelectedIndex == 0 || wireGauge.SelectedIndex == 1)
+            {
+                plus = swgInsulations[SWGAWGBWGIndex];
+            }
+
+            di = (fileD * 10) + plus;
 
 
             double fluxInArmiture = armutureLeakageFactor * fluxIntheAirGap;
@@ -176,44 +368,87 @@ namespace second
             double areaofArmiture = fluxInArmiture / fluxDensityofCore;
 
 
-            double t1 = areaofArmiture / (widthofPoleFace * Math.Pow(10, -3));
+            t1 = areaofArmiture / (widthofPoleFace * Math.Pow(10, -3));
 
 
-            double t = t2 / 2;
+            t = t2 / 2;
 
 
-            double netHeightofCoil = h - (2 * coilsHeight);
+            netHeightofCoil = h - (2 * coilsHeight);
 
 
-            double numberofLayerDepth = netHeightofCoil / (di * 10);
+            numberofLayerDepth = (int)netHeightofCoil / (di * 10);
 
 
-            double netwindingDepth = (rDiff / 10) -  (coilsTube + coilCoverThickness );
+            netwindingDepth = (rDiff / 10) -  (coilsTube + coilCoverThickness );
 
 
-            double numberofLayerHeightWise = netwindingDepth / di;
+            numberofLayerHeightWise = (int)netwindingDepth / di;
 
 
-            double totalTurns = numberofLayerHeightWise * numberofLayerDepth;
+            N = numberofLayerHeightWise * numberofLayerDepth;
 
 
-            double az = (Math.PI / 4) * d * d;
+            az = (Math.PI / 4) * d * d;
 
 
-            double lmt = Math.PI * (radiusofPoleCore + r2);
+            lmt = Math.PI * (radiusofPoleCore + r2);
 
 
-            double R = (pho2 * lmt * totalTurns) / az;
+            R = (pho2 * lmt * N) / az;
 
 
-            double I = voltage / R;
+            I = voltage / R;
 
 
-            double actualMMF = totalTurns * I;
+            double actualMMF = N * I;
+            double error = ((actualMMF - mmf) / mmf) * 100;
+            errors.Add(error);
+            if (error < accurcy)
+            {
+                // اینجا با فلت آرمیچر قرق داره
+                accurcy = error;
+            }
+            else
+            {
+                if (rdbfixTheFactor.Checked)
+                {
+                    method1.Checked = true;
+                    value = 1.2 - 1.1;
+                    nextIterVal = value / maximumIteration;
+                }
+                else if (rdbuseDefaultValue.Checked)
+                {
+                    value = heightTODepthRation - 0;
+                    nextIterVal = value / maximumIteration;
+                }
+                else
+                {
+                    value = heightTODepthRation - 3;
+                    nextIterVal = value / maximumIteration;
+                }
+
+            }
 
 
-            Console.WriteLine(actualMMF - mmf);
+            
+        }
 
+
+
+
+        
+
+
+
+
+
+
+
+
+        private double getDFromFile(string v, double d)
+        {
+            throw new NotImplementedException();
         }
 
         private IInterpolation getModel(String filePath)
@@ -233,7 +468,10 @@ namespace second
             return Interpolate.CubicSpline(x.AsEnumerable(), y.AsEnumerable());
         }
 
-        private double getMMFFromBHCurve()
+
+
+
+            private double getMMFFromBHCurve()
         {
             return 0;
         }
@@ -254,8 +492,6 @@ namespace second
             temp = Double.Parse(txtTemperature.Text);
 
             ambTemp =Double.Parse(AmbientTemperature.Text);
-
-            permeability = Double.Parse(txtPermeability.Text);
 
             fluxDensityofCore = Double.Parse(txtFluxDensityofCore.Text);
 
@@ -285,15 +521,31 @@ namespace second
 
             totalVetcalInsulation = Double.Parse(txtTotalVerticalInsulation.Text);
 
-            faceofPoleThickness=Double.Parse(txtFaceofPoleThickness.Text);
+            faceofPoleThickness = Double.Parse(txtFaceofPoleThickness.Text);
 
-            accuracy=Double.Parse(txtAccuracy.Text);
+            accurcy = Double.Parse(txtAccuracy.Text);
+               
+            maximumIteration = Convert.ToInt32(txtMaximumIteration.Text);
 
-            maximumIteration=Double.Parse(txtMaximumIteration.Text);
-
-            intermittentRating=Double.Parse(txtIntermittedRating.Text);
+            intermittentRating = Double.Parse(txtIntermittedRating.Text);
 
         }
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void forceTypeCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -308,5 +560,6 @@ namespace second
                 isNeuton = true;
             }
         }
+
     }
 }
