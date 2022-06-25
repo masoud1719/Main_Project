@@ -37,6 +37,8 @@ namespace Main
 
         private void button4_Click(object sender, EventArgs e)
         {
+            splitContainer1.Panel2.Controls.Clear();
+            splitContainer1.Panel2.Controls.Add(new excitationCoilFrontPage());
         }
 
         public static void openForm(double indexNumber, Type problemType, double force, double stroke, bool isMass)
@@ -194,6 +196,12 @@ namespace Main
         public static void openTrans()
         {
             SinglePhaseTransformer f = new SinglePhaseTransformer();
+            f.ShowDialog();
+        }
+
+        public static void openExcitationCoil()
+        {
+            Exsitationcoil f = new Exsitationcoil();
             f.ShowDialog();
         }
     }

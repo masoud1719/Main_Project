@@ -125,6 +125,12 @@
     <Compile Include="TransFrontPage.Designer.cs">
       <DependentUpon>TransFrontPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="excitationCoilFrontPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="excitationCoilFrontPage.Designer.cs">
+      <DependentUpon>excitationCoilFrontPage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Exsitationcoil.resx">
       <DependentUpon>Exsitationcoil.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="TransFrontPage.resx">
       <DependentUpon>TransFrontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="excitationCoilFrontPage.resx">
+      <DependentUpon>excitationCoilFrontPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
