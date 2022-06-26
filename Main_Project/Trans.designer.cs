@@ -152,20 +152,14 @@ namespace trans_1
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label_L = new System.Windows.Forms.Label();
-            this.label_H = new System.Windows.Forms.Label();
-            this.label_w = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblPT2 = new System.Windows.Forms.Label();
-            this.lblPicr2 = new System.Windows.Forms.Label();
-            this.lblPicN2 = new System.Windows.Forms.Label();
-            this.lblPicr1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Parameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -174,8 +168,8 @@ namespace trans_1
             this.groupBox6.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -941,59 +935,16 @@ namespace trans_1
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label_L);
-            this.tabPage1.Controls.Add(this.label_H);
-            this.tabPage1.Controls.Add(this.label_w);
-            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.lblPT2);
-            this.tabPage1.Controls.Add(this.lblPicr2);
-            this.tabPage1.Controls.Add(this.lblPicN2);
-            this.tabPage1.Controls.Add(this.lblPicr1);
+            this.tabPage1.Controls.Add(this.pictureBox1);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // label_L
-            // 
-            resources.ApplyResources(this.label_L, "label_L");
-            this.label_L.Name = "label_L";
-            // 
-            // label_H
-            // 
-            resources.ApplyResources(this.label_H, "label_H");
-            this.label_H.Name = "label_H";
-            // 
-            // label_w
-            // 
-            resources.ApplyResources(this.label_w, "label_w");
-            this.label_w.Name = "label_w";
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::Main_Project.Properties.Resources.Screenshot__572_;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // lblPT2
             // 
             resources.ApplyResources(this.lblPT2, "lblPT2");
             this.lblPT2.Name = "lblPT2";
-            // 
-            // lblPicr2
-            // 
-            resources.ApplyResources(this.lblPicr2, "lblPicr2");
-            this.lblPicr2.Name = "lblPicr2";
-            // 
-            // lblPicN2
-            // 
-            resources.ApplyResources(this.lblPicN2, "lblPicN2");
-            this.lblPicN2.Name = "lblPicN2";
-            // 
-            // lblPicr1
-            // 
-            resources.ApplyResources(this.lblPicr1, "lblPicr1");
-            this.lblPicr1.Name = "lblPicr1";
             // 
             // tabPage2
             // 
@@ -1054,6 +1005,13 @@ namespace trans_1
             this.value.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.value, "value");
             this.value.Name = "value";
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // SinglePhaseTransformer
             // 
@@ -1121,8 +1079,8 @@ namespace trans_1
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1249,19 +1207,13 @@ namespace trans_1
         private TextBox txt_kFactor;
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private Label label_L;
-        private Label label_H;
-        private Label label_w;
-        private PictureBox pictureBox1;
         private Label lblPT2;
-        private Label lblPicr2;
-        private Label lblPicN2;
-        private Label lblPicr1;
         private TabPage tabPage2;
         private Button button2;
         private DataGridView dataGridView3;
         private DataGridViewTextBoxColumn Parameter;
         private DataGridViewTextBoxColumn unit;
         private DataGridViewTextBoxColumn value;
+        private PictureBox pictureBox1;
     }
 }

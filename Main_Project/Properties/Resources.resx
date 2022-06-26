@@ -118,35 +118,74 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="plunger_3D_view" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plunger_3D_view.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="home-icon-placed-in-blue-circle-vector-23387008" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home-icon-placed-in-blue-circle-vector-23387008.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blue_3d_geometric_abstract_background_6815669" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blue_3d_geometric_abstract_background_6815669.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2241257" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2241257.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="singlepahse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\singlepahse.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="horse she" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\horse she.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot (567)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot (567).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot (568)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot (568).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot (579)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot (579).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Inkedplunger_LI1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inkedplunger_LI1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Screenshot (566)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot (566).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home-icon-placed-in-blue-circle-vector-233870081" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home-icon-placed-in-blue-circle-vector-233870081.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lab-hall-low" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lab-hall-low.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="تصویر زمینه فانتزی (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\تصویر زمینه فانتزی (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot (576)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot (576).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="575082898_UThiarGRmUpXP0Vsed5CrJZO6Nn8f6LNTaHYpE3p9c4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\575082898_UThiarGRmUpXP0Vsed5CrJZO6Nn8f6LNTaHYpE3p9c4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home-icon-placed-in-blue-circle-vector-233870081" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home-icon-placed-in-blue-circle-vector-233870081.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Screenshot (566)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot (566).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="w2kcfslsblm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\w2kcfslsblm1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plunger_3D_view" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plunger_3D_view.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot (572)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot (572).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lab-hall-low" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lab-hall-low.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lifting-elctromagnet-on-excavator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lifting-elctromagnet-on-excavator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg_slider_fa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg_slider_fa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot (576)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot (576)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flat armature" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flat armature.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_3d_geometric_abstract_background_6815669" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_3d_geometric_abstract_background_6815669.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Inkedplunger_LI2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inkedplunger_LI2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="horse she" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\horse she.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="flat armature1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flat armature1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,43 +193,25 @@
   <data name="Inkedplunger_LI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inkedplunger_LI.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Screenshot (567)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot (567).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg_slider_fa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg_slider_fa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="تصویر زمینه فانتزی (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\تصویر زمینه فانتزی (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flat armature" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flat armature.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Screenshot (568)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot (568).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="w2kcfslsblm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\w2kcfslsblm1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="singlepahse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\singlepahse.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="universe-space-beautiful-background-great-for-your-vector-4481504" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\universe-space-beautiful-background-great-for-your-vector-4481504.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FlatArmature" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FlatArmature.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lifting-elctromagnet-on-excavator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lifting-elctromagnet-on-excavator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2241257" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2241257.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="universe-space-beautiful-background-great-for-your-vector-4481504" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\universe-space-beautiful-background-great-for-your-vector-4481504.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Screenshot (578)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot (578).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="horse shoe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\horse shoe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Screenshot (572)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot (572).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Screenshot (585)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot (585).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot (583)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot (583).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transformer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transformer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

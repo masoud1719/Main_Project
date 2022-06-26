@@ -286,5 +286,26 @@
   <ItemGroup>
     <None Include="Resources\Screenshot %28572%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %28576%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %28576%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %28578%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %28579%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %28583%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %28585%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transformer.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

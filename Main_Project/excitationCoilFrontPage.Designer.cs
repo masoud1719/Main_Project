@@ -37,7 +37,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.pictureBox1.Image = global::Main_Project.Properties.Resources.Screenshot__566_;
-            this.pictureBox1.Location = new System.Drawing.Point(170, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(205, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(640, 471);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -47,7 +47,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button1.Location = new System.Drawing.Point(420, 495);
+            this.button1.Location = new System.Drawing.Point(459, 508);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 55);
             this.button1.TabIndex = 36;
@@ -64,7 +64,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "excitationCoilFrontPage";
-            this.Size = new System.Drawing.Size(991, 575);
+            this.Size = new System.Drawing.Size(1050, 616);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
