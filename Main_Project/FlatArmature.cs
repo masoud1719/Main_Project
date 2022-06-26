@@ -116,9 +116,9 @@ namespace testmna
         private double actualMMF;
 
 
-        private List<double> errors = new List<double>();
-        private List<double> mmfs = new List<double>();
-        private List<double> hratios = new List<double>();
+        private List<double> errors ;
+        private List<double> mmfs ;
+        private List<double> hratios;
 
 
 
@@ -258,6 +258,7 @@ namespace testmna
 
             chkDutyCycle.SelectedIndex = 0;
             wireGauge.SelectedIndex = 0;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
 
@@ -282,8 +283,10 @@ namespace testmna
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
 
+            errors = new List<double>();
+            hratios = new List<double>();
+            mmfs = new List<double>();
             getValues();
             for (int i = 0; i < iteration; i++)
             {
@@ -497,7 +500,7 @@ namespace testmna
             lbldc.Text = "= " + Convert.ToString(string.Format("{0:0.00}", dc));
 
 
-
+            dataGridView3.Rows.Clear();
 
             dataGridView3.Rows.Add("  pho2", "  ohm_cm", string.Format("  {0:0.00000000}", pho2));
 
@@ -538,8 +541,11 @@ namespace testmna
             dataGridView3.Rows.Add("  I", "  Amper", string.Format("  {0:0.0000}", I));
 
             dataGridView3.Rows.Add("  actualMMF", "  A", string.Format("  {0:0}", actualMMF));
+            dataGridView3.Rows.Add("  index", " ", string.Format("  {0:0}", SWGAWGBWGIndex));
 
-
+            chart1.Series["error"].Points.Clear();
+            chart2.Series["mmf"].Points.Clear();
+            chart3.Series["HeighttoDepthRatio"].Points.Clear();
             for (int i = 0; i < errors.Count; i++)
             {
                 chart1.Series["error"].Points.AddXY(i, errors[i]);
