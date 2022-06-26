@@ -223,5 +223,68 @@
   <ItemGroup>
     <None Include="Resources\Screenshot %28567%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horse she.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plunger_3D_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %28566%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlepahse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w2kcfslsblm1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flat armature1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-icon-placed-in-blue-circle-vector-23387008.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-icon-placed-in-blue-circle-vector-233870081.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horse shoe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inkedplunger_LI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inkedplunger_LI1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inkedplunger_LI2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2241257.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_slider_fa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\575082898_UThiarGRmUpXP0Vsed5CrJZO6Nn8f6LNTaHYpE3p9c4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصویر زمینه فانتزی %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lab-hall-low.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifting-elctromagnet-on-excavator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\universe-space-beautiful-background-great-for-your-vector-4481504.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_3d_geometric_abstract_background_6815669.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %28572%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

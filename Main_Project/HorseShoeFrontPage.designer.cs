@@ -29,102 +29,110 @@ namespace Main
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.lblForce = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.HorseShoe_c = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtStroke = new System.Windows.Forms.TextBox();
             this.txtForce = new System.Windows.Forms.TextBox();
             this.comboBoxForce = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblForce
-            // 
-            this.lblForce.AutoSize = true;
-            this.lblForce.Location = new System.Drawing.Point(367, 400);
-            this.lblForce.Name = "lblForce";
-            this.lblForce.Size = new System.Drawing.Size(0, 15);
-            this.lblForce.TabIndex = 15;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(241, 498);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Calculate";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(148, 454);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 15);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Stroke (g)";
-            // 
-            // txtStroke
-            // 
-            this.txtStroke.Location = new System.Drawing.Point(241, 451);
-            this.txtStroke.Name = "txtStroke";
-            this.txtStroke.Size = new System.Drawing.Size(100, 23);
-            this.txtStroke.TabIndex = 12;
-            // 
-            // txtForce
-            // 
-            this.txtForce.Location = new System.Drawing.Point(241, 392);
-            this.txtForce.Name = "txtForce";
-            this.txtForce.Size = new System.Drawing.Size(100, 23);
-            this.txtForce.TabIndex = 11;
-            // 
-            // comboBoxForce
-            // 
-            this.comboBoxForce.FormattingEnabled = true;
-            this.comboBoxForce.Items.AddRange(new object[] {
-            "Mass",
-            "Force"});
-            this.comboBoxForce.Location = new System.Drawing.Point(85, 392);
-            this.comboBoxForce.Name = "comboBoxForce";
-            this.comboBoxForce.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxForce.TabIndex = 10;
-            this.comboBoxForce.SelectedIndexChanged += new System.EventHandler(this.comboBoxForce_SelectedIndexChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(513, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(340, 188);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 86);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(369, 463);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 15);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "متن مورد نطر برای هورس شو اینجا باید اضافه شود";
+            this.label1.Size = new System.Drawing.Size(25, 16);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "cm";
             // 
-            // UserControl1
+            // lblForce
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.lblForce.AutoSize = true;
+            this.lblForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblForce.Location = new System.Drawing.Point(369, 422);
+            this.lblForce.Name = "lblForce";
+            this.lblForce.Size = new System.Drawing.Size(23, 16);
+            this.lblForce.TabIndex = 22;
+            this.lblForce.Text = "Kg";
+            // 
+            // HorseShoe_c
+            // 
+            this.HorseShoe_c.BackColor = System.Drawing.Color.DarkSalmon;
+            this.HorseShoe_c.Location = new System.Drawing.Point(152, 503);
+            this.HorseShoe_c.Name = "HorseShoe_c";
+            this.HorseShoe_c.Size = new System.Drawing.Size(140, 55);
+            this.HorseShoe_c.TabIndex = 21;
+            this.HorseShoe_c.Text = "Calculate";
+            this.HorseShoe_c.UseVisualStyleBackColor = false;
+            this.HorseShoe_c.Click += new System.EventHandler(this.HorseShoe_c_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(127, 463);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Stroke (g)";
+            // 
+            // txtStroke
+            // 
+            this.txtStroke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtStroke.Location = new System.Drawing.Point(233, 460);
+            this.txtStroke.Name = "txtStroke";
+            this.txtStroke.Size = new System.Drawing.Size(114, 22);
+            this.txtStroke.TabIndex = 19;
+            // 
+            // txtForce
+            // 
+            this.txtForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtForce.Location = new System.Drawing.Point(233, 420);
+            this.txtForce.Name = "txtForce";
+            this.txtForce.Size = new System.Drawing.Size(114, 22);
+            this.txtForce.TabIndex = 18;
+            // 
+            // comboBoxForce
+            // 
+            this.comboBoxForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboBoxForce.FormattingEnabled = true;
+            this.comboBoxForce.Items.AddRange(new object[] {
+            "Mass",
+            "Force"});
+            this.comboBoxForce.Location = new System.Drawing.Point(89, 418);
+            this.comboBoxForce.Name = "comboBoxForce";
+            this.comboBoxForce.Size = new System.Drawing.Size(103, 24);
+            this.comboBoxForce.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Main_Project.Properties.Resources.horse_she;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1037, 591);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // HorseShoeFrontPage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblForce);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.HorseShoe_c);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtStroke);
             this.Controls.Add(this.txtForce);
             this.Controls.Add(this.comboBoxForce);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(907, 557);
-            this.Load += new System.EventHandler(this.UserControl1_Load);
+            this.Name = "HorseShoeFrontPage";
+            this.Size = new System.Drawing.Size(1037, 594);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,14 +140,13 @@ namespace Main
         }
 
         #endregion
-
+        private PictureBox pictureBox1;
+        private Label label1;
         private Label lblForce;
-        private Button button1;
+        private Button HorseShoe_c;
         private Label label2;
         private TextBox txtStroke;
         private TextBox txtForce;
         private ComboBox comboBoxForce;
-        private PictureBox pictureBox1;
-        private Label label1;
     }
 }

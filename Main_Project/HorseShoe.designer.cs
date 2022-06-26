@@ -61,6 +61,17 @@
             this.btncalc = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblPicN2 = new System.Windows.Forms.Label();
+            this.lbldc = new System.Windows.Forms.Label();
+            this.lblPicT1 = new System.Windows.Forms.Label();
+            this.lblPicStroke = new System.Windows.Forms.Label();
+            this.lblPicT = new System.Windows.Forms.Label();
+            this.lblPicT2 = new System.Windows.Forms.Label();
+            this.lblPicr2 = new System.Windows.Forms.Label();
+            this.lblD = new System.Windows.Forms.Label();
+            this.lblPicH = new System.Windows.Forms.Label();
+            this.lblPicr1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.txtArmetureLeacageFactor = new System.Windows.Forms.TextBox();
@@ -118,25 +129,14 @@
             this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblPicr1 = new System.Windows.Forms.Label();
-            this.lblPicH = new System.Windows.Forms.Label();
-            this.lblPicN2 = new System.Windows.Forms.Label();
-            this.lblPicr2 = new System.Windows.Forms.Label();
-            this.lblPT2 = new System.Windows.Forms.Label();
-            this.lblPict = new System.Windows.Forms.Label();
-            this.lblPicStroke = new System.Windows.Forms.Label();
-            this.lblPT1 = new System.Windows.Forms.Label();
-            this.lbldc = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label15
@@ -412,7 +412,6 @@
             this.btnExport.TabIndex = 85;
             this.btnExport.Text = "Export as PDF";
             this.btnExport.UseVisualStyleBackColor = true;
-
             // 
             // btncalc
             // 
@@ -437,14 +436,14 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.lbldc);
-            this.tabPage1.Controls.Add(this.lblPT1);
-            this.tabPage1.Controls.Add(this.lblPicStroke);
-            this.tabPage1.Controls.Add(this.lblPict);
-            this.tabPage1.Controls.Add(this.lblPT2);
-            this.tabPage1.Controls.Add(this.lblPicr2);
             this.tabPage1.Controls.Add(this.lblPicN2);
+            this.tabPage1.Controls.Add(this.lbldc);
+            this.tabPage1.Controls.Add(this.lblPicT1);
+            this.tabPage1.Controls.Add(this.lblPicStroke);
+            this.tabPage1.Controls.Add(this.lblPicT);
+            this.tabPage1.Controls.Add(this.lblPicT2);
+            this.tabPage1.Controls.Add(this.lblPicr2);
+            this.tabPage1.Controls.Add(this.lblD);
             this.tabPage1.Controls.Add(this.lblPicH);
             this.tabPage1.Controls.Add(this.lblPicr1);
             this.tabPage1.Controls.Add(this.pictureBox1);
@@ -456,6 +455,109 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lblPicN2
+            // 
+            this.lblPicN2.AutoSize = true;
+            this.lblPicN2.Location = new System.Drawing.Point(32, 290);
+            this.lblPicN2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblPicN2.Name = "lblPicN2";
+            this.lblPicN2.Size = new System.Drawing.Size(59, 16);
+            this.lblPicN2.TabIndex = 156;
+            this.lblPicN2.Text = "(0 Turns)";
+            // 
+            // lbldc
+            // 
+            this.lbldc.AutoSize = true;
+            this.lbldc.Location = new System.Drawing.Point(253, 24);
+            this.lbldc.Name = "lbldc";
+            this.lbldc.Size = new System.Drawing.Size(21, 16);
+            this.lbldc.TabIndex = 107;
+            this.lbldc.Text = "=0";
+            // 
+            // lblPicT1
+            // 
+            this.lblPicT1.AutoSize = true;
+            this.lblPicT1.Location = new System.Drawing.Point(547, 71);
+            this.lblPicT1.Name = "lblPicT1";
+            this.lblPicT1.Size = new System.Drawing.Size(21, 16);
+            this.lblPicT1.TabIndex = 106;
+            this.lblPicT1.Text = "=0";
+            // 
+            // lblPicStroke
+            // 
+            this.lblPicStroke.AutoSize = true;
+            this.lblPicStroke.Location = new System.Drawing.Point(547, 123);
+            this.lblPicStroke.Name = "lblPicStroke";
+            this.lblPicStroke.Size = new System.Drawing.Size(21, 16);
+            this.lblPicStroke.TabIndex = 105;
+            this.lblPicStroke.Text = "=0";
+            // 
+            // lblPicT
+            // 
+            this.lblPicT.AutoSize = true;
+            this.lblPicT.Location = new System.Drawing.Point(527, 153);
+            this.lblPicT.Name = "lblPicT";
+            this.lblPicT.Size = new System.Drawing.Size(21, 16);
+            this.lblPicT.TabIndex = 104;
+            this.lblPicT.Text = "=0";
+            // 
+            // lblPicT2
+            // 
+            this.lblPicT2.AutoSize = true;
+            this.lblPicT2.Location = new System.Drawing.Point(527, 410);
+            this.lblPicT2.Name = "lblPicT2";
+            this.lblPicT2.Size = new System.Drawing.Size(21, 16);
+            this.lblPicT2.TabIndex = 103;
+            this.lblPicT2.Text = "=0";
+            // 
+            // lblPicr2
+            // 
+            this.lblPicr2.AutoSize = true;
+            this.lblPicr2.Location = new System.Drawing.Point(218, 439);
+            this.lblPicr2.Name = "lblPicr2";
+            this.lblPicr2.Size = new System.Drawing.Size(21, 16);
+            this.lblPicr2.TabIndex = 102;
+            this.lblPicr2.Text = "=0";
+            // 
+            // lblD
+            // 
+            this.lblD.AutoSize = true;
+            this.lblD.Location = new System.Drawing.Point(334, 439);
+            this.lblD.Name = "lblD";
+            this.lblD.Size = new System.Drawing.Size(21, 16);
+            this.lblD.TabIndex = 101;
+            this.lblD.Text = "=0";
+            // 
+            // lblPicH
+            // 
+            this.lblPicH.AutoSize = true;
+            this.lblPicH.Location = new System.Drawing.Point(527, 273);
+            this.lblPicH.Name = "lblPicH";
+            this.lblPicH.Size = new System.Drawing.Size(21, 16);
+            this.lblPicH.TabIndex = 100;
+            this.lblPicH.Text = "=0";
+            // 
+            // lblPicr1
+            // 
+            this.lblPicr1.AutoSize = true;
+            this.lblPicr1.Location = new System.Drawing.Point(449, 439);
+            this.lblPicr1.Name = "lblPicr1";
+            this.lblPicr1.Size = new System.Drawing.Size(21, 16);
+            this.lblPicr1.TabIndex = 99;
+            this.lblPicr1.Text = "=0";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Main_Project.Properties.Resources.Screenshot__567_;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(621, 467);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // tabPage2
             // 
@@ -1051,109 +1153,6 @@
             this.value.MinimumWidth = 6;
             this.value.Name = "value";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Main_Project.Properties.Resources.Screenshot__567_;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(621, 467);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblPicr1
-            // 
-            this.lblPicr1.AutoSize = true;
-            this.lblPicr1.Location = new System.Drawing.Point(449, 439);
-            this.lblPicr1.Name = "lblPicr1";
-            this.lblPicr1.Size = new System.Drawing.Size(21, 16);
-            this.lblPicr1.TabIndex = 99;
-            this.lblPicr1.Text = "=0";
-            // 
-            // lblPicH
-            // 
-            this.lblPicH.AutoSize = true;
-            this.lblPicH.Location = new System.Drawing.Point(527, 273);
-            this.lblPicH.Name = "lblPicH";
-            this.lblPicH.Size = new System.Drawing.Size(21, 16);
-            this.lblPicH.TabIndex = 100;
-            this.lblPicH.Text = "=0";
-            // 
-            // lblPicN2
-            // 
-            this.lblPicN2.AutoSize = true;
-            this.lblPicN2.Location = new System.Drawing.Point(334, 439);
-            this.lblPicN2.Name = "lblPicN2";
-            this.lblPicN2.Size = new System.Drawing.Size(21, 16);
-            this.lblPicN2.TabIndex = 101;
-            this.lblPicN2.Text = "=0";
-            // 
-            // lblPicr2
-            // 
-            this.lblPicr2.AutoSize = true;
-            this.lblPicr2.Location = new System.Drawing.Point(218, 439);
-            this.lblPicr2.Name = "lblPicr2";
-            this.lblPicr2.Size = new System.Drawing.Size(21, 16);
-            this.lblPicr2.TabIndex = 102;
-            this.lblPicr2.Text = "=0";
-            // 
-            // lblPT2
-            // 
-            this.lblPT2.AutoSize = true;
-            this.lblPT2.Location = new System.Drawing.Point(527, 410);
-            this.lblPT2.Name = "lblPT2";
-            this.lblPT2.Size = new System.Drawing.Size(21, 16);
-            this.lblPT2.TabIndex = 103;
-            this.lblPT2.Text = "=0";
-            // 
-            // lblPict
-            // 
-            this.lblPict.AutoSize = true;
-            this.lblPict.Location = new System.Drawing.Point(527, 153);
-            this.lblPict.Name = "lblPict";
-            this.lblPict.Size = new System.Drawing.Size(21, 16);
-            this.lblPict.TabIndex = 104;
-            this.lblPict.Text = "=0";
-            // 
-            // lblPicStroke
-            // 
-            this.lblPicStroke.AutoSize = true;
-            this.lblPicStroke.Location = new System.Drawing.Point(547, 123);
-            this.lblPicStroke.Name = "lblPicStroke";
-            this.lblPicStroke.Size = new System.Drawing.Size(21, 16);
-            this.lblPicStroke.TabIndex = 105;
-            this.lblPicStroke.Text = "=0";
-            // 
-            // lblPT1
-            // 
-            this.lblPT1.AutoSize = true;
-            this.lblPT1.Location = new System.Drawing.Point(547, 71);
-            this.lblPT1.Name = "lblPT1";
-            this.lblPT1.Size = new System.Drawing.Size(21, 16);
-            this.lblPT1.TabIndex = 106;
-            this.lblPT1.Text = "=0";
-            // 
-            // lbldc
-            // 
-            this.lbldc.AutoSize = true;
-            this.lbldc.Location = new System.Drawing.Point(253, 24);
-            this.lbldc.Name = "lbldc";
-            this.lbldc.Size = new System.Drawing.Size(21, 16);
-            this.lbldc.TabIndex = 107;
-            this.lbldc.Text = "=0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 290);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 16);
-            this.label5.TabIndex = 156;
-            this.label5.Text = "(0 Turns)";
-            // 
             // HorseShoe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1213,12 +1212,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1314,15 +1313,15 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbldc;
-        private System.Windows.Forms.Label lblPT1;
+        private System.Windows.Forms.Label lblPicT1;
         private System.Windows.Forms.Label lblPicStroke;
-        private System.Windows.Forms.Label lblPict;
-        private System.Windows.Forms.Label lblPT2;
+        private System.Windows.Forms.Label lblPicT;
+        private System.Windows.Forms.Label lblPicT2;
         private System.Windows.Forms.Label lblPicr2;
-        private System.Windows.Forms.Label lblPicN2;
+        private System.Windows.Forms.Label lblD;
         private System.Windows.Forms.Label lblPicH;
         private System.Windows.Forms.Label lblPicr1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPicN2;
     }
 }
 

@@ -24,7 +24,7 @@ namespace Main
             getValues();
             double indexNumber = Math.Sqrt(mass) / stroke;
             bool isMass = comboBoxForce.SelectedIndex == 0;
-            MainForm.openForm(indexNumber, Type.FlatArmature, mass, stroke *100, isMass);
+            MainForm.openForm(indexNumber, Type.FlatArmature, mass, stroke * 100, isMass);
         }
 
         private void getValues()
@@ -41,7 +41,8 @@ namespace Main
             }
         }
 
-        private void comboBoxForce_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void comboBoxForce_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (comboBoxForce.SelectedIndex == 0)
             {

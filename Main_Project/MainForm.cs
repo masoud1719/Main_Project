@@ -29,6 +29,11 @@ namespace Main
             splitContainer1.Panel2.Controls.Add(new HorseShoeFrontPage());
         }
 
+        internal static void HorseShoe()
+        {
+            throw new NotImplementedException();
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             splitContainer1.Panel2.Controls.Clear();
@@ -175,6 +180,8 @@ namespace Main
             }
         }
 
+        
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             splitContainer1.Panel2.Controls.Clear();
@@ -204,5 +211,7 @@ namespace Main
             Exsitationcoil f = new Exsitationcoil();
             f.ShowDialog();
         }
+
+       
     }
 }

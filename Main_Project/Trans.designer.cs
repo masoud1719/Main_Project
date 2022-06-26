@@ -30,6 +30,9 @@ namespace trans_1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinglePhaseTransformer));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.combo_structure = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,6 +67,7 @@ namespace trans_1
             this.txt_tr = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_kFactor = new System.Windows.Forms.TextBox();
             this.txtSLL = new System.Windows.Forms.MaskedTextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.txt_Stackingfactor = new System.Windows.Forms.MaskedTextBox();
@@ -146,13 +150,32 @@ namespace trans_1
             this.label43 = new System.Windows.Forms.Label();
             this.txt_doLv = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.txt_kFactor = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label_L = new System.Windows.Forms.Label();
+            this.label_H = new System.Windows.Forms.Label();
+            this.label_w = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblPT2 = new System.Windows.Forms.Label();
+            this.lblPicr2 = new System.Windows.Forms.Label();
+            this.lblPicN2 = new System.Windows.Forms.Label();
+            this.lblPicr1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Parameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -359,6 +382,13 @@ namespace trans_1
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // txt_kFactor
+            // 
+            resources.ApplyResources(this.txt_kFactor, "txt_kFactor");
+            this.txt_kFactor.Name = "txt_kFactor";
+            this.txt_kFactor.TextChanged += new System.EventHandler(this.txt_kFactor_TextChanged);
+            this.txt_kFactor.Validated += new System.EventHandler(this.txt_kFactor_Validated);
             // 
             // txtSLL
             // 
@@ -901,17 +931,137 @@ namespace trans_1
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
             // 
-            // txt_kFactor
+            // tabControl1
             // 
-            resources.ApplyResources(this.txt_kFactor, "txt_kFactor");
-            this.txt_kFactor.Name = "txt_kFactor";
-            this.txt_kFactor.TextChanged += new System.EventHandler(this.txt_kFactor_TextChanged);
-            this.txt_kFactor.Validated += new System.EventHandler(this.txt_kFactor_Validated);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label_L);
+            this.tabPage1.Controls.Add(this.label_H);
+            this.tabPage1.Controls.Add(this.label_w);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.lblPT2);
+            this.tabPage1.Controls.Add(this.lblPicr2);
+            this.tabPage1.Controls.Add(this.lblPicN2);
+            this.tabPage1.Controls.Add(this.lblPicr1);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label_L
+            // 
+            resources.ApplyResources(this.label_L, "label_L");
+            this.label_L.Name = "label_L";
+            // 
+            // label_H
+            // 
+            resources.ApplyResources(this.label_H, "label_H");
+            this.label_H.Name = "label_H";
+            // 
+            // label_w
+            // 
+            resources.ApplyResources(this.label_w, "label_w");
+            this.label_w.Name = "label_w";
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::Main_Project.Properties.Resources.Screenshot__572_;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblPT2
+            // 
+            resources.ApplyResources(this.lblPT2, "lblPT2");
+            this.lblPT2.Name = "lblPT2";
+            // 
+            // lblPicr2
+            // 
+            resources.ApplyResources(this.lblPicr2, "lblPicr2");
+            this.lblPicr2.Name = "lblPicr2";
+            // 
+            // lblPicN2
+            // 
+            resources.ApplyResources(this.lblPicN2, "lblPicN2");
+            this.lblPicN2.Name = "lblPicN2";
+            // 
+            // lblPicr1
+            // 
+            resources.ApplyResources(this.lblPicr1, "lblPicr1");
+            this.lblPicr1.Name = "lblPicr1";
+            // 
+            // tabPage2
+            // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Parameter,
+            this.unit,
+            this.value});
+            resources.ApplyResources(this.dataGridView3, "dataGridView3");
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 25;
+            // 
+            // Parameter
+            // 
+            this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.Parameter, "Parameter");
+            this.Parameter.Name = "Parameter";
+            this.Parameter.ReadOnly = true;
+            // 
+            // unit
+            // 
+            this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.unit, "unit");
+            this.unit.Name = "unit";
+            // 
+            // value
+            // 
+            this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle3;
+            resources.ApplyResources(this.value, "value");
+            this.value.Name = "value";
             // 
             // SinglePhaseTransformer
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label57);
             this.Controls.Add(this.txtWcu);
             this.Controls.Add(this.label58);
@@ -968,6 +1118,11 @@ namespace trans_1
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1092,5 +1247,21 @@ namespace trans_1
         private TextBox txt_doLv;
         private GroupBox groupBox6;
         private TextBox txt_kFactor;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private Label label_L;
+        private Label label_H;
+        private Label label_w;
+        private PictureBox pictureBox1;
+        private Label lblPT2;
+        private Label lblPicr2;
+        private Label lblPicN2;
+        private Label lblPicr1;
+        private TabPage tabPage2;
+        private Button button2;
+        private DataGridView dataGridView3;
+        private DataGridViewTextBoxColumn Parameter;
+        private DataGridViewTextBoxColumn unit;
+        private DataGridViewTextBoxColumn value;
     }
 }

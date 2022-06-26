@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Excitation_Coil
@@ -10,7 +11,158 @@ namespace Excitation_Coil
             InitializeComponent();
         }
 
+        private int SWGAWGBWGIndex = -1;
+
+        private List<double> swgInsulations = new List<double>();
+        private List<double> awgInsulations = new List<double>();
+
+
+        private List<double> errors = new List<double>();
+        private List<double> mmfs = new List<double>();
+        private List<double> hratios = new List<double>();
+
+
+
+
+        private double W;
+        private double L;
+        private double H;
+
+
+       private void cretwAWGInsulation()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                awgInsulations.Add(0.41);
+            }
+
+            awgInsulations.Add(0.4);
+
+            awgInsulations.Add(0.4);
+
+            awgInsulations.Add(0.4);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+
+
+            for (int i = 23; i < 37; i++)
+            {
+                awgInsulations.Add(0.25);
+            }
+
+            for (int i = 37; i < 41; i++)
+            {
+                awgInsulations.Add(0.2);
+            }
+        }
+
+        private void creteSWGInsulations()
+        {
+            for (int i = 0; i < 16; i++)
+            {
+
+                swgInsulations.Add(0.074);
+
+            }
+
+            swgInsulations.Add(0.075);
+
+            swgInsulations.Add(0.075);
+
+            swgInsulations.Add(0.075);
+
+            swgInsulations.Add(0.263);
+
+            swgInsulations.Add(0.263);
+
+            swgInsulations.Add(0.05);
+
+            swgInsulations.Add(0.05);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.033);
+
+            swgInsulations.Add(0.033);
+
+            swgInsulations.Add(0.033);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.013);
+
+            swgInsulations.Add(0.013);
+        }
+
+
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+
+            wireGauge.SelectedIndex = 0;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void Exsitationcoil_Load(object sender, EventArgs e)
         {
             
         }
@@ -88,14 +240,14 @@ namespace Excitation_Coil
         {
             maskedTextBox10.Enabled = false;
             maskedTextBox11.Enabled = false;
-            comboBox3.Enabled = false;
+            wireGauge.Enabled = false;
 
             if (radioButton8.Checked)
                 maskedTextBox10.Enabled = true;
             else if (radioButton9.Checked)
                 maskedTextBox11.Enabled = true;
             else
-                comboBox3.Enabled = true;
+                wireGauge.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -162,7 +314,7 @@ namespace Excitation_Coil
 
 
 
-            var H = Double.Parse(maskedTextBox5.Text);
+            H = Double.Parse(maskedTextBox5.Text);
 
 
 
@@ -181,8 +333,8 @@ namespace Excitation_Coil
             }
             else
             {
-                var L = Double.Parse(maskedTextBox7.Text);
-                var W = Double.Parse(maskedTextBox6.Text);
+                L = Double.Parse(maskedTextBox7.Text);
+                W = Double.Parse(maskedTextBox6.Text);
 
 
 
@@ -226,7 +378,32 @@ namespace Excitation_Coil
 
 
             else
-                di = 0; // todo calc from SWG table!
+            {
+                double fileD;
+                if (wireGauge.SelectedIndex == 0)
+                {
+                    fileD = getDFromFile(@"Resources\\SWG.txt", d);
+                }
+                else if (wireGauge.SelectedIndex == 1)
+                {
+                    fileD = getDFromFile(@"Resources\\AWG.txt", d);
+                }
+                else
+                {
+                    fileD = getDFromFile(@"Resources\\BWG.txt", d);
+                }
+
+
+
+                double plus = 0.2;
+                if (wireGauge.SelectedIndex == 0 || wireGauge.SelectedIndex == 1)
+                {
+                    plus = swgInsulations[SWGAWGBWGIndex];
+                }
+
+                di = (fileD * 10) + plus;
+            }
+                
 
 
 
@@ -296,6 +473,24 @@ namespace Excitation_Coil
 
 
 
+
+
+
+
+
+
+            label_w.Text = "= " + Convert.ToString(string.Format("{0:0.00}", W));
+
+            label_L.Text = "= " + Convert.ToString(string.Format("{0:0.00}", L));
+
+            label_H.Text = "= " + Convert.ToString(string.Format("{0:0.00}", H));
+
+
+
+
+
+
+
             dgv_result_dim.Rows.Clear();
             dgv_result_elec.Rows.Clear();
 
@@ -322,6 +517,11 @@ namespace Excitation_Coil
             dgv_result_elec.Rows.Add("HD", Math.Round(HD, 3) + "   watt/cm^2");
             dgv_result_elec.Rows.Add("mmf new", Math.Round(mmf_new, 4) + "   A");
             
+        }
+
+        private double getDFromFile(string v, double d)
+        {
+            throw new NotImplementedException();
         }
 
         private void dgv_result_dim_CellContentClick(object sender, DataGridViewCellEventArgs e)

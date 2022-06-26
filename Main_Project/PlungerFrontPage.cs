@@ -55,5 +55,7 @@ namespace Main
             stroke = Double.Parse(txtStroke.Text);
             stroke *= Math.Pow(10, -2);
         }
+
+       
     }
 }

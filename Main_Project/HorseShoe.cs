@@ -86,6 +86,8 @@ namespace second
         private double lmt;
         private double R;
         private double I;
+        private double D;
+        private double W;
 
 
 
@@ -244,208 +246,6 @@ namespace second
         }
 
 
-
-        
-
-
-
-
-
-        
-
-        private void btncalc_Click(object sender, EventArgs e, int SWGAWGBWGIndex)
-        {
-            getValues();
-            // addad shakhes ra hesab mikonim
-            double IndexNumber = Math.Sqrt(force) / stroke;
-
-
-
-            double Bg = getModel(@"Resources\\Bg.txt").Interpolate(IndexNumber);
-
-            // A....m^2
-            double areaofEachPoleFace = ((force * u0) / (0.102 * Math.Pow(Bg, 2)));
-
-            // W......m
-            double widthofPoleFace = Math.Sqrt(areaofEachPoleFace);
-
-            // sqrA * sqrA.........m^2
-            double actualAreaofPoleFace = widthofPoleFace * widthofPoleFace;
-
-
-            double fluxIntheAirGap = actualAreaofPoleFace * Bg;
-
-            // wb
-            double fluxatTheBaseofPoles = yokeLeakageFactor * fluxIntheAirGap;
-
-
-            double areaofPoleCore = fluxatTheBaseofPoles / fluxDensityofCore;
-
-            //r1..........mm
-            radiusofPoleCore = Math.Sqrt(areaofPoleCore / Math.PI) *1000;
-
-
-            // 1.1 ---- 1.2
-            double value = nextIterVal == 0 ? 1.1 : nextIterVal;
-            double mmf = 16e5 * stroke / 100 * Bg * 1.1;
-
-
-
-
-
-            double pho = 2.1e-6;
-
-
-            double RT1 = 234.5 + 75;
-
-
-            double RT2 = 234.5 + (temp + ambTemp);
-
-
-            double pho2 = pho / (RT1 / RT2);
-
-
-
-
-            if (!rdbfixTheFactor.Checked)
-            {
-                heightTODepthRation = nextIterVal == 0 ? heightTODepthRation : heightTODepthRation + nextIterVal;
-            }
-
-            hratios.Add(heightTODepthRation);
-
-
-            double lambda = getModel(@"Resources\\lambda.txt").Interpolate(temp);
-
-            //cm
-            double vahidValue = (intermittentRating * pho2 * Math.Pow(mmf, 2)) / (2 * lambda * slotSpaceFactor * temp);
-
-
-            rDiff = Math.Pow(vahidValue / (heightTODepthRation * heightTODepthRation), (double)1 / 3);
-
-
-            r2 = rDiff + radiusofPoleCore;
-
-
-            h = heightTODepthRation * rDiff;
-
-
-            t2 = (Math.Pow(radiusofPoleCore, 2) * Math.PI) / widthofPoleFace;
-
-            // d.............mm
-            d = Math.Sqrt((4 * pho2 * (radiusofPoleCore + r2) * mmf) / voltage) * 10;
-
-
-
-            double fileD;
-            if (wireGauge.SelectedIndex == 0)
-            {
-                fileD = getDFromFile(@"Resources\\SWG.txt", d);
-            }
-            else if (wireGauge.SelectedIndex == 1)
-            {
-                fileD = getDFromFile(@"Resources\\AWG.txt", d);
-            }
-            else
-            {
-                fileD = getDFromFile(@"Resources\\BWG.txt", d);
-            }
-
-
-
-            double plus = 0.2;
-            if (wireGauge.SelectedIndex == 0 || wireGauge.SelectedIndex == 1)
-            {
-                plus = swgInsulations[SWGAWGBWGIndex];
-            }
-
-            di = (fileD * 10) + plus;
-
-
-            double fluxInArmiture = armutureLeakageFactor * fluxIntheAirGap;
-
-
-            double areaofArmiture = fluxInArmiture / fluxDensityofCore;
-
-
-            t1 = areaofArmiture / (widthofPoleFace * Math.Pow(10, -3));
-
-
-            t = t2 / 2;
-
-
-            netHeightofCoil = h - (2 * coilsHeight);
-
-
-            numberofLayerDepth = (int)netHeightofCoil / (di * 10);
-
-
-            netwindingDepth = (rDiff / 10) -  (coilsTube + coilCoverThickness );
-
-
-            numberofLayerHeightWise = (int)netwindingDepth / di;
-
-
-            N = numberofLayerHeightWise * numberofLayerDepth;
-
-
-            az = (Math.PI / 4) * d * d;
-
-
-            lmt = Math.PI * (radiusofPoleCore + r2);
-
-
-            R = (pho2 * lmt * N) / az;
-
-
-            I = voltage / R;
-
-
-            double actualMMF = N * I;
-            double error = ((actualMMF - mmf) / mmf) * 100;
-            errors.Add(error);
-            if (error < accurcy)
-            {
-                // اینجا با فلت آرمیچر قرق داره
-                accurcy = error;
-            }
-            else
-            {
-                if (rdbfixTheFactor.Checked)
-                {
-                    method1.Checked = true;
-                    value = 1.2 - 1.1;
-                    nextIterVal = value / maximumIteration;
-                }
-                else if (rdbuseDefaultValue.Checked)
-                {
-                    value = heightTODepthRation - 0;
-                    nextIterVal = value / maximumIteration;
-                }
-                else
-                {
-                    value = heightTODepthRation - 3;
-                    nextIterVal = value / maximumIteration;
-                }
-
-            }
-
-
-            
-        }
-
-
-
-
-        
-
-
-
-
-
-
-
-
         private double getDFromFile(string v, double d)
         {
             throw new NotImplementedException();
@@ -467,6 +267,261 @@ namespace second
             }
             return Interpolate.CubicSpline(x.AsEnumerable(), y.AsEnumerable());
         }
+
+
+
+
+
+
+
+
+        private void btncalc_Click(object sender, EventArgs e, int SWGAWGBWGIndex)
+        {
+            getValues();
+            for(int i = 0; i < maximumIteration; i++)
+            {
+
+                // addad shakhes ra hesab mikonim
+                double IndexNumber = Math.Sqrt(force) / stroke;
+
+
+
+                double Bg = getModel(@"Resources\\Bg.txt").Interpolate(IndexNumber);
+
+                // A....m^2
+                double areaofEachPoleFace = ((force * u0) / (0.102 * Math.Pow(Bg, 2)));
+
+                // W......m
+                double widthofPoleFace = Math.Sqrt(areaofEachPoleFace);
+
+                // sqrA * sqrA.........m^2
+                double actualAreaofPoleFace = widthofPoleFace * widthofPoleFace;
+
+
+                double fluxIntheAirGap = actualAreaofPoleFace * Bg;
+
+                // wb
+                double fluxatTheBaseofPoles = yokeLeakageFactor * fluxIntheAirGap;
+
+
+                double areaofPoleCore = fluxatTheBaseofPoles / fluxDensityofCore;
+
+                //r1..........mm
+                radiusofPoleCore = Math.Sqrt(areaofPoleCore / Math.PI) * 1000;
+
+
+                // 1.1 ---- 1.2
+                double value = nextIterVal == 0 ? 1.1 : nextIterVal;
+                double mmf = 16e5 * stroke / 100 * Bg * 1.1;
+
+
+
+
+
+                double pho = 2.1e-6;
+
+
+                double RT1 = 234.5 + 75;
+
+
+                double RT2 = 234.5 + (temp + ambTemp);
+
+
+                double pho2 = pho / (RT1 / RT2);
+
+
+
+
+                if (!rdbfixTheFactor.Checked)
+                {
+                    heightTODepthRation = nextIterVal == 0 ? heightTODepthRation : heightTODepthRation + nextIterVal;
+                }
+
+                hratios.Add(heightTODepthRation);
+
+
+                double lambda = getModel(@"Resources\\lambda.txt").Interpolate(temp);
+
+                //cm
+                double vahidValue = (intermittentRating * pho2 * Math.Pow(mmf, 2)) / (2 * lambda * slotSpaceFactor * temp);
+
+
+                rDiff = Math.Pow(vahidValue / (heightTODepthRation * heightTODepthRation), (double)1 / 3);
+
+
+                r2 = rDiff + radiusofPoleCore;
+
+
+                h = heightTODepthRation * rDiff;
+
+
+                t2 = (Math.Pow(radiusofPoleCore, 2) * Math.PI) / widthofPoleFace;
+
+                // d.............mm
+                d = Math.Sqrt((4 * pho2 * (radiusofPoleCore + r2) * mmf) / voltage) * 10;
+
+
+
+                double fileD;
+                if (wireGauge.SelectedIndex == 0)
+                {
+                    fileD = getDFromFile(@"Resources\\SWG.txt", d);
+                }
+                else if (wireGauge.SelectedIndex == 1)
+                {
+                    fileD = getDFromFile(@"Resources\\AWG.txt", d);
+                }
+                else
+                {
+                    fileD = getDFromFile(@"Resources\\BWG.txt", d);
+                }
+
+
+
+                double plus = 0.2;
+                if (wireGauge.SelectedIndex == 0 || wireGauge.SelectedIndex == 1)
+                {
+                    plus = swgInsulations[SWGAWGBWGIndex];
+                }
+
+                di = (fileD * 10) + plus;
+
+
+                double fluxInArmiture = armutureLeakageFactor * fluxIntheAirGap;
+
+
+                double areaofArmiture = fluxInArmiture / fluxDensityofCore;
+
+
+                t1 = areaofArmiture / (widthofPoleFace * Math.Pow(10, -3));
+
+
+                t = t2 / 2;
+
+
+                netHeightofCoil = h - (2 * coilsHeight);
+
+
+                numberofLayerDepth = (int)netHeightofCoil / (di * 10);
+
+
+                netwindingDepth = (rDiff / 10) - (coilsTube + coilCoverThickness);
+
+
+                numberofLayerHeightWise = (int)netwindingDepth / di;
+
+
+                N = numberofLayerHeightWise * numberofLayerDepth;
+
+
+                az = (Math.PI / 4) * d * d;
+
+
+                lmt = Math.PI * (radiusofPoleCore + r2);
+
+
+                R = (pho2 * lmt * N) / az;
+
+
+                I = voltage / R;
+
+
+                double actualMMF = N * I;
+                double error = ((actualMMF - mmf) / mmf) * 100;
+                errors.Add(error);
+                if (error < accurcy)
+                {
+                    
+                    break;
+                }
+                else
+                {
+                    if (rdbfixTheFactor.Checked)
+                    {
+                        method1.Checked = true;
+                        value = 1.2 - 1.1;
+                        nextIterVal = value / maximumIteration;
+                    }
+                    else if (rdbuseDefaultValue.Checked)
+                    {
+                        value = heightTODepthRation - 0;
+                        nextIterVal = value / maximumIteration;
+                    }
+                    else
+                    {
+                        value = heightTODepthRation - 3;
+                        nextIterVal = value / maximumIteration;
+                    }
+
+                }
+
+
+            }
+
+
+
+
+            lblPicr1.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r1));
+
+            lblPicr2.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r2));
+
+            lblPicT.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t));
+
+            lblPicT1.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t1));
+
+            lblPicT2.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t2));
+
+            lblPicStroke.Text = "= " + Convert.ToString(string.Format("{0:0.00}", stroke));
+
+            lblPicN2.Text = "= " + Convert.ToString(string.Format("{0:0}", N));
+
+            lblPicH.Text = "= " + Convert.ToString(string.Format("{0:0.00}", h));
+
+            lblD.Text = "= " + Convert.ToString(string.Format("{0:0.00}", D));
+
+            lbldc.Text = "= " + Convert.ToString(string.Format("{0:0.00}", W));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
 
 
 
@@ -561,5 +616,6 @@ namespace second
             }
         }
 
+        
     }
 }
