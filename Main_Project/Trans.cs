@@ -5,6 +5,8 @@ namespace trans_1
 {
     public partial class SinglePhaseTransformer : Form
     {
+        private double maxLmtPerLi;
+        private double minLmtPerLi;
 
         private double rating;
 
@@ -402,7 +404,7 @@ namespace trans_1
 
             fluxDensity = Double.Parse(txt_Fluxdensity.Text);
 
-            delta = Double.Parse(txt_123.Text);
+            delta = Double.Parse(txt_delta.Text);
 
             temperatureRise = Double.Parse(txt_tm.Text);
 
@@ -538,6 +540,10 @@ namespace trans_1
             comboGroup.SelectedIndex = 0;
             combo_conductor.SelectedIndex = 0;
             combo_application.SelectedIndex = 0;
+            combo_Currentdensity.SelectedIndex = 0;
+            combo_Steel.SelectedIndex = 0;
+            combo_Thicknessofsteel.SelectedIndex = 0;
+            combo_insulation.SelectedIndex = 0;
         }
 
         private void combo_Ai_SelectedIndexChanged(object sender, EventArgs e)
@@ -595,11 +601,17 @@ namespace trans_1
             {
                 combo_Leakageresistancewinding.SelectedIndex = 0;
                 txt_kFactor.Text = "0.8";
+                maxLmtPerLi = 0.55;
+                minLmtPerLi = 0.3;
+                txt_LmtLi.Text = "0.4";
             }
             else
             {
                 combo_Leakageresistancewinding.SelectedIndex =1;
                 txt_kFactor.Text = "1";
+                maxLmtPerLi = 2;
+                minLmtPerLi = 1.2;
+                txt_LmtLi.Text = "1.5";
             }
         }
 
@@ -630,7 +642,19 @@ namespace trans_1
 
         private void combo_application_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (combo_application.SelectedIndex == 1)
+            {
+                combo_Currentdensity.Items.RemoveAt(2);
+                combo_Currentdensity.Items.RemoveAt(2);
+                combo_Currentdensity.Items.RemoveAt(2);
+            }
+            if(combo_application.SelectedIndex == 0 && !combo_Currentdensity.Items.Contains("AF"))
+            {
+                combo_Currentdensity.Items.Add("AF");
+                combo_Currentdensity.Items.Add("OF");
+                combo_Currentdensity.Items.Add("WF");
+                
+            }
         }
 
         private void txt_Kfactor_MaskChanged(object sender, EventArgs e)
@@ -665,6 +689,147 @@ namespace trans_1
             }
         }
 
-        
+        private void txt_LmtLi_Validated(object sender, EventArgs e)
+        {
+            if (Double.Parse(txt_LmtLi.Text) > maxLmtPerLi)
+            {
+                MessageBox.Show("the value is grater than " + $"{maxLmtPerLi}");
+                txt_LmtLi.Text = Convert.ToString(maxLmtPerLi);
+            }
+            if (Double.Parse(txt_LmtLi.Text) < minLmtPerLi)
+            {
+                MessageBox.Show("the value is less than " + $"{minLmtPerLi}");
+                txt_LmtLi.Text = Convert.ToString(minLmtPerLi);
+            }
+        }
+
+        private void combo_Currentdensity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combo_Currentdensity.SelectedIndex == 1 || combo_Currentdensity.SelectedIndex == 2)
+            {
+                txt_delta.Text = "2.5";
+            } else if (combo_Currentdensity.SelectedIndex == 3)
+            {
+                txt_delta.Text = "3.4";
+            } else if (combo_Currentdensity.SelectedIndex == 4)
+            {
+                txt_delta.Text = "6";
+            }
+        }
+
+        private void combo_Steel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combo_Steel.SelectedIndex == 7)
+            {
+                if (combo_application.SelectedIndex == 0)
+                {
+                    if (highVoltage > 0 && highVoltage < 132)
+                    {
+                        txt_Fluxdensity.Text= "1.55";
+                    } else if (highVoltage >= 132 && highVoltage < 275)
+                    {
+                        txt_Fluxdensity.Text = "1.6";
+                    }
+                    else if (highVoltage >= 275 && highVoltage < 400)
+                    {
+                        txt_Fluxdensity.Text = "1.7";
+                    }
+                    else if (highVoltage >= 400 )
+                    {
+                        txt_Fluxdensity.Text = "1.75";
+                    }
+                }
+                else
+                {
+                    txt_Fluxdensity.Text = "1.7";
+                }
+            } else if (combo_Steel.SelectedIndex != 0 && combo_Steel.SelectedIndex != 7)
+            {
+                if (combo_application.SelectedIndex == 0)
+                {
+                    txt_Fluxdensity.Text = "1.35";
+                }
+                else
+                {
+                    txt_Fluxdensity.Text = "1.3";
+                }
+            }
+        }
+
+        private void txt_Fluxdensity_Validated(object sender, EventArgs e)
+        {
+            if (combo_Steel.SelectedIndex != 0 && combo_Steel.SelectedIndex != 7)
+            {
+                if (combo_application.SelectedIndex == 0)
+                {
+                    if (Double.Parse(txt_Fluxdensity.Text) < 1.25)
+                    {
+                        MessageBox.Show("Invalid value");
+                        txt_Fluxdensity.Text = "1.25";
+                    }
+                }
+                else
+                {
+                    txt_Fluxdensity.Text = "1.3";
+                }
+            }
+        }
+
+        private void combo_Thicknessofsteel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combo_Thicknessofsteel.SelectedIndex == 0)
+            {
+                combo_insulation.Items.Remove("Heat resistance coating");
+                combo_insulation.Items.Remove("Single layer varnish+Heat resistance coating");
+            }
+            else if(combo_Thicknessofsteel.SelectedIndex != 0 && !combo_insulation.Items.Contains("Heat resistance coating"))
+            {
+                combo_insulation.Items.Add("Heat resistance coating");
+                combo_insulation.Items.Add("Single layer varnish+Heat resistance coating");
+
+            }
+        }
+
+        private void combo_insulation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combo_Thicknessofsteel.SelectedIndex == 0)
+            {
+                if (combo_insulation.SelectedIndex == 0)
+                {
+                    txt_ks.Text = "0.95";
+                }
+                else if (combo_insulation.SelectedIndex == 1)
+                {
+                    txt_ks.Text = "0.93";
+                }
+                else
+                {
+                    txt_ks.Text = "0.91";
+                }
+            }
+            else
+            {
+                if (combo_insulation.SelectedIndex == 0)
+                {
+                    txt_ks.Text = "0.93";
+                }
+                else if (combo_insulation.SelectedIndex == 1)
+                {
+                    txt_ks.Text = "0.91";
+                }
+                else if (combo_insulation.SelectedIndex ==2)
+                {
+                    txt_ks.Text = "0.8";
+                }
+                else if (combo_insulation.SelectedIndex == 3)
+                {
+                    txt_ks.Text = "0.95";
+                }
+                else if (combo_insulation.SelectedIndex == 4)
+                {
+                    txt_ks.Text = "0.93";
+                }
+            }
+        }
     }
 }

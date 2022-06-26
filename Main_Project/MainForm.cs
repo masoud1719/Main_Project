@@ -36,8 +36,7 @@ namespace Main
 
         private void button3_Click(object sender, EventArgs e)
         {
-            splitContainer1.Panel2.Controls.Clear();
-            splitContainer1.Panel2.Controls.Add(new PlungerFrontPage());
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -185,19 +184,25 @@ namespace Main
         private void MainForm_Load(object sender, EventArgs e)
         {
             splitContainer1.Panel2.Controls.Clear();
-            splitContainer1.Panel2.Controls.Add(new HomeFrontPage());
+            HomeFrontPage h = new HomeFrontPage();
+            h.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(h);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             splitContainer1.Panel2.Controls.Clear();
-            splitContainer1.Panel2.Controls.Add(new HomeFrontPage());
+            var homeFrontPage = new HomeFrontPage();
+            homeFrontPage.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(homeFrontPage);
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             splitContainer1.Panel2.Controls.Clear();
-            splitContainer1.Panel2.Controls.Add(new TransFrontPage());
+            var transFrontPage = new TransFrontPage();
+            transFrontPage.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(transFrontPage);
         }
 
         public static void openTrans()
@@ -212,6 +217,38 @@ namespace Main
             f.ShowDialog();
         }
 
-       
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            FlatArmitureFrontPage ar = new FlatArmitureFrontPage();
+            ar.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(ar);
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            var h = new HorseShoeFrontPage();
+            h.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(h);
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            var p = new PlungerFrontPage();
+            p.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(p);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+
+            var excitationCoilFrontPage = new excitationCoilFrontPage();
+            excitationCoilFrontPage.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(excitationCoilFrontPage);
+        }
     }
 }

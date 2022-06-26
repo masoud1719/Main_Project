@@ -307,5 +307,14 @@
   <ItemGroup>
     <None Include="Resources\transformer.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flat armature11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flat armature1 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flat armature1 %281%291.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

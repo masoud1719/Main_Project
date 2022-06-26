@@ -36,10 +36,12 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::Main_Project.Properties.Resources.Screenshot__566_;
-            this.pictureBox1.Location = new System.Drawing.Point(205, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(640, 471);
+            this.pictureBox1.Size = new System.Drawing.Size(788, 500);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -47,9 +49,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button1.Location = new System.Drawing.Point(459, 508);
+            this.button1.Location = new System.Drawing.Point(344, 413);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 55);
+            this.button1.Size = new System.Drawing.Size(105, 45);
             this.button1.TabIndex = 36;
             this.button1.Text = "openExcitationCoil";
             this.button1.UseVisualStyleBackColor = false;
@@ -57,14 +60,13 @@
             // 
             // excitationCoilFrontPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Main_Project.Properties.Resources.blue_3d_geometric_abstract_background_6815669;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "excitationCoilFrontPage";
-            this.Size = new System.Drawing.Size(1050, 616);
+            this.Size = new System.Drawing.Size(788, 500);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

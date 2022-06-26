@@ -30,9 +30,9 @@ namespace trans_1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinglePhaseTransformer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.combo_structure = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@ namespace trans_1
             this.txt_Fluxdensity = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.txt_123 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_delta = new System.Windows.Forms.MaskedTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.txt_tm = new System.Windows.Forms.MaskedTextBox();
@@ -81,19 +81,19 @@ namespace trans_1
             this.label5 = new System.Windows.Forms.Label();
             this.comboCrossSection = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox10 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_ks = new System.Windows.Forms.MaskedTextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.txt_Thicknessofsteel = new System.Windows.Forms.ComboBox();
+            this.combo_Thicknessofsteel = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.txt_insulation = new System.Windows.Forms.ComboBox();
+            this.combo_insulation = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_Steel = new System.Windows.Forms.ComboBox();
+            this.combo_Steel = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txt_Currentdensity = new System.Windows.Forms.ComboBox();
+            this.combo_Currentdensity = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label42 = new System.Windows.Forms.Label();
@@ -153,13 +153,13 @@ namespace trans_1
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lblPT2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Parameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -168,8 +168,8 @@ namespace trans_1
             this.groupBox6.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -212,8 +212,7 @@ namespace trans_1
             this.combo_application.FormattingEnabled = true;
             this.combo_application.Items.AddRange(new object[] {
             resources.GetString("combo_application.Items"),
-            resources.GetString("combo_application.Items1"),
-            resources.GetString("combo_application.Items2")});
+            resources.GetString("combo_application.Items1")});
             resources.ApplyResources(this.combo_application, "combo_application");
             this.combo_application.Name = "combo_application";
             this.combo_application.SelectedIndexChanged += new System.EventHandler(this.combo_application_SelectedIndexChanged);
@@ -308,6 +307,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_Fluxdensity, "txt_Fluxdensity");
             this.txt_Fluxdensity.Name = "txt_Fluxdensity";
+            this.txt_Fluxdensity.Validated += new System.EventHandler(this.txt_Fluxdensity_Validated);
             // 
             // label14
             // 
@@ -319,10 +319,10 @@ namespace trans_1
             resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
             // 
-            // txt_123
+            // txt_delta
             // 
-            resources.ApplyResources(this.txt_123, "txt_123");
-            this.txt_123.Name = "txt_123";
+            resources.ApplyResources(this.txt_delta, "txt_delta");
+            this.txt_delta.Name = "txt_delta";
             // 
             // label16
             // 
@@ -464,21 +464,21 @@ namespace trans_1
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox10);
+            this.groupBox1.Controls.Add(this.txt_ks);
             this.groupBox1.Controls.Add(this.label29);
             this.groupBox1.Controls.Add(this.label28);
-            this.groupBox1.Controls.Add(this.txt_Thicknessofsteel);
+            this.groupBox1.Controls.Add(this.combo_Thicknessofsteel);
             this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.txt_insulation);
+            this.groupBox1.Controls.Add(this.combo_insulation);
             this.groupBox1.Controls.Add(this.label23);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // maskedTextBox10
+            // txt_ks
             // 
-            resources.ApplyResources(this.maskedTextBox10, "maskedTextBox10");
-            this.maskedTextBox10.Name = "maskedTextBox10";
+            resources.ApplyResources(this.txt_ks, "txt_ks");
+            this.txt_ks.Name = "txt_ks";
             // 
             // label29
             // 
@@ -490,31 +490,33 @@ namespace trans_1
             resources.ApplyResources(this.label28, "label28");
             this.label28.Name = "label28";
             // 
-            // txt_Thicknessofsteel
+            // combo_Thicknessofsteel
             // 
-            this.txt_Thicknessofsteel.FormattingEnabled = true;
-            this.txt_Thicknessofsteel.Items.AddRange(new object[] {
-            resources.GetString("txt_Thicknessofsteel.Items"),
-            resources.GetString("txt_Thicknessofsteel.Items1")});
-            resources.ApplyResources(this.txt_Thicknessofsteel, "txt_Thicknessofsteel");
-            this.txt_Thicknessofsteel.Name = "txt_Thicknessofsteel";
+            this.combo_Thicknessofsteel.FormattingEnabled = true;
+            this.combo_Thicknessofsteel.Items.AddRange(new object[] {
+            resources.GetString("combo_Thicknessofsteel.Items"),
+            resources.GetString("combo_Thicknessofsteel.Items1")});
+            resources.ApplyResources(this.combo_Thicknessofsteel, "combo_Thicknessofsteel");
+            this.combo_Thicknessofsteel.Name = "combo_Thicknessofsteel";
+            this.combo_Thicknessofsteel.SelectedIndexChanged += new System.EventHandler(this.combo_Thicknessofsteel_SelectedIndexChanged);
             // 
             // label27
             // 
             resources.ApplyResources(this.label27, "label27");
             this.label27.Name = "label27";
             // 
-            // txt_insulation
+            // combo_insulation
             // 
-            this.txt_insulation.FormattingEnabled = true;
-            this.txt_insulation.Items.AddRange(new object[] {
-            resources.GetString("txt_insulation.Items"),
-            resources.GetString("txt_insulation.Items1"),
-            resources.GetString("txt_insulation.Items2"),
-            resources.GetString("txt_insulation.Items3"),
-            resources.GetString("txt_insulation.Items4")});
-            resources.ApplyResources(this.txt_insulation, "txt_insulation");
-            this.txt_insulation.Name = "txt_insulation";
+            this.combo_insulation.FormattingEnabled = true;
+            this.combo_insulation.Items.AddRange(new object[] {
+            resources.GetString("combo_insulation.Items"),
+            resources.GetString("combo_insulation.Items1"),
+            resources.GetString("combo_insulation.Items2"),
+            resources.GetString("combo_insulation.Items3"),
+            resources.GetString("combo_insulation.Items4")});
+            resources.ApplyResources(this.combo_insulation, "combo_insulation");
+            this.combo_insulation.Name = "combo_insulation";
+            this.combo_insulation.SelectedIndexChanged += new System.EventHandler(this.combo_insulation_SelectedIndexChanged);
             // 
             // label23
             // 
@@ -536,22 +538,21 @@ namespace trans_1
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // txt_Steel
+            // combo_Steel
             // 
-            this.txt_Steel.FormattingEnabled = true;
-            this.txt_Steel.Items.AddRange(new object[] {
-            resources.GetString("txt_Steel.Items"),
-            resources.GetString("txt_Steel.Items1"),
-            resources.GetString("txt_Steel.Items2"),
-            resources.GetString("txt_Steel.Items3"),
-            resources.GetString("txt_Steel.Items4"),
-            resources.GetString("txt_Steel.Items5"),
-            resources.GetString("txt_Steel.Items6"),
-            resources.GetString("txt_Steel.Items7"),
-            resources.GetString("txt_Steel.Items8"),
-            resources.GetString("txt_Steel.Items9")});
-            resources.ApplyResources(this.txt_Steel, "txt_Steel");
-            this.txt_Steel.Name = "txt_Steel";
+            this.combo_Steel.FormattingEnabled = true;
+            this.combo_Steel.Items.AddRange(new object[] {
+            resources.GetString("combo_Steel.Items"),
+            resources.GetString("combo_Steel.Items1"),
+            resources.GetString("combo_Steel.Items2"),
+            resources.GetString("combo_Steel.Items3"),
+            resources.GetString("combo_Steel.Items4"),
+            resources.GetString("combo_Steel.Items5"),
+            resources.GetString("combo_Steel.Items6"),
+            resources.GetString("combo_Steel.Items7")});
+            resources.ApplyResources(this.combo_Steel, "combo_Steel");
+            this.combo_Steel.Name = "combo_Steel";
+            this.combo_Steel.SelectedIndexChanged += new System.EventHandler(this.combo_Steel_SelectedIndexChanged);
             // 
             // groupBox4
             // 
@@ -565,17 +566,18 @@ namespace trans_1
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // txt_Currentdensity
+            // combo_Currentdensity
             // 
-            this.txt_Currentdensity.FormattingEnabled = true;
-            this.txt_Currentdensity.Items.AddRange(new object[] {
-            resources.GetString("txt_Currentdensity.Items"),
-            resources.GetString("txt_Currentdensity.Items1"),
-            resources.GetString("txt_Currentdensity.Items2"),
-            resources.GetString("txt_Currentdensity.Items3"),
-            resources.GetString("txt_Currentdensity.Items4")});
-            resources.ApplyResources(this.txt_Currentdensity, "txt_Currentdensity");
-            this.txt_Currentdensity.Name = "txt_Currentdensity";
+            this.combo_Currentdensity.FormattingEnabled = true;
+            this.combo_Currentdensity.Items.AddRange(new object[] {
+            resources.GetString("combo_Currentdensity.Items"),
+            resources.GetString("combo_Currentdensity.Items1"),
+            resources.GetString("combo_Currentdensity.Items2"),
+            resources.GetString("combo_Currentdensity.Items3"),
+            resources.GetString("combo_Currentdensity.Items4")});
+            resources.ApplyResources(this.combo_Currentdensity, "combo_Currentdensity");
+            this.combo_Currentdensity.Name = "combo_Currentdensity";
+            this.combo_Currentdensity.SelectedIndexChanged += new System.EventHandler(this.combo_Currentdensity_SelectedIndexChanged);
             // 
             // label30
             // 
@@ -677,6 +679,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_LmtLi, "txt_LmtLi");
             this.txt_LmtLi.Name = "txt_LmtLi";
+            this.txt_LmtLi.Validated += new System.EventHandler(this.txt_LmtLi_Validated);
             // 
             // label34
             // 
@@ -946,6 +949,13 @@ namespace trans_1
             resources.ApplyResources(this.lblPT2, "lblPT2");
             this.lblPT2.Name = "lblPT2";
             // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // tabPage2
             // 
             resources.ApplyResources(this.tabPage2, "tabPage2");
@@ -972,12 +982,12 @@ namespace trans_1
             // Parameter
             // 
             this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.Parameter, "Parameter");
             this.Parameter.Name = "Parameter";
             this.Parameter.ReadOnly = true;
@@ -985,33 +995,26 @@ namespace trans_1
             // unit
             // 
             this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle5;
             resources.ApplyResources(this.unit, "unit");
             this.unit.Name = "unit";
             // 
             // value
             // 
             this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle6;
             resources.ApplyResources(this.value, "value");
             this.value.Name = "value";
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // SinglePhaseTransformer
             // 
@@ -1030,9 +1033,9 @@ namespace trans_1
             this.Controls.Add(this.label54);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_Steel);
+            this.Controls.Add(this.combo_Steel);
             this.Controls.Add(this.label30);
-            this.Controls.Add(this.txt_Currentdensity);
+            this.Controls.Add(this.combo_Currentdensity);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label19);
@@ -1042,7 +1045,7 @@ namespace trans_1
             this.Controls.Add(this.txt_tm);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.txt_123);
+            this.Controls.Add(this.txt_delta);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txt_Fluxdensity);
@@ -1079,8 +1082,8 @@ namespace trans_1
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1113,7 +1116,7 @@ namespace trans_1
         private MaskedTextBox txt_Fluxdensity;
         private Label label14;
         private Label label15;
-        private MaskedTextBox txt_123;
+        private MaskedTextBox txt_delta;
         private Label label16;
         private Label label17;
         private MaskedTextBox txt_tm;
@@ -1129,13 +1132,13 @@ namespace trans_1
         private ComboBox comboCrossSection;
         private GroupBox groupBox1;
         private Label label3;
-        private ComboBox txt_Steel;
-        private MaskedTextBox maskedTextBox10;
+        private ComboBox combo_Steel;
+        private MaskedTextBox txt_ks;
         private Label label29;
         private Label label28;
-        private ComboBox txt_Thicknessofsteel;
+        private ComboBox combo_Thicknessofsteel;
         private Label label27;
-        private ComboBox txt_insulation;
+        private ComboBox combo_insulation;
         private Label label23;
         private MaskedTextBox txt_Kc;
         private Label label22;
@@ -1143,7 +1146,7 @@ namespace trans_1
         private Label label24;
         private MaskedTextBox txt_KwValue;
         private GroupBox groupBox4;
-        private ComboBox txt_Currentdensity;
+        private ComboBox combo_Currentdensity;
         private Label label30;
         private MaskedTextBox txt_Stackingfactor;
         private Label label31;
