@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Main_Project;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,7 +46,7 @@ namespace Main
             getValues();
             double indexNumber = Math.Sqrt(mass) / stroke;
             bool isMass = comboBoxForce.SelectedIndex == 0;
-            MainForm.openForm(indexNumber, Type.Plunger, mass, stroke * 100, isMass);
+            Vahid_MainForm.openForm(indexNumber, Type.Plunger, mass, stroke * 100, isMass);
         }
 
         private void comboBoxForce_SelectedIndexChanged(object sender, EventArgs e)

@@ -16,13 +16,10 @@ namespace Main
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            splitContainer1.Panel2.Controls.Clear();
-            splitContainer1.Panel2.Controls.Add(new FlatArmitureFrontPage());
+        
+         
 
-        }
-
+        // ok
         internal static void openTrans2()
         {
             Trans2 f = new Trans2();
@@ -35,6 +32,8 @@ namespace Main
             splitContainer1.Panel2.Controls.Add(new HorseShoeFrontPage());
         }
 
+
+
         internal static void HorseShoe()
         {
             throw new NotImplementedException();
@@ -45,12 +44,32 @@ namespace Main
             
         }
 
+
+
         private void button4_Click(object sender, EventArgs e)
         {
             splitContainer1.Panel2.Controls.Clear();
             splitContainer1.Panel2.Controls.Add(new excitationCoilFrontPage());
         }
 
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            splitContainer1.Panel2.Controls.Add(new FlatArmitureFrontPage());
+
+        }
+
+
+
+
+
+
+
+
+
+        // ok
         public static void openForm(double indexNumber, Type problemType, double force, double stroke, bool isMass)
         {
            
@@ -189,6 +208,7 @@ namespace Main
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // ok
             splitContainer1.Panel2.Controls.Clear();
             HomeFrontPage h = new HomeFrontPage();
             h.Dock = DockStyle.Fill;
@@ -197,6 +217,7 @@ namespace Main
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            // ok
             splitContainer1.Panel2.Controls.Clear();
             var homeFrontPage = new HomeFrontPage();
             homeFrontPage.Dock = DockStyle.Fill;
@@ -205,18 +226,22 @@ namespace Main
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            // ok
             splitContainer1.Panel2.Controls.Clear();
             var transFrontPage = new TransFrontPage();
             transFrontPage.Dock = DockStyle.Fill;
             splitContainer1.Panel2.Controls.Add(transFrontPage);
         }
 
+        // ok
         public static void openTrans()
         {
             SinglePhaseTransformer f = new SinglePhaseTransformer();
             f.ShowDialog();
         }
 
+
+        // ok
         public static void openExcitationCoil()
         {
             Exsitationcoil f = new Exsitationcoil();
@@ -225,6 +250,7 @@ namespace Main
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            // ok
             splitContainer1.Panel2.Controls.Clear();
             FlatArmitureFrontPage ar = new FlatArmitureFrontPage();
             ar.Dock = DockStyle.Fill;
@@ -234,6 +260,7 @@ namespace Main
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            // ok
             splitContainer1.Panel2.Controls.Clear();
             var h = new HorseShoeFrontPage();
             h.Dock = DockStyle.Fill;
@@ -242,6 +269,7 @@ namespace Main
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            // ok
             splitContainer1.Panel2.Controls.Clear();
             var p = new PlungerFrontPage();
             p.Dock = DockStyle.Fill;
@@ -250,8 +278,8 @@ namespace Main
 
         private void button5_Click(object sender, EventArgs e)
         {
+            // ok
             splitContainer1.Panel2.Controls.Clear();
-
             var excitationCoilFrontPage = new excitationCoilFrontPage();
             excitationCoilFrontPage.Dock = DockStyle.Fill;
             splitContainer1.Panel2.Controls.Add(excitationCoilFrontPage);
@@ -259,11 +287,21 @@ namespace Main
 
         private void button6_Click(object sender, EventArgs e)
         {
+            // ok
             splitContainer1.Panel2.Controls.Clear();
-
             var trans2Frontpage = new Trans2Frontpage();
             trans2Frontpage.Dock = DockStyle.Fill;
             splitContainer1.Panel2.Controls.Add(trans2Frontpage);
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -74,6 +74,7 @@
     <Compile Include="FlatArmitureFrontPage.designer.cs">
       <DependentUpon>FlatArmitureFrontPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemeColor.cs" />
     <Compile Include="Trans.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +340,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\flat armature1 %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeLogo11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlatfacedElctromagnetLogo5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HorseshoeLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlungermagnetLogo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HorseshoeLogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlatfacedElctromagnetLogo51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoilLogo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

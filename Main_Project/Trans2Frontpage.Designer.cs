@@ -33,7 +33,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(496, 165);
+            this.button2.Location = new System.Drawing.Point(453, 238);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(199, 81);
             this.button2.TabIndex = 1;
@@ -47,7 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button2);
             this.Name = "Trans2Frontpage";
-            this.Size = new System.Drawing.Size(1069, 523);
+            this.Size = new System.Drawing.Size(1073, 597);
             this.ResumeLayout(false);
 
         }

@@ -113,6 +113,16 @@ namespace Main_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CoilLogo1 {
+            get {
+                object obj = ResourceManager.GetObject("CoilLogo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CRGO {
             get {
                 object obj = ResourceManager.GetObject("CRGO", resourceCulture);
@@ -193,6 +203,26 @@ namespace Main_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FlatfacedElctromagnetLogo5 {
+            get {
+                object obj = ResourceManager.GetObject("FlatfacedElctromagnetLogo5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FlatfacedElctromagnetLogo51 {
+            get {
+                object obj = ResourceManager.GetObject("FlatfacedElctromagnetLogo51", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_icon_placed_in_blue_circle_vector_23387008 {
             get {
                 object obj = ResourceManager.GetObject("home-icon-placed-in-blue-circle-vector-23387008", resourceCulture);
@@ -263,6 +293,16 @@ namespace Main_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HomeLogo11 {
+            get {
+                object obj = ResourceManager.GetObject("HomeLogo11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap horse_she {
             get {
                 object obj = ResourceManager.GetObject("horse she", resourceCulture);
@@ -286,6 +326,26 @@ namespace Main_Project.Properties {
         internal static System.Drawing.Bitmap horse_shoe12__1_ {
             get {
                 object obj = ResourceManager.GetObject("horse shoe12 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HorseshoeLogo1 {
+            get {
+                object obj = ResourceManager.GetObject("HorseshoeLogo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HorseshoeLogo2 {
+            get {
+                object obj = ResourceManager.GetObject("HorseshoeLogo2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -406,6 +466,16 @@ namespace Main_Project.Properties {
         internal static System.Drawing.Bitmap plunger_3D_view {
             get {
                 object obj = ResourceManager.GetObject("plunger_3D_view", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PlungermagnetLogo3 {
+            get {
+                object obj = ResourceManager.GetObject("PlungermagnetLogo3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
