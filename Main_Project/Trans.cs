@@ -172,8 +172,6 @@ namespace trans_1
         private void cretwAWGInsulation()
         {
 
-            creteSWGInsulations();
-            cretwAWGInsulation();
 
             for (int i = 0; i < 10; i++)
             {
@@ -511,15 +509,15 @@ namespace trans_1
             double fileD;
             if (wireGauge.SelectedIndex == 0)
             {
-                fileD = getDFromFile(@"Resources\\SWG.txt", dHv);
+                fileD = getDFromFile(@"Resources\\SWG.txt", dHv , true);
             }
             else if (wireGauge.SelectedIndex == 1)
             {
-                fileD = getDFromFile(@"Resources\\AWG.txt", dHv);
+                fileD = getDFromFile(@"Resources\\AWG.txt", dHv, true);
             }
             else
             {
-                fileD = getDFromFile(@"Resources\\BWG.txt", dHv);
+                fileD = getDFromFile(@"Resources\\BWG.txt", dHv, true);
             }
 
 
@@ -557,15 +555,15 @@ namespace trans_1
                        
             if (wireGauge.SelectedIndex == 0)
             {
-                fileD = getDFromFile(@"Resources\\SWG.txt", dLv);
+                fileD = getDFromFile(@"Resources\\SWG.txt", dLv , false);
             }
             else if (wireGauge.SelectedIndex == 1)
             {
-                fileD = getDFromFile(@"Resources\\AWG.txt", dLv);
+                fileD = getDFromFile(@"Resources\\AWG.txt", dLv, false);
             }
             else
             {
-                fileD = getDFromFile(@"Resources\\BWG.txt", dLv);
+                fileD = getDFromFile(@"Resources\\BWG.txt", dLv, false);
             }
 
 
@@ -636,7 +634,7 @@ namespace trans_1
 
         }
 
-        private double getDFromFile(string filePath, double value)
+        private double getDFromFile(string filePath, double value, bool highVol)
         {
             var first = new List<double>();
             var second = new List<double>();
@@ -653,9 +651,15 @@ namespace trans_1
                 }
             }
             double res = second.Aggregate((x, y) => Math.Abs(x - value) < Math.Abs(y - value) ? x : y);
-            SWGAWGBWGIndex = (int)first[second.IndexOf(res)];
-            SWGAWGBWGIndexHv = (int)first[second.IndexOf(res)];
-            SWGAWGBWGIndexLv = (int)first[second.IndexOf(res)];
+            if (highVol)
+            {
+                SWGAWGBWGIndexHv = (int)first[second.IndexOf(res)];
+            }
+            else
+            {
+                SWGAWGBWGIndexLv = (int)first[second.IndexOf(res)];
+            }
+
             return res;
         }
 
@@ -820,6 +824,8 @@ namespace trans_1
 
         private void SinglePhaseTransformer_Load(object sender, EventArgs e)
         {
+            creteSWGInsulations();
+            cretwAWGInsulation();
             combo_Ai.SelectedIndex = 0;
             combo_Kw.SelectedIndex = 0;
             comboCrossSection.SelectedIndex = 0;

@@ -22,6 +22,12 @@ namespace Main_Project
         private int tempIndex;
         private Form activeForm;
 
+        internal static void openSmallTrans()
+        {
+            SmallTrans f = new SmallTrans();
+            f.ShowDialog();
+        }
+
         public Vahid_MainForm()
         {
             InitializeComponent();
@@ -93,51 +99,6 @@ namespace Main_Project
             lblTitle.Text = childForm.Text;
 
         }
-
-
-
-
-
-
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            panelDesktopPane.Controls.Clear();
-            panelDesktopPane.Controls.Add(new HorseShoeFrontPage());
-        }
-
-
-
-        internal static void HorseShoe()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            panelDesktopPane.Controls.Clear();
-            panelDesktopPane.Controls.Add(new excitationCoilFrontPage());
-        }
-
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            panelDesktopPane.Controls.Clear();
-            panelDesktopPane.Controls.Add(new FlatArmitureFrontPage());
-
-        }
-
-
-
 
 
 
@@ -308,27 +269,8 @@ namespace Main_Project
             panelDesktopPane.Controls.Add(ar);
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
 
-            panelDesktopPane.Controls.Clear();
-            var h = new HorseShoeFrontPage();
-            h.Dock = DockStyle.Fill;
-            panelDesktopPane.Controls.Add(h);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-
-            panelDesktopPane.Controls.Clear();
-            var p = new PlungerFrontPage();
-            p.Dock = DockStyle.Fill;
-            panelDesktopPane.Controls.Add(p);
-
-
-        }
+ 
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -340,30 +282,11 @@ namespace Main_Project
             panelDesktopPane.Controls.Add(excitationCoilFrontPage);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
+  
 
-            panelDesktopPane.Controls.Clear();
-            var transFrontPage = new TransFrontPage();
-            transFrontPage.Dock = DockStyle.Fill;
-            panelDesktopPane.Controls.Add(transFrontPage);
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
 
-            panelDesktopPane.Controls.Clear();
-            var trans2Frontpage = new Trans2Frontpage();
-            trans2Frontpage.Dock = DockStyle.Fill;
-            panelDesktopPane.Controls.Add(trans2Frontpage);
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-        }
+        
 
 
         public static void openTrans()
@@ -390,6 +313,56 @@ namespace Main_Project
             HomeFrontPage h = new HomeFrontPage();
             h.Dock = DockStyle.Fill;
             panelDesktopPane.Controls.Add(h);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+
+            panelDesktopPane.Controls.Clear();
+            var h = new HorseShoeFrontPage();
+            h.Dock = DockStyle.Fill;
+            panelDesktopPane.Controls.Add(h);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+
+            panelDesktopPane.Controls.Clear();
+            PlungerFrontPage ar = new PlungerFrontPage();
+            ar.Dock = DockStyle.Fill;
+            panelDesktopPane.Controls.Add(ar);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+
+            panelDesktopPane.Controls.Clear();
+            TransFrontPage ar = new TransFrontPage();
+            ar.Dock = DockStyle.Fill;
+            panelDesktopPane.Controls.Add(ar);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+
+            panelDesktopPane.Controls.Clear();
+            Trans2Frontpage ar = new Trans2Frontpage();
+            ar.Dock = DockStyle.Fill;
+            panelDesktopPane.Controls.Add(ar);
+
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+
+            panelDesktopPane.Controls.Clear();
+            SmallTransFrontPage ar = new SmallTransFrontPage();
+            ar.Dock = DockStyle.Fill;
+            panelDesktopPane.Controls.Add(ar);
         }
     }
 

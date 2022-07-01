@@ -74,6 +74,12 @@
     <Compile Include="FlatArmitureFrontPage.designer.cs">
       <DependentUpon>FlatArmitureFrontPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="SmallTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallTrans.Designer.cs">
+      <DependentUpon>SmallTrans.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
     <Compile Include="Trans.cs">
       <SubType>Form</SubType>
@@ -144,6 +150,12 @@
     <Compile Include="Trans2Frontpage.Designer.cs">
       <DependentUpon>Trans2Frontpage.cs</DependentUpon>
     </Compile>
+    <Compile Include="SmallTransFrontPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SmallTransFrontPage.Designer.cs">
+      <DependentUpon>SmallTransFrontPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vahid_MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Trans2Frontpage.resx">
       <DependentUpon>Trans2Frontpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallTransFrontPage.resx">
+      <DependentUpon>SmallTransFrontPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vahid_MainForm.resx">
       <DependentUpon>Vahid_MainForm.cs</DependentUpon>

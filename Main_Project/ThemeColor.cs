@@ -39,12 +39,12 @@ namespace Main_Project
 
 
 
-        public static Color ChangeColorBrightness(ConsoleColor color, double correctionFactor)
+        public static Color ChangeColorBrightness(Color color, double correctionFactor)
         {
             
-            double red = color.R;
-            double green = color.G;
-            double blue = color.B;
+            double red = (double)ConsoleColor.Red;
+            double green =(double)ConsoleColor.Green;
+            double blue =(double) ConsoleColor.Blue;
 
             if (correctionFactor < 0)
             {
@@ -60,14 +60,11 @@ namespace Main_Project
                 blue = (255 - blue) * correctionFactor + blue;
             }
 
-            return Color.FromArgb(color.A, (byte)red, (byte)green, (byte)blue);
+            return Color.FromArgb( (byte)red, (byte)green, (byte)blue);
 
         }
 
-        internal static Color ChangeColorBrightness(Color color, double v)
-        {
-            throw new NotImplementedException();
-        }
+  
     }
     
 }
