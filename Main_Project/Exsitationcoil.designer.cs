@@ -29,6 +29,9 @@ namespace Excitation_Coil
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -57,14 +60,11 @@ namespace Excitation_Coil
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox9 = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.wireGauge = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -77,17 +77,18 @@ namespace Excitation_Coil
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label28 = new System.Windows.Forms.Label();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.maskedTextBox12 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.maskedTextBox13 = new System.Windows.Forms.MaskedTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.maskedParallel = new System.Windows.Forms.MaskedTextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.maskedleakage = new System.Windows.Forms.MaskedTextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -106,20 +107,10 @@ namespace Excitation_Coil
             this.label14 = new System.Windows.Forms.Label();
             this.maskedTextBox14 = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.dgv_result_dim = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_result_elec = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label_L = new System.Windows.Forms.Label();
             this.label_H = new System.Windows.Forms.Label();
@@ -130,6 +121,10 @@ namespace Excitation_Coil
             this.lblPicN2 = new System.Windows.Forms.Label();
             this.lblPicr1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Parameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -137,22 +132,20 @@ namespace Excitation_Coil
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_result_dim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_result_elec)).BeginInit();
-            this.groupBox8.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Motor",
             "Generator"});
-            this.comboBox1.Location = new System.Drawing.Point(231, 22);
+            this.comboBox1.Location = new System.Drawing.Point(243, 22);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(90, 24);
@@ -161,8 +154,9 @@ namespace Excitation_Coil
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 24);
+            this.label1.Location = new System.Drawing.Point(24, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 16);
             this.label1.TabIndex = 2;
@@ -170,7 +164,8 @@ namespace Excitation_Coil
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(231, 47);
+            this.maskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.maskedTextBox1.Location = new System.Drawing.Point(243, 47);
             this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(90, 22);
@@ -179,7 +174,8 @@ namespace Excitation_Coil
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(231, 122);
+            this.maskedTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.maskedTextBox2.Location = new System.Drawing.Point(243, 122);
             this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(90, 22);
@@ -188,17 +184,20 @@ namespace Excitation_Coil
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(231, 72);
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Location = new System.Drawing.Point(243, 72);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(90, 22);
             this.textBox1.TabIndex = 6;
             this.textBox1.Text = "500";
+
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 70);
+            this.label2.Location = new System.Drawing.Point(21, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 16);
             this.label2.TabIndex = 7;
@@ -206,8 +205,9 @@ namespace Excitation_Coil
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 47);
+            this.label3.Location = new System.Drawing.Point(23, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 16);
             this.label3.TabIndex = 8;
@@ -215,8 +215,9 @@ namespace Excitation_Coil
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 98);
+            this.label4.Location = new System.Drawing.Point(22, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 16);
             this.label4.TabIndex = 9;
@@ -224,8 +225,9 @@ namespace Excitation_Coil
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 124);
+            this.label5.Location = new System.Drawing.Point(23, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(152, 16);
             this.label5.TabIndex = 10;
@@ -233,6 +235,7 @@ namespace Excitation_Coil
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label24);
@@ -250,7 +253,7 @@ namespace Excitation_Coil
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(9, 243);
+            this.groupBox1.Location = new System.Drawing.Point(21, 261);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -333,6 +336,7 @@ namespace Excitation_Coil
             // 
             // maskedTextBox4
             // 
+            this.maskedTextBox4.Enabled = false;
             this.maskedTextBox4.Location = new System.Drawing.Point(222, 129);
             this.maskedTextBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBox4.Name = "maskedTextBox4";
@@ -341,6 +345,7 @@ namespace Excitation_Coil
             // 
             // maskedTextBox3
             // 
+            this.maskedTextBox3.Enabled = false;
             this.maskedTextBox3.Location = new System.Drawing.Point(222, 154);
             this.maskedTextBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBox3.Name = "maskedTextBox3";
@@ -417,60 +422,49 @@ namespace Excitation_Coil
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.maskedTextBox8);
             this.groupBox2.Controls.Add(this.maskedTextBox9);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Location = new System.Drawing.Point(9, 442);
+            this.groupBox2.Location = new System.Drawing.Point(21, 455);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(354, 139);
+            this.groupBox2.Size = new System.Drawing.Size(354, 123);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Slot Space Factor (SSF or Wf)";
             // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(322, 90);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(25, 16);
-            this.label27.TabIndex = 59;
-            this.label27.Text = "cm";
-            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(216, 63);
+            this.radioButton2.Location = new System.Drawing.Point(216, 56);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(111, 20);
             this.radioButton2.TabIndex = 38;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Without Sleep";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(13, 63);
+            this.radioButton1.Location = new System.Drawing.Point(13, 56);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(93, 20);
             this.radioButton1.TabIndex = 37;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "With Sleep";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(13, 34);
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(13, 26);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(193, 20);
@@ -479,17 +473,10 @@ namespace Excitation_Coil
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // maskedTextBox8
-            // 
-            this.maskedTextBox8.Location = new System.Drawing.Point(222, 87);
-            this.maskedTextBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(90, 22);
-            this.maskedTextBox8.TabIndex = 24;
-            // 
             // maskedTextBox9
             // 
-            this.maskedTextBox9.Location = new System.Drawing.Point(222, 112);
+            this.maskedTextBox9.Enabled = false;
+            this.maskedTextBox9.Location = new System.Drawing.Point(222, 88);
             this.maskedTextBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBox9.Name = "maskedTextBox9";
             this.maskedTextBox9.Size = new System.Drawing.Size(90, 22);
@@ -498,20 +485,12 @@ namespace Excitation_Coil
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(13, 117);
+            this.label15.Enabled = false;
+            this.label15.Location = new System.Drawing.Point(13, 90);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(60, 16);
             this.label15.TabIndex = 17;
             this.label15.Text = "SSF (Wf)";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(13, 94);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(91, 16);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "Wire diameter";
             // 
             // wireGauge
             // 
@@ -528,6 +507,7 @@ namespace Excitation_Coil
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Controls.Add(this.radioButton10);
@@ -536,7 +516,7 @@ namespace Excitation_Coil
             this.groupBox3.Controls.Add(this.maskedTextBox10);
             this.groupBox3.Controls.Add(this.maskedTextBox11);
             this.groupBox3.Controls.Add(this.wireGauge);
-            this.groupBox3.Location = new System.Drawing.Point(383, 138);
+            this.groupBox3.Location = new System.Drawing.Point(395, 138);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -620,12 +600,12 @@ namespace Excitation_Coil
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.radioButton7);
-            this.groupBox4.Controls.Add(this.radioButton6);
             this.groupBox4.Controls.Add(this.radioButton5);
             this.groupBox4.Controls.Add(this.maskedTextBox12);
-            this.groupBox4.Location = new System.Drawing.Point(383, 22);
+            this.groupBox4.Location = new System.Drawing.Point(395, 22);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -637,7 +617,7 @@ namespace Excitation_Coil
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(354, 67);
+            this.label28.Location = new System.Drawing.Point(343, 70);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(25, 16);
             this.label28.TabIndex = 59;
@@ -657,22 +637,10 @@ namespace Excitation_Coil
             this.radioButton7.UseVisualStyleBackColor = true;
             this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
             // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 44);
-            this.radioButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(116, 20);
-            this.radioButton6.TabIndex = 37;
-            this.radioButton6.Text = "do not assume";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
-            // 
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(6, 20);
+            this.radioButton5.Location = new System.Drawing.Point(6, 34);
             this.radioButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(104, 20);
@@ -692,65 +660,74 @@ namespace Excitation_Coil
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.radioButton4);
+            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox5.Controls.Add(this.checkBox3);
+            this.groupBox5.Controls.Add(this.comboBox3);
             this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.radioButton3);
             this.groupBox5.Controls.Add(this.maskedTextBox13);
-            this.groupBox5.Location = new System.Drawing.Point(9, 151);
+            this.groupBox5.Location = new System.Drawing.Point(21, 158);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(354, 79);
+            this.groupBox5.Size = new System.Drawing.Size(354, 92);
             this.groupBox5.TabIndex = 27;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Excitation regulator voltage drop";
             // 
-            // radioButton4
+            // checkBox3
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Checked = true;
-            this.radioButton4.Location = new System.Drawing.Point(15, 52);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(132, 20);
-            this.radioButton4.TabIndex = 31;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "customized value";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Location = new System.Drawing.Point(13, 27);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(105, 20);
+            this.checkBox3.TabIndex = 48;
+            this.checkBox3.Text = "default value";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox3.Enabled = false;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Absolute",
+            "Persentage"});
+            this.comboBox3.Location = new System.Drawing.Point(13, 54);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(105, 24);
+            this.comboBox3.TabIndex = 47;
+            this.comboBox3.Text = "Absolute";
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(323, 54);
+            this.label18.Enabled = false;
+            this.label18.Location = new System.Drawing.Point(326, 61);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(16, 16);
-            this.label18.TabIndex = 40;
+            this.label18.TabIndex = 46;
             this.label18.Text = "V";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(15, 31);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(104, 20);
-            this.radioButton3.TabIndex = 30;
-            this.radioButton3.Text = "default value";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // maskedTextBox13
             // 
-            this.maskedTextBox13.Location = new System.Drawing.Point(222, 53);
+            this.maskedTextBox13.Enabled = false;
+            this.maskedTextBox13.Location = new System.Drawing.Point(222, 58);
             this.maskedTextBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBox13.Name = "maskedTextBox13";
             this.maskedTextBox13.Size = new System.Drawing.Size(90, 22);
             this.maskedTextBox13.TabIndex = 24;
-            this.maskedTextBox13.Text = "50";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(231, 97);
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.Location = new System.Drawing.Point(243, 97);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(90, 22);
@@ -759,7 +736,8 @@ namespace Excitation_Coil
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(845, 492);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Location = new System.Drawing.Point(901, 643);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(204, 60);
@@ -770,6 +748,9 @@ namespace Excitation_Coil
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox7.Controls.Add(this.maskedParallel);
+            this.groupBox7.Controls.Add(this.label16);
             this.groupBox7.Controls.Add(this.maskedleakage);
             this.groupBox7.Controls.Add(this.label38);
             this.groupBox7.Controls.Add(this.label35);
@@ -784,18 +765,37 @@ namespace Excitation_Coil
             this.groupBox7.Controls.Add(this.label12);
             this.groupBox7.Controls.Add(this.txt_mmf);
             this.groupBox7.Controls.Add(this.label13);
-            this.groupBox7.Location = new System.Drawing.Point(383, 354);
+            this.groupBox7.Location = new System.Drawing.Point(395, 338);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox7.Size = new System.Drawing.Size(401, 228);
+            this.groupBox7.Size = new System.Drawing.Size(401, 244);
             this.groupBox7.TabIndex = 36;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "MMF Calculate Method";
             // 
+            // maskedParallel
+            // 
+            this.maskedParallel.Enabled = false;
+            this.maskedParallel.Location = new System.Drawing.Point(228, 123);
+            this.maskedParallel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.maskedParallel.Name = "maskedParallel";
+            this.maskedParallel.Size = new System.Drawing.Size(85, 22);
+            this.maskedParallel.TabIndex = 48;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(9, 126);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(83, 16);
+            this.label16.TabIndex = 47;
+            this.label16.Text = "Parallel Path";
+            // 
             // maskedleakage
             // 
-            this.maskedleakage.Location = new System.Drawing.Point(228, 195);
+            this.maskedleakage.Enabled = false;
+            this.maskedleakage.Location = new System.Drawing.Point(228, 212);
             this.maskedleakage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedleakage.Name = "maskedleakage";
             this.maskedleakage.Size = new System.Drawing.Size(85, 22);
@@ -804,7 +804,7 @@ namespace Excitation_Coil
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(9, 198);
+            this.label38.Location = new System.Drawing.Point(9, 215);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(133, 16);
             this.label38.TabIndex = 45;
@@ -813,7 +813,7 @@ namespace Excitation_Coil
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(314, 166);
+            this.label35.Location = new System.Drawing.Point(314, 185);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(74, 16);
             this.label35.TabIndex = 44;
@@ -821,7 +821,8 @@ namespace Excitation_Coil
             // 
             // maskeflux
             // 
-            this.maskeflux.Location = new System.Drawing.Point(228, 163);
+            this.maskeflux.Enabled = false;
+            this.maskeflux.Location = new System.Drawing.Point(228, 182);
             this.maskeflux.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskeflux.Name = "maskeflux";
             this.maskeflux.Size = new System.Drawing.Size(85, 22);
@@ -830,7 +831,7 @@ namespace Excitation_Coil
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(9, 166);
+            this.label36.Location = new System.Drawing.Point(9, 185);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(112, 16);
             this.label36.TabIndex = 42;
@@ -838,7 +839,8 @@ namespace Excitation_Coil
             // 
             // maskedArmatur
             // 
-            this.maskedArmatur.Location = new System.Drawing.Point(228, 129);
+            this.maskedArmatur.Enabled = false;
+            this.maskedArmatur.Location = new System.Drawing.Point(228, 151);
             this.maskedArmatur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedArmatur.Name = "maskedArmatur";
             this.maskedArmatur.Size = new System.Drawing.Size(85, 22);
@@ -847,7 +849,7 @@ namespace Excitation_Coil
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(9, 132);
+            this.label34.Location = new System.Drawing.Point(9, 154);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(135, 16);
             this.label34.TabIndex = 39;
@@ -856,6 +858,8 @@ namespace Excitation_Coil
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Location = new System.Drawing.Point(10, 29);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox2.Name = "checkBox2";
@@ -863,6 +867,7 @@ namespace Excitation_Coil
             this.checkBox2.TabIndex = 38;
             this.checkBox2.Text = "Absolut value";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label31
             // 
@@ -875,6 +880,7 @@ namespace Excitation_Coil
             // 
             // maskedVelocity
             // 
+            this.maskedVelocity.Enabled = false;
             this.maskedVelocity.Location = new System.Drawing.Point(228, 96);
             this.maskedVelocity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedVelocity.Name = "maskedVelocity";
@@ -893,7 +899,7 @@ namespace Excitation_Coil
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(354, 58);
+            this.label12.Location = new System.Drawing.Point(354, 55);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(16, 16);
             this.label12.TabIndex = 34;
@@ -901,7 +907,7 @@ namespace Excitation_Coil
             // 
             // txt_mmf
             // 
-            this.txt_mmf.Location = new System.Drawing.Point(229, 57);
+            this.txt_mmf.Location = new System.Drawing.Point(229, 54);
             this.txt_mmf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_mmf.Name = "txt_mmf";
             this.txt_mmf.Size = new System.Drawing.Size(85, 22);
@@ -911,7 +917,7 @@ namespace Excitation_Coil
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(10, 60);
+            this.label13.Location = new System.Drawing.Point(10, 57);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(86, 16);
             this.label13.TabIndex = 32;
@@ -919,10 +925,11 @@ namespace Excitation_Coil
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox6.Controls.Add(this.label14);
             this.groupBox6.Controls.Add(this.maskedTextBox14);
             this.groupBox6.Controls.Add(this.label17);
-            this.groupBox6.Location = new System.Drawing.Point(383, 255);
+            this.groupBox6.Location = new System.Drawing.Point(395, 255);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -957,67 +964,11 @@ namespace Excitation_Coil
             this.label17.TabIndex = 35;
             this.label17.Text = "Value";
             // 
-            // dgv_result_dim
-            // 
-            this.dgv_result_dim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_result_dim.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dgv_result_dim.Location = new System.Drawing.Point(10, 28);
-            this.dgv_result_dim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_result_dim.Name = "dgv_result_dim";
-            this.dgv_result_dim.RowHeadersWidth = 51;
-            this.dgv_result_dim.RowTemplate.Height = 29;
-            this.dgv_result_dim.Size = new System.Drawing.Size(618, 86);
-            this.dgv_result_dim.TabIndex = 38;
-            this.dgv_result_dim.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_result_dim_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "parameter";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 270;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "value";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 270;
-            // 
-            // dgv_result_elec
-            // 
-            this.dgv_result_elec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_result_elec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.dgv_result_elec.Location = new System.Drawing.Point(11, 25);
-            this.dgv_result_elec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_result_elec.Name = "dgv_result_elec";
-            this.dgv_result_elec.RowHeadersWidth = 51;
-            this.dgv_result_elec.RowTemplate.Height = 29;
-            this.dgv_result_elec.Size = new System.Drawing.Size(594, 100);
-            this.dgv_result_elec.TabIndex = 39;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "parameter";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 270;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "value";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 270;
-            // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(331, 75);
+            this.label19.Location = new System.Drawing.Point(343, 75);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(16, 16);
             this.label19.TabIndex = 41;
@@ -1025,8 +976,9 @@ namespace Excitation_Coil
             // 
             // label20
             // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(328, 100);
+            this.label20.Location = new System.Drawing.Point(340, 100);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(20, 16);
             this.label20.TabIndex = 56;
@@ -1034,68 +986,25 @@ namespace Excitation_Coil
             // 
             // label21
             // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(328, 125);
+            this.label21.Location = new System.Drawing.Point(340, 125);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(20, 16);
             this.label21.TabIndex = 57;
             this.label21.Text = "°C";
             // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.dgv_result_dim);
-            this.groupBox8.Location = new System.Drawing.Point(12, 590);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Size = new System.Drawing.Size(647, 138);
-            this.groupBox8.TabIndex = 58;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Dimenion Resualts";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.dgv_result_elec);
-            this.groupBox9.Location = new System.Drawing.Point(682, 590);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(624, 138);
-            this.groupBox9.TabIndex = 59;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Electric Resualts";
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1077, 492);
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Location = new System.Drawing.Point(1133, 643);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(187, 59);
             this.button2.TabIndex = 60;
             this.button2.Text = "Export to PDF";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(1072, 567);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(159, 20);
-            this.checkBox3.TabIndex = 47;
-            this.checkBox3.Text = "Open ritgh after export";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.tabPage2.Size = new System.Drawing.Size(497, 411);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tabPage1
             // 
@@ -1111,7 +1020,7 @@ namespace Excitation_Coil
             this.tabPage1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.tabPage1.Size = new System.Drawing.Size(497, 411);
+            this.tabPage1.Size = new System.Drawing.Size(562, 525);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1119,7 +1028,7 @@ namespace Excitation_Coil
             // label_L
             // 
             this.label_L.AutoSize = true;
-            this.label_L.Location = new System.Drawing.Point(159, 206);
+            this.label_L.Location = new System.Drawing.Point(184, 268);
             this.label_L.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_L.Name = "label_L";
             this.label_L.Size = new System.Drawing.Size(21, 16);
@@ -1129,7 +1038,7 @@ namespace Excitation_Coil
             // label_H
             // 
             this.label_H.AutoSize = true;
-            this.label_H.Location = new System.Drawing.Point(361, 314);
+            this.label_H.Location = new System.Drawing.Point(410, 405);
             this.label_H.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_H.Name = "label_H";
             this.label_H.Size = new System.Drawing.Size(21, 16);
@@ -1139,7 +1048,7 @@ namespace Excitation_Coil
             // label_w
             // 
             this.label_w.AutoSize = true;
-            this.label_w.Location = new System.Drawing.Point(148, 65);
+            this.label_w.Location = new System.Drawing.Point(167, 86);
             this.label_w.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_w.Name = "label_w";
             this.label_w.Size = new System.Drawing.Size(21, 16);
@@ -1153,8 +1062,8 @@ namespace Excitation_Coil
             this.pictureBox1.Location = new System.Drawing.Point(5, 3);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(487, 405);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(552, 519);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 104;
             this.pictureBox1.TabStop = false;
             // 
@@ -1196,25 +1105,79 @@ namespace Excitation_Coil
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(801, 28);
+            this.tabControl1.Location = new System.Drawing.Point(813, 28);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(505, 440);
+            this.tabControl1.Size = new System.Drawing.Size(570, 554);
             this.tabControl1.TabIndex = 106;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Parameter,
+            this.unit,
+            this.value});
+            this.dataGridView3.Location = new System.Drawing.Point(24, 598);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 25;
+            this.dataGridView3.Size = new System.Drawing.Size(767, 104);
+            this.dataGridView3.TabIndex = 89;
+            // 
+            // Parameter
+            // 
+            this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Parameter.HeaderText = "                  Parameter";
+            this.Parameter.MinimumWidth = 6;
+            this.Parameter.Name = "Parameter";
+            this.Parameter.ReadOnly = true;
+            // 
+            // unit
+            // 
+            this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
+            this.unit.HeaderText = "                     unit";
+            this.unit.MinimumWidth = 6;
+            this.unit.Name = "unit";
+            // 
+            // value
+            // 
+            this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle3;
+            this.value.HeaderText = "                      value";
+            this.value.MinimumWidth = 6;
+            this.value.Name = "value";
             // 
             // Exsitationcoil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 723);
+            this.ClientSize = new System.Drawing.Size(1399, 716);
+            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox9);
-            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
@@ -1239,6 +1202,7 @@ namespace Excitation_Coil
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Exsitationcoil";
             this.Text = "Excitation Coil";
+            this.Load += new System.EventHandler(this.Exsitationcoil_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1253,14 +1217,11 @@ namespace Excitation_Coil
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_result_dim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_result_elec)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1292,10 +1253,8 @@ namespace Excitation_Coil
         private MaskedTextBox maskedTextBox3;
         private GroupBox groupBox2;
         private CheckBox checkBox1;
-        private MaskedTextBox maskedTextBox8;
         private MaskedTextBox maskedTextBox9;
         private Label label15;
-        private Label label16;
         private ComboBox wireGauge;
         private GroupBox groupBox3;
         private MaskedTextBox maskedTextBox10;
@@ -1307,11 +1266,8 @@ namespace Excitation_Coil
         private TextBox textBox2;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
-        private RadioButton radioButton4;
-        private RadioButton radioButton3;
         private Button button1;
         private RadioButton radioButton7;
-        private RadioButton radioButton6;
         private RadioButton radioButton5;
         private RadioButton radioButton10;
         private RadioButton radioButton9;
@@ -1324,9 +1280,6 @@ namespace Excitation_Coil
         private Label label14;
         private MaskedTextBox maskedTextBox14;
         private Label label17;
-        private DataGridView dgv_result_dim;
-        private DataGridView dgv_result_elec;
-        private Label label18;
         private Label label19;
         private Label label20;
         private Label label21;
@@ -1335,7 +1288,6 @@ namespace Excitation_Coil
         private Label label24;
         private Label label23;
         private Label label22;
-        private Label label27;
         private Label label30;
         private Label label29;
         private Label label28;
@@ -1350,15 +1302,7 @@ namespace Excitation_Coil
         private Label label31;
         private MaskedTextBox maskedVelocity;
         private Label label32;
-        private GroupBox groupBox8;
-        private GroupBox groupBox9;
         private Button button2;
-        private CheckBox checkBox3;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private TabPage tabPage2;
         private TabPage tabPage1;
         private Label label_L;
         private Label label_H;
@@ -1369,5 +1313,14 @@ namespace Excitation_Coil
         private Label lblPicN2;
         private Label lblPicr1;
         private TabControl tabControl1;
+        private DataGridView dataGridView3;
+        private DataGridViewTextBoxColumn Parameter;
+        private DataGridViewTextBoxColumn unit;
+        private DataGridViewTextBoxColumn value;
+        private MaskedTextBox maskedParallel;
+        private Label label16;
+        private Label label18;
+        private ComboBox comboBox3;
+        private CheckBox checkBox3;
     }
 }

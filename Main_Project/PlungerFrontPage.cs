@@ -36,17 +36,7 @@ namespace Main
             stroke *= Math.Pow(10, -2);
         }
 
-        private void comboBoxForce_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            if (comboBoxForce.SelectedIndex == 0)
-            {
-                lblForce.Text = "Kg";
-            }
-            else
-            {
-                lblForce.Text = "N";
-            }
-        }
+        
 
        
 
@@ -56,6 +46,19 @@ namespace Main
             double indexNumber = Math.Sqrt(mass) / stroke;
             bool isMass = comboBoxForce.SelectedIndex == 0;
             MainForm.openForm(indexNumber, Type.Plunger, mass, stroke * 100, isMass);
+        }
+
+        private void comboBoxForce_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (comboBoxForce.SelectedIndex == 0)
+            {
+                lblForce.Text = "Kg";
+            }
+            else
+            {
+                lblForce.Text = "N";
+            }
         }
     }
 }

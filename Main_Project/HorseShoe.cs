@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using MathNet.Numerics;
 using MathNet.Numerics.Interpolation;
+
 
 namespace second
 {
@@ -25,8 +29,6 @@ namespace second
 
         private double ambTemp;
 
-        private double permeability;
-
         private double fluxDensityofCore;
 
         private double yokeLeakageFactor;
@@ -41,21 +43,6 @@ namespace second
 
         private double coilsTube;
 
-        private double allowance;
-
-        private double clearance;
-
-        private double spoolThickness;
-
-        private double coilSpoolInsulation;
-
-        private double coilCoverThickness;
-
-        private double totalRadiusInsulation;
-
-        private double totalVetcalInsulation;
-
-        private double faceofPoleThickness;
 
         private double accurcy;
 
@@ -68,7 +55,6 @@ namespace second
         private double nextIterVal;
         private double pho2;
         private double r1;
-        private double radiusofPoleCore;
         private double r2;
         private double t;
         private double t1;
@@ -88,6 +74,15 @@ namespace second
         private double I;
         private double D;
         private double W;
+        private double P;
+        private double actualMMF;
+        private double Box1;
+        private double widthofPoleFace;
+        private double coilCoverThickness;
+        private double Bg;
+        private double mmf;
+        private double Lambda;
+        private double dc;
 
 
 
@@ -241,12 +236,13 @@ namespace second
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            
+
             wireGauge.SelectedIndex = 0;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
 
-        private double getDFromFile(string v, double d)
+        private double GetDFromFile(string v, double d)
         {
             throw new NotImplementedException();
         }
@@ -272,13 +268,39 @@ namespace second
 
 
 
-
-
-
-        private void btncalc_Click(object sender, EventArgs e, int SWGAWGBWGIndex)
+        private double getDFromFile(string filePath, double value)
         {
+            var first = new List<double>();
+            var second = new List<double>();
+
+            using (var streamReader = new StreamReader(filePath))
+            {
+
+                String line;
+                while ((line = streamReader.ReadLine()) != null)
+                {
+                    string[] arr = line.Split(',');
+                    first.Add(Double.Parse(arr[0]));
+                    second.Add(Double.Parse(arr[1]));
+                }
+            }
+            double res = second.Aggregate((x, y) => Math.Abs(x - value) < Math.Abs(y - value) ? x : y);
+            SWGAWGBWGIndex = (int)first[second.IndexOf(res)];
+            return res;
+        }
+
+
+
+
+
+        private void btncalc_Click(object sender, EventArgs e)
+        {
+            errors = new List<double>();
+            hratios = new List<double>();
+            mmfs = new List<double>();
+
             getValues();
-            for(int i = 0; i < maximumIteration; i++)
+            for (int i = 0; i < maximumIteration; i++)
             {
 
                 // addad shakhes ra hesab mikonim
@@ -286,34 +308,50 @@ namespace second
 
 
 
-                double Bg = getModel(@"Resources\\Bg.txt").Interpolate(IndexNumber);
+                Bg = getModel(@"Resources\\Bg.txt").Interpolate(IndexNumber);
 
                 // A....m^2
                 double areaofEachPoleFace = ((force * u0) / (0.102 * Math.Pow(Bg, 2)));
 
                 // W......m
-                double widthofPoleFace = Math.Sqrt(areaofEachPoleFace);
+                widthofPoleFace = Math.Sqrt(areaofEachPoleFace);
 
                 // sqrA * sqrA.........m^2
                 double actualAreaofPoleFace = widthofPoleFace * widthofPoleFace;
 
-
+                // wb
                 double fluxIntheAirGap = actualAreaofPoleFace * Bg;
 
-                // wb
+                // wb/m^2
                 double fluxatTheBaseofPoles = yokeLeakageFactor * fluxIntheAirGap;
 
-
+                //m^2
                 double areaofPoleCore = fluxatTheBaseofPoles / fluxDensityofCore;
 
-                //r1..........mm
-                radiusofPoleCore = Math.Sqrt(areaofPoleCore / Math.PI) * 1000;
+                //r1..........cm
+                r1 = Math.Sqrt(areaofPoleCore / Math.PI) * 100;
 
 
                 // 1.1 ---- 1.2
-                double value = nextIterVal == 0 ? 1.1 : nextIterVal;
-                double mmf = 16e5 * stroke / 100 * Bg * 1.1;
 
+                
+
+                double value;
+                if (method1.Checked)
+                {
+                    // 1.1 -> 1.2
+                    value = nextIterVal == 0 ? 1.1 : nextIterVal;
+                    mmf = 16e5 * stroke / 100 * Bg * value;
+
+                }
+                else
+                {
+                    mmf = (16e5 * (stroke / 100) * Bg) / 0.8;
+                }
+
+
+
+                mmfs.Add(mmf);
 
 
 
@@ -327,7 +365,7 @@ namespace second
                 double RT2 = 234.5 + (temp + ambTemp);
 
 
-                double pho2 = pho / (RT1 / RT2);
+                pho2 = pho / (RT1 / RT2);
 
 
 
@@ -340,26 +378,30 @@ namespace second
                 hratios.Add(heightTODepthRation);
 
 
-                double lambda = getModel(@"Resources\\lambda.txt").Interpolate(temp);
+                Lambda = getModel(@"Resources\\lambda.txt").Interpolate(temp);
+
 
                 //cm
-                double vahidValue = (intermittentRating * pho2 * Math.Pow(mmf, 2)) / (2 * lambda * slotSpaceFactor * temp);
+                double h1 = ((intermittentRating * pho2 * Math.Pow(mmf, 2) * heightTODepthRation) / (2 * Lambda * slotSpaceFactor * temp));
 
 
-                rDiff = Math.Pow(vahidValue / (heightTODepthRation * heightTODepthRation), (double)1 / 3);
+                h = Math.Pow(h1, (double)1 / 3);
 
 
-                r2 = rDiff + radiusofPoleCore;
+                dc = h * (1 / heightTODepthRation);
 
 
-                h = heightTODepthRation * rDiff;
+                r2 = dc + r1;
 
 
-                t2 = (Math.Pow(radiusofPoleCore, 2) * Math.PI) / widthofPoleFace;
+                
+
+
+                t2 = (r1 * r1 * Math.PI)  / (widthofPoleFace * 100);
 
                 // d.............mm
-                d = Math.Sqrt((4 * pho2 * (radiusofPoleCore + r2) * mmf) / voltage) * 10;
-
+                d = Math.Sqrt((4 * pho2 * (r1 + r2) * mmf) / voltage) * 10;
+                
 
 
                 double fileD;
@@ -384,7 +426,7 @@ namespace second
                     plus = swgInsulations[SWGAWGBWGIndex];
                 }
 
-                di = (fileD * 10) + plus;
+                di = (fileD) + plus;
 
 
                 double fluxInArmiture = armutureLeakageFactor * fluxIntheAirGap;
@@ -393,45 +435,50 @@ namespace second
                 double areaofArmiture = fluxInArmiture / fluxDensityofCore;
 
 
-                t1 = areaofArmiture / (widthofPoleFace * Math.Pow(10, -3));
+                t1 = (areaofArmiture / widthofPoleFace) * 100;
 
 
                 t = t2 / 2;
 
 
-                netHeightofCoil = h - (2 * coilsHeight);
+                netHeightofCoil = h - (2 * coilsHeight / 10);
 
 
-                numberofLayerDepth = (int)netHeightofCoil / (di * 10);
+                numberofLayerDepth = Math.Round(netHeightofCoil * 10 / (di));
 
 
-                netwindingDepth = (rDiff / 10) - (coilsTube + coilCoverThickness);
+                netwindingDepth = dc - ((coilsTube + coilCoverThickness) / 10);
 
 
-                numberofLayerHeightWise = (int)netwindingDepth / di;
+
+                numberofLayerHeightWise = Math.Round(netwindingDepth * 10 / di);
 
 
-                N = numberofLayerHeightWise * numberofLayerDepth;
+                N = numberofLayerDepth * numberofLayerHeightWise;
 
-
+                // mm^2
                 az = (Math.PI / 4) * d * d;
 
 
-                lmt = Math.PI * (radiusofPoleCore + r2);
+                D = (2 * r2) + (Box1 / 10);
+
+                //cm
+                lmt = Math.PI * (r1 + r2);
 
 
-                R = (pho2 * lmt * N) / az;
+                R = (pho2 * lmt * N) / (az * 0.01);
 
 
                 I = voltage / R;
 
+                P = R * I * I;
 
-                double actualMMF = N * I;
+                actualMMF = N * I;
                 double error = ((actualMMF - mmf) / mmf) * 100;
                 errors.Add(error);
                 if (error < accurcy)
                 {
-                    
+
                     break;
                 }
                 else
@@ -461,6 +508,8 @@ namespace second
 
 
 
+            dataGridView3.Rows.Clear();
+
             lblPicr1.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r1));
 
             lblPicr2.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r2));
@@ -473,36 +522,82 @@ namespace second
 
             lblPicStroke.Text = "= " + Convert.ToString(string.Format("{0:0.00}", stroke));
 
-            lblPicN2.Text = "= " + Convert.ToString(string.Format("{0:0}", N));
+            label10.Text = "= " + Convert.ToString(string.Format("{0:0}", N));
 
             lblPicH.Text = "= " + Convert.ToString(string.Format("{0:0.00}", h));
 
             lblD.Text = "= " + Convert.ToString(string.Format("{0:0.00}", D));
 
-            lbldc.Text = "= " + Convert.ToString(string.Format("{0:0.00}", W));
+            lbldc.Text = "= " + Convert.ToString(string.Format("{0:0.00}", (widthofPoleFace * 100)));
 
 
 
 
 
 
+            dataGridView3.Rows.Clear();
+
+            dataGridView3.Rows.Add("  pho2", "  ohm_cm", string.Format("  {0:0.00000000}", pho2));
+
+            dataGridView3.Rows.Add("  Bg", "  Wb/m^2", string.Format("  {0:0.0000}", Bg));
+
+            dataGridView3.Rows.Add("  mmf", "  A", string.Format("  {0:0.0000}", mmf));
+
+            dataGridView3.Rows.Add("  Lambda", "  wat_cm^2/°C", string.Format("  {0:0.000000}", Lambda));
+
+            dataGridView3.Rows.Add("  dc", "  cm", string.Format("  {0:0.0000}", dc));
+
+            dataGridView3.Rows.Add("  h", "  cm", string.Format("  {0:0.0000}", h));
+
+            dataGridView3.Rows.Add("  r1", "  cm", string.Format("  {0:0.0000}", r1));
+
+            dataGridView3.Rows.Add("  r2", "  cm", string.Format("  {0:0.0000}", r2));
+
+            dataGridView3.Rows.Add("  t1", "  cm", string.Format("  {0:0.0000}", t1));
+
+            dataGridView3.Rows.Add("  t2", "  cm", string.Format("  {0:0.0000}", t2));
+
+            dataGridView3.Rows.Add("  t", "  cm", string.Format("  {0:0.0000}", t));
+
+            dataGridView3.Rows.Add("  d", "  mm", string.Format("  {0:0.0000}", d));
+
+            dataGridView3.Rows.Add("  di", "  mm", string.Format("  {0:0.0000}", di));
+
+            dataGridView3.Rows.Add("  netHeightofCoil", "  cm", string.Format("  {0:0.0000}", netHeightofCoil));
+
+            dataGridView3.Rows.Add("  numberofLayerDepth", "", string.Format("  {0:0}", numberofLayerDepth));
+
+            dataGridView3.Rows.Add("  netwindingDepth", "  cm", string.Format("  {0:0.0000}", netwindingDepth));
+
+            dataGridView3.Rows.Add("  numberofLayerHeightWise", "", string.Format("  {0:0}", numberofLayerHeightWise));
+
+            dataGridView3.Rows.Add("  N", "", string.Format("  {0:0}", N));
+
+            dataGridView3.Rows.Add("  az", "  mm^2", string.Format("  {0:0.0000}", az));
+
+            dataGridView3.Rows.Add("  lmt", "  cm", string.Format("  {0:0.0000}", lmt));
+
+            dataGridView3.Rows.Add("  R", "  ohm", string.Format("  {0:0.0000}", R));
+
+            dataGridView3.Rows.Add("  I", "  Amper", string.Format("  {0:0.0000}", I));
+
+            dataGridView3.Rows.Add("  actualMMF", "  A", string.Format("  {0:0}", actualMMF));
+
+            dataGridView3.Rows.Add("  Wire gauge index", " ", string.Format("  {0:0}", SWGAWGBWGIndex));
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+            chart1.Series["error"].Points.Clear();
+            chart2.Series["mmf"].Points.Clear();
+            chart3.Series["HeighttoDepthRatio"].Points.Clear();
+            for (int i = 0; i < errors.Count; i++)
+            {
+                chart1.Series["error"].Points.AddXY(i, errors[i]);
+                chart2.Series["mmf"].Points.AddXY(i, mmfs[i]);
+                chart3.Series["HeighttoDepthRatio"].Points.AddXY(i, hratios[i]);
+            }
 
 
 
@@ -510,23 +605,7 @@ namespace second
         }
 
 
-
-
-        
-
-
-
-
-
-
-
-
-        
-
-
-
-
-            private double getMMFFromBHCurve()
+        private double getMMFFromBHCurve()
         {
             return 0;
         }
@@ -540,66 +619,36 @@ namespace second
             }
 
             stroke = Double.Parse(txtStroke.Text);
-            stroke *= Math.Pow(10, -2);
 
             voltage = Double.Parse(txtVoltage.Text);
 
             temp = Double.Parse(txtTemperature.Text);
 
-            ambTemp =Double.Parse(AmbientTemperature.Text);
+            ambTemp = Double.Parse(textAmbientTemperature.Text);
 
             fluxDensityofCore = Double.Parse(txtFluxDensityofCore.Text);
 
             yokeLeakageFactor = Double.Parse(txtYokeleakageFactor.Text);
 
-            armutureLeakageFactor =Double.Parse(txtArmetureLeacageFactor.Text);
+            armutureLeakageFactor = Double.Parse(txtArmetureLeacageFactor.Text);
 
             heightTODepthRation = Double.Parse(txtHeightToDepthRatio.Text);
 
-            slotSpaceFactor =Double.Parse(txtslotSpaceFactor.Text);
+            slotSpaceFactor = Double.Parse(txtslotSpaceFactor.Text);
 
-            coilsHeight =Double.Parse(txtCoilsheight.Text);
+            coilsHeight = Double.Parse(txtCoilsheight.Text);
 
             coilsTube = Double.Parse(txtCoilsTube.Text);
 
-            allowance = Double.Parse(txtAllowance.Text);
-
-            clearance = Double.Parse(txtClearance.Text);
-
-            spoolThickness = Double.Parse(txtSpoolThickness.Text);
-
-            coilSpoolInsulation =Double.Parse(txtCoilsSpoolInsulation.Text);
-
-            spoolThickness = Double.Parse(txtCoilsCoverThickness.Text);
-
-            totalRadiusInsulation=Double.Parse(txtTotalRadusInsulation.Text);
-
-            totalVetcalInsulation = Double.Parse(txtTotalVerticalInsulation.Text);
-
-            faceofPoleThickness = Double.Parse(txtFaceofPoleThickness.Text);
-
             accurcy = Double.Parse(txtAccuracy.Text);
-               
+
             maximumIteration = Convert.ToInt32(txtMaximumIteration.Text);
 
             intermittentRating = Double.Parse(txtIntermittedRating.Text);
 
+            Box1 = Double.Parse(textBox1.Text);
+
         }
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
 
 
         private void forceTypeCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -616,6 +665,120 @@ namespace second
             }
         }
 
-        
+
+
+
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF files|*.pdf" })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        Document doc = new Document(iTextSharp.text.PageSize.A4, 10, 10, 42, 35);
+
+                        PdfWriter pdfWriter = PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+
+                        doc.Open();
+
+                        PdfContentByte pdfContent = pdfWriter.DirectContent;
+
+                        iTextSharp.text.Rectangle rectangle = new iTextSharp.text.Rectangle(doc.PageSize);
+
+                        //customized border sizes
+                        rectangle.Left += doc.LeftMargin - 5;
+
+                        rectangle.Right -= doc.RightMargin - 5;
+
+                        rectangle.Top -= doc.TopMargin - 5;
+
+                        rectangle.Bottom += doc.BottomMargin - 5;
+
+                        pdfContent.SetColorStroke(BaseColor.WHITE);//setting the color of the border to white
+
+                        pdfContent.Rectangle(rectangle.Left, rectangle.Bottom, rectangle.Width, rectangle.Height);
+
+                        pdfContent.Stroke();
+
+                        using (Bitmap bmp = new Bitmap(tabPage1.Size.Width, tabPage1.Size.Height))
+                        {
+
+                            tabPage1.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, tabPage1.Size.Width, tabPage1.Size.Height));
+
+                            bmp.Save(@"Resources\report.jpg", ImageFormat.Png);
+
+                            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(@"Resources\report.jpg");
+
+                            doc.Add(img);
+                        }
+                        //setting font type, font size and font color
+                        iTextSharp.text.Font headerFont = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 25, BaseColor.LIGHT_GRAY);
+
+                        Paragraph p = new Paragraph();
+
+                        p.Alignment = Element.ALIGN_CENTER;//adjust the alignment of the heading
+
+                        p.Add(new Chunk("Report", headerFont));//adding a heading to the PDF
+
+                        doc.Add(p);//adding component to the document
+
+                        Paragraph p2 = new Paragraph();
+
+                        p2.Add(new Chunk("                      ", headerFont));//adding a heading to the PDF
+
+                        doc.Add(p2);//adding component to the document
+
+                        iTextSharp.text.Font font = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 12, BaseColor.LIGHT_GRAY);
+
+                        //creating pdf table
+                        PdfPTable table = new PdfPTable(dataGridView3.Columns.Count);
+
+                        for (int j = 0; j < dataGridView3.Columns.Count; j++)
+
+                        {
+                            PdfPCell cell = new PdfPCell(); //create object from the pdfpcell
+
+                            cell.BackgroundColor = BaseColor.WHITE;//set color of cells
+
+                            cell.AddElement(new Chunk(dataGridView3.Columns[j].HeaderText.ToUpper(), font));
+
+                            table.AddCell(cell);
+                        }
+
+                        //adding rows from gridview to table
+                        for (int i = 0; i < dataGridView3.Rows.Count; i++)
+                        {
+                            table.WidthPercentage = 100;//set width of the table
+
+                            for (int j = 0; j < dataGridView3.Columns.Count; j++)
+                            {
+                                if (dataGridView3[j, i].Value != null)
+
+                                    table.AddCell(new Phrase(dataGridView3[j, i].Value.ToString()));
+                            }
+                        }
+                        //adding table to document
+                        doc.Add(table);
+
+
+                        doc.Close();
+                        MessageBox.Show("You have successfully exported the file.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
     }
 }
+

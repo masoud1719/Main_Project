@@ -29,9 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HorseShoe));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -55,58 +65,23 @@
             this.txtslotSpaceFactor = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label56 = new System.Windows.Forms.Label();
             this.btnExport = new System.Windows.Forms.Button();
             this.btncalc = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lblPicN2 = new System.Windows.Forms.Label();
-            this.lbldc = new System.Windows.Forms.Label();
-            this.lblPicT1 = new System.Windows.Forms.Label();
-            this.lblPicStroke = new System.Windows.Forms.Label();
-            this.lblPicT = new System.Windows.Forms.Label();
-            this.lblPicT2 = new System.Windows.Forms.Label();
-            this.lblPicr2 = new System.Windows.Forms.Label();
-            this.lblD = new System.Windows.Forms.Label();
-            this.lblPicH = new System.Windows.Forms.Label();
-            this.lblPicr1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.txtArmetureLeacageFactor = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCoilsCoverThickness = new System.Windows.Forms.TextBox();
-            this.txtCoilsSpoolInsulation = new System.Windows.Forms.TextBox();
-            this.txtSpoolThickness = new System.Windows.Forms.TextBox();
-            this.txtFaceofPoleThickness = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.txtClearance = new System.Windows.Forms.TextBox();
-            this.txtAllowance = new System.Windows.Forms.TextBox();
             this.txtCoilsTube = new System.Windows.Forms.TextBox();
             this.txtCoilsheight = new System.Windows.Forms.TextBox();
-            this.txtTotalRadusInsulation = new System.Windows.Forms.TextBox();
-            this.txtTotalVerticalInsulation = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.txtAccuracy = new System.Windows.Forms.TextBox();
@@ -122,6 +97,7 @@
             this.lblForce = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.method2 = new System.Windows.Forms.RadioButton();
             this.label44 = new System.Windows.Forms.Label();
             this.wireGauge = new System.Windows.Forms.ComboBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -129,18 +105,43 @@
             this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbldc = new System.Windows.Forms.Label();
+            this.lblPicT1 = new System.Windows.Forms.Label();
+            this.lblPicStroke = new System.Windows.Forms.Label();
+            this.lblPicT = new System.Windows.Forms.Label();
+            this.lblPicT2 = new System.Windows.Forms.Label();
+            this.lblPicr2 = new System.Windows.Forms.Label();
+            this.lblD = new System.Windows.Forms.Label();
+            this.lblPicH = new System.Windows.Forms.Label();
+            this.lblPicr1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.SuspendLayout();
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(336, 128);
             this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -151,6 +152,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(336, 100);
             this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -161,6 +163,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(336, 69);
             this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -184,6 +187,7 @@
             // 
             // txtTemperature
             // 
+            this.txtTemperature.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTemperature.Location = new System.Drawing.Point(248, 125);
             this.txtTemperature.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtTemperature.Name = "txtTemperature";
@@ -193,14 +197,17 @@
             // 
             // txtVoltage
             // 
+            this.txtVoltage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtVoltage.Location = new System.Drawing.Point(248, 94);
             this.txtVoltage.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtVoltage.Name = "txtVoltage";
             this.txtVoltage.Size = new System.Drawing.Size(79, 22);
             this.txtVoltage.TabIndex = 36;
+            this.txtVoltage.Text = "120";
             // 
             // txtStroke
             // 
+            this.txtStroke.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStroke.Location = new System.Drawing.Point(248, 66);
             this.txtStroke.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtStroke.Name = "txtStroke";
@@ -209,6 +216,7 @@
             // 
             // AmbientTemperature
             // 
+            this.AmbientTemperature.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AmbientTemperature.AutoSize = true;
             this.AmbientTemperature.Location = new System.Drawing.Point(25, 154);
             this.AmbientTemperature.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -220,6 +228,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(24, 126);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -231,6 +240,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 97);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -242,6 +252,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 69);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -253,6 +264,7 @@
             // 
             // forceTypeCombo
             // 
+            this.forceTypeCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.forceTypeCombo.FormattingEnabled = true;
             this.forceTypeCombo.Items.AddRange(new object[] {
             "Mass",
@@ -268,25 +280,29 @@
             // 
             // txtHeightToDepthRatio
             // 
-            this.txtHeightToDepthRatio.Location = new System.Drawing.Point(249, 463);
+            this.txtHeightToDepthRatio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtHeightToDepthRatio.Location = new System.Drawing.Point(718, 269);
             this.txtHeightToDepthRatio.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtHeightToDepthRatio.Name = "txtHeightToDepthRatio";
-            this.txtHeightToDepthRatio.Size = new System.Drawing.Size(78, 22);
+            this.txtHeightToDepthRatio.Size = new System.Drawing.Size(75, 22);
             this.txtHeightToDepthRatio.TabIndex = 97;
             this.txtHeightToDepthRatio.Text = "7";
             // 
             // label20
             // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(23, 468);
+            this.label20.Location = new System.Drawing.Point(396, 271);
             this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(206, 16);
             this.label20.TabIndex = 89;
             this.label20.Text = "Height to depth ratio ( h / ( r2 - r1 ) )";
+            this.toolTip1.SetToolTip(this.label20, resources.GetString("label20.ToolTip"));
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(27, 313);
             this.label19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -294,9 +310,11 @@
             this.label19.Size = new System.Drawing.Size(123, 16);
             this.label19.TabIndex = 88;
             this.label19.Text = "Flux Density of core";
+            this.toolTip1.SetToolTip(this.label19, "Represents the flux density at the pole core.\r\nThe default value is 1.5.");
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(27, 346);
             this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -304,13 +322,17 @@
             this.label18.Size = new System.Drawing.Size(138, 16);
             this.label18.TabIndex = 87;
             this.label18.Text = "Yoke\'s leakage factor";
+            this.toolTip1.SetToolTip(this.label18, "Shows the approximate amount of flux in the yoke and its default value is 1.8.\r\nM" +
+        "ultiplying this value by the air distance flux determines the amount of flux in " +
+        "the trunk of the poles.");
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.rdbConsiderLimit);
             this.groupBox2.Controls.Add(this.rdbuseDefaultValue);
             this.groupBox2.Controls.Add(this.rdbfixTheFactor);
-            this.groupBox2.Location = new System.Drawing.Point(26, 491);
+            this.groupBox2.Location = new System.Drawing.Point(399, 299);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
@@ -355,7 +377,8 @@
             // 
             // txtslotSpaceFactor
             // 
-            this.txtslotSpaceFactor.Location = new System.Drawing.Point(248, 546);
+            this.txtslotSpaceFactor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtslotSpaceFactor.Location = new System.Drawing.Point(248, 471);
             this.txtslotSpaceFactor.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtslotSpaceFactor.Name = "txtslotSpaceFactor";
             this.txtslotSpaceFactor.Size = new System.Drawing.Size(78, 22);
@@ -364,8 +387,9 @@
             // 
             // label55
             // 
+            this.label55.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(253, 549);
+            this.label55.Location = new System.Drawing.Point(251, 471);
             this.label55.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(0, 16);
@@ -373,38 +397,19 @@
             // 
             // label54
             // 
+            this.label54.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(29, 549);
+            this.label54.Location = new System.Drawing.Point(27, 473);
             this.label54.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(144, 16);
             this.label54.TabIndex = 99;
             this.label54.Text = "Slot space factor (SSF)";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label56);
-            this.groupBox4.Location = new System.Drawing.Point(431, 490);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.groupBox4.Size = new System.Drawing.Size(368, 63);
-            this.groupBox4.TabIndex = 104;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "MMF Calculation formula";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(68, 32);
-            this.label56.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(137, 16);
-            this.label56.TabIndex = 83;
-            this.label56.Text = "Total radius insulation";
+            this.toolTip1.SetToolTip(this.label54, resources.GetString("label54.ToolTip"));
             // 
             // btnExport
             // 
+            this.btnExport.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExport.Location = new System.Drawing.Point(1227, 602);
             this.btnExport.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnExport.Name = "btnExport";
@@ -412,9 +417,11 @@
             this.btnExport.TabIndex = 85;
             this.btnExport.Text = "Export as PDF";
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btncalc
             // 
+            this.btncalc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btncalc.Location = new System.Drawing.Point(920, 602);
             this.btncalc.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btncalc.Name = "btncalc";
@@ -422,21 +429,495 @@
             this.btncalc.TabIndex = 84;
             this.btncalc.Text = "Calculate";
             this.btncalc.UseVisualStyleBackColor = true;
+            this.btncalc.Click += new System.EventHandler(this.btncalc_Click);
             // 
-            // tabControl1
+            // label4
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(900, 15);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(639, 502);
-            this.tabControl1.TabIndex = 105;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(27, 378);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(160, 16);
+            this.label4.TabIndex = 106;
+            this.label4.Text = "Armature\'s leakage factor";
+            this.toolTip1.SetToolTip(this.label4, "Indicates the dispersion factor in the armature and its default value is consider" +
+        "ed to be 1.3.\r\nMultiplying this value by the flux in the air gap, the flux in th" +
+        "e armature is obtained.");
+            // 
+            // txtArmetureLeacageFactor
+            // 
+            this.txtArmetureLeacageFactor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtArmetureLeacageFactor.Location = new System.Drawing.Point(248, 372);
+            this.txtArmetureLeacageFactor.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtArmetureLeacageFactor.Name = "txtArmetureLeacageFactor";
+            this.txtArmetureLeacageFactor.Size = new System.Drawing.Size(78, 22);
+            this.txtArmetureLeacageFactor.TabIndex = 107;
+            this.txtArmetureLeacageFactor.Text = "1.3";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label58);
+            this.groupBox1.Controls.Add(this.label52);
+            this.groupBox1.Controls.Add(this.label51);
+            this.groupBox1.Controls.Add(this.label28);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtCoilsCoverThickness);
+            this.groupBox1.Controls.Add(this.txtCoilsTube);
+            this.groupBox1.Controls.Add(this.txtCoilsheight);
+            this.groupBox1.Location = new System.Drawing.Point(399, 35);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.groupBox1.Size = new System.Drawing.Size(445, 193);
+            this.groupBox1.TabIndex = 108;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Insulation";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(407, 157);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 16);
+            this.label5.TabIndex = 154;
+            this.label5.Text = "mm";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(10, 159);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(249, 16);
+            this.label9.TabIndex = 153;
+            this.label9.Text = "The distance between adjacent windings";
+            this.toolTip1.SetToolTip(this.label9, "The distance between adjacent windings");
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(318, 154);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(77, 22);
+            this.textBox1.TabIndex = 152;
+            this.textBox1.Text = "3";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(407, 121);
+            this.label58.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(29, 16);
+            this.label58.TabIndex = 151;
+            this.label58.Text = "mm";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(406, 82);
+            this.label52.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(29, 16);
+            this.label52.TabIndex = 148;
+            this.label52.Text = "mm";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(404, 44);
+            this.label51.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(29, 16);
+            this.label51.TabIndex = 147;
+            this.label51.Text = "mm";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(10, 123);
+            this.label28.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(134, 16);
+            this.label28.TabIndex = 121;
+            this.label28.Text = "Coil Cover Thickness";
+            this.toolTip1.SetToolTip(this.label28, "Coil cover with specified thickness");
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(10, 85);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(149, 16);
+            this.label7.TabIndex = 116;
+            this.label7.Text = "Coil Tube of kraft paper ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 47);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(289, 16);
+            this.label6.TabIndex = 109;
+            this.label6.Text = "Coil\'s height of each paper margins to thickness";
+            // 
+            // txtCoilsCoverThickness
+            // 
+            this.txtCoilsCoverThickness.Location = new System.Drawing.Point(318, 118);
+            this.txtCoilsCoverThickness.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtCoilsCoverThickness.Name = "txtCoilsCoverThickness";
+            this.txtCoilsCoverThickness.Size = new System.Drawing.Size(77, 22);
+            this.txtCoilsCoverThickness.TabIndex = 115;
+            this.txtCoilsCoverThickness.Text = "0.1";
+            // 
+            // txtCoilsTube
+            // 
+            this.txtCoilsTube.Location = new System.Drawing.Point(319, 82);
+            this.txtCoilsTube.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtCoilsTube.Name = "txtCoilsTube";
+            this.txtCoilsTube.Size = new System.Drawing.Size(77, 22);
+            this.txtCoilsTube.TabIndex = 110;
+            this.txtCoilsTube.Text = "0.8";
+            // 
+            // txtCoilsheight
+            // 
+            this.txtCoilsheight.Location = new System.Drawing.Point(317, 44);
+            this.txtCoilsheight.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtCoilsheight.Name = "txtCoilsheight";
+            this.txtCoilsheight.Size = new System.Drawing.Size(77, 22);
+            this.txtCoilsheight.TabIndex = 109;
+            this.txtCoilsheight.Text = "0.4";
+            // 
+            // label42
+            // 
+            this.label42.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(415, 402);
+            this.label42.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(63, 16);
+            this.label42.TabIndex = 135;
+            this.label42.Text = "Accuracy";
+            this.toolTip1.SetToolTip(this.label42, "Specifies the required accuracy and percentage\r\n");
+            // 
+            // label43
+            // 
+            this.label43.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(415, 436);
+            this.label43.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(114, 16);
+            this.label43.TabIndex = 136;
+            this.label43.Text = "Maximum iteration";
+            this.toolTip1.SetToolTip(this.label43, "Maximum repetition to achieve the desired accuracy\r\n");
+            // 
+            // txtAccuracy
+            // 
+            this.txtAccuracy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAccuracy.Location = new System.Drawing.Point(717, 396);
+            this.txtAccuracy.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtAccuracy.Name = "txtAccuracy";
+            this.txtAccuracy.Size = new System.Drawing.Size(77, 22);
+            this.txtAccuracy.TabIndex = 141;
+            this.txtAccuracy.Text = "5";
+            // 
+            // txtMaximumIteration
+            // 
+            this.txtMaximumIteration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMaximumIteration.Location = new System.Drawing.Point(717, 427);
+            this.txtMaximumIteration.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtMaximumIteration.Name = "txtMaximumIteration";
+            this.txtMaximumIteration.Size = new System.Drawing.Size(77, 22);
+            this.txtMaximumIteration.TabIndex = 142;
+            this.txtMaximumIteration.Text = "30";
+            // 
+            // label49
+            // 
+            this.label49.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(27, 408);
+            this.label49.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(130, 16);
+            this.label49.TabIndex = 144;
+            this.label49.Text = "Intermittenet rating(q)";
+            this.toolTip1.SetToolTip(this.label49, resources.GetString("label49.ToolTip"));
+            // 
+            // txtIntermittedRating
+            // 
+            this.txtIntermittedRating.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIntermittedRating.Location = new System.Drawing.Point(248, 402);
+            this.txtIntermittedRating.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtIntermittedRating.Name = "txtIntermittedRating";
+            this.txtIntermittedRating.Size = new System.Drawing.Size(79, 22);
+            this.txtIntermittedRating.TabIndex = 146;
+            this.txtIntermittedRating.Text = "1";
+            // 
+            // label64
+            // 
+            this.label64.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(806, 399);
+            this.label64.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(19, 16);
+            this.label64.TabIndex = 156;
+            this.label64.Text = "%";
+            // 
+            // label66
+            // 
+            this.label66.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(336, 160);
+            this.label66.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(20, 16);
+            this.label66.TabIndex = 159;
+            this.label66.Text = "°C";
+            // 
+            // txtYokeleakageFactor
+            // 
+            this.txtYokeleakageFactor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtYokeleakageFactor.Location = new System.Drawing.Point(249, 343);
+            this.txtYokeleakageFactor.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtYokeleakageFactor.Name = "txtYokeleakageFactor";
+            this.txtYokeleakageFactor.Size = new System.Drawing.Size(78, 22);
+            this.txtYokeleakageFactor.TabIndex = 160;
+            this.txtYokeleakageFactor.Text = "1.8";
+            // 
+            // txtFluxDensityofCore
+            // 
+            this.txtFluxDensityofCore.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtFluxDensityofCore.Location = new System.Drawing.Point(248, 313);
+            this.txtFluxDensityofCore.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtFluxDensityofCore.Name = "txtFluxDensityofCore";
+            this.txtFluxDensityofCore.Size = new System.Drawing.Size(78, 22);
+            this.txtFluxDensityofCore.TabIndex = 161;
+            this.txtFluxDensityofCore.Text = "1.5";
+            // 
+            // textAmbientTemperature
+            // 
+            this.textAmbientTemperature.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textAmbientTemperature.Location = new System.Drawing.Point(248, 154);
+            this.textAmbientTemperature.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.textAmbientTemperature.Name = "textAmbientTemperature";
+            this.textAmbientTemperature.Size = new System.Drawing.Size(79, 22);
+            this.textAmbientTemperature.TabIndex = 157;
+            this.textAmbientTemperature.Text = "40";
+            // 
+            // txtForce
+            // 
+            this.txtForce.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtForce.Location = new System.Drawing.Point(248, 35);
+            this.txtForce.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtForce.Name = "txtForce";
+            this.txtForce.Size = new System.Drawing.Size(79, 22);
+            this.txtForce.TabIndex = 34;
+            // 
+            // lblForce
+            // 
+            this.lblForce.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblForce.AutoSize = true;
+            this.lblForce.Location = new System.Drawing.Point(336, 35);
+            this.lblForce.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblForce.Name = "lblForce";
+            this.lblForce.Size = new System.Drawing.Size(22, 16);
+            this.lblForce.TabIndex = 41;
+            this.lblForce.Text = "kg";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(339, 316);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 16);
+            this.label8.TabIndex = 162;
+            this.label8.Text = "T";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox3.Controls.Add(this.method2);
+            this.groupBox3.Controls.Add(this.method1);
+            this.groupBox3.Location = new System.Drawing.Point(27, 210);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(300, 80);
+            this.groupBox3.TabIndex = 163;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "MMF Calculation method";
+            this.toolTip1.SetToolTip(this.groupBox3, "In this section, the amount of MMF can be calculated using one methods.\r\nMethod1 " +
+        ": MMF can be calculated using the experimental factorof 1.1 to 1.2\r\n");
+            // 
+            // method2
+            // 
+            this.method2.AutoSize = true;
+            this.method2.Location = new System.Drawing.Point(212, 39);
+            this.method2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.method2.Name = "method2";
+            this.method2.Size = new System.Drawing.Size(80, 20);
+            this.method2.TabIndex = 39;
+            this.method2.Text = "Method2";
+            this.method2.UseVisualStyleBackColor = true;
+            // 
+            // label44
+            // 
+            this.label44.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(27, 433);
+            this.label44.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(70, 16);
+            this.label44.TabIndex = 165;
+            this.label44.Text = "Wire gage";
+            this.toolTip1.SetToolTip(this.label44, "Specifies the wire standard\r\nSWG : Standard Wire Gauge\r\nAWG : American Wire Gauge" +
+        "\r\nBWG : Birmingham Wire Gauge\r\n");
+            // 
+            // wireGauge
+            // 
+            this.wireGauge.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.wireGauge.FormattingEnabled = true;
+            this.wireGauge.Items.AddRange(new object[] {
+            "SWG",
+            "AWG",
+            "BWG"});
+            this.wireGauge.Location = new System.Drawing.Point(248, 432);
+            this.wireGauge.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.wireGauge.Name = "wireGauge";
+            this.wireGauge.Size = new System.Drawing.Size(78, 24);
+            this.wireGauge.TabIndex = 164;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Parameter,
+            this.unit,
+            this.value});
+            this.dataGridView3.Location = new System.Drawing.Point(26, 602);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 25;
+            this.dataGridView3.Size = new System.Drawing.Size(815, 142);
+            this.dataGridView3.TabIndex = 166;
+            // 
+            // Parameter
+            // 
+            this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Parameter.HeaderText = "                  Parameter";
+            this.Parameter.MinimumWidth = 6;
+            this.Parameter.Name = "Parameter";
+            this.Parameter.ReadOnly = true;
+            // 
+            // unit
+            // 
+            this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
+            this.unit.HeaderText = "                     unit";
+            this.unit.MinimumWidth = 6;
+            this.unit.Name = "unit";
+            // 
+            // value
+            // 
+            this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle3;
+            this.value.HeaderText = "                      value";
+            this.value.MinimumWidth = 6;
+            this.value.Name = "value";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.chart2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(631, 473);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // chart2
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(3, 3);
+            this.chart2.Margin = new System.Windows.Forms.Padding(4);
+            this.chart2.Name = "chart2";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series1.Legend = "Legend1";
+            series1.Name = "mmf";
+            this.chart2.Series.Add(series1);
+            this.chart2.Size = new System.Drawing.Size(625, 467);
+            this.chart2.TabIndex = 1;
+            this.chart2.Text = "chart2";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.chart1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tabPage2.Size = new System.Drawing.Size(631, 473);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // chart1
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(5, 3);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
+            this.chart1.Name = "chart1";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series2.Legend = "Legend1";
+            series2.Name = "error";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(621, 467);
+            this.chart1.TabIndex = 1;
+            this.chart1.Text = "chart1";
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.lblPicN2);
+            this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.lbldc);
             this.tabPage1.Controls.Add(this.lblPicT1);
             this.tabPage1.Controls.Add(this.lblPicStroke);
@@ -456,20 +937,19 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // lblPicN2
+            // label10
             // 
-            this.lblPicN2.AutoSize = true;
-            this.lblPicN2.Location = new System.Drawing.Point(32, 290);
-            this.lblPicN2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblPicN2.Name = "lblPicN2";
-            this.lblPicN2.Size = new System.Drawing.Size(59, 16);
-            this.lblPicN2.TabIndex = 156;
-            this.lblPicN2.Text = "(0 Turns)";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(51, 279);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 16);
+            this.label10.TabIndex = 108;
+            this.label10.Text = "0 Turns";
             // 
             // lbldc
             // 
             this.lbldc.AutoSize = true;
-            this.lbldc.Location = new System.Drawing.Point(253, 24);
+            this.lbldc.Location = new System.Drawing.Point(253, 35);
             this.lbldc.Name = "lbldc";
             this.lbldc.Size = new System.Drawing.Size(21, 16);
             this.lbldc.TabIndex = 107;
@@ -478,7 +958,7 @@
             // lblPicT1
             // 
             this.lblPicT1.AutoSize = true;
-            this.lblPicT1.Location = new System.Drawing.Point(547, 71);
+            this.lblPicT1.Location = new System.Drawing.Point(547, 80);
             this.lblPicT1.Name = "lblPicT1";
             this.lblPicT1.Size = new System.Drawing.Size(21, 16);
             this.lblPicT1.TabIndex = 106;
@@ -487,7 +967,7 @@
             // lblPicStroke
             // 
             this.lblPicStroke.AutoSize = true;
-            this.lblPicStroke.Location = new System.Drawing.Point(547, 123);
+            this.lblPicStroke.Location = new System.Drawing.Point(561, 134);
             this.lblPicStroke.Name = "lblPicStroke";
             this.lblPicStroke.Size = new System.Drawing.Size(21, 16);
             this.lblPicStroke.TabIndex = 105;
@@ -496,7 +976,7 @@
             // lblPicT
             // 
             this.lblPicT.AutoSize = true;
-            this.lblPicT.Location = new System.Drawing.Point(527, 153);
+            this.lblPicT.Location = new System.Drawing.Point(527, 158);
             this.lblPicT.Name = "lblPicT";
             this.lblPicT.Size = new System.Drawing.Size(21, 16);
             this.lblPicT.TabIndex = 104;
@@ -505,7 +985,7 @@
             // lblPicT2
             // 
             this.lblPicT2.AutoSize = true;
-            this.lblPicT2.Location = new System.Drawing.Point(527, 410);
+            this.lblPicT2.Location = new System.Drawing.Point(527, 399);
             this.lblPicT2.Name = "lblPicT2";
             this.lblPicT2.Size = new System.Drawing.Size(21, 16);
             this.lblPicT2.TabIndex = 103;
@@ -514,7 +994,7 @@
             // lblPicr2
             // 
             this.lblPicr2.AutoSize = true;
-            this.lblPicr2.Location = new System.Drawing.Point(218, 439);
+            this.lblPicr2.Location = new System.Drawing.Point(218, 431);
             this.lblPicr2.Name = "lblPicr2";
             this.lblPicr2.Size = new System.Drawing.Size(21, 16);
             this.lblPicr2.TabIndex = 102;
@@ -523,7 +1003,7 @@
             // lblD
             // 
             this.lblD.AutoSize = true;
-            this.lblD.Location = new System.Drawing.Point(334, 439);
+            this.lblD.Location = new System.Drawing.Point(334, 431);
             this.lblD.Name = "lblD";
             this.lblD.Size = new System.Drawing.Size(21, 16);
             this.lblD.TabIndex = 101;
@@ -541,7 +1021,7 @@
             // lblPicr1
             // 
             this.lblPicr1.AutoSize = true;
-            this.lblPicr1.Location = new System.Drawing.Point(449, 439);
+            this.lblPicr1.Location = new System.Drawing.Point(449, 431);
             this.lblPicr1.Name = "lblPicr1";
             this.lblPicr1.Size = new System.Drawing.Size(21, 16);
             this.lblPicr1.TabIndex = 99;
@@ -559,599 +1039,48 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.tabPage2.Size = new System.Drawing.Size(631, 473);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 378);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 16);
-            this.label4.TabIndex = 106;
-            this.label4.Text = "Armature\'s leakage factor";
-            // 
-            // txtArmetureLeacageFactor
-            // 
-            this.txtArmetureLeacageFactor.Location = new System.Drawing.Point(248, 372);
-            this.txtArmetureLeacageFactor.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtArmetureLeacageFactor.Name = "txtArmetureLeacageFactor";
-            this.txtArmetureLeacageFactor.Size = new System.Drawing.Size(78, 22);
-            this.txtArmetureLeacageFactor.TabIndex = 107;
-            this.txtArmetureLeacageFactor.Text = "4";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label60);
-            this.groupBox1.Controls.Add(this.label59);
-            this.groupBox1.Controls.Add(this.label58);
-            this.groupBox1.Controls.Add(this.label57);
-            this.groupBox1.Controls.Add(this.label53);
-            this.groupBox1.Controls.Add(this.label52);
-            this.groupBox1.Controls.Add(this.label63);
-            this.groupBox1.Controls.Add(this.label51);
-            this.groupBox1.Controls.Add(this.label62);
-            this.groupBox1.Controls.Add(this.label29);
-            this.groupBox1.Controls.Add(this.label61);
-            this.groupBox1.Controls.Add(this.label28);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtCoilsCoverThickness);
-            this.groupBox1.Controls.Add(this.txtCoilsSpoolInsulation);
-            this.groupBox1.Controls.Add(this.txtSpoolThickness);
-            this.groupBox1.Controls.Add(this.txtFaceofPoleThickness);
-            this.groupBox1.Controls.Add(this.label40);
-            this.groupBox1.Controls.Add(this.txtClearance);
-            this.groupBox1.Controls.Add(this.txtAllowance);
-            this.groupBox1.Controls.Add(this.txtCoilsTube);
-            this.groupBox1.Controls.Add(this.txtCoilsheight);
-            this.groupBox1.Controls.Add(this.txtTotalRadusInsulation);
-            this.groupBox1.Controls.Add(this.txtTotalVerticalInsulation);
-            this.groupBox1.Controls.Add(this.label34);
-            this.groupBox1.Controls.Add(this.label38);
-            this.groupBox1.Location = new System.Drawing.Point(399, 35);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.groupBox1.Size = new System.Drawing.Size(445, 330);
-            this.groupBox1.TabIndex = 108;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Insulation";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(407, 174);
-            this.label60.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(29, 16);
-            this.label60.TabIndex = 152;
-            this.label60.Text = "mm";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(407, 145);
-            this.label59.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(29, 16);
-            this.label59.TabIndex = 151;
-            this.label59.Text = "mm";
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(407, 204);
-            this.label58.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(29, 16);
-            this.label58.TabIndex = 151;
-            this.label58.Text = "mm";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(407, 113);
-            this.label57.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(29, 16);
-            this.label57.TabIndex = 150;
-            this.label57.Text = "mm";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(407, 85);
-            this.label53.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(29, 16);
-            this.label53.TabIndex = 149;
-            this.label53.Text = "mm";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(405, 56);
-            this.label52.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(29, 16);
-            this.label52.TabIndex = 148;
-            this.label52.Text = "mm";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(405, 291);
-            this.label63.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(29, 16);
-            this.label63.TabIndex = 155;
-            this.label63.Text = "mm";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(405, 28);
-            this.label51.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(29, 16);
-            this.label51.TabIndex = 147;
-            this.label51.Text = "mm";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(407, 262);
-            this.label62.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(29, 16);
-            this.label62.TabIndex = 154;
-            this.label62.Text = "mm";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(183, 32);
-            this.label29.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(10, 16);
-            this.label29.TabIndex = 109;
-            this.label29.Text = ":";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(407, 237);
-            this.label61.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(29, 16);
-            this.label61.TabIndex = 153;
-            this.label61.Text = "mm";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(10, 206);
-            this.label28.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(134, 16);
-            this.label28.TabIndex = 121;
-            this.label28.Text = "Coil Cover Thickness";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(10, 178);
-            this.label27.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(127, 16);
-            this.label27.TabIndex = 120;
-            this.label27.Text = "Coil-spool insulation";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(9, 148);
-            this.label26.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(102, 16);
-            this.label26.TabIndex = 119;
-            this.label26.Text = "Spool thickness";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(10, 119);
-            this.label25.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(69, 16);
-            this.label25.TabIndex = 118;
-            this.label25.Text = "Clearance";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(9, 88);
-            this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 16);
-            this.label16.TabIndex = 117;
-            this.label16.Text = "Allowance";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 59);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(149, 16);
-            this.label7.TabIndex = 116;
-            this.label7.Text = "Coil Tube of kraft paper ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 31);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(289, 16);
-            this.label6.TabIndex = 109;
-            this.label6.Text = "Coil\'s height of each paper margins to thickness";
-            // 
-            // txtCoilsCoverThickness
-            // 
-            this.txtCoilsCoverThickness.Location = new System.Drawing.Point(318, 201);
-            this.txtCoilsCoverThickness.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtCoilsCoverThickness.Name = "txtCoilsCoverThickness";
-            this.txtCoilsCoverThickness.Size = new System.Drawing.Size(77, 22);
-            this.txtCoilsCoverThickness.TabIndex = 115;
-            this.txtCoilsCoverThickness.Text = "4";
-            // 
-            // txtCoilsSpoolInsulation
-            // 
-            this.txtCoilsSpoolInsulation.Location = new System.Drawing.Point(318, 170);
-            this.txtCoilsSpoolInsulation.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtCoilsSpoolInsulation.Name = "txtCoilsSpoolInsulation";
-            this.txtCoilsSpoolInsulation.Size = new System.Drawing.Size(77, 22);
-            this.txtCoilsSpoolInsulation.TabIndex = 114;
-            this.txtCoilsSpoolInsulation.Text = "4";
-            // 
-            // txtSpoolThickness
-            // 
-            this.txtSpoolThickness.Location = new System.Drawing.Point(318, 142);
-            this.txtSpoolThickness.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtSpoolThickness.Name = "txtSpoolThickness";
-            this.txtSpoolThickness.Size = new System.Drawing.Size(77, 22);
-            this.txtSpoolThickness.TabIndex = 113;
-            this.txtSpoolThickness.Text = "4";
-            // 
-            // txtFaceofPoleThickness
-            // 
-            this.txtFaceofPoleThickness.Location = new System.Drawing.Point(318, 288);
-            this.txtFaceofPoleThickness.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtFaceofPoleThickness.Name = "txtFaceofPoleThickness";
-            this.txtFaceofPoleThickness.Size = new System.Drawing.Size(77, 22);
-            this.txtFaceofPoleThickness.TabIndex = 133;
-            this.txtFaceofPoleThickness.Text = "4";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(10, 295);
-            this.label40.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(150, 16);
-            this.label40.TabIndex = 132;
-            this.label40.Text = "face-of-pole-thickness(t)";
-            // 
-            // txtClearance
-            // 
-            this.txtClearance.Location = new System.Drawing.Point(318, 113);
-            this.txtClearance.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtClearance.Name = "txtClearance";
-            this.txtClearance.Size = new System.Drawing.Size(77, 22);
-            this.txtClearance.TabIndex = 112;
-            this.txtClearance.Text = "4";
-            // 
-            // txtAllowance
-            // 
-            this.txtAllowance.Location = new System.Drawing.Point(318, 85);
-            this.txtAllowance.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtAllowance.Name = "txtAllowance";
-            this.txtAllowance.Size = new System.Drawing.Size(77, 22);
-            this.txtAllowance.TabIndex = 111;
-            this.txtAllowance.Text = "4";
-            // 
-            // txtCoilsTube
-            // 
-            this.txtCoilsTube.Location = new System.Drawing.Point(318, 56);
-            this.txtCoilsTube.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtCoilsTube.Name = "txtCoilsTube";
-            this.txtCoilsTube.Size = new System.Drawing.Size(77, 22);
-            this.txtCoilsTube.TabIndex = 110;
-            this.txtCoilsTube.Text = "4";
-            // 
-            // txtCoilsheight
-            // 
-            this.txtCoilsheight.Location = new System.Drawing.Point(318, 28);
-            this.txtCoilsheight.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtCoilsheight.Name = "txtCoilsheight";
-            this.txtCoilsheight.Size = new System.Drawing.Size(77, 22);
-            this.txtCoilsheight.TabIndex = 109;
-            this.txtCoilsheight.Text = "4";
-            // 
-            // txtTotalRadusInsulation
-            // 
-            this.txtTotalRadusInsulation.Location = new System.Drawing.Point(318, 230);
-            this.txtTotalRadusInsulation.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtTotalRadusInsulation.Name = "txtTotalRadusInsulation";
-            this.txtTotalRadusInsulation.Size = new System.Drawing.Size(77, 22);
-            this.txtTotalRadusInsulation.TabIndex = 128;
-            this.txtTotalRadusInsulation.Text = "4";
-            // 
-            // txtTotalVerticalInsulation
-            // 
-            this.txtTotalVerticalInsulation.Location = new System.Drawing.Point(318, 259);
-            this.txtTotalVerticalInsulation.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtTotalVerticalInsulation.Name = "txtTotalVerticalInsulation";
-            this.txtTotalVerticalInsulation.Size = new System.Drawing.Size(77, 22);
-            this.txtTotalVerticalInsulation.TabIndex = 130;
-            this.txtTotalVerticalInsulation.Text = "4";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(10, 236);
-            this.label34.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(137, 16);
-            this.label34.TabIndex = 128;
-            this.label34.Text = "Total radius insulation";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(10, 265);
-            this.label38.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(143, 16);
-            this.label38.TabIndex = 129;
-            this.label38.Text = "Total vertical insulation";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(415, 402);
-            this.label42.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(63, 16);
-            this.label42.TabIndex = 135;
-            this.label42.Text = "Accuracy";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(415, 436);
-            this.label43.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(114, 16);
-            this.label43.TabIndex = 136;
-            this.label43.Text = "Maximum iteration";
-            // 
-            // txtAccuracy
-            // 
-            this.txtAccuracy.Location = new System.Drawing.Point(717, 396);
-            this.txtAccuracy.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtAccuracy.Name = "txtAccuracy";
-            this.txtAccuracy.Size = new System.Drawing.Size(77, 22);
-            this.txtAccuracy.TabIndex = 141;
-            this.txtAccuracy.Text = "4";
-            // 
-            // txtMaximumIteration
-            // 
-            this.txtMaximumIteration.Location = new System.Drawing.Point(717, 427);
-            this.txtMaximumIteration.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtMaximumIteration.Name = "txtMaximumIteration";
-            this.txtMaximumIteration.Size = new System.Drawing.Size(77, 22);
-            this.txtMaximumIteration.TabIndex = 142;
-            this.txtMaximumIteration.Text = "4";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(27, 408);
-            this.label49.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(130, 16);
-            this.label49.TabIndex = 144;
-            this.label49.Text = "Intermittenet rating(q)";
-            // 
-            // txtIntermittedRating
-            // 
-            this.txtIntermittedRating.Location = new System.Drawing.Point(248, 402);
-            this.txtIntermittedRating.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtIntermittedRating.Name = "txtIntermittedRating";
-            this.txtIntermittedRating.Size = new System.Drawing.Size(79, 22);
-            this.txtIntermittedRating.TabIndex = 146;
-            this.txtIntermittedRating.Text = "4";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(806, 399);
-            this.label64.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(19, 16);
-            this.label64.TabIndex = 156;
-            this.label64.Text = "%";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(336, 160);
-            this.label66.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(20, 16);
-            this.label66.TabIndex = 159;
-            this.label66.Text = "°C";
-            // 
-            // txtYokeleakageFactor
-            // 
-            this.txtYokeleakageFactor.Location = new System.Drawing.Point(249, 343);
-            this.txtYokeleakageFactor.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtYokeleakageFactor.Name = "txtYokeleakageFactor";
-            this.txtYokeleakageFactor.Size = new System.Drawing.Size(78, 22);
-            this.txtYokeleakageFactor.TabIndex = 160;
-            this.txtYokeleakageFactor.Text = "4";
-            // 
-            // txtFluxDensityofCore
-            // 
-            this.txtFluxDensityofCore.Location = new System.Drawing.Point(248, 313);
-            this.txtFluxDensityofCore.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtFluxDensityofCore.Name = "txtFluxDensityofCore";
-            this.txtFluxDensityofCore.Size = new System.Drawing.Size(78, 22);
-            this.txtFluxDensityofCore.TabIndex = 161;
-            this.txtFluxDensityofCore.Text = "4";
-            // 
-            // textAmbientTemperature
-            // 
-            this.textAmbientTemperature.Location = new System.Drawing.Point(248, 154);
-            this.textAmbientTemperature.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.textAmbientTemperature.Name = "textAmbientTemperature";
-            this.textAmbientTemperature.Size = new System.Drawing.Size(79, 22);
-            this.textAmbientTemperature.TabIndex = 157;
-            this.textAmbientTemperature.Text = "40";
-            // 
-            // txtForce
-            // 
-            this.txtForce.Location = new System.Drawing.Point(248, 35);
-            this.txtForce.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtForce.Name = "txtForce";
-            this.txtForce.Size = new System.Drawing.Size(79, 22);
-            this.txtForce.TabIndex = 34;
-            // 
-            // lblForce
-            // 
-            this.lblForce.AutoSize = true;
-            this.lblForce.Location = new System.Drawing.Point(336, 35);
-            this.lblForce.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblForce.Name = "lblForce";
-            this.lblForce.Size = new System.Drawing.Size(22, 16);
-            this.lblForce.TabIndex = 41;
-            this.lblForce.Text = "kg";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(339, 316);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 16);
-            this.label8.TabIndex = 162;
-            this.label8.Text = "T";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.method1);
-            this.groupBox3.Location = new System.Drawing.Point(27, 210);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(300, 80);
-            this.groupBox3.TabIndex = 163;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "MMF Calculation method";
-            this.toolTip1.SetToolTip(this.groupBox3, "In this section, the amount of MMF can be calculated using one methods.\r\nMethod1 " +
-        ": MMF can be calculated using the experimental factorof 1.1 to 1.2\r\n");
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(27, 433);
-            this.label44.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(70, 16);
-            this.label44.TabIndex = 165;
-            this.label44.Text = "Wire gage";
-            // 
-            // wireGauge
-            // 
-            this.wireGauge.FormattingEnabled = true;
-            this.wireGauge.Items.AddRange(new object[] {
-            "SWG",
-            "AWG",
-            "BWG"});
-            this.wireGauge.Location = new System.Drawing.Point(248, 432);
-            this.wireGauge.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.wireGauge.Name = "wireGauge";
-            this.wireGauge.Size = new System.Drawing.Size(78, 24);
-            this.wireGauge.TabIndex = 164;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Parameter,
-            this.unit,
-            this.value});
-            this.dataGridView3.Location = new System.Drawing.Point(26, 602);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(815, 142);
-            this.dataGridView3.TabIndex = 166;
-            // 
-            // Parameter
-            // 
-            this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Parameter.HeaderText = "                  Parameter";
-            this.Parameter.MinimumWidth = 6;
-            this.Parameter.Name = "Parameter";
-            this.Parameter.ReadOnly = true;
-            // 
-            // unit
-            // 
-            this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle5;
-            this.unit.HeaderText = "                     unit";
-            this.unit.MinimumWidth = 6;
-            this.unit.Name = "unit";
-            // 
-            // value
-            // 
-            this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle6;
-            this.value.HeaderText = "                      value";
-            this.value.MinimumWidth = 6;
-            this.value.Name = "value";
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Location = new System.Drawing.Point(900, 15);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(639, 502);
+            this.tabControl1.TabIndex = 105;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.chart3);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(631, 473);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // chart3
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea3);
+            this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend3.Name = "Legend1";
+            this.chart3.Legends.Add(legend3);
+            this.chart3.Location = new System.Drawing.Point(3, 3);
+            this.chart3.Margin = new System.Windows.Forms.Padding(4);
+            this.chart3.Name = "chart3";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series3.Legend = "Legend1";
+            series3.Name = "HeighttoDepthRatio";
+            this.chart3.Series.Add(series3);
+            this.chart3.Size = new System.Drawing.Size(625, 467);
+            this.chart3.TabIndex = 1;
             // 
             // HorseShoe
             // 
@@ -1179,7 +1108,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnExport);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btncalc);
             this.Controls.Add(this.txtslotSpaceFactor);
             this.Controls.Add(this.label55);
@@ -1202,22 +1130,27 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.forceTypeCombo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Name = "HorseShoe";
             this.Text = "Horse shoe";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1248,53 +1181,26 @@
         private System.Windows.Forms.TextBox txtslotSpaceFactor;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Button btncalc;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtArmetureLeacageFactor;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCoilsCoverThickness;
-        private System.Windows.Forms.TextBox txtCoilsSpoolInsulation;
-        private System.Windows.Forms.TextBox txtSpoolThickness;
-        private System.Windows.Forms.TextBox txtClearance;
-        private System.Windows.Forms.TextBox txtAllowance;
         private System.Windows.Forms.TextBox txtCoilsTube;
         private System.Windows.Forms.TextBox txtCoilsheight;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox txtTotalRadusInsulation;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox txtTotalVerticalInsulation;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox txtFaceofPoleThickness;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox txtAccuracy;
         private System.Windows.Forms.TextBox txtMaximumIteration;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox txtIntermittedRating;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.TextBox txtYokeleakageFactor;
@@ -1311,7 +1217,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn unit;
         private System.Windows.Forms.DataGridViewTextBoxColumn value;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label lbldc;
         private System.Windows.Forms.Label lblPicT1;
         private System.Windows.Forms.Label lblPicStroke;
@@ -1321,7 +1229,17 @@
         private System.Windows.Forms.Label lblD;
         private System.Windows.Forms.Label lblPicH;
         private System.Windows.Forms.Label lblPicr1;
-        private System.Windows.Forms.Label lblPicN2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RadioButton method2;
     }
 }
 

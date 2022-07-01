@@ -1,4 +1,11 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace trans_1
@@ -88,7 +95,205 @@ namespace trans_1
 
         private double Lmt;
 
-        
+        private double H;
+
+        private double Hw;
+
+        private double Hy;
+
+        private double W;
+
+        private double Ww;
+
+        private double D;
+
+        private double Dy;
+
+        private double Aw;
+
+        private double a;
+
+        private double b;
+
+        private double d;
+
+        private double diLv;
+
+        private double diHv;
+
+        private double ILv;
+
+        private double Iv;
+
+        private double NLv;
+
+        private double NHv;
+
+        private double IHv;
+
+        private double RHv;
+
+        private double RLv;
+
+        private double xHv;
+
+        private double xLv;
+
+        private double XLv;
+
+        private double XHv;
+
+        private double aHv;
+
+        private double aLv;
+
+        private double εx;
+
+        private double dLv;
+
+        private double dHv;
+
+        private double XHv_2n;
+
+        private double XLv_2n;
+
+        private double Acu;
+
+        private int SWGAWGBWGIndexHv = -1;
+        private int SWGAWGBWGIndexLv = -1;
+
+        private List<double> swgInsulations = new List<double>();
+        private List<double> awgInsulations = new List<double>();
+
+
+        private int SWGAWGBWGIndex = -1;
+
+
+        private void cretwAWGInsulation()
+        {
+
+            creteSWGInsulations();
+            cretwAWGInsulation();
+
+            for (int i = 0; i < 10; i++)
+            {
+                awgInsulations.Add(0.41);
+            }
+
+            awgInsulations.Add(0.4);
+
+            awgInsulations.Add(0.4);
+
+            awgInsulations.Add(0.4);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.35);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+            awgInsulations.Add(0.3);
+
+
+
+            for (int i = 23; i < 37; i++)
+            {
+                awgInsulations.Add(0.25);
+            }
+
+            for (int i = 37; i < 41; i++)
+            {
+                awgInsulations.Add(0.2);
+            }
+        }
+
+        private void creteSWGInsulations()
+        {
+            for (int i = 0; i < 16; i++)
+            {
+
+                swgInsulations.Add(0.074);
+
+            }
+
+            swgInsulations.Add(0.075);
+
+            swgInsulations.Add(0.075);
+
+            swgInsulations.Add(0.075);
+
+            swgInsulations.Add(0.263);
+
+            swgInsulations.Add(0.263);
+
+            swgInsulations.Add(0.05);
+
+            swgInsulations.Add(0.05);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.038);
+
+            swgInsulations.Add(0.033);
+
+            swgInsulations.Add(0.033);
+
+            swgInsulations.Add(0.033);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.025);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.018);
+
+            swgInsulations.Add(0.013);
+
+            swgInsulations.Add(0.013);
+        }
+
+
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            wireGauge.SelectedIndex = 0;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+        }
+
+
+
+
+
+
+
 
         public SinglePhaseTransformer()
         {
@@ -101,65 +306,66 @@ namespace trans_1
 
 
 
-
-
-
             //kw
 
             //  S < 10
 
-            if (combo_Kw.SelectedIndex == 2)
+            if (combo_Kw.SelectedIndex == 1)
             {
-                if (rating < 10)
+                if (rating <= 10)
                 {
                     kw = 8 / (30 + highVoltage);
                 }
-                else if (rating < 50 && rating > 10)
+                else if (rating <= 50 && rating > 10)
                 {
                     //  10 < S < 50
                     kw = 9 / (30 + highVoltage);
                 }
-                else if (rating < 200 && rating > 50)
+                else if (rating <= 200 && rating > 50)
                 {
                     //  50 < S < 200
                     kw = 10 / (30 + highVoltage);
                 }
-                else if (rating < 500 && rating > 200)
+                else if (rating <= 500 && rating > 200)
                 {
                     //  200 < S < 500
                     kw = 11 / (30 + highVoltage);
                 }
-                else if (rating < 1000 && rating > 500)
+                else if (rating <= 1000 && rating > 500)
                 {
                     //  500 < S < 1000
                     kw = 12 / (30 + highVoltage);
                 }
-                else if (rating < 2000 && rating > 1000)
+                else if (rating <= 2000 && rating > 1000)
                 {
                     //  1000 < S < 2000
                     kw = 13 / (30 + highVoltage);
                 }
-                else if (rating < 5000 && rating > 2000)
+                else if (rating <= 5000 && rating > 2000)
                 {
                     //  2000 < S < 5000
                     kw = 14 / (30 + highVoltage);
                 }
 
-                else if (rating < 10000 && rating > 5000)
+                else if (rating <= 10000 && rating > 5000)
                 {
                     //  5000 < S < 10000
                     kw = 15 / (30 + highVoltage);
                 }
-                else if (rating < 20000 && rating > 10000)
+                else if (rating <= 20000 && rating > 10000)
                 {
                     //  10000 < S < 2000
                     kw = 16 / (30 + highVoltage);
                 }
-            } else if (combo_Kw.SelectedIndex == 1)
-            {
+                else if (rating > 20000)
+                {
+                    //  10000 < S < 2000
+                    kw = 20 / (30 + highVoltage);
+                }
+
 
             }
-            
+
 
 
 
@@ -177,29 +383,30 @@ namespace trans_1
 
 
             // Aw cm^2
-            double Aw = (rating * Math.Pow(10, 5)) / (2.22 * fluxDensity * frequency * delta * kw * Ai);
+            Aw = (rating * Math.Pow(10, 5)) / (2.22 * fluxDensity * frequency * delta * kw * Ai);
 
 
 
             //Acu
-            double Acu = Aw * kw;
+            
+            Acu = Aw * kw;
 
 
             //d
-            double d = Math.Sqrt(Ai / kc);
+            d = Math.Sqrt(Ai / kc);
 
             double Agi = Ai / sf;
 
 
-            double a = 0;
-            double b = 0;
-            double D = 0;
-            double Ww = 0;
-            double Hw = 0;
-            double Dy = 0;
-            double Hy = 0;
-            double H = 0;
-            double W = 0;
+            a = 0;
+            b = 0;
+            D = 0;
+            Ww = 0;
+            Hw = 0;
+            Dy = 0;
+            Hy = 0;
+            H = 0;
+            W = 0;
             // هسته مربعی
             if (comboCrossSection.SelectedIndex == 0)
             {
@@ -217,7 +424,7 @@ namespace trans_1
                 b = 0.53 * d;
             }
             
-
+            
             
             // هسته سه دندانه
             else if (comboCrossSection.SelectedIndex == 2)
@@ -292,47 +499,98 @@ namespace trans_1
 
             // طراحی سیم پیچ ها
 
-            double NHv = highVoltage / voltagePerTurn;
+            NHv = highVoltage / voltagePerTurn;
 
-            double IHv = (rating * 1000) / highVoltage;
+            IHv = (rating * 1000) / highVoltage;
+            //mm^2
+            aHv = IHv / delta;
+            //mm
+            dHv = Math.Sqrt((4 * aHv) / Math.PI);
 
-            double aHv = IHv / delta;
+            
+            double fileD;
+            if (wireGauge.SelectedIndex == 0)
+            {
+                fileD = getDFromFile(@"Resources\\SWG.txt", dHv);
+            }
+            else if (wireGauge.SelectedIndex == 1)
+            {
+                fileD = getDFromFile(@"Resources\\AWG.txt", dHv);
+            }
+            else
+            {
+                fileD = getDFromFile(@"Resources\\BWG.txt", dHv);
+            }
 
-            double dHv = Math.Sqrt((4 * aHv) / Math.PI);
 
-            double diHv = dHv;
+
+            double plus = 0.2;
+            if (wireGauge.SelectedIndex == 0 || wireGauge.SelectedIndex == 1)
+            {
+                plus = swgInsulations[SWGAWGBWGIndexHv];
+            }
+
+            diHv = (fileD) + plus;
+
 
             double LmtHv = (Math.PI * (DiHv + DiLv)) / 2;
 
-            double RHv = (pho2 * NHv * LmtHv) / aHv;
+            RHv = (pho2 * NHv * LmtHv) / aHv;
 
+
+            
+            
 
 
 
             // طراحی سیم پیچ ها
 
-            double NLv = lowVoltage / voltagePerTurn;
+            NLv = lowVoltage / voltagePerTurn;
 
-            double ILv = (rating * 1000) / highVoltage;
+            ILv = (rating * 1000) / highVoltage;
 
-            double aLv = IHv / delta;
+            aLv = ILv / delta;
 
-            double dLv = Math.Sqrt((4 * aHv) / Math.PI);
-
-            double diLv = dHv;
-
-            double LmtLv = (Math.PI * (DiHv + DiLv)) / 2;
-
-            double RLv = (pho2 * NLv * LmtLv) / aHv;
+            dLv = Math.Sqrt((4 * aLv) / Math.PI);
 
 
+                       
+            if (wireGauge.SelectedIndex == 0)
+            {
+                fileD = getDFromFile(@"Resources\\SWG.txt", dLv);
+            }
+            else if (wireGauge.SelectedIndex == 1)
+            {
+                fileD = getDFromFile(@"Resources\\AWG.txt", dLv);
+            }
+            else
+            {
+                fileD = getDFromFile(@"Resources\\BWG.txt", dLv);
+            }
 
-            double xHv = 0;
-            double xLv = 0;
-            double XHv = 0;
-            double XLv = 0;
+
+
+            
+            if (wireGauge.SelectedIndex == 0 || wireGauge.SelectedIndex == 1)
+            {
+                plus = swgInsulations[SWGAWGBWGIndexLv];
+            }
+
+            diLv = (fileD) + plus;
+
+
+            double LmtLv = Math.PI * ((DiHv + DiLv) / 2);
+
+            RLv = (pho2 * NLv * LmtLv) / aHv;
+
+
+
+            xHv = 0;
+            xLv = 0;
+            XHv = 0;
+            XLv = 0;
             double mmf = 0;
-            double εx_Concentric = 0;
+            εx = 0;
             // Concentric  برای ترانس ستونی
             if (combo_Leakageresistancewinding.SelectedIndex == 0)
             {
@@ -346,7 +604,7 @@ namespace trans_1
 
                  mmf = (4.44 * frequency * Ai * fluxDensity * 1000) / (kFactor * kFactor);
 
-                 εx_Concentric = ((2 * Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI) / voltagePerTurn) * mmf * (Lmt / hc) * (((bhv + blv) / 3) + b0);
+                 εx = ((2 * Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI) / voltagePerTurn) * mmf * (Lmt / hc) * (((bhv + blv) / 3) + b0);
             }
             else
             {
@@ -363,13 +621,13 @@ namespace trans_1
                 //  گروه    n2 برای
                 else
                 {
-                    double XHv_2n = ((Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI * Math.Pow(NHv, 2)) / n) * (Lmt / w) * (((bhv + blv) / 6) + b0);
+                    XHv_2n = ((Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI * Math.Pow(NHv, 2)) / n) * (Lmt / w) * (((bhv + blv) / 6) + b0);
 
-                    double XLv_2n = ((Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI * Math.Pow(NLv, 2)) / n) * (Lmt / w) * (((bhv + blv) / 6) + b0);
+                    XLv_2n = ((Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI * Math.Pow(NLv, 2)) / n) * (Lmt / w) * (((bhv + blv) / 6) + b0);
 
                     mmf = (4.44 * frequency * Ai * fluxDensity * 1000) / (kFactor * kFactor);
 
-                    double εx_Sandwitch = ((Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI) / (n * voltagePerTurn)) * mmf * (Lmt / w) * (((bhv + blv) / 6) + b0);
+                    εx = ((Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI) / (n * voltagePerTurn)) * mmf * (Lmt / w) * (((bhv + blv) / 6) + b0);
                 }
 
                 
@@ -378,18 +636,41 @@ namespace trans_1
 
         }
 
+        private double getDFromFile(string filePath, double value)
+        {
+            var first = new List<double>();
+            var second = new List<double>();
+
+            using (var streamReader = new StreamReader(filePath))
+            {
+
+                String line;
+                while ((line = streamReader.ReadLine()) != null)
+                {
+                    string[] arr = line.Split(',');
+                    first.Add(Double.Parse(arr[0]));
+                    second.Add(Double.Parse(arr[1]));
+                }
+            }
+            double res = second.Aggregate((x, y) => Math.Abs(x - value) < Math.Abs(y - value) ? x : y);
+            SWGAWGBWGIndex = (int)first[second.IndexOf(res)];
+            SWGAWGBWGIndexHv = (int)first[second.IndexOf(res)];
+            SWGAWGBWGIndexLv = (int)first[second.IndexOf(res)];
+            return res;
+        }
+
         private void getvalues()
         {
             if (rdbRaiting.Checked)
             {
-                rating = Double.Parse(rdbRaiting.Text);
-                voltagePerTurn = kFactor / Math.Sqrt(rating);
+                rating = Double.Parse(txt_ratingvalue.Text);
+                voltagePerTurn = kFactor * Math.Sqrt(rating);
                 txt_voltageperturnvalue.Text = Convert.ToString(voltagePerTurn);
             }
             else if (rdbVoltagePerTurn.Checked)
             {
                 voltagePerTurn = Double.Parse(txt_voltageperturnvalue.Text);
-                rating = Math.Pow((kFactor / voltagePerTurn), 2);
+                rating = Math.Pow((voltagePerTurn / kFactor), 2);
                 txt_ratingvalue.Text = Convert.ToString(rating);
             }
             
@@ -431,12 +712,12 @@ namespace trans_1
 
             AcuPerAi = Double.Parse(txt_AcuAi.Text);
 
-            ks = Double.Parse(txt_Kc.Text);
+            ks = Double.Parse(txt_ks.Text);
 
             kc = Double.Parse(txt_Kc.Text);
             if (combo_Kw.SelectedIndex == 0)
             {
-                kw = Double.Parse(combo_Kw.Text);
+                kw = Double.Parse(txt_KwValue.Text);
             }
 
            
@@ -444,8 +725,6 @@ namespace trans_1
             kFactor = Double.Parse(txt_kFactor.Text);
 
             sf = Double.Parse(txt_Stackingfactor.Text);
-
-            fluxDensity = Double.Parse(txt_Fluxdensity.Text);
 
             DiHv = Double.Parse(txt_diHv.Text);
 
@@ -473,22 +752,27 @@ namespace trans_1
 
             SLL = Double.Parse(txtSLL.Text);
 
-            Wcu = Double.Parse(txtWcu.Text);
+            
 
-
+            // cm^2
             if (combo_Ai.SelectedIndex == 0)
             {
+                //user
                 Ai = Double.Parse(combo_Ai.Text);
             }
             else if (combo_Ai.SelectedIndex == 1)
             {
-                Ai = (voltagePerTurn * Math.Pow(10, 2)) / (4.44 * frequency * fluxDensity);
+                //Et
+                Ai = (voltagePerTurn * Math.Pow(10, 4)) / (4.44 * frequency * fluxDensity);
             }
             else if (combo_Ai.SelectedIndex == 2)
             {
-                Ai = Math.Sqrt(((1000 * rating) / (2.22 * frequency * fluxDensity * delta)) * lmtPerLi * gcuPergi * GiPerGcu);
+                //cost
+                Ai = Math.Sqrt((1000 * rating * lmtPerLi * gcuPergi * GiPerGcu) / (2.22 * frequency * fluxDensity * delta)) * 10000;
             } else if (combo_Ai.SelectedIndex == 3)
             {
+
+                // efficiency
                 double pho = 2.1e-6;
                 double RT1 = 234.5 + temperatureRise;
                 double RT2 = 234.5 + (temperatureRise + ambTemperature);
@@ -496,25 +780,30 @@ namespace trans_1
 
                 WiT = (1 + (y / 100)) * Wi;
 
-                Wcu = (Math.Pow((delta * Math.Pow(10, -6)), 2) * pho2) / 89000;
+                // wat/kg
+                Wcu = (Math.Pow((delta * Math.Pow(10, -6)), 2) * pho2) / 890000;
 
                 WcuT = (1 + (SLL / 100)) * Wcu;
 
                 GiPerGcu = Math.Pow((x / 100), 2) * (WcuT / WiT);
 
-                Ai = Math.Sqrt(((1000 * rating) / (2.22 * frequency * fluxDensity * delta) * lmtPerLi * gcuPergi * GiPerGcu));
+                Ai = Math.Sqrt((1000 * rating * lmtPerLi * gcuPergi * GiPerGcu) / (2.22 * frequency * fluxDensity * delta)) * 10000;
             } else if (combo_Ai.SelectedIndex == 4)
             {
-                Ai = Math.Sqrt(((1000 * rating) / (2.22 * frequency * fluxDensity * delta) * lmtPerLi * gcuPergi * 1));
+                //weight
+                
+                
+                Ai = Math.Sqrt((1000 * rating * lmtPerLi * gcuPergi * GiPerGcu) / (2.22 * frequency * fluxDensity * delta)) * 10000;
             } else if (combo_Ai.SelectedIndex == 5)
             {
+                //volume
                 GiPerGcu = 1 / gcuPergi;
-                Ai = Math.Sqrt(((1000 * rating) / (2.22 * frequency * fluxDensity * delta) * lmtPerLi * 0.86));
+                Ai = Math.Sqrt((1000 * rating * lmtPerLi * GiPerGcu) / (2.22 * frequency * fluxDensity * delta)) * 10000;
             }
 
 
 
-            // you should add the rest of them
+            
         }
 
         private void rdbRaiting_CheckedChanged(object sender, EventArgs e)
@@ -552,6 +841,10 @@ namespace trans_1
             {
                 txt_AiValue.Enabled = false;
             }
+            else
+            {
+                txt_AiValue.Enabled = true;
+            }
 
             if (combo_Ai.SelectedIndex == 5)
             {
@@ -561,6 +854,17 @@ namespace trans_1
             {
                 txt_Gi_Gcu.Enabled = true;
             }
+
+            if(combo_Ai.SelectedIndex == 4)
+            {
+                txt_Gi_Gcu.Text = "1";
+            }
+            else
+            {
+                txt_Gi_Gcu.Text = "";
+            }
+
+
         }
 
         private void combo_Kw_SelectedIndexChanged(object sender, EventArgs e)
@@ -599,6 +903,20 @@ namespace trans_1
         {
             if (combo_structure.SelectedIndex == 0)
             {
+                pictureBox8.Visible = true;
+                pictureBox9.Visible = false;
+
+                labelH.Visible = false;
+                labelHy.Visible = false;
+                labelHw.Visible = false;
+                labelW.Visible = false;
+                labelWw.Visible = false;
+                label2D.Visible = false;
+                labelDy.Visible = false;
+                labelHV.Visible = false;
+                labelLv.Visible = false;
+
+
                 combo_Leakageresistancewinding.SelectedIndex = 0;
                 txt_kFactor.Text = "0.8";
                 maxLmtPerLi = 0.55;
@@ -607,12 +925,31 @@ namespace trans_1
             }
             else
             {
+                pictureBox8.Visible = false;
+                pictureBox9.Visible = true;
+
+                labelHy.Visible = true;
+                labelHw.Visible = true;
+                labelW.Visible = true;
+                labelWw.Visible = true;
+                label2D.Visible = true;
+                labelDy.Visible = true;
+                labelHV.Visible = true;
+                labelLv.Visible = true;
+
                 combo_Leakageresistancewinding.SelectedIndex =1;
                 txt_kFactor.Text = "1";
                 maxLmtPerLi = 2;
                 minLmtPerLi = 1.2;
                 txt_LmtLi.Text = "1.5";
             }
+
+
+
+            
+
+
+
         }
 
         private void combo_Leakageresistancewinding_SelectedIndexChanged(object sender, EventArgs e)
@@ -657,15 +994,7 @@ namespace trans_1
             }
         }
 
-        private void txt_Kfactor_MaskChanged(object sender, EventArgs e)
-        {
-         
-        }
 
-        private void txt_kFactor_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void txt_kFactor_Validated(object sender, EventArgs e)
         {
@@ -682,11 +1011,17 @@ namespace trans_1
                         txt_kFactor.Text = "0.75";
                     }
                 }
-                catch (Exception exception)
+                catch (Exception)
                 {
 
                 }
             }
+        }
+
+
+        private void txt_kFactor_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void txt_LmtLi_Validated(object sender, EventArgs e)
@@ -719,25 +1054,23 @@ namespace trans_1
 
         private void combo_Steel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combo_Steel.SelectedIndex == 7)
+            if (combo_Steel.SelectedIndex == 7 && combo_application.SelectedIndex == 0)
             {
-                if (combo_application.SelectedIndex == 0)
+                if (highVoltage > 0 && highVoltage < 132)
                 {
-                    if (highVoltage > 0 && highVoltage < 132)
-                    {
-                        txt_Fluxdensity.Text= "1.55";
-                    } else if (highVoltage >= 132 && highVoltage < 275)
-                    {
-                        txt_Fluxdensity.Text = "1.6";
-                    }
-                    else if (highVoltage >= 275 && highVoltage < 400)
-                    {
-                        txt_Fluxdensity.Text = "1.7";
-                    }
-                    else if (highVoltage >= 400 )
-                    {
-                        txt_Fluxdensity.Text = "1.75";
-                    }
+                    txt_Fluxdensity.Text = "1.55";
+                }
+                else if (highVoltage >= 132 && highVoltage < 275)
+                {
+                    txt_Fluxdensity.Text = "1.6";
+                }
+                else if (highVoltage >= 275 && highVoltage < 400)
+                {
+                    txt_Fluxdensity.Text = "1.7";
+                }
+                else if (highVoltage >= 400)
+                {
+                    txt_Fluxdensity.Text = "1.75";
                 }
                 else
                 {
@@ -754,6 +1087,113 @@ namespace trans_1
                     txt_Fluxdensity.Text = "1.3";
                 }
             }
+
+
+
+            if(combo_Steel.SelectedIndex == 1)
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = true;
+                pictureBox7.Visible = false;
+
+                
+            } 
+            
+            else if (combo_Steel.SelectedIndex == 2)
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = true;
+                pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+            }
+            else if (combo_Steel.SelectedIndex == 3)
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = true;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+
+                
+            }
+            else if (combo_Steel.SelectedIndex == 4)
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = true;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+
+                
+            }
+            else if (combo_Steel.SelectedIndex == 5)
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+
+                
+            }
+            else if (combo_Steel.SelectedIndex == 6)
+            {
+                pictureBox1.Visible = true;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+                pictureBox7.Visible = false;
+
+                
+            }
+            else if (combo_Steel.SelectedIndex == 7)
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+                pictureBox7.Visible = true;
+            }
+            else
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = true;
+                pictureBox7.Visible = false;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
         private void txt_Fluxdensity_Validated(object sender, EventArgs e)
@@ -830,6 +1270,244 @@ namespace trans_1
                     txt_ks.Text = "0.93";
                 }
             }
+
+
+
+
+
+            if(combo_structure.SelectedIndex == 0)
+            {
+                lblPicH.Text = "= " + Convert.ToString(string.Format("{0:0.00}", H));
+
+                lblPicHw.Text = "= " + Convert.ToString(string.Format("{0:0.00}", Hw));
+
+                lblPicHy.Text = "= " + Convert.ToString(string.Format("{0:0.00}", Hy));
+
+                lblPicW.Text = "= " + Convert.ToString(string.Format("{0:0.00}", W));
+
+                lblPicWw.Text = "= " + Convert.ToString(string.Format("{0:0.00}", Ww));
+
+                lblPicD.Text = "= " + Convert.ToString(string.Format("{0:0.00}", D));
+
+                lblPicDy.Text = "= " + Convert.ToString(string.Format("{0:0}", Dy));
+            }
+            else
+            {
+                labelH.Text = "= " + Convert.ToString(string.Format("{0:0}", H));
+
+                labelHV.Text = "= " + Convert.ToString(string.Format("{0:0.00}", NHv));
+
+                labelHw.Text = "= " + Convert.ToString(string.Format("{0:0.00}", Hw));
+
+                labelHy.Text = "= " + Convert.ToString(string.Format("{0:0.00}", Hy));
+
+                labelLv.Text = "= " + Convert.ToString(string.Format("{0:0.00}", NLv));
+
+                labelW.Text = "= " + Convert.ToString(string.Format("{0:0.00}", W));
+
+                labelWw.Text = "= " + Convert.ToString(string.Format("{0:0.00}", Ww));
+
+                label2D.Text = "= " + Convert.ToString(string.Format("{0:0.00}", (D * 2)));
+
+                labelDy.Text = "= " + Convert.ToString(string.Format("{0:0.00}", Dy));
+            }
+            
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+            dataGridView3.Rows.Clear();
+
+            dataGridView3.Rows.Add("  pho2", "  ohm_cm", string.Format("  {0:0.00000000}", pho2));
+
+            dataGridView3.Rows.Add("  H", "  cm", string.Format("  {0:0.0000}", H));
+
+            dataGridView3.Rows.Add("  W", "  cm", string.Format("  {0:0.0000}", W));
+
+            dataGridView3.Rows.Add("  Hw", "  cm", string.Format("  {0:0.0000}", Hw));
+
+            dataGridView3.Rows.Add("  Ww", "  cm", string.Format("  {0:0.0000}", Ww));
+
+            dataGridView3.Rows.Add("  Hy", "  cm", string.Format("  {0:0.0000}", Hy));
+
+            dataGridView3.Rows.Add("  Dy", "  cm", string.Format("  {0:0.0000}", Dy));
+
+            dataGridView3.Rows.Add("  D", "  cm", string.Format("  {0:0.0000}", D));
+
+            dataGridView3.Rows.Add("  Ai", "  cm", string.Format("  {0:0.0000}", Ai));
+
+            dataGridView3.Rows.Add("  Aw", "  cm", string.Format("  {0:0.0000}", Aw));
+
+            dataGridView3.Rows.Add("  a", "", string.Format("  {0:0}", a));
+
+            dataGridView3.Rows.Add("  b", "", string.Format("  {0:0}", b));
+
+            dataGridView3.Rows.Add("  d", "", string.Format("  {0:0}", d));
+
+            dataGridView3.Rows.Add("  diLv", "", string.Format("  {0:0}", diLv));
+
+            dataGridView3.Rows.Add("  diHv", "", string.Format("  {0:0.0000}", diHv));
+
+            dataGridView3.Rows.Add("  index HV", " ", string.Format("  {0:0}", SWGAWGBWGIndexHv));
+
+            dataGridView3.Rows.Add("  index LV", " ", string.Format("  {0:0}", SWGAWGBWGIndexLv));
+
+            dataGridView3.Rows.Add("  ILv", "  cm^2", string.Format("  {0:0.0000}", ILv));
+
+            dataGridView3.Rows.Add("  IHv", "  cm", string.Format("  {0:0.0000}", IHv));
+
+            dataGridView3.Rows.Add("  RHv", "  ohm", string.Format("  {0:0.0000}", RHv));
+
+            dataGridView3.Rows.Add("  RLv", "  Amper", string.Format("  {0:0.0000}", RLv));
+
+            dataGridView3.Rows.Add("  aHv", "  Amper", string.Format("  {0:0.0000}", aHv));
+
+            dataGridView3.Rows.Add("  aLv", "  Amper", string.Format("  {0:0.0000}", aLv));
+
+            dataGridView3.Rows.Add("  xHv", "  Amper", string.Format("  {0:0.0000}", xHv));
+
+            dataGridView3.Rows.Add("  xLv", "  Amper", string.Format("  {0:0.0000}", xLv));
+
+            dataGridView3.Rows.Add("  XLv", "  Amper", string.Format("  {0:0.0000}", XLv));
+
+            dataGridView3.Rows.Add("  XLv", "  Amper", string.Format("  {0:0.0000}", XLv));
+
+            dataGridView3.Rows.Add("  εx", "  Amper", string.Format("  {0:0.0000}", εx));
+            
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF files|*.pdf" })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        Document doc = new Document(iTextSharp.text.PageSize.A4, 10, 10, 42, 35);
+
+                        PdfWriter pdfWriter = PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+
+                        doc.Open();
+
+                        PdfContentByte pdfContent = pdfWriter.DirectContent;
+
+                        iTextSharp.text.Rectangle rectangle = new iTextSharp.text.Rectangle(doc.PageSize);
+
+                        //customized border sizes
+                        rectangle.Left += doc.LeftMargin - 5;
+
+                        rectangle.Right -= doc.RightMargin - 5;
+
+                        rectangle.Top -= doc.TopMargin - 5;
+
+                        rectangle.Bottom += doc.BottomMargin - 5;
+
+                        pdfContent.SetColorStroke(BaseColor.WHITE);//setting the color of the border to white
+
+                        pdfContent.Rectangle(rectangle.Left, rectangle.Bottom, rectangle.Width, rectangle.Height);
+
+                        pdfContent.Stroke();
+
+                        using (Bitmap bmp = new Bitmap(tabPage1.Size.Width, tabPage1.Size.Height))
+                        {
+
+                            tabPage1.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, tabPage1.Size.Width, tabPage1.Size.Height));
+
+                            bmp.Save(@"Resources\report.jpg", ImageFormat.Png);
+
+                            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(@"Resources\report.jpg");
+
+                            doc.Add(img);
+                        }
+                        //setting font type, font size and font color
+                        iTextSharp.text.Font headerFont = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 25, BaseColor.LIGHT_GRAY);
+
+                        Paragraph p = new Paragraph();
+
+                        p.Alignment = Element.ALIGN_CENTER;//adjust the alignment of the heading
+
+                        p.Add(new Chunk("Report", headerFont));//adding a heading to the PDF
+
+                        doc.Add(p);//adding component to the document
+
+                        Paragraph p2 = new Paragraph();
+
+                        p2.Add(new Chunk("                      ", headerFont));//adding a heading to the PDF
+
+                        doc.Add(p2);//adding component to the document
+
+                        iTextSharp.text.Font font = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 12, BaseColor.LIGHT_GRAY);
+
+                        //creating pdf table
+                        PdfPTable table = new PdfPTable(dataGridView3.Columns.Count);
+
+                        for (int j = 0; j < dataGridView3.Columns.Count; j++)
+
+                        {
+                            PdfPCell cell = new PdfPCell(); //create object from the pdfpcell
+
+                            cell.BackgroundColor = BaseColor.WHITE;//set color of cells
+
+                            cell.AddElement(new Chunk(dataGridView3.Columns[j].HeaderText.ToUpper(), font));
+
+                            table.AddCell(cell);
+                        }
+
+                        //adding rows from gridview to table
+                        for (int i = 0; i < dataGridView3.Rows.Count; i++)
+                        {
+                            table.WidthPercentage = 100;//set width of the table
+
+                            for (int j = 0; j < dataGridView3.Columns.Count; j++)
+                            {
+                                if (dataGridView3[j, i].Value != null)
+
+                                    table.AddCell(new Phrase(dataGridView3[j, i].Value.ToString()));
+                            }
+                        }
+                        //adding table to document
+                        doc.Add(table);
+
+
+                        doc.Close();
+                        MessageBox.Show("You have successfully exported the file.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        
     }
-}
+    }

@@ -120,6 +120,21 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="label20.ToolTip" xml:space="preserve">
+    <value>Indicates of height to depth ratio of the coil. Its value is between 3 and 5. It consists of three parts.
+If we want to select it by default, it sets the value to 4. In the Fix the factor, Have the user's choice.
+Finally, we can limit the range between 3 and 5 by selecting option Consider Limits.
+</value>
+  </data>
+  <data name="label54.ToolTip" xml:space="preserve">
+    <value>The value of this coefficient can be changed between 0.5 and 0.7 Of course, this value also depends on the voltage.
+If the voltage is low, the default value is 0.7 and if the voltage is high, the default value is 0.5 . But the user can change it.
+</value>
+  </data>
+  <data name="label49.ToolTip" xml:space="preserve">
+    <value>This item is determined by the duty cycle of the device and depends on the operating mode of the device.
+If the device works continuously, its value is 1, and if the device works in turns, the number 0.25 can be assigned to it.</value>
+  </data>
   <metadata name="Parameter.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -129,16 +144,81 @@
   <metadata name="value.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Parameter.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="unit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="value.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAACMuAAAjLgAAAAAAAAAA
+        AAAoFhX/OSko/zkpKP84KCf/QjMy/0Y3Nv88LCz/JhQT/ygWFf8nFhX/JxYV/ycWFf8nFhX/JxYV/ycW
+        Ff8nFhX/JxYV/ycWFf8nFhX/JxYV/ycWFf8nFhX/KBYV/zcnJv85KSn/Oiop/zcnJv84KCf/Oiop/zws
+        K/88LSz/KxkY/xgFBP8uHRz/LBsa/y4dHP9BMjH/Oysq/zcnJv8XAwL/FgMC/xYDAv8WAwL/FgIC/xQB
+        Af8TAAH/EwAB/xQBAf8VAQD/FAAA/xQAAP8VAQD/FgIB/xYDAv8XBAP/IxEQ/yQSEf8lFBP/IhAP/yMR
+        EP8nFRT/KhgX/yoZGP8ZBgX/rqen/6qjo/+rpKP/q6Sj/6ihof+ooKD/qaKi/6+oqP+uqKf/rqen/6yl
+        pv+vqKf/t7Gq/7u1q/+7tav/ta+p/7OusP+3s7X/t7S2/7Swsf+uqKj/rKWk/66np/+rpaT/q6Sk/6uk
+        pP+spaT/q6Sk/6uko/+qo6P/qqOj/66np///////////////////////////////////////////////
+        ///////////////////m5f//vrv1/5qV6f+0sfb/0ryn/76ijf/XxbX/8+rj////////////////////
+        //////////////////////////////////////////////z7+//8+/v//Pv7//z7+//8+/v//Pv7//z8
+        +//5+Pv////+//z8+/+yreP/Z1/M/0Y8wv9BNsD/Niq7/3Jr1f+hfVz/dEEc/3xMKP+AUS7/l3FU/8m2
+        qP/8/Pz///////r5+P/8/Pz//Pv7//z7+//8+/v//Pv7//z7+//8+/v/////////////////////////
+        /////////Pz+///////g3vX/bWXQ/0I3w/9JPsX/UEbH/1RKyP9IPsT/fnnb/6qJa/+CUzH/il49/4hb
+        Of+DVDH/fk0p/5x3Wv/q4tz///////38/P//////////////////////////////////////////////
+        //////////////z8/v//////z8zv/09Fx/9HPMT/U0nI/1FHx/9PRcf/U0nI/0g+xP9+edv/qolr/4JT
+        Mf+JXTz/h1o4/4hbOv+JXTz/gVIu/4daOP/e0sn///////38/P//////////////////////////////
+        ///////////////////9/f7//////9za8/9NQ8b/TEHG/1JIyP9PRcf/UEbH/1FHyP9JP8X/OCy//3Vv
+        2f+kgGD/d0Qf/4NUMf+IXDr/iFs5/4daOP+JXTv/hVc0/4ZZNv/n3tj///////79/f//////////////
+        /////////////////////////v7////////8/P7/Z17O/0g9xf9SSMj/TkTH/1FHx/9MQsb/RjvE/3Vt
+        0/+ppOP/1NLz/+LXzf/Erp7/oX5j/4FRLv+FWDX/iFs6/4dZN/+JXTv/glMw/5dxU//9/Pz////////+
+        /v/////////////////////////////////8/P7//////6yo5P9BNsP/U0nI/09Fx/9QRsf/S0HG/1VL
+        yf/DwOv/////////////////////////////////1se7/4tfPv+EVjT/iFs6/4daOP+KXjz/fU0o/8ey
+        ov///////fz8///////////////////////////////////////9/P7/Zl3O/0o/xf9QRsf/UEbH/05E
+        x/9PRsf/2NXy///////9/f7//Pz+//39///+/f3//fz7//79/f//////5NrS/4daOP+GWTf/h1s5/4hb
+        Of+DVTL/l3BT//39/f/////////+///////////////////////9/f7//////9fV8v9KP8X/UEbH/09F
+        x/9SSMj/QzjD/6ah4v//////+vr9//////////////////////////////////v6+f//////wqua/39O
+        Kv+JXTv/h1o4/4hbOf+DVTL/5NrT///////+/f3///////////////////////z8/v//////trLo/0M4
+        w/9SSMj/T0XH/05Ex/9RR8j/6Of4///////+/v///////////////////////////////////v79////
+        ///v6eX/iFw6/4dZN/+HWjj/iV07/39PKv/OvK7///////38/P///////////////////////Pz+////
+        //+moeP/QjfD/1JIyP9QRsf/SkDF/2Vczv/7+/7/////////////////////////////////////////
+        //////////////z7+v+VblD/hFUy/4hbOf+JXTv/fk4q/8Osm////////fz8////////////////////
+        ///8/P7//////6Sf4v9CN8P/UkjI/1BGx/9JP8X/Z1/P//39/v//////////////////////////////
+        /////////////////////////f38/5dxU/+DVTL/iFs5/4ldO/9+Tir/waqZ///////9/Pz/////////
+        //////////////z8/v//////pJ/i/0I3w/9SSMj/UEbH/0k/xf9nXs///f3+////////////////////
+        ///////////////////////////////////9/fz/l3BT/4NVMv+IWzn/iV07/35OKf/Bqpn///////38
+        /P///////////////////////Pz+//////+kn+L/QjfD/1JIyP9QRsf/ST/F/2dfz//9/f7/////////
+        //////////////////////////////////////////////39/P+XcFP/g1Uy/4hbOf+JXTv/fk4p/8Gq
+        mf///////fz8///////////////////////8/P7//////6Sf4v9CN8P/UkjI/1BGx/9JP8X/Z1/P//39
+        /v///////////////////////////////////////////////////////f38/5dwU/+DVTL/iFs5/4ld
+        O/9+Tin/waqZ///////9/Pz///////////////////////z8/v//////pJ/i/0I3w/9SSMj/UEbH/0k/
+        xf9nX8///f3+///////////////////////////////////////////////////////9/fz/l3BT/4NV
+        Mv+IWzn/iV07/35OKf/Bqpn///////38/P///////////////////////Pz+//////+kn+L/QjfD/1JI
+        yP9QRsf/ST/F/2dfz//9/f7///////////////////////////////////////////////////////39
+        /P+XcFP/g1Uy/4hbOf+JXTv/fk4p/8Gqmf///////fz8///////////////////////8/P7//////6Sf
+        4v9CN8P/UkjI/1BGx/9JP8X/Z1/P//39/v//////////////////////////////////////////////
+        /////////f38/5dwU/+DVTL/iFs5/4ldO/9+Tin/waqZ///////9/Pz///////////////////////z8
+        /v//////pJ/i/0I3w/9SSMj/UEbH/0k/xf9nX8///f3+////////////////////////////////////
+        ///////////////////9/fz/l3BT/4NVMv+IWzn/iV07/35OKf/Bqpn///////38/P//////////////
+        /////////Pz+//////+kn+L/QjfD/1JIyP9QRsf/ST/F/2dfz//9/f7/////////////////////////
+        //////////////////////////////39/P+XcFP/g1Uy/4hbOf+JXTv/fk4p/8Gqmf///////fz8////
+        ///////////////////8/P7//////6Sf4v9COMP/UkjI/1BGx/9KP8X/Z1/P//39/v//////////////
+        /////////////////////////////////////////f38/5dwU/+DVTL/iFw6/4ldPP9+Tin/waqZ////
+        ///9/Pz///////////////////////z8/v//////pJ/i/0I3w/9SSMj/UUfI/0k+xf9nX8///f3+////
+        ///////////////////////////////////////////////////9/fz/l3BT/4NVMf+FVzX/iVw7/39P
+        Kv/Bqpn///////38/P///////////////////////Pz+//////+kn+L/QzjD/1RKyP9LQcb/S0DG/2de
+        z//9/f7///////////////////////////////////////////////////////39/P+XcFP/hVc0/5Vt
+        T/+JXTv/e0ok/8Krmv///////fz8///////////////////////8/P7//////5qV3/9xadH/qqXj/6ag
+        4v+ppOP/WlHL/////////////////////////////////////////////////////////////v7+/5Nq
+        S/+adFj/3NDG/+bd1v+KXj3/v6eV///////9/Pz///////////////////////z8/v//////m5Xf/25m
+        0f/09Pv//////6+q5f9aUcr/////////////////////////////////////////////////////////
+        ///+/v7/k2pM/6B9Y//Twrb/2s3D/4lcO/+/p5X///////38/P///////////////////////Pz+////
+        //+bld//cGjR//T0+/+uqeX/sa3m/1pRyv//////////////////////////////////////////////
+        //////////////////+OZET/zLmq//Hs6P/Muav/hlk3/8Col////////fz8////////////////////
+        ///8/P7//////6Cb4f9MQsb/ZFzO/1ZMyf9gV8z/YlnN//39/v//////////////////////////////
+        /////////////////////////f39/5VtT/+GWDb/rY53/6qKcv9/Tyv/wKiW///////9/Pz/////////
+        //////////////z8/v//////qaTk/0g9xf9VS8n/Vk3J/0xCxv9vZ9H//f3+////////////////////
+        ///////////////////////////////////9/f3/nHdb/4daOP+FVzX/h1o4/4NVMv/Er57///////38
+        /P/////////////////////////////////09Pv/5+b3/+rp+P/p6Pj/6ej4/+zr+f//////////////
+        ///////////////////////////////////////////////////y7er/7+rl//Ht6f/x7Oj/7unk//j1
+        8///////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+</value>
+  </data>
 </root>

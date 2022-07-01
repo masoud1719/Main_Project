@@ -42,47 +42,48 @@ namespace Main
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::Main_Project.Properties.Resources.plunger_3D_view;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(356, 44);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(785, 484);
+            this.pictureBox1.Size = new System.Drawing.Size(472, 485);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(290, 358);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(732, 592);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.Size = new System.Drawing.Size(25, 16);
             this.label1.TabIndex = 45;
             this.label1.Text = "cm";
             // 
             // lblForce
             // 
+            this.lblForce.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblForce.AutoSize = true;
             this.lblForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblForce.Location = new System.Drawing.Point(290, 323);
-            this.lblForce.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblForce.Location = new System.Drawing.Point(732, 549);
             this.lblForce.Name = "lblForce";
-            this.lblForce.Size = new System.Drawing.Size(20, 13);
+            this.lblForce.Size = new System.Drawing.Size(23, 16);
             this.lblForce.TabIndex = 44;
             this.lblForce.Text = "Kg";
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button1.Location = new System.Drawing.Point(128, 389);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(529, 630);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 45);
+            this.button1.Size = new System.Drawing.Size(140, 55);
             this.button1.TabIndex = 43;
             this.button1.Text = "Calculate";
             this.button1.UseVisualStyleBackColor = false;
@@ -90,51 +91,57 @@ namespace Main
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(109, 358);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(490, 592);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 42;
             this.label2.Text = "Stroke (g)";
             // 
             // txtStroke
             // 
+            this.txtStroke.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStroke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtStroke.Location = new System.Drawing.Point(188, 354);
-            this.txtStroke.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStroke.Location = new System.Drawing.Point(596, 587);
+            this.txtStroke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStroke.Name = "txtStroke";
-            this.txtStroke.Size = new System.Drawing.Size(86, 20);
+            this.txtStroke.Size = new System.Drawing.Size(113, 22);
             this.txtStroke.TabIndex = 41;
             // 
             // txtForce
             // 
+            this.txtForce.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtForce.Location = new System.Drawing.Point(188, 322);
-            this.txtForce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtForce.Location = new System.Drawing.Point(596, 547);
+            this.txtForce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtForce.Name = "txtForce";
-            this.txtForce.Size = new System.Drawing.Size(86, 20);
+            this.txtForce.Size = new System.Drawing.Size(113, 22);
             this.txtForce.TabIndex = 40;
             // 
             // comboBoxForce
             // 
+            this.comboBoxForce.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.comboBoxForce.FormattingEnabled = true;
             this.comboBoxForce.Items.AddRange(new object[] {
             "Mass",
             "Force"});
-            this.comboBoxForce.Location = new System.Drawing.Point(80, 320);
-            this.comboBoxForce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxForce.Location = new System.Drawing.Point(452, 545);
+            this.comboBoxForce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxForce.Name = "comboBoxForce";
-            this.comboBoxForce.Size = new System.Drawing.Size(78, 21);
+            this.comboBoxForce.Size = new System.Drawing.Size(103, 24);
             this.comboBoxForce.TabIndex = 39;
+            this.comboBoxForce.SelectedIndexChanged += new System.EventHandler(this.comboBoxForce_SelectedIndexChanged);
             // 
             // PlungerFrontPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = global::Main_Project.Properties.Resources.blue_3d_geometric_abstract_background_6815669;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblForce);
             this.Controls.Add(this.button1);
@@ -143,9 +150,9 @@ namespace Main
             this.Controls.Add(this.txtForce);
             this.Controls.Add(this.comboBoxForce);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PlungerFrontPage";
-            this.Size = new System.Drawing.Size(785, 484);
+            this.Size = new System.Drawing.Size(1199, 746);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

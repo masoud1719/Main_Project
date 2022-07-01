@@ -43,9 +43,7 @@ namespace testmna
         private double ssf;
 
 
-        private List<double> errors = new List<double>();
-        private List<double> mmfs = new List<double>();
-        private List<double> hratios = new List<double>();
+      
 
         private int SWGAWGBWGIndex = -1;
 
@@ -80,17 +78,23 @@ namespace testmna
         private double mmf;
         private double Ro1;
         private double Netwindingheight;
+        private double Bg;
+        private double Lambda;
+
+
+        private List<double> errors = new List<double>();
+        private List<double> mmfs = new List<double>();
+        private List<double> hratios = new List<double>();
+
         
-        
-        
-        
-        
+
+
         private void cmb_force_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (cmb_force.Text.Equals("Mass"))
-                lbl_force.Text = "kg";
+            if (comboBox1.Text.Equals("Mass"))
+                lblForce.Text = "kg";
             else
-                lbl_force.Text = "N";
+                lblForce.Text = "N";
         }
 
 
@@ -103,7 +107,7 @@ namespace testmna
             force *= isMass ? 1 : 9.81;
             txtForce.Text = Convert.ToString(force);
             txtStroke.Text = Convert.ToString(stroke);
-            cmb_force.SelectedIndex = isMass ? 0 : 1;
+            comboBox1.SelectedIndex = isMass ? 0 : 1;
 
             creteSWGInsulations();
             cretwAWGInsulation();
@@ -221,6 +225,7 @@ namespace testmna
 
 
             txt_wire.SelectedIndex = 0;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
 
@@ -246,6 +251,9 @@ namespace testmna
 
         private void button1_Click(object sender, EventArgs e)
         {
+            errors = new List<double>();
+            hratios = new List<double>();
+            mmfs = new List<double>();
 
             getValues();
             for (int i = 0; i < MaximumIteration; i++)
@@ -253,20 +261,36 @@ namespace testmna
 
 
                 // kg/cm
-                var IndexNumber = Math.Sqrt(F) / g;
+                var IndexNumber = Math.Sqrt(F) / stroke;
 
 
-                double Bg = getModel(@"Resources\\Bg.txt").Interpolate(IndexNumber);
+                Bg = getModel(@"Resources\\Bg.txt").Interpolate(IndexNumber);
 
                 // Area of plunger..........m^2
                 A = (F * 4 * Math.PI * Math.Pow(10, -7)) / (0.051 * Math.Pow(Bg, 2));
 
 
-                // Radius of plunger.........mm
-                r1 = Math.Sqrt(A / Math.PI) * 1000;
+                // Radius of plunger.........cm
+                r1 = Math.Sqrt(A / Math.PI) * 100;
 
 
-                mmf = 1; // todo calculate it!
+                double value;
+                if (method1.Checked)
+                {
+                    // 1.1 -> 1.2
+                    value = nextIterVal == 0 ? 1.1 : nextIterVal;
+                    mmf = 16e5 * stroke / 100 * Bg * value;
+
+                }
+                else
+                {
+                    mmf = (16e5 * (stroke / 100) * Bg) / 0.7;
+                }
+
+
+
+
+                mmfs.Add(mmf);
 
 
 
@@ -280,43 +304,51 @@ namespace testmna
                 Ro2 = Ro1 * (234.5 + Tm + Ta) / (234.5 + 75);
 
 
-                double lambda = getModel(@"Resources\\lambda.txt").Interpolate(Tm);
+                if (!rdbfixTheFactor.Checked)
+                {
+                    Alpha = nextIterVal == 0 ? Alpha : Alpha + nextIterVal;
+                }
 
-                // واحد: میلیمتر
-                hc = Math.Pow(((q * Ro2 * Math.Pow((double)mmf, 2) * Alpha) / (2 * lambda * ssf * Tm)), 3) * 10;
+                hratios.Add(Alpha);
+
+
+                Lambda = getModel(@"Resources\\lambda.txt").Interpolate(Tm);
+
+                // واحد: سانتی متر
+                hc = Math.Pow(((q * Ro2 * Math.Pow(mmf, 2) * Alpha) / (2 * Lambda * ssf * Tm)), (double)1 / 3);
 
 
 
-                // واحد: میلیمتر
+                // واحد: سانتی متر
                 dc = hc / Alpha;
 
 
 
-                // واحد: میلیمتر
+                // واحد: سانتی متر
                 r2 = dc + r1;
 
 
 
-
-                r3 = Math.Sqrt(((Inferior / 100) * Math.Pow((double)r1, 2)) + Math.Pow((double)r2, 2));
-
-
+                // واحد: سانتی متر
+                r3 = Math.Sqrt(((Inferior / 100) * Math.Pow(r1, 2)) + Math.Pow(r2, 2));
 
 
+
+                // واحد: سانتی متر
                 t1 = ((Inferior / (100 * 2)) * r1);
 
 
-
+                // واحد: سانتی متر
                 t2 = ((Inferior / (100 * 2)) * (Math.Pow(r1, 2) / r2));
 
 
 
                 // واحد: وبر
-                double phi0 = leakagefactor * Math.PI * Math.Pow(r1, 2) * Math.Pow(10, -3) * Bg;
+                double phi0 = leakagefactor * Math.PI * Math.Pow(r1, 2) * Math.Pow(10, -4) * Bg;
 
 
 
-
+                // واحد: میلی متر
                 lgc = K + L;
 
 
@@ -326,13 +358,13 @@ namespace testmna
 
 
 
-
-                t4 = (800000 * phi0 * lgc) / (mmfgc);
+                // واحد: سانتی متر
+                t4 = ((800000 * phi0 * lgc * Math.Pow(10, -3)) / (mmfgc)) * 100;
 
 
 
                 // واحد: متر مربع
-                double Areaoffluxpatchthoughcylindricalgap = Math.PI * ((2 * r1) + lgc) * t4 * Math.Pow(10, -3);
+                double Areaoffluxpatchthoughcylindricalgap = Math.PI * ((2 * r1) + lgc) * t4 * Math.Pow(10, -5);
 
 
 
@@ -342,7 +374,7 @@ namespace testmna
 
 
                 // واحد: میلیمتر
-                d = (Math.Sqrt((4 * Ro2 * mmf * (r2 - r1) * Math.Pow(10, -1)))) * 10;
+                d = Math.Sqrt((4 * Ro2 * mmf * (r2 - r1)) / V) * 10;
 
 
                 double fileD;
@@ -367,7 +399,7 @@ namespace testmna
                     plus = swgInsulations[SWGAWGBWGIndex];
                 }
 
-                di = (fileD * 10) + plus;
+                di = (fileD) + plus;
 
 
 
@@ -379,22 +411,22 @@ namespace testmna
 
 
 
-                Netwindingdepht = dc - TotalAllowance;
+                Netwindingdepht = dc - (TotalAllowance / 10);
 
 
 
 
-                Numberoflayersdephtwise = dc / di;
+                Numberoflayersdephtwise = Math.Round(Netwindingdepht / (di / 10));
 
 
 
 
-                Netwindingheight = (hc - P) - (2 * Q);
+                Netwindingheight = ((hc * 10) - P) - (2 * Q);
 
 
 
 
-                Numberoflayersheightwise = Netwindingheight / di;
+                Numberoflayersheightwise = Math.Round(Netwindingheight / di);
 
 
 
@@ -404,7 +436,7 @@ namespace testmna
 
 
 
-                az = (Math.PI / 4) * Math.Pow((double)d, 2);
+                az = (Math.PI / 4) * Math.Pow(d, 2);
 
 
 
@@ -414,19 +446,19 @@ namespace testmna
 
 
 
-                R = (Ro2 * lmt * Math.Pow(10, -1) * N) / (az * Math.Pow(10, -2));
+                R = (Ro2 * lmt * N) / (az * 0.01);
 
 
 
 
-                I = V / R;
+                I = (V / R) * 10;
 
 
 
 
 
 
-                double actualMMF = N * I;
+                actualMMF = N * I;
                 double error = ((actualMMF - mmf) / mmf) * 100;
 
                 errors.Add(error);
@@ -439,17 +471,17 @@ namespace testmna
                     if (rdbfixTheFactor.Checked)
                     {
                         method1.Checked = true;
-                        double value = 1.1 - 1.2;
+                        value = 1.2 - 1.1;
                         nextIterVal = value / MaximumIteration;
                     }
                     else if (rdbuseDefaultValue.Checked)
                     {
-                        double value = Alpha - 0;
+                        value = Alpha - 0;
                         nextIterVal = value / MaximumIteration;
                     }
                     else
                     {
-                        double value = Alpha - 3;
+                        value = Alpha - 3;
                         nextIterVal = value / MaximumIteration;
                     }
 
@@ -486,35 +518,47 @@ namespace testmna
 
 
 
+            dataGridView3.Rows.Clear();
 
             dataGridView3.Rows.Add("  pho2", "  ohm_cm", string.Format("  {0:0.00000000}", Ro2));
 
-            dataGridView3.Rows.Add("  h", "  cm", string.Format("  {0:0.0000}", hc));
+            dataGridView3.Rows.Add("  Bg", "  Wb/m^2", string.Format("  {0:0.0000}", Bg));
+
+            dataGridView3.Rows.Add("  mmf", "  A", string.Format("  {0:0.0000}", mmf));
+
+            dataGridView3.Rows.Add("  Lambda", "  wat_cm^2/°C", string.Format("  {0:0.000000}", Lambda));
 
             dataGridView3.Rows.Add("  dc", "  cm", string.Format("  {0:0.0000}", dc));
+
+            dataGridView3.Rows.Add("  hc", "  cm", string.Format("  {0:0.0000}", hc));
 
             dataGridView3.Rows.Add("  r1", "  cm", string.Format("  {0:0.0000}", r1));
 
             dataGridView3.Rows.Add("  r2", "  cm", string.Format("  {0:0.0000}", r2));
 
-            dataGridView3.Rows.Add("  r3", "  cm", string.Format("  {0:0.0000}", r3));
+            dataGridView3.Rows.Add("  r2", "  cm", string.Format("  {0:0.0000}", r3));
 
             dataGridView3.Rows.Add("  t1", "  cm", string.Format("  {0:0.0000}", t1));
 
             dataGridView3.Rows.Add("  t2", "  cm", string.Format("  {0:0.0000}", t2));
 
-            dataGridView3.Rows.Add("  d", "  cm", string.Format("  {0:0.0000}", d));
+            dataGridView3.Rows.Add("  t4", "  cm", string.Format("  {0:0.0000}", t4));
 
-            dataGridView3.Rows.Add("  di", "  cm", string.Format("  {0:0.0000}", di));
+            dataGridView3.Rows.Add("  d", "  mm", string.Format("  {0:0.0000}", d));
+
+            dataGridView3.Rows.Add("  di", "  mm", string.Format("  {0:0.0000}", di));
+
             dataGridView3.Rows.Add("  Netwindingdepht", "  cm", string.Format("  {0:0.0000}", Netwindingdepht));
 
             dataGridView3.Rows.Add("  Numberoflayersdephtwise", "", string.Format("  {0:0}", Numberoflayersdephtwise));
 
+            dataGridView3.Rows.Add("  Netwindingheight", "  cm", string.Format("  {0:0.0000}", Netwindingheight));
+
             dataGridView3.Rows.Add("  Numberoflayersheightwise", "", string.Format("  {0:0}", Numberoflayersheightwise));
 
-            dataGridView3.Rows.Add("  NetDepthOfCoil", "", string.Format("  {0:0}", N));
+            dataGridView3.Rows.Add("  N", "", string.Format("  {0:0}", N));
 
-            dataGridView3.Rows.Add("  az", "  cm^2", string.Format("  {0:0.0000}", az));
+            dataGridView3.Rows.Add("  az", "  mm^2", string.Format("  {0:0.0000}", az));
 
             dataGridView3.Rows.Add("  lmt", "  cm", string.Format("  {0:0.0000}", lmt));
 
@@ -524,9 +568,26 @@ namespace testmna
 
             dataGridView3.Rows.Add("  actualMMF", "  A", string.Format("  {0:0}", actualMMF));
 
+            dataGridView3.Rows.Add("  Wire gauge index", " ", string.Format("  {0:0}", SWGAWGBWGIndex));
 
 
-            
+
+
+
+
+
+            chart1.Series["error"].Points.Clear();
+            chart2.Series["mmf"].Points.Clear();
+            chart3.Series["HeighttoDepthRatio"].Points.Clear();
+            for (int i = 0; i < errors.Count; i++)
+            {
+                chart1.Series["error"].Points.AddXY(i, errors[i]);
+                chart2.Series["mmf"].Points.AddXY(i, mmfs[i]);
+                chart3.Series["HeighttoDepthRatio"].Points.AddXY(i, hratios[i]);
+            }// اینجا ارور داره
+
+
+
 
         }
 
@@ -568,7 +629,7 @@ namespace testmna
                 F /= 9.81;
             }
 
-            g = Double.Parse(txtStroke.Text);
+            stroke = Double.Parse(txtStroke.Text);
 
             V = int.Parse(txtVolyage.Text);
 
@@ -608,115 +669,133 @@ namespace testmna
         }
 
 
-            private void btnExport_Click(object sender, EventArgs e)
+
+
+        
+
+
+
+
+
+        private void btnExport_Click_1(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF files|*.pdf" })
             {
-                using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF files|*.pdf" })
+                if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    if (sfd.ShowDialog() == DialogResult.OK)
+                    try
                     {
-                        try
+                        Document doc = new Document(iTextSharp.text.PageSize.A4, 10, 10, 42, 35);
+
+                        PdfWriter pdfWriter = PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+
+                        doc.Open();
+
+                        PdfContentByte pdfContent = pdfWriter.DirectContent;
+
+                        iTextSharp.text.Rectangle rectangle = new iTextSharp.text.Rectangle(doc.PageSize);
+
+                        //customized border sizes
+                        rectangle.Left += doc.LeftMargin - 5;
+
+                        rectangle.Right -= doc.RightMargin - 5;
+
+                        rectangle.Top -= doc.TopMargin - 5;
+
+                        rectangle.Bottom += doc.BottomMargin - 5;
+
+                        pdfContent.SetColorStroke(BaseColor.WHITE);//setting the color of the border to white
+
+                        pdfContent.Rectangle(rectangle.Left, rectangle.Bottom, rectangle.Width, rectangle.Height);
+
+                        pdfContent.Stroke();
+
+                        using (Bitmap bmp = new Bitmap(tabPage1.Size.Width, tabPage1.Size.Height))
                         {
-                            Document doc = new Document(iTextSharp.text.PageSize.A4, 10, 10, 42, 35);
 
-                            PdfWriter pdfWriter = PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+                            tabPage1.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, tabPage1.Size.Width, tabPage1.Size.Height));
 
-                            doc.Open();
+                            bmp.Save(@"Resources\report.jpg", ImageFormat.Png);
 
-                            PdfContentByte pdfContent = pdfWriter.DirectContent;
+                            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(@"Resources\report.jpg");
 
-                            iTextSharp.text.Rectangle rectangle = new iTextSharp.text.Rectangle(doc.PageSize);
+                            doc.Add(img);
+                        }
+                        //setting font type, font size and font color
+                        iTextSharp.text.Font headerFont = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 25, BaseColor.LIGHT_GRAY);
 
-                            //customized border sizes
-                            rectangle.Left += doc.LeftMargin - 5;
+                        Paragraph p = new Paragraph();
 
-                            rectangle.Right -= doc.RightMargin - 5;
+                        p.Alignment = Element.ALIGN_CENTER;//adjust the alignment of the heading
 
-                            rectangle.Top -= doc.TopMargin - 5;
+                        p.Add(new Chunk("Report", headerFont));//adding a heading to the PDF
 
-                            rectangle.Bottom += doc.BottomMargin - 5;
+                        doc.Add(p);//adding component to the document
 
-                            pdfContent.SetColorStroke(BaseColor.WHITE);//setting the color of the border to white
+                        Paragraph p2 = new Paragraph();
 
-                            pdfContent.Rectangle(rectangle.Left, rectangle.Bottom, rectangle.Width, rectangle.Height);
+                        p2.Add(new Chunk("                      ", headerFont));//adding a heading to the PDF
 
-                            pdfContent.Stroke();
+                        doc.Add(p2);//adding component to the document
 
-                            using (Bitmap bmp = new Bitmap(tabPage1.Size.Width, tabPage1.Size.Height))
-                            {
+                        iTextSharp.text.Font font = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 12, BaseColor.LIGHT_GRAY);
 
-                                tabPage1.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, tabPage1.Size.Width, tabPage1.Size.Height));
+                        //creating pdf table
+                        PdfPTable table = new PdfPTable(dataGridView3.Columns.Count);
 
-                                bmp.Save(@"Resources\report.jpg", ImageFormat.Png);
+                        for (int j = 0; j < dataGridView3.Columns.Count; j++)
 
-                                iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(@"Resources\report.jpg");
+                        {
+                            PdfPCell cell = new PdfPCell(); //create object from the pdfpcell
 
-                                doc.Add(img);
-                            }
-                            //setting font type, font size and font color
-                            iTextSharp.text.Font headerFont = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 25, BaseColor.LIGHT_GRAY);
+                            cell.BackgroundColor = BaseColor.WHITE;//set color of cells
 
-                            Paragraph p = new Paragraph();
+                            cell.AddElement(new Chunk(dataGridView3.Columns[j].HeaderText.ToUpper(), font));
 
-                            p.Alignment = Element.ALIGN_CENTER;//adjust the alignment of the heading
+                            table.AddCell(cell);
+                        }
 
-                            p.Add(new Chunk("Report", headerFont));//adding a heading to the PDF
-
-                            doc.Add(p);//adding component to the document
-
-                            Paragraph p2 = new Paragraph();
-
-                            p2.Add(new Chunk("                      ", headerFont));//adding a heading to the PDF
-
-                            doc.Add(p2);//adding component to the document
-
-                            iTextSharp.text.Font font = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 12, BaseColor.LIGHT_GRAY);
-
-                            //creating pdf table
-                            PdfPTable table = new PdfPTable(dataGridView3.Columns.Count);
+                        //adding rows from gridview to table
+                        for (int i = 0; i < dataGridView3.Rows.Count; i++)
+                        {
+                            table.WidthPercentage = 100;//set width of the table
 
                             for (int j = 0; j < dataGridView3.Columns.Count; j++)
-
                             {
-                                PdfPCell cell = new PdfPCell(); //create object from the pdfpcell
+                                if (dataGridView3[j, i].Value != null)
 
-                                cell.BackgroundColor = BaseColor.WHITE;//set color of cells
-
-                                cell.AddElement(new Chunk(dataGridView3.Columns[j].HeaderText.ToUpper(), font));
-
-                                table.AddCell(cell);
+                                    table.AddCell(new Phrase(dataGridView3[j, i].Value.ToString()));
                             }
-
-                            //adding rows from gridview to table
-                            for (int i = 0; i < dataGridView3.Rows.Count; i++)
-                            {
-                                table.WidthPercentage = 100;//set width of the table
-
-                                for (int j = 0; j < dataGridView3.Columns.Count; j++)
-                                {
-                                    if (dataGridView3[j, i].Value != null)
-
-                                        table.AddCell(new Phrase(dataGridView3[j, i].Value.ToString()));
-                                }
-                            }
-                            //adding table to document
-                            doc.Add(table);
-
-
-                            doc.Close();
-                            MessageBox.Show("You have successfully exported the file.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        //adding table to document
+                        doc.Add(table);
+
+
+                        doc.Close();
+                        MessageBox.Show("You have successfully exported the file.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-
-                
             }
-
-  
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                isNeuton = false;
+                lblForce.Text = "Kg";
+            }
+            else
+            {
+                isNeuton = true;
+                lblForce.Text = "N";
+            }
+        }
+    }
     }
 
 

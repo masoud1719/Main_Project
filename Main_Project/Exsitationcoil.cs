@@ -1,5 +1,13 @@
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using MathNet.Numerics;
+using MathNet.Numerics.Interpolation;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Excitation_Coil
@@ -27,9 +35,44 @@ namespace Excitation_Coil
         private double W;
         private double L;
         private double H;
+        private double vc;
+        private double dc;
+        private double d;
+        private double di;
+        private double lmt;
+        private double ro;
+        private double az;
+        private double Nh;
+        private double Nd;
+        private double N;
+        private double P;
+        private double I;
+        private double HD;
+        private double R;
+        private double actualMMF;
+        private double mmf;
+        private double Di;
+        private double Do;
+        private double tm;
+        private double tr;
+        private double dt;
+        private double Velocity;
+        private double Armatur;
+        private double flux;
+        private double leakage;
+        private double v;
+        private double p;
+        private double Parallel;
+        private double VoltDrop;
 
 
-       private void cretwAWGInsulation()
+
+
+
+
+
+
+        private void cretwAWGInsulation()
         {
             for (int i = 0; i < 10; i++)
             {
@@ -141,70 +184,36 @@ namespace Excitation_Coil
 
 
             wireGauge.SelectedIndex = 0;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void Exsitationcoil_Load(object sender, EventArgs e)
+        private IInterpolation getModel(String filePath)
         {
-            
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton3.Checked)
-                maskedTextBox13.Enabled = false;
-            else
-                maskedTextBox13.Enabled = true;
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            radioButton1.Enabled = false;
-            radioButton2.Enabled = false;
-            maskedTextBox8.Enabled = false;
-            maskedTextBox9.Enabled = false;
-
-            if (checkBox1.Checked)
+            var x = new List<double>();
+            var y = new List<double>();
+            using (var streamReader = new StreamReader(filePath))
             {
-                if (comboBox2.Text == "Round Wire")
+                String line;
+                while ((line = streamReader.ReadLine()) != null)
                 {
-                    radioButton1.Enabled = true;
-                    radioButton2.Enabled = true;
-                }
-                else
-                {
-                    maskedTextBox8.Enabled = true;
+                    string[] arr = line.Split(',');
+                    x.Add(Double.Parse(arr[0]));
+                    y.Add(Double.Parse(arr[1]));
                 }
             }
-            else
-            {
-                maskedTextBox9.Enabled = true;
-
-                if (Double.Parse(textBox1.Text) < 100)
-                    maskedTextBox9.Text = "0.75";
-                else
-                    maskedTextBox9.Text = "0.50";
-
-            }
+            return Interpolate.CubicSpline(x.AsEnumerable(), y.AsEnumerable());
         }
+
+
+
+        
+
+
+
+
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -250,31 +259,77 @@ namespace Excitation_Coil
                 wireGauge.Enabled = true;
         }
 
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            maskedVelocity.Enabled = false;
+            maskedArmatur.Enabled = false;
+            maskeflux.Enabled = false;
+            maskedleakage.Enabled = false;
+            txt_mmf.Enabled = false;
+            maskedParallel.Enabled = false;
+
+
+            if (checkBox2.Checked)
+            {
+                mmf = Double.Parse(txt_mmf.Text);
+                txt_mmf.Enabled = true;
+                maskedVelocity.Enabled = false;
+                maskedArmatur.Enabled = false;
+                maskeflux.Enabled = false;
+                maskedleakage.Enabled = false;
+                maskedParallel.Enabled = false;
+            }
+            else
+            {
+                txt_mmf.Enabled = false;
+                maskedVelocity.Enabled = true;
+                maskedArmatur.Enabled = true;
+                maskeflux.Enabled = true;
+                maskedleakage.Enabled = true;
+                maskedParallel.Enabled = true;
+
+
+
+
+
+            }
+        }
+
+
+
+
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
-            double vc;
-            double v = Double.Parse(textBox1.Text);
-            double p = Double.Parse(maskedTextBox1.Text);
+
+
+
+            v = Double.Parse(textBox1.Text);
+            p = Double.Parse(maskedTextBox1.Text);
 
             if (comboBox1.Text == "Generator")
-
-
+            {
                 vc = (0.8 * v) / p;
-
+            }
 
             else
                 vc = v / p;
 
-            if (radioButton4.Checked)
-            {
 
 
-                double VoltDrop = Double.Parse(maskedTextBox13.Text);
-                vc = (v - VoltDrop) / p;
-            }
 
 
-            double dc;
+
+            
+
+
+
+
+
+
+
             if (radioButton5.Checked)
             {
 
@@ -288,10 +343,7 @@ namespace Excitation_Coil
 
 
             }
-            else if (radioButton6.Checked)
-            {
-                dc = 0;
-            }
+
             else
             {
 
@@ -319,13 +371,13 @@ namespace Excitation_Coil
 
 
 
-            double lmt;
+
             if (comboBox2.Text == "Round Wire")
             {
 
 
-                var Di = Double.Parse(maskedTextBox4.Text);
-                var Do = Double.Parse(maskedTextBox3.Text);
+                Di = Double.Parse(maskedTextBox4.Text);
+                Do = Double.Parse(maskedTextBox3.Text);
 
 
 
@@ -342,39 +394,43 @@ namespace Excitation_Coil
             }
 
 
-            double tm = Double.Parse(textBox2.Text);
-            double tr = Double.Parse(maskedTextBox2.Text);
+            tm = Double.Parse(textBox2.Text);
+            tr = Double.Parse(maskedTextBox2.Text);
 
 
 
 
-            double ro = 2.1 * Math.Pow(10, -6);
+            ro = 2.1 * Math.Pow(10, -6);
 
             if (tm + tr != 75)
                 ro = ro * (234.5 + tm + tr) / (234.5 + 75);
 
 
 
-            double mmf = Double.Parse(txt_mmf.Text);
+            az = ((ro * lmt * mmf) / vc) * 100;
 
 
 
-            double az = ((ro * lmt * mmf) / vc) * 100;
-             // az......mm^2
+            // az......mm^2
 
 
 
-            double d = Math.Sqrt(4 * az / Math.PI);
+            d = Math.Sqrt(4 * az / Math.PI);
 
 
 
-            double di;
+
             if (radioButton8.Checked)
+            {
                 di = d + (2 * ti);
-
+            }
 
             else if (radioButton9.Checked)
+            {
                 di = d + iwd;
+            }   
+
+
 
 
             else
@@ -403,7 +459,7 @@ namespace Excitation_Coil
 
                 di = (fileD * 10) + plus;
             }
-                
+
 
 
 
@@ -427,27 +483,24 @@ namespace Excitation_Coil
 
                         ssf = 0.785 * Math.Pow(d / di, 2);
                 }
-                else
-                {
-                    ssf = Double.Parse(maskedTextBox8.Text); // check shavad.
-                }
+               
             }
 
 
-            double Nh = Math.Round(H / (di / 10));
-            double Nd = Math.Round(dc / (di / 10));
+            Nh = Math.Round(H / (di / 10));
+            Nd = Math.Round(dc / (di / 10));
 
 
 
-            double N = Nh * Nd;
+            N = Nh * Nd;
 
 
             // watt
-            double P = (ro * lmt * mmf * mmf) / ((az * Math.Pow(10, -2) * N));
+            P = (ro * lmt * mmf * mmf) / ((az * Math.Pow(10, -2) * N));
 
 
 
-            double I = P / vc;
+            I = P / vc;
 
 
             // cm^2
@@ -455,7 +508,7 @@ namespace Excitation_Coil
 
 
 
-            double HD;
+
             if (maskedTextBox14.Text != "")
                 HD = Double.Parse(maskedTextBox14.Text);
 
@@ -465,11 +518,11 @@ namespace Excitation_Coil
 
 
             // ohm
-            double R = (ro * lmt * N) / (az *Math.Pow(10, -2));
+            R = (ro * lmt * N) / (az * Math.Pow(10, -2));
 
 
 
-            double mmf_new = N * I;
+            actualMMF = N * I;
 
 
 
@@ -491,32 +544,60 @@ namespace Excitation_Coil
 
 
 
-            dgv_result_dim.Rows.Clear();
-            dgv_result_elec.Rows.Clear();
 
 
 
-            dgv_result_dim.Rows.Add("Height", H + " cm");
-            dgv_result_dim.Rows.Add("dc", dc);
-            dgv_result_dim.Rows.Add("ssf", ssf);
 
 
 
-            dgv_result_elec.Rows.Add("vc", Math.Round(vc, 2) + "    V");
-            dgv_result_elec.Rows.Add("lmt", Math.Round(lmt, 2) + "   cm");
-            dgv_result_elec.Rows.Add("az", Math.Round(lmt, 2) + "   mm^2");
-            dgv_result_elec.Rows.Add("d", Math.Round(d, 2) + "   mm");
-            dgv_result_elec.Rows.Add("di",Math.Round( di, 2) + "   mm");
-            dgv_result_elec.Rows.Add("Nh", Nh);
-            dgv_result_elec.Rows.Add("Nd", Nd);
-            dgv_result_elec.Rows.Add("N", N);
-            dgv_result_elec.Rows.Add("R", Math.Round(R, 2) + "   ohm");
-            dgv_result_elec.Rows.Add("I", Math.Round(I, 2) + "   A");
-            dgv_result_elec.Rows.Add("P", Math.Round(P, 2) + "   watt");
-            dgv_result_elec.Rows.Add("C", Math.Round(C, 2) + "   cm^2");
-            dgv_result_elec.Rows.Add("HD", Math.Round(HD, 3) + "   watt/cm^2");
-            dgv_result_elec.Rows.Add("mmf new", Math.Round(mmf_new, 4) + "   A");
+
+            dataGridView3.Rows.Clear();
+
+            dataGridView3.Rows.Add("  ro", "  ohm_cm", string.Format("  {0:0.00000000}", ro));
+
+            dataGridView3.Rows.Add("  W", "  cm", string.Format("  {0:0.0000}", W));
+
+            dataGridView3.Rows.Add("  L", "  cm", string.Format("  {0:0.0000}", L));
+
+            dataGridView3.Rows.Add("  H", "  cm", string.Format("  {0:0.0000}", H));
+
+            dataGridView3.Rows.Add("  vc", "  cm", string.Format("  {0:0.0000}", vc));
+
+            dataGridView3.Rows.Add("  d", "  cm", string.Format("  {0:0.0000}", d));
+
+            dataGridView3.Rows.Add("  di", "  cm", string.Format("  {0:0.0000}", di));
+
+            dataGridView3.Rows.Add("  dc", "  cm", string.Format("  {0:0.0000}", dc));
+
+            dataGridView3.Rows.Add("  lmt", "  cm", string.Format("  {0:0.0000}", lmt));
+
+            dataGridView3.Rows.Add("  az", "  cm^2", string.Format("  {0:0.00000000}", az));
+
+            dataGridView3.Rows.Add("  Nh", "", string.Format("  {0:0}", Nh));
+
+            dataGridView3.Rows.Add("  Nd", "", string.Format("  {0:0}", Nd));
+
+            dataGridView3.Rows.Add("  N", "", string.Format("  {0:0.0}", N));
+
+            dataGridView3.Rows.Add("  P", "", string.Format("  {0:0.0000}", P));
+
+            dataGridView3.Rows.Add("  R", "  ohm", string.Format("  {0:0.0000}", R));
+
+            dataGridView3.Rows.Add("  I", "  Amper", string.Format("  {0:0.0000}", I));
+
+            dataGridView3.Rows.Add("  actualMMF", "  A", string.Format("  {0:0}", actualMMF));
+
+            dataGridView3.Rows.Add("  index", " ", string.Format("  {0:0}", SWGAWGBWGIndex));
+
+
+
+
+
+
             
+
+
+
         }
 
         private double getDFromFile(string v, double d)
@@ -524,9 +605,194 @@ namespace Excitation_Coil
             throw new NotImplementedException();
         }
 
-        private void dgv_result_dim_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF files|*.pdf" })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        Document doc = new Document(iTextSharp.text.PageSize.A4, 10, 10, 42, 35);
+
+                        PdfWriter pdfWriter = PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+
+                        doc.Open();
+
+                        PdfContentByte pdfContent = pdfWriter.DirectContent;
+
+                        iTextSharp.text.Rectangle rectangle = new iTextSharp.text.Rectangle(doc.PageSize);
+
+                        //customized border sizes
+                        rectangle.Left += doc.LeftMargin - 5;
+
+                        rectangle.Right -= doc.RightMargin - 5;
+
+                        rectangle.Top -= doc.TopMargin - 5;
+
+                        rectangle.Bottom += doc.BottomMargin - 5;
+
+                        pdfContent.SetColorStroke(BaseColor.WHITE);//setting the color of the border to white
+
+                        pdfContent.Rectangle(rectangle.Left, rectangle.Bottom, rectangle.Width, rectangle.Height);
+
+                        pdfContent.Stroke();
+
+                        using (Bitmap bmp = new Bitmap(tabPage1.Size.Width, tabPage1.Size.Height))
+                        {
+
+                            tabPage1.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, tabPage1.Size.Width, tabPage1.Size.Height));
+
+                            bmp.Save(@"Resources\report.jpg", ImageFormat.Png);
+
+                            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(@"Resources\report.jpg");
+
+                            doc.Add(img);
+                        }
+                        //setting font type, font size and font color
+                        iTextSharp.text.Font headerFont = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 25, BaseColor.RED);
+
+                        Paragraph p = new Paragraph();
+
+                        p.Alignment = Element.ALIGN_CENTER;//adjust the alignment of the heading
+
+                        p.Add(new Chunk("Report",   headerFont));//adding a heading to the PDF
+
+                        doc.Add(p);//adding component to the document
+
+                        Paragraph p2 = new Paragraph();
+
+                        p2.Add(new Chunk("                      ", headerFont));//adding a heading to the PDF
+
+                        doc.Add(p2);//adding component to the document
+
+                        iTextSharp.text.Font font = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 12, BaseColor.BLACK);
+
+                        //creating pdf table
+                        PdfPTable table = new PdfPTable(dataGridView3.Columns.Count);
+
+                        for (int j = 0; j < dataGridView3.Columns.Count; j++)
+
+                        {
+                            PdfPCell cell = new PdfPCell(); //create object from the pdfpcell
+
+                            cell.BackgroundColor = BaseColor.YELLOW;//set color of cells
+
+                            cell.AddElement(new Chunk(dataGridView3.Columns[j].HeaderText.ToUpper(), font));
+
+                            table.AddCell(cell);
+                        }
+
+                        //adding rows from gridview to table
+                        for (int i = 0; i < dataGridView3.Rows.Count; i++)
+                        {
+                            table.WidthPercentage = 100;//set width of the table
+
+                            for (int j = 0; j < dataGridView3.Columns.Count; j++)
+                            {
+                                if (dataGridView3[j, i].Value != null)
+
+                                    table.AddCell(new Phrase(dataGridView3[j, i].Value.ToString()));
+                            }
+                        }
+                        //adding table to document
+                        doc.Add(table);
+
+
+                        doc.Close();
+                        MessageBox.Show("You have successfully exported the file.", "PDF Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
+
+        private void Exsitationcoil_Load_1(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+        }
+
+        
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton1.Enabled = false;
+            radioButton2.Enabled = false;
+            label15.Enabled = false;
+            maskedTextBox9.Enabled = false;
+
+            if (checkBox1.Checked)
+            {
+
+                radioButton1.Enabled = true;
+                radioButton2.Enabled = true;
+
+
+            }
+            else
+            {
+
+                maskedTextBox9.Enabled = true;
+                label15.Enabled = true;
+                if (Double.Parse(textBox1.Text) > 0 && Double.Parse(textBox1.Text) < 100)
+                {
+                    maskedTextBox9.Text = "0.75";
+
+                }
+                else if (Double.Parse(textBox1.Text) <= 0)
+                {
+                    MessageBox.Show("Invalid value");
+                }
+                else
+                {
+                    maskedTextBox9.Text = "0.50";
+                }
+
+
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            if (comboBox3.SelectedIndex == 0)
+            {
+                double Q = Double.Parse(maskedTextBox13.Text);
+                vc = (v - Q) / p;
+                label18.Text = "V";
+            }
+            else
+            {
+                double Q = Double.Parse(maskedTextBox13.Text);
+                vc = ((1 - Q) * v) / p;
+                label18.Text = "%";
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            maskedTextBox13.Enabled = false;
+            label18.Enabled = false;
+            comboBox3.Enabled = false;
+
+            if (checkBox3.Checked)
+            {
+                maskedTextBox13.Enabled = false;
+                label18.Enabled = false;
+                comboBox3.Enabled = false;
+            }
+            else
+            {
+                maskedTextBox13.Enabled = true;
+                label18.Enabled = true;
+                comboBox3.Enabled = true;
+            }
+        }
+
+        
     }
 }

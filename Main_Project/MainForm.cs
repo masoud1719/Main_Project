@@ -23,6 +23,12 @@ namespace Main
 
         }
 
+        internal static void openTrans2()
+        {
+            Trans2 f = new Trans2();
+            f.ShowDialog();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             splitContainer1.Panel2.Controls.Clear();
@@ -249,6 +255,15 @@ namespace Main
             var excitationCoilFrontPage = new excitationCoilFrontPage();
             excitationCoilFrontPage.Dock = DockStyle.Fill;
             splitContainer1.Panel2.Controls.Add(excitationCoilFrontPage);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+
+            var trans2Frontpage = new Trans2Frontpage();
+            trans2Frontpage.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(trans2Frontpage);
         }
     }
 }

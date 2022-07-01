@@ -30,9 +30,9 @@ namespace trans_1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinglePhaseTransformer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.combo_structure = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -120,9 +120,6 @@ namespace trans_1
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.txt_calculate = new System.Windows.Forms.Button();
-            this.label57 = new System.Windows.Forms.Label();
-            this.txtWcu = new System.Windows.Forms.MaskedTextBox();
-            this.label58 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.txt_diHv = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
@@ -152,14 +149,43 @@ namespace trans_1
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelHV = new System.Windows.Forms.Label();
+            this.labelDy = new System.Windows.Forms.Label();
+            this.labelHw = new System.Windows.Forms.Label();
+            this.labelLv = new System.Windows.Forms.Label();
+            this.labelWw = new System.Windows.Forms.Label();
+            this.labelHy = new System.Windows.Forms.Label();
+            this.labelH = new System.Windows.Forms.Label();
+            this.label2D = new System.Windows.Forms.Label();
+            this.labelW = new System.Windows.Forms.Label();
+            this.lblPicDy = new System.Windows.Forms.Label();
+            this.lblPicWw = new System.Windows.Forms.Label();
+            this.lblPicNhv = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.lblPicHw = new System.Windows.Forms.Label();
+            this.lblPicHy = new System.Windows.Forms.Label();
+            this.lblPicD = new System.Windows.Forms.Label();
+            this.lblPicW = new System.Windows.Forms.Label();
+            this.lblPicH = new System.Windows.Forms.Label();
             this.lblPT2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Parameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label48 = new System.Windows.Forms.Label();
+            this.wireGauge = new System.Windows.Forms.ComboBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label57 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -168,8 +194,17 @@ namespace trans_1
             this.groupBox6.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -179,11 +214,11 @@ namespace trans_1
             // 
             // combo_structure
             // 
+            resources.ApplyResources(this.combo_structure, "combo_structure");
             this.combo_structure.FormattingEnabled = true;
             this.combo_structure.Items.AddRange(new object[] {
             resources.GetString("combo_structure.Items"),
             resources.GetString("combo_structure.Items1")});
-            resources.ApplyResources(this.combo_structure, "combo_structure");
             this.combo_structure.Name = "combo_structure";
             this.combo_structure.SelectedIndexChanged += new System.EventHandler(this.combo_structure_SelectedIndexChanged);
             // 
@@ -194,11 +229,11 @@ namespace trans_1
             // 
             // combo_conductor
             // 
+            resources.ApplyResources(this.combo_conductor, "combo_conductor");
             this.combo_conductor.FormattingEnabled = true;
             this.combo_conductor.Items.AddRange(new object[] {
             resources.GetString("combo_conductor.Items"),
             resources.GetString("combo_conductor.Items1")});
-            resources.ApplyResources(this.combo_conductor, "combo_conductor");
             this.combo_conductor.Name = "combo_conductor";
             this.combo_conductor.SelectedIndexChanged += new System.EventHandler(this.combo_conductor_SelectedIndexChanged);
             // 
@@ -209,11 +244,11 @@ namespace trans_1
             // 
             // combo_application
             // 
+            resources.ApplyResources(this.combo_application, "combo_application");
             this.combo_application.FormattingEnabled = true;
             this.combo_application.Items.AddRange(new object[] {
             resources.GetString("combo_application.Items"),
             resources.GetString("combo_application.Items1")});
-            resources.ApplyResources(this.combo_application, "combo_application");
             this.combo_application.Name = "combo_application";
             this.combo_application.SelectedIndexChanged += new System.EventHandler(this.combo_application_SelectedIndexChanged);
             // 
@@ -361,6 +396,7 @@ namespace trans_1
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.txt_kFactor);
             this.groupBox2.Controls.Add(this.txtSLL);
             this.groupBox2.Controls.Add(this.label56);
@@ -373,7 +409,6 @@ namespace trans_1
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.label25);
             this.groupBox2.Controls.Add(this.label21);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
@@ -419,8 +454,7 @@ namespace trans_1
             this.combo_Kw.FormattingEnabled = true;
             this.combo_Kw.Items.AddRange(new object[] {
             resources.GetString("combo_Kw.Items"),
-            resources.GetString("combo_Kw.Items1"),
-            resources.GetString("combo_Kw.Items2")});
+            resources.GetString("combo_Kw.Items1")});
             resources.ApplyResources(this.combo_Kw, "combo_Kw");
             this.combo_Kw.Name = "combo_Kw";
             this.combo_Kw.SelectedIndexChanged += new System.EventHandler(this.combo_Kw_SelectedIndexChanged);
@@ -540,6 +574,7 @@ namespace trans_1
             // 
             // combo_Steel
             // 
+            resources.ApplyResources(this.combo_Steel, "combo_Steel");
             this.combo_Steel.FormattingEnabled = true;
             this.combo_Steel.Items.AddRange(new object[] {
             resources.GetString("combo_Steel.Items"),
@@ -550,24 +585,24 @@ namespace trans_1
             resources.GetString("combo_Steel.Items5"),
             resources.GetString("combo_Steel.Items6"),
             resources.GetString("combo_Steel.Items7")});
-            resources.ApplyResources(this.combo_Steel, "combo_Steel");
             this.combo_Steel.Name = "combo_Steel";
             this.combo_Steel.SelectedIndexChanged += new System.EventHandler(this.combo_Steel_SelectedIndexChanged);
             // 
             // groupBox4
             // 
+            resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Controls.Add(this.txt_ratingvalue);
             this.groupBox4.Controls.Add(this.txt_voltageperturnvalue);
             this.groupBox4.Controls.Add(this.rdbRaiting);
             this.groupBox4.Controls.Add(this.rdbVoltagePerTurn);
             this.groupBox4.Controls.Add(this.label26);
             this.groupBox4.Controls.Add(this.label7);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
             // combo_Currentdensity
             // 
+            resources.ApplyResources(this.combo_Currentdensity, "combo_Currentdensity");
             this.combo_Currentdensity.FormattingEnabled = true;
             this.combo_Currentdensity.Items.AddRange(new object[] {
             resources.GetString("combo_Currentdensity.Items"),
@@ -575,7 +610,6 @@ namespace trans_1
             resources.GetString("combo_Currentdensity.Items2"),
             resources.GetString("combo_Currentdensity.Items3"),
             resources.GetString("combo_Currentdensity.Items4")});
-            resources.ApplyResources(this.combo_Currentdensity, "combo_Currentdensity");
             this.combo_Currentdensity.Name = "combo_Currentdensity";
             this.combo_Currentdensity.SelectedIndexChanged += new System.EventHandler(this.combo_Currentdensity_SelectedIndexChanged);
             // 
@@ -586,6 +620,8 @@ namespace trans_1
             // 
             // groupBox5
             // 
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Controls.Add(this.label57);
             this.groupBox5.Controls.Add(this.label42);
             this.groupBox5.Controls.Add(this.txt_y);
             this.groupBox5.Controls.Add(this.label40);
@@ -606,7 +642,6 @@ namespace trans_1
             this.groupBox5.Controls.Add(this.txt_AiValue);
             this.groupBox5.Controls.Add(this.combo_Ai);
             this.groupBox5.Controls.Add(this.label32);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
             // 
@@ -741,21 +776,6 @@ namespace trans_1
             this.txt_calculate.Name = "txt_calculate";
             this.txt_calculate.UseVisualStyleBackColor = true;
             this.txt_calculate.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label57
-            // 
-            resources.ApplyResources(this.label57, "label57");
-            this.label57.Name = "label57";
-            // 
-            // txtWcu
-            // 
-            resources.ApplyResources(this.txtWcu, "txtWcu");
-            this.txtWcu.Name = "txtWcu";
-            // 
-            // label58
-            // 
-            resources.ApplyResources(this.label58, "label58");
-            this.label58.Name = "label58";
             // 
             // label41
             // 
@@ -898,6 +918,7 @@ namespace trans_1
             // 
             // groupBox6
             // 
+            resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.Controls.Add(this.txt_doLv);
             this.groupBox6.Controls.Add(this.label43);
             this.groupBox6.Controls.Add(this.txt_diLv);
@@ -924,40 +945,148 @@ namespace trans_1
             this.groupBox6.Controls.Add(this.label44);
             this.groupBox6.Controls.Add(this.txt_diHv);
             this.groupBox6.Controls.Add(this.label41);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
             // 
             // tabControl1
             // 
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.labelHV);
+            this.tabPage1.Controls.Add(this.labelDy);
+            this.tabPage1.Controls.Add(this.labelHw);
+            this.tabPage1.Controls.Add(this.labelLv);
+            this.tabPage1.Controls.Add(this.labelWw);
+            this.tabPage1.Controls.Add(this.labelHy);
+            this.tabPage1.Controls.Add(this.labelH);
+            this.tabPage1.Controls.Add(this.label2D);
+            this.tabPage1.Controls.Add(this.labelW);
+            this.tabPage1.Controls.Add(this.pictureBox9);
+            this.tabPage1.Controls.Add(this.lblPicDy);
+            this.tabPage1.Controls.Add(this.lblPicWw);
+            this.tabPage1.Controls.Add(this.lblPicNhv);
+            this.tabPage1.Controls.Add(this.label62);
+            this.tabPage1.Controls.Add(this.lblPicHw);
+            this.tabPage1.Controls.Add(this.lblPicHy);
+            this.tabPage1.Controls.Add(this.lblPicD);
+            this.tabPage1.Controls.Add(this.lblPicW);
+            this.tabPage1.Controls.Add(this.lblPicH);
+            this.tabPage1.Controls.Add(this.pictureBox8);
             this.tabPage1.Controls.Add(this.lblPT2);
-            this.tabPage1.Controls.Add(this.pictureBox1);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // labelHV
+            // 
+            resources.ApplyResources(this.labelHV, "labelHV");
+            this.labelHV.Name = "labelHV";
+            // 
+            // labelDy
+            // 
+            resources.ApplyResources(this.labelDy, "labelDy");
+            this.labelDy.Name = "labelDy";
+            // 
+            // labelHw
+            // 
+            resources.ApplyResources(this.labelHw, "labelHw");
+            this.labelHw.Name = "labelHw";
+            // 
+            // labelLv
+            // 
+            resources.ApplyResources(this.labelLv, "labelLv");
+            this.labelLv.Name = "labelLv";
+            // 
+            // labelWw
+            // 
+            resources.ApplyResources(this.labelWw, "labelWw");
+            this.labelWw.Name = "labelWw";
+            // 
+            // labelHy
+            // 
+            resources.ApplyResources(this.labelHy, "labelHy");
+            this.labelHy.Name = "labelHy";
+            // 
+            // labelH
+            // 
+            resources.ApplyResources(this.labelH, "labelH");
+            this.labelH.Name = "labelH";
+            // 
+            // label2D
+            // 
+            resources.ApplyResources(this.label2D, "label2D");
+            this.label2D.Name = "label2D";
+            // 
+            // labelW
+            // 
+            resources.ApplyResources(this.labelW, "labelW");
+            this.labelW.Name = "labelW";
+            // 
+            // lblPicDy
+            // 
+            resources.ApplyResources(this.lblPicDy, "lblPicDy");
+            this.lblPicDy.Name = "lblPicDy";
+            // 
+            // lblPicWw
+            // 
+            resources.ApplyResources(this.lblPicWw, "lblPicWw");
+            this.lblPicWw.Name = "lblPicWw";
+            // 
+            // lblPicNhv
+            // 
+            resources.ApplyResources(this.lblPicNhv, "lblPicNhv");
+            this.lblPicNhv.Name = "lblPicNhv";
+            // 
+            // label62
+            // 
+            resources.ApplyResources(this.label62, "label62");
+            this.label62.Name = "label62";
+            // 
+            // lblPicHw
+            // 
+            resources.ApplyResources(this.lblPicHw, "lblPicHw");
+            this.lblPicHw.Name = "lblPicHw";
+            // 
+            // lblPicHy
+            // 
+            resources.ApplyResources(this.lblPicHy, "lblPicHy");
+            this.lblPicHy.Name = "lblPicHy";
+            // 
+            // lblPicD
+            // 
+            resources.ApplyResources(this.lblPicD, "lblPicD");
+            this.lblPicD.Name = "lblPicD";
+            // 
+            // lblPicW
+            // 
+            resources.ApplyResources(this.lblPicW, "lblPicW");
+            this.lblPicW.Name = "lblPicW";
+            // 
+            // lblPicH
+            // 
+            resources.ApplyResources(this.lblPicH, "lblPicH");
+            this.lblPicH.Name = "lblPicH";
             // 
             // lblPT2
             // 
             resources.ApplyResources(this.lblPT2, "lblPT2");
             this.lblPT2.Name = "lblPT2";
             // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pictureBox7);
+            this.tabPage2.Controls.Add(this.pictureBox6);
+            this.tabPage2.Controls.Add(this.pictureBox5);
+            this.tabPage2.Controls.Add(this.pictureBox4);
+            this.tabPage2.Controls.Add(this.pictureBox3);
+            this.tabPage2.Controls.Add(this.pictureBox2);
+            this.tabPage2.Controls.Add(this.pictureBox1);
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -967,27 +1096,28 @@ namespace trans_1
             resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView3
             // 
+            resources.ApplyResources(this.dataGridView3, "dataGridView3");
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Parameter,
             this.unit,
             this.value});
-            resources.ApplyResources(this.dataGridView3, "dataGridView3");
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 25;
             // 
             // Parameter
             // 
             this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle7;
             resources.ApplyResources(this.Parameter, "Parameter");
             this.Parameter.Name = "Parameter";
             this.Parameter.ReadOnly = true;
@@ -995,37 +1125,119 @@ namespace trans_1
             // unit
             // 
             this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle8;
             resources.ApplyResources(this.unit, "unit");
             this.unit.Name = "unit";
             // 
             // value
             // 
             this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle9;
             resources.ApplyResources(this.value, "value");
             this.value.Name = "value";
+            // 
+            // label48
+            // 
+            resources.ApplyResources(this.label48, "label48");
+            this.label48.Name = "label48";
+            // 
+            // wireGauge
+            // 
+            resources.ApplyResources(this.wireGauge, "wireGauge");
+            this.wireGauge.FormattingEnabled = true;
+            this.wireGauge.Items.AddRange(new object[] {
+            resources.GetString("wireGauge.Items"),
+            resources.GetString("wireGauge.Items1"),
+            resources.GetString("wireGauge.Items2")});
+            this.wireGauge.Name = "wireGauge";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
+            resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Main_Project.Properties.Resources.CRGO;
+            resources.ApplyResources(this.pictureBox7, "pictureBox7");
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Main_Project.Properties.Resources.M15_;
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Main_Project.Properties.Resources.M19_;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Main_Project.Properties.Resources.M22_;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Main_Project.Properties.Resources.M27_;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Main_Project.Properties.Resources.M36_;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Main_Project.Properties.Resources.M43_;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Main_Project.Properties.Resources.Screenshot__593_;
+            resources.ApplyResources(this.pictureBox9, "pictureBox9");
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.TabStop = false;
+            // 
+            // label57
+            // 
+            resources.ApplyResources(this.label57, "label57");
+            this.label57.Name = "label57";
             // 
             // SinglePhaseTransformer
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label48);
+            this.Controls.Add(this.wireGauge);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label57);
-            this.Controls.Add(this.txtWcu);
-            this.Controls.Add(this.label58);
             this.Controls.Add(this.txt_calculate);
             this.Controls.Add(this.label55);
             this.Controls.Add(this.txt_Wi);
@@ -1082,8 +1294,17 @@ namespace trans_1
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1135,7 +1356,6 @@ namespace trans_1
         private ComboBox combo_Steel;
         private MaskedTextBox txt_ks;
         private Label label29;
-        private Label label28;
         private ComboBox combo_Thicknessofsteel;
         private Label label27;
         private ComboBox combo_insulation;
@@ -1177,9 +1397,6 @@ namespace trans_1
         private Button txt_calculate;
         private MaskedTextBox txtSLL;
         private Label label56;
-        private Label label57;
-        private MaskedTextBox txtWcu;
-        private Label label58;
         private Label label41;
         private TextBox txt_diHv;
         private Label label44;
@@ -1217,6 +1434,36 @@ namespace trans_1
         private DataGridViewTextBoxColumn Parameter;
         private DataGridViewTextBoxColumn unit;
         private DataGridViewTextBoxColumn value;
+        private Label label48;
+        private ComboBox wireGauge;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox7;
+        private Label lblPicDy;
+        private Label lblPicWw;
+        private Label lblPicNhv;
+        private Label label62;
+        private Label lblPicHw;
+        private Label lblPicHy;
+        private Label lblPicD;
+        private Label lblPicW;
+        private Label lblPicH;
+        private PictureBox pictureBox8;
+        private Label label28;
+        private Label labelHV;
+        private Label labelDy;
+        private Label labelHw;
+        private Label labelLv;
+        private Label labelWw;
+        private Label labelHy;
+        private Label labelH;
+        private Label label2D;
+        private Label labelW;
+        private PictureBox pictureBox9;
+        private Label label57;
     }
 }

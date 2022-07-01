@@ -55,6 +55,7 @@ namespace Main
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(513, 457);
@@ -65,6 +66,7 @@ namespace Main
             // 
             // lblForce
             // 
+            this.lblForce.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblForce.AutoSize = true;
             this.lblForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblForce.Location = new System.Drawing.Point(515, 415);
@@ -75,6 +77,7 @@ namespace Main
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.DarkSalmon;
             this.button1.Location = new System.Drawing.Point(307, 503);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -87,6 +90,7 @@ namespace Main
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label2.Location = new System.Drawing.Point(291, 455);
@@ -97,6 +101,7 @@ namespace Main
             // 
             // txtStroke
             // 
+            this.txtStroke.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStroke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtStroke.Location = new System.Drawing.Point(396, 453);
             this.txtStroke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -106,6 +111,7 @@ namespace Main
             // 
             // txtForce
             // 
+            this.txtForce.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtForce.Location = new System.Drawing.Point(395, 412);
             this.txtForce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -115,6 +121,7 @@ namespace Main
             // 
             // comboBoxForce
             // 
+            this.comboBoxForce.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxForce.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.comboBoxForce.FormattingEnabled = true;
             this.comboBoxForce.Items.AddRange(new object[] {

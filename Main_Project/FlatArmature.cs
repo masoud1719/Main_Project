@@ -146,8 +146,11 @@ namespace testmna
             cretwAWGInsulation();
         }
 
+
+
         private void cretwAWGInsulation()
         {
+
             for (int i = 0; i < 10; i++)
             {
                 awgInsulations.Add(0.41);
@@ -318,14 +321,11 @@ namespace testmna
                     mmf = 16e5 * stroke / 100 * Bg * value;
 
                 }
-                else if (method2.Checked)
+                else 
                 {
                     mmf = (16e5 * stroke / 100 * Bg + 8000 * r1 / 100);
                 }
-                else
-                {
-                    mmf = getMMFFromBHCurve();
-                }
+               
 
 
                 mmfs.Add(mmf);
@@ -380,7 +380,7 @@ namespace testmna
                 t2 = Math.Pow(r1, 2) / (2 * r2);
 
 
-                d = Math.Sqrt((4 * pho2 * (r1 + r2) * mmf) / voltage);
+                d = Math.Sqrt((4 * pho2 * (r1 + r2) * mmf) / voltage) * 10;
 
                 double fileD;
                 if (wireGauge.SelectedIndex == 0)
@@ -404,7 +404,7 @@ namespace testmna
                     plus = swgInsulations[SWGAWGBWGIndex];
                 }
 
-                di = (fileD * 10) + plus;
+                di = (fileD) + plus;
 
 
 
@@ -437,7 +437,7 @@ namespace testmna
 
 
                 // Resistance
-                R = (pho2 * lmt * N) / az;
+                R = (pho2 * lmt * N) / (az * 0.01);
 
 
                 // current
@@ -481,13 +481,16 @@ namespace testmna
             }
 
 
+
+
+
             lblPicr1.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r1));
 
             lblPicr2.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r2));
 
             lblPicr3.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r3));
 
-            lblPicT1.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t1));
+            lblPicT2.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t1));
 
             lblPicT2.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t2));
 
@@ -541,7 +544,10 @@ namespace testmna
             dataGridView3.Rows.Add("  I", "  Amper", string.Format("  {0:0.0000}", I));
 
             dataGridView3.Rows.Add("  actualMMF", "  A", string.Format("  {0:0}", actualMMF));
+
             dataGridView3.Rows.Add("  index", " ", string.Format("  {0:0}", SWGAWGBWGIndex));
+
+
 
             chart1.Series["error"].Points.Clear();
             chart2.Series["mmf"].Points.Clear();
@@ -742,7 +748,7 @@ namespace testmna
             }
         }
 
-     
+        
     }
     }
 
