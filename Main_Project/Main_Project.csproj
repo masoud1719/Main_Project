@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="choke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="choke.Designer.cs">
+      <DependentUpon>choke.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exsitationcoil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     <Compile Include="Vahid_MainForm.Designer.cs">
       <DependentUpon>Vahid_MainForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="choke.resx">
+      <DependentUpon>choke.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Exsitationcoil.resx">
       <DependentUpon>Exsitationcoil.cs</DependentUpon>
     </EmbeddedResource>

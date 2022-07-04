@@ -368,7 +368,7 @@ namespace Main_Project
 
 
 
-
+            // ohm_cmm
             double pho = 2.1e-6;
             double RT1 = 234.5 + 75;
             double RT2 = 234.5 + (temperatureRise + ambTemperature);

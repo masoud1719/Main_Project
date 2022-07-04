@@ -377,7 +377,6 @@
             // 
             // pictureBox8
             // 
-
             this.pictureBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox8.Location = new System.Drawing.Point(0, 0);
             this.pictureBox8.Name = "pictureBox8";
@@ -487,7 +486,6 @@
             // 
             // pictureBox9
             // 
-
             this.pictureBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox9.Location = new System.Drawing.Point(5, 2);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
@@ -2137,7 +2135,6 @@
             // 
             // pictureBox10
             // 
-
             this.pictureBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox10.Location = new System.Drawing.Point(0, 0);
             this.pictureBox10.Name = "pictureBox10";
