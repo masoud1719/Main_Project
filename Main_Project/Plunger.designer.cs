@@ -30,19 +30,19 @@ namespace testmna
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Plunger));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea25 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend25 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea26 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend26 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series26 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea27 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend27 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series27 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -157,7 +157,7 @@ namespace testmna
             this.label1.Size = new System.Drawing.Size(65, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Stroke (g)";
-            this.toolTip1.SetToolTip(this.label1, "my exp about stroke");
+            this.toolTip1.SetToolTip(this.label1, "The air gap is also denoted by g. Its unit is centimeters.\r\n");
             // 
             // label2
             // 
@@ -169,7 +169,7 @@ namespace testmna
             this.label2.Size = new System.Drawing.Size(74, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Voltage (V)";
-            this.toolTip1.SetToolTip(this.label2, "my explanation about voltage");
+            this.toolTip1.SetToolTip(this.label2, "Coil input voltage. Its unit is volts\r\n");
             // 
             // label3
             // 
@@ -181,7 +181,7 @@ namespace testmna
             this.label3.Size = new System.Drawing.Size(141, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tempreature rise (Tm)";
-            this.toolTip1.SetToolTip(this.label3, "salam khobi?");
+            this.toolTip1.SetToolTip(this.label3, "Temperature rise in degrees Celsius\r\n");
             // 
             // AmbientTemperature
             // 
@@ -193,6 +193,7 @@ namespace testmna
             this.AmbientTemperature.Size = new System.Drawing.Size(165, 16);
             this.AmbientTemperature.TabIndex = 4;
             this.AmbientTemperature.Text = "Ambient Temperature (Ta)";
+            this.toolTip1.SetToolTip(this.AmbientTemperature, "Ambient temperature with a default value of 40 degrees Celsius\r\n");
             // 
             // label5
             // 
@@ -204,6 +205,7 @@ namespace testmna
             this.label5.Size = new System.Drawing.Size(154, 16);
             this.label5.TabIndex = 5;
             this.label5.Text = "MMF Calculation method";
+            this.toolTip1.SetToolTip(this.label5, resources.GetString("label5.ToolTip"));
             // 
             // txtForce
             // 
@@ -332,6 +334,7 @@ namespace testmna
             this.label18.Size = new System.Drawing.Size(47, 16);
             this.label18.TabIndex = 26;
             this.label18.Text = "Inferior";
+            this.toolTip1.SetToolTip(this.label18, resources.GetString("label18.ToolTip"));
             // 
             // label19
             // 
@@ -343,6 +346,7 @@ namespace testmna
             this.label19.Size = new System.Drawing.Size(128, 16);
             this.label19.TabIndex = 27;
             this.label19.Text = "Intermittent raiting (q)";
+            this.toolTip1.SetToolTip(this.label19, resources.GetString("label19.ToolTip"));
             // 
             // label20
             // 
@@ -354,6 +358,7 @@ namespace testmna
             this.label20.Size = new System.Drawing.Size(206, 16);
             this.label20.TabIndex = 28;
             this.label20.Text = "Height to depth ratio ( h / ( r2 - r1 ) )";
+            this.toolTip1.SetToolTip(this.label20, "Maximum repetition to achieve the desired accuracy\r\n\r\n");
             // 
             // txt_wire
             // 
@@ -422,6 +427,7 @@ namespace testmna
             this.label54.Size = new System.Drawing.Size(144, 16);
             this.label54.TabIndex = 75;
             this.label54.Text = "Slot space factor (SSF)";
+            this.toolTip1.SetToolTip(this.label54, resources.GetString("label54.ToolTip"));
             // 
             // txtslotSpaceFactor
             // 
@@ -604,19 +610,19 @@ namespace testmna
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea25.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea25);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            legend25.Name = "Legend1";
+            this.chart1.Legends.Add(legend25);
             this.chart1.Location = new System.Drawing.Point(3, 3);
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series1.Legend = "Legend1";
-            series1.Name = "error";
-            this.chart1.Series.Add(series1);
+            series25.ChartArea = "ChartArea1";
+            series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series25.Legend = "Legend1";
+            series25.Name = "error";
+            this.chart1.Series.Add(series25);
             this.chart1.Size = new System.Drawing.Size(722, 488);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
@@ -634,19 +640,19 @@ namespace testmna
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            chartArea26.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea26);
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            legend26.Name = "Legend1";
+            this.chart2.Legends.Add(legend26);
             this.chart2.Location = new System.Drawing.Point(3, 3);
             this.chart2.Margin = new System.Windows.Forms.Padding(4);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series2.Legend = "Legend1";
-            series2.Name = "mmf";
-            this.chart2.Series.Add(series2);
+            series26.ChartArea = "ChartArea1";
+            series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series26.Legend = "Legend1";
+            series26.Name = "mmf";
+            this.chart2.Series.Add(series26);
             this.chart2.Size = new System.Drawing.Size(722, 488);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
@@ -664,19 +670,19 @@ namespace testmna
             // 
             // chart3
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
+            chartArea27.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea27);
             this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
+            legend27.Name = "Legend1";
+            this.chart3.Legends.Add(legend27);
             this.chart3.Location = new System.Drawing.Point(3, 3);
             this.chart3.Margin = new System.Windows.Forms.Padding(4);
             this.chart3.Name = "chart3";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series3.Legend = "Legend1";
-            series3.Name = "HeighttoDepthRatio";
-            this.chart3.Series.Add(series3);
+            series27.ChartArea = "ChartArea1";
+            series27.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series27.Legend = "Legend1";
+            series27.Name = "HeighttoDepthRatio";
+            this.chart3.Series.Add(series27);
             this.chart3.Size = new System.Drawing.Size(722, 488);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart3";
@@ -776,6 +782,7 @@ namespace testmna
             this.label29.Size = new System.Drawing.Size(192, 16);
             this.label29.TabIndex = 118;
             this.label29.Text = "Allowance for fibre at both ends";
+            this.toolTip1.SetToolTip(this.label29, "The thickness of the lateral fibers");
             // 
             // label58
             // 
@@ -805,6 +812,7 @@ namespace testmna
             this.label60.Size = new System.Drawing.Size(119, 16);
             this.label60.TabIndex = 114;
             this.label60.Text = "Allowance for mica";
+            this.toolTip1.SetToolTip(this.label60, "The thickness of linseed oil or mica");
             // 
             // label49
             // 
@@ -834,6 +842,7 @@ namespace testmna
             this.label57.Size = new System.Drawing.Size(160, 16);
             this.label57.TabIndex = 110;
             this.label57.Text = "Albwance for irregularities";
+            this.toolTip1.SetToolTip(this.label57, "Albwance for irregularities\r\n");
             // 
             // label46
             // 
@@ -863,6 +872,7 @@ namespace testmna
             this.label48.Size = new System.Drawing.Size(157, 16);
             this.label48.TabIndex = 106;
             this.label48.Text = "Outside the coil insulation";
+            this.toolTip1.SetToolTip(this.label48, "The thickness of the external insulation of the winding");
             // 
             // label43
             // 
@@ -892,6 +902,7 @@ namespace testmna
             this.label45.Size = new System.Drawing.Size(158, 16);
             this.label45.TabIndex = 102;
             this.label45.Text = "Brass tube_coil insulation";
+            this.toolTip1.SetToolTip(this.label45, "The thickness of the insulation between the brass pipe and the winding");
             // 
             // label42
             // 
@@ -940,6 +951,7 @@ namespace testmna
             this.label38.Size = new System.Drawing.Size(185, 16);
             this.label38.TabIndex = 97;
             this.label38.Text = "plunger_brass tube clearance";
+            this.toolTip1.SetToolTip(this.label38, "Thickness between plunger and  brass tube");
             // 
             // label35
             // 
@@ -950,6 +962,7 @@ namespace testmna
             this.label35.Size = new System.Drawing.Size(149, 16);
             this.label35.TabIndex = 96;
             this.label35.Text = "Thickness of brass tube";
+            this.toolTip1.SetToolTip(this.label35, "Thickness of brass tube");
             // 
             // txt_Intermittentraiting
             // 
@@ -971,6 +984,8 @@ namespace testmna
             this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 89;
             this.label4.Text = "Wire gauge";
+            this.toolTip1.SetToolTip(this.label4, "Specifies the wire standard\r\nSWG : Standard Wire Gauge\r\nAWG : American Wire Gauge" +
+        "\r\nBWG : Birmingham Wire Gauge\r\n\r\n");
             // 
             // txt_inferior
             // 
@@ -1013,6 +1028,7 @@ namespace testmna
             this.label37.Size = new System.Drawing.Size(97, 16);
             this.label37.TabIndex = 93;
             this.label37.Text = "Leakage factor";
+            this.toolTip1.SetToolTip(this.label37, "Scattering factor");
             // 
             // method2
             // 
@@ -1072,12 +1088,12 @@ namespace testmna
             // Parameter
             // 
             this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle25;
             this.Parameter.HeaderText = "                  Parameter";
             this.Parameter.MinimumWidth = 6;
             this.Parameter.Name = "Parameter";
@@ -1086,12 +1102,12 @@ namespace testmna
             // unit
             // 
             this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle26;
             this.unit.HeaderText = "                     unit";
             this.unit.MinimumWidth = 6;
             this.unit.Name = "unit";
@@ -1099,12 +1115,12 @@ namespace testmna
             // value
             // 
             this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle27;
             this.value.HeaderText = "                      value";
             this.value.MinimumWidth = 6;
             this.value.Name = "value";

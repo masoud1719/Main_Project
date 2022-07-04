@@ -36,8 +36,9 @@ namespace Main_Project
              "#43B76E",
              "#7BCFE9",
              "#B71C46"};
+        internal static Color secondaryColor;
 
-
+        public static Color PrimaryColor { get; internal set; }
 
         public static Color ChangeColorBrightness(Color color, double correctionFactor)
         {

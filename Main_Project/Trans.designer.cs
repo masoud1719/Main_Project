@@ -29,16 +29,15 @@ namespace trans_1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinglePhaseTransformer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.combo_structure = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.combo_conductor = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.combo_application = new System.Windows.Forms.ComboBox();
             this.txt_ratingvalue = new System.Windows.Forms.MaskedTextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,7 +66,8 @@ namespace trans_1
             this.txt_tr = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_kFactor = new System.Windows.Forms.TextBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.txtSLL = new System.Windows.Forms.MaskedTextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.txt_Stackingfactor = new System.Windows.Forms.MaskedTextBox();
@@ -96,10 +96,11 @@ namespace trans_1
             this.combo_Currentdensity = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.txt_y = new System.Windows.Forms.MaskedTextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.txt_AcuAi = new System.Windows.Forms.MaskedTextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.txt_Da = new System.Windows.Forms.MaskedTextBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -147,6 +148,17 @@ namespace trans_1
             this.label43 = new System.Windows.Forms.Label();
             this.txt_doLv = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.labelHV = new System.Windows.Forms.Label();
@@ -158,6 +170,7 @@ namespace trans_1
             this.labelH = new System.Windows.Forms.Label();
             this.label2D = new System.Windows.Forms.Label();
             this.labelW = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lblPicDy = new System.Windows.Forms.Label();
             this.lblPicWw = new System.Windows.Forms.Label();
             this.lblPicNhv = new System.Windows.Forms.Label();
@@ -167,16 +180,9 @@ namespace trans_1
             this.lblPicD = new System.Windows.Forms.Label();
             this.lblPicW = new System.Windows.Forms.Label();
             this.lblPicH = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblPT2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Parameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label48 = new System.Windows.Forms.Label();
-            this.wireGauge = new System.Windows.Forms.ComboBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -184,8 +190,16 @@ namespace trans_1
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label57 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Parameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label48 = new System.Windows.Forms.Label();
+            this.wireGauge = new System.Windows.Forms.ComboBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.combo_application = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -194,9 +208,9 @@ namespace trans_1
             this.groupBox6.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -204,13 +218,14 @@ namespace trans_1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // combo_structure
             // 
@@ -226,6 +241,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
+            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // combo_conductor
             // 
@@ -236,21 +252,6 @@ namespace trans_1
             resources.GetString("combo_conductor.Items1")});
             this.combo_conductor.Name = "combo_conductor";
             this.combo_conductor.SelectedIndexChanged += new System.EventHandler(this.combo_conductor_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // combo_application
-            // 
-            resources.ApplyResources(this.combo_application, "combo_application");
-            this.combo_application.FormattingEnabled = true;
-            this.combo_application.Items.AddRange(new object[] {
-            resources.GetString("combo_application.Items"),
-            resources.GetString("combo_application.Items1")});
-            this.combo_application.Name = "combo_application";
-            this.combo_application.SelectedIndexChanged += new System.EventHandler(this.combo_application_SelectedIndexChanged);
             // 
             // txt_ratingvalue
             // 
@@ -281,11 +282,13 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_HighVoltage, "txt_HighVoltage");
             this.txt_HighVoltage.Name = "txt_HighVoltage";
+            this.txt_HighVoltage.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_HighVoltage_MaskInputRejected);
             // 
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
+            this.toolTip1.SetToolTip(this.label10, resources.GetString("label10.ToolTip"));
             // 
             // rdbRaiting
             // 
@@ -312,11 +315,13 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_LowVoltage, "txt_LowVoltage");
             this.txt_LowVoltage.Name = "txt_LowVoltage";
+            this.txt_LowVoltage.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_LowVoltage_MaskInputRejected);
             // 
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
+            this.toolTip1.SetToolTip(this.label8, resources.GetString("label8.ToolTip"));
             // 
             // label11
             // 
@@ -327,11 +332,13 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_Frequency, "txt_Frequency");
             this.txt_Frequency.Name = "txt_Frequency";
+            this.txt_Frequency.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_Frequency_MaskInputRejected);
             // 
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
+            this.toolTip1.SetToolTip(this.label12, resources.GetString("label12.ToolTip"));
             // 
             // label13
             // 
@@ -342,12 +349,14 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_Fluxdensity, "txt_Fluxdensity");
             this.txt_Fluxdensity.Name = "txt_Fluxdensity";
+            this.txt_Fluxdensity.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_Fluxdensity_MaskInputRejected);
             this.txt_Fluxdensity.Validated += new System.EventHandler(this.txt_Fluxdensity_Validated);
             // 
             // label14
             // 
             resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
+            this.toolTip1.SetToolTip(this.label14, resources.GetString("label14.ToolTip"));
             // 
             // label15
             // 
@@ -358,11 +367,13 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_delta, "txt_delta");
             this.txt_delta.Name = "txt_delta";
+            this.txt_delta.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_delta_MaskInputRejected);
             // 
             // label16
             // 
             resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
+            this.toolTip1.SetToolTip(this.label16, resources.GetString("label16.ToolTip"));
             // 
             // label17
             // 
@@ -378,6 +389,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label18, "label18");
             this.label18.Name = "label18";
+            this.toolTip1.SetToolTip(this.label18, resources.GetString("label18.ToolTip"));
             // 
             // label19
             // 
@@ -393,11 +405,13 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label20, "label20");
             this.label20.Name = "label20";
+            this.toolTip1.SetToolTip(this.label20, resources.GetString("label20.ToolTip"));
             // 
             // groupBox2
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Controls.Add(this.txt_kFactor);
+            this.groupBox2.Controls.Add(this.label68);
+            this.groupBox2.Controls.Add(this.maskedTextBox1);
             this.groupBox2.Controls.Add(this.txtSLL);
             this.groupBox2.Controls.Add(this.label56);
             this.groupBox2.Controls.Add(this.txt_Stackingfactor);
@@ -412,12 +426,16 @@ namespace trans_1
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
-            // txt_kFactor
+            // label68
             // 
-            resources.ApplyResources(this.txt_kFactor, "txt_kFactor");
-            this.txt_kFactor.Name = "txt_kFactor";
-            this.txt_kFactor.TextChanged += new System.EventHandler(this.txt_kFactor_TextChanged);
-            this.txt_kFactor.Validated += new System.EventHandler(this.txt_kFactor_Validated);
+            resources.ApplyResources(this.label68, "label68");
+            this.label68.Name = "label68";
+            // 
+            // maskedTextBox1
+            // 
+            resources.ApplyResources(this.maskedTextBox1, "maskedTextBox1");
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // txtSLL
             // 
@@ -538,6 +556,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label27, "label27");
             this.label27.Name = "label27";
+            this.toolTip1.SetToolTip(this.label27, resources.GetString("label27.ToolTip"));
             // 
             // combo_insulation
             // 
@@ -556,6 +575,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label23, "label23");
             this.label23.Name = "label23";
+            this.toolTip1.SetToolTip(this.label23, resources.GetString("label23.ToolTip"));
             // 
             // label25
             // 
@@ -571,6 +591,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
+            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // combo_Steel
             // 
@@ -599,6 +620,7 @@ namespace trans_1
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
+            this.toolTip1.SetToolTip(this.groupBox4, resources.GetString("groupBox4.ToolTip"));
             // 
             // combo_Currentdensity
             // 
@@ -621,11 +643,11 @@ namespace trans_1
             // groupBox5
             // 
             resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Controls.Add(this.label67);
+            this.groupBox5.Controls.Add(this.label66);
             this.groupBox5.Controls.Add(this.label57);
             this.groupBox5.Controls.Add(this.label42);
             this.groupBox5.Controls.Add(this.txt_y);
-            this.groupBox5.Controls.Add(this.label40);
-            this.groupBox5.Controls.Add(this.txt_AcuAi);
             this.groupBox5.Controls.Add(this.label39);
             this.groupBox5.Controls.Add(this.txt_Da);
             this.groupBox5.Controls.Add(this.label38);
@@ -645,6 +667,21 @@ namespace trans_1
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
             // 
+            // label67
+            // 
+            resources.ApplyResources(this.label67, "label67");
+            this.label67.Name = "label67";
+            // 
+            // label66
+            // 
+            resources.ApplyResources(this.label66, "label66");
+            this.label66.Name = "label66";
+            // 
+            // label57
+            // 
+            resources.ApplyResources(this.label57, "label57");
+            this.label57.Name = "label57";
+            // 
             // label42
             // 
             resources.ApplyResources(this.label42, "label42");
@@ -654,16 +691,6 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_y, "txt_y");
             this.txt_y.Name = "txt_y";
-            // 
-            // label40
-            // 
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.Name = "label40";
-            // 
-            // txt_AcuAi
-            // 
-            resources.ApplyResources(this.txt_AcuAi, "txt_AcuAi");
-            this.txt_AcuAi.Name = "txt_AcuAi";
             // 
             // label39
             // 
@@ -704,6 +731,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_gcugi, "txt_gcugi");
             this.txt_gcugi.Name = "txt_gcugi";
+            this.txt_gcugi.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_gcugi_MaskInputRejected);
             // 
             // label35
             // 
@@ -714,6 +742,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_LmtLi, "txt_LmtLi");
             this.txt_LmtLi.Name = "txt_LmtLi";
+            this.txt_LmtLi.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_LmtLi_MaskInputRejected);
             this.txt_LmtLi.Validated += new System.EventHandler(this.txt_LmtLi_Validated);
             // 
             // label34
@@ -725,16 +754,19 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_Gi_Gcu, "txt_Gi_Gcu");
             this.txt_Gi_Gcu.Name = "txt_Gi_Gcu";
+            this.txt_Gi_Gcu.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_Gi_Gcu_MaskInputRejected);
             // 
             // label33
             // 
             resources.ApplyResources(this.label33, "label33");
             this.label33.Name = "label33";
+            this.toolTip1.SetToolTip(this.label33, resources.GetString("label33.ToolTip"));
             // 
             // txt_AiValue
             // 
             resources.ApplyResources(this.txt_AiValue, "txt_AiValue");
             this.txt_AiValue.Name = "txt_AiValue";
+            this.txt_AiValue.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_AiValue_MaskInputRejected);
             // 
             // combo_Ai
             // 
@@ -754,6 +786,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label32, "label32");
             this.label32.Name = "label32";
+            this.toolTip1.SetToolTip(this.label32, resources.GetString("label32.ToolTip"));
             // 
             // txt_Wi
             // 
@@ -764,6 +797,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label54, "label54");
             this.label54.Name = "label54";
+            this.toolTip1.SetToolTip(this.label54, resources.GetString("label54.ToolTip"));
             // 
             // label55
             // 
@@ -869,12 +903,13 @@ namespace trans_1
             // 
             // comboGroup
             // 
+            resources.ApplyResources(this.comboGroup, "comboGroup");
             this.comboGroup.FormattingEnabled = true;
             this.comboGroup.Items.AddRange(new object[] {
             resources.GetString("comboGroup.Items"),
             resources.GetString("comboGroup.Items1")});
-            resources.ApplyResources(this.comboGroup, "comboGroup");
             this.comboGroup.Name = "comboGroup";
+            this.comboGroup.SelectedIndexChanged += new System.EventHandler(this.comboGroup_SelectedIndexChanged);
             // 
             // textnvalue
             // 
@@ -919,6 +954,17 @@ namespace trans_1
             // groupBox6
             // 
             resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Controls.Add(this.label72);
+            this.groupBox6.Controls.Add(this.label71);
+            this.groupBox6.Controls.Add(this.label70);
+            this.groupBox6.Controls.Add(this.label69);
+            this.groupBox6.Controls.Add(this.label65);
+            this.groupBox6.Controls.Add(this.label64);
+            this.groupBox6.Controls.Add(this.label63);
+            this.groupBox6.Controls.Add(this.label59);
+            this.groupBox6.Controls.Add(this.label58);
+            this.groupBox6.Controls.Add(this.label40);
+            this.groupBox6.Controls.Add(this.checkBox1);
             this.groupBox6.Controls.Add(this.txt_doLv);
             this.groupBox6.Controls.Add(this.label43);
             this.groupBox6.Controls.Add(this.txt_diLv);
@@ -947,6 +993,65 @@ namespace trans_1
             this.groupBox6.Controls.Add(this.label41);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
+            // 
+            // label72
+            // 
+            resources.ApplyResources(this.label72, "label72");
+            this.label72.Name = "label72";
+            // 
+            // label71
+            // 
+            resources.ApplyResources(this.label71, "label71");
+            this.label71.Name = "label71";
+            // 
+            // label70
+            // 
+            resources.ApplyResources(this.label70, "label70");
+            this.label70.Name = "label70";
+            // 
+            // label69
+            // 
+            resources.ApplyResources(this.label69, "label69");
+            this.label69.Name = "label69";
+            // 
+            // label65
+            // 
+            resources.ApplyResources(this.label65, "label65");
+            this.label65.Name = "label65";
+            // 
+            // label64
+            // 
+            resources.ApplyResources(this.label64, "label64");
+            this.label64.Name = "label64";
+            // 
+            // label63
+            // 
+            resources.ApplyResources(this.label63, "label63");
+            this.label63.Name = "label63";
+            // 
+            // label59
+            // 
+            resources.ApplyResources(this.label59, "label59");
+            this.label59.Name = "label59";
+            // 
+            // label58
+            // 
+            resources.ApplyResources(this.label58, "label58");
+            this.label58.Name = "label58";
+            // 
+            // label40
+            // 
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.Name = "label40";
+            // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // tabControl1
             // 
@@ -1028,6 +1133,13 @@ namespace trans_1
             resources.ApplyResources(this.labelW, "labelW");
             this.labelW.Name = "labelW";
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Main_Project.Properties.Resources.Screenshot__593_;
+            resources.ApplyResources(this.pictureBox9, "pictureBox9");
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.TabStop = false;
+            // 
             // lblPicDy
             // 
             resources.ApplyResources(this.lblPicDy, "lblPicDy");
@@ -1073,6 +1185,13 @@ namespace trans_1
             resources.ApplyResources(this.lblPicH, "lblPicH");
             this.lblPicH.Name = "lblPicH";
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
+            resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.TabStop = false;
+            // 
             // lblPT2
             // 
             resources.ApplyResources(this.lblPT2, "lblPT2");
@@ -1090,83 +1209,6 @@ namespace trans_1
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // dataGridView3
-            // 
-            resources.ApplyResources(this.dataGridView3, "dataGridView3");
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Parameter,
-            this.unit,
-            this.value});
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 25;
-            // 
-            // Parameter
-            // 
-            this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle7;
-            resources.ApplyResources(this.Parameter, "Parameter");
-            this.Parameter.Name = "Parameter";
-            this.Parameter.ReadOnly = true;
-            // 
-            // unit
-            // 
-            this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle8;
-            resources.ApplyResources(this.unit, "unit");
-            this.unit.Name = "unit";
-            // 
-            // value
-            // 
-            this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle9;
-            resources.ApplyResources(this.value, "value");
-            this.value.Name = "value";
-            // 
-            // label48
-            // 
-            resources.ApplyResources(this.label48, "label48");
-            this.label48.Name = "label48";
-            // 
-            // wireGauge
-            // 
-            resources.ApplyResources(this.wireGauge, "wireGauge");
-            this.wireGauge.FormattingEnabled = true;
-            this.wireGauge.Items.AddRange(new object[] {
-            resources.GetString("wireGauge.Items"),
-            resources.GetString("wireGauge.Items1"),
-            resources.GetString("wireGauge.Items2")});
-            this.wireGauge.Name = "wireGauge";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
-            resources.ApplyResources(this.pictureBox8, "pictureBox8");
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -1217,17 +1259,92 @@ namespace trans_1
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox9
+            // button2
             // 
-            this.pictureBox9.Image = global::Main_Project.Properties.Resources.Screenshot__593_;
-            resources.ApplyResources(this.pictureBox9, "pictureBox9");
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.TabStop = false;
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label57
+            // dataGridView3
             // 
-            resources.ApplyResources(this.label57, "label57");
-            this.label57.Name = "label57";
+            resources.ApplyResources(this.dataGridView3, "dataGridView3");
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Parameter,
+            this.unit,
+            this.value});
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 25;
+            // 
+            // Parameter
+            // 
+            this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle4;
+            resources.ApplyResources(this.Parameter, "Parameter");
+            this.Parameter.Name = "Parameter";
+            this.Parameter.ReadOnly = true;
+            // 
+            // unit
+            // 
+            this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle5;
+            resources.ApplyResources(this.unit, "unit");
+            this.unit.Name = "unit";
+            // 
+            // value
+            // 
+            this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle6;
+            resources.ApplyResources(this.value, "value");
+            this.value.Name = "value";
+            // 
+            // label48
+            // 
+            resources.ApplyResources(this.label48, "label48");
+            this.label48.Name = "label48";
+            this.toolTip1.SetToolTip(this.label48, resources.GetString("label48.ToolTip"));
+            // 
+            // wireGauge
+            // 
+            resources.ApplyResources(this.wireGauge, "wireGauge");
+            this.wireGauge.FormattingEnabled = true;
+            this.wireGauge.Items.AddRange(new object[] {
+            resources.GetString("wireGauge.Items"),
+            resources.GetString("wireGauge.Items1"),
+            resources.GetString("wireGauge.Items2")});
+            this.wireGauge.Name = "wireGauge";
+            // 
+            // combo_application
+            // 
+            resources.ApplyResources(this.combo_application, "combo_application");
+            this.combo_application.FormattingEnabled = true;
+            this.combo_application.Items.AddRange(new object[] {
+            resources.GetString("combo_application.Items"),
+            resources.GetString("combo_application.Items1")});
+            this.combo_application.Name = "combo_application";
+            this.combo_application.SelectedIndexChanged += new System.EventHandler(this.combo_application_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // SinglePhaseTransformer
             // 
@@ -1294,9 +1411,9 @@ namespace trans_1
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1304,7 +1421,7 @@ namespace trans_1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1316,8 +1433,6 @@ namespace trans_1
         private ComboBox combo_structure;
         private Label label2;
         private ComboBox combo_conductor;
-        private Label label4;
-        private ComboBox combo_application;
         private MaskedTextBox txt_ratingvalue;
         private Label label26;
         private Label label7;
@@ -1385,8 +1500,6 @@ namespace trans_1
         private Label label32;
         private Label label42;
         private MaskedTextBox txt_y;
-        private Label label40;
-        private MaskedTextBox txt_AcuAi;
         private Label label39;
         private MaskedTextBox txt_Da;
         private Label label38;
@@ -1424,7 +1537,6 @@ namespace trans_1
         private Label label43;
         private TextBox txt_doLv;
         private GroupBox groupBox6;
-        private TextBox txt_kFactor;
         private TabControl tabControl1;
         private TabPage tabPage1;
         private Label lblPT2;
@@ -1454,6 +1566,22 @@ namespace trans_1
         private Label lblPicH;
         private PictureBox pictureBox8;
         private Label label28;
+        private Label label57;
+        private MaskedTextBox maskedTextBox1;
+        private CheckBox checkBox1;
+        private Label label68;
+        private Label label67;
+        private Label label66;
+        private Label label65;
+        private Label label64;
+        private Label label63;
+        private Label label59;
+        private Label label58;
+        private Label label40;
+        private Label label72;
+        private Label label71;
+        private Label label70;
+        private Label label69;
         private Label labelHV;
         private Label labelDy;
         private Label labelHw;
@@ -1464,6 +1592,8 @@ namespace trans_1
         private Label label2D;
         private Label labelW;
         private PictureBox pictureBox9;
-        private Label label57;
+        private ToolTip toolTip1;
+        private ComboBox combo_application;
+        private Label label4;
     }
 }

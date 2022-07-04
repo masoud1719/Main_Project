@@ -29,9 +29,11 @@ namespace Excitation_Coil
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exsitationcoil));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -125,6 +127,7 @@ namespace Excitation_Coil
             this.Parameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -161,6 +164,7 @@ namespace Excitation_Coil
             this.label1.Size = new System.Drawing.Size(42, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Mode";
+            this.toolTip1.SetToolTip(this.label1, "There are two modes for coil design:\r\nMotor mode\r\nGenerator mode");
             // 
             // maskedTextBox1
             // 
@@ -191,7 +195,6 @@ namespace Excitation_Coil
             this.textBox1.Size = new System.Drawing.Size(90, 22);
             this.textBox1.TabIndex = 6;
             this.textBox1.Text = "500";
-
             // 
             // label2
             // 
@@ -202,6 +205,7 @@ namespace Excitation_Coil
             this.label2.Size = new System.Drawing.Size(110, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Terminal Voltage";
+            this.toolTip1.SetToolTip(this.label2, "Coil input voltage. Its unit is volts\r\n");
             // 
             // label3
             // 
@@ -212,6 +216,7 @@ namespace Excitation_Coil
             this.label3.Size = new System.Drawing.Size(35, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Pole";
+            this.toolTip1.SetToolTip(this.label3, "The number of poles");
             // 
             // label4
             // 
@@ -222,6 +227,7 @@ namespace Excitation_Coil
             this.label4.Size = new System.Drawing.Size(141, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Temperature rise (Tm)";
+            this.toolTip1.SetToolTip(this.label4, "Temperature rise in degrees Celsius");
             // 
             // label5
             // 
@@ -232,6 +238,7 @@ namespace Excitation_Coil
             this.label5.Size = new System.Drawing.Size(152, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Ambient temperature(Tr)";
+            this.toolTip1.SetToolTip(this.label5, "Ambient temperature with a default value of 40 degrees Celsius");
             // 
             // groupBox1
             // 
@@ -360,6 +367,7 @@ namespace Excitation_Coil
             this.label11.Size = new System.Drawing.Size(124, 16);
             this.label11.TabIndex = 20;
             this.label11.Text = "Outer diameter (Do)";
+            this.toolTip1.SetToolTip(this.label11, "Outer diameter in cm");
             // 
             // label10
             // 
@@ -369,6 +377,7 @@ namespace Excitation_Coil
             this.label10.Size = new System.Drawing.Size(116, 16);
             this.label10.TabIndex = 19;
             this.label10.Text = "Inner diameter (Di)";
+            this.toolTip1.SetToolTip(this.label10, "Inner diameter in cm");
             // 
             // label9
             // 
@@ -378,6 +387,7 @@ namespace Excitation_Coil
             this.label9.Size = new System.Drawing.Size(64, 16);
             this.label9.TabIndex = 18;
             this.label9.Text = "Height (h)";
+            this.toolTip1.SetToolTip(this.label9, "Coil Height in centimeters");
             // 
             // label8
             // 
@@ -387,6 +397,7 @@ namespace Excitation_Coil
             this.label8.Size = new System.Drawing.Size(61, 16);
             this.label8.TabIndex = 17;
             this.label8.Text = "Width (w)";
+            this.toolTip1.SetToolTip(this.label8, "Coil width in centimeters");
             // 
             // label6
             // 
@@ -396,6 +407,7 @@ namespace Excitation_Coil
             this.label6.Size = new System.Drawing.Size(61, 16);
             this.label6.TabIndex = 12;
             this.label6.Text = "Lenght (l)";
+            this.toolTip1.SetToolTip(this.label6, "Coil length in centimeters");
             // 
             // comboBox2
             // 
@@ -419,6 +431,7 @@ namespace Excitation_Coil
             this.label7.Size = new System.Drawing.Size(117, 16);
             this.label7.TabIndex = 15;
             this.label7.Text = "Wire cross section";
+            this.toolTip1.SetToolTip(this.label7, "The cross section of the wire, which includes circular and rectangular wire");
             // 
             // groupBox2
             // 
@@ -436,6 +449,8 @@ namespace Excitation_Coil
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Slot Space Factor (SSF or Wf)";
+            this.toolTip1.SetToolTip(this.groupBox2, "SSF can be calculated based on the cross section of the wire or the suggested num" +
+        "ber in the range of 0.5 to 0.7");
             // 
             // radioButton2
             // 
@@ -524,6 +539,7 @@ namespace Excitation_Coil
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Insulation";
+            this.toolTip1.SetToolTip(this.groupBox3, resources.GetString("groupBox3.ToolTip"));
             // 
             // label30
             // 
@@ -613,6 +629,8 @@ namespace Excitation_Coil
             this.groupBox4.TabIndex = 26;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Depth of coil";
+            this.toolTip1.SetToolTip(this.groupBox4, "By default, depth of coile can be 0.5 to 5 cm. It is 5 for big machin and 0.5 for" +
+        " small machin .\r\n  Otherwise, we can fill it with the desired number of hair");
             // 
             // label28
             // 
@@ -673,6 +691,8 @@ namespace Excitation_Coil
             this.groupBox5.TabIndex = 27;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Excitation regulator voltage drop";
+            this.toolTip1.SetToolTip(this.groupBox5, "This part shows the voltage drop, which by default we have 20% voltage drop in ge" +
+        "nerator mode.");
             // 
             // checkBox3
             // 
@@ -773,6 +793,8 @@ namespace Excitation_Coil
             this.groupBox7.TabIndex = 36;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "MMF Calculate Method";
+            this.toolTip1.SetToolTip(this.groupBox7, "The magnetic driving force can be calculated as follows:\r\n1. The user enters its " +
+        "value\r\n2. It is obtained based on the specifications of the machin");
             // 
             // maskedParallel
             // 
@@ -937,6 +959,8 @@ namespace Excitation_Coil
             this.groupBox6.TabIndex = 37;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Heat Dissipation";
+            this.toolTip1.SetToolTip(this.groupBox6, "Its value is between 0.1 and 0.35.\r\nIf you do not enter the value, the program wi" +
+        "ll automatically calculate this value");
             // 
             // label14
             // 
@@ -1133,12 +1157,12 @@ namespace Excitation_Coil
             // Parameter
             // 
             this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle10;
             this.Parameter.HeaderText = "                  Parameter";
             this.Parameter.MinimumWidth = 6;
             this.Parameter.Name = "Parameter";
@@ -1147,12 +1171,12 @@ namespace Excitation_Coil
             // unit
             // 
             this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle11;
             this.unit.HeaderText = "                     unit";
             this.unit.MinimumWidth = 6;
             this.unit.Name = "unit";
@@ -1160,12 +1184,12 @@ namespace Excitation_Coil
             // value
             // 
             this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle12;
             this.value.HeaderText = "                      value";
             this.value.MinimumWidth = 6;
             this.value.Name = "value";
@@ -1322,5 +1346,6 @@ namespace Excitation_Coil
         private Label label18;
         private ComboBox comboBox3;
         private CheckBox checkBox3;
+        private ToolTip toolTip1;
     }
 }

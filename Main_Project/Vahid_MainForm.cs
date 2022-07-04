@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +23,8 @@ namespace Main_Project
         private int tempIndex;
         private Form activeForm;
 
+        public Image Green { get; private set; }
+
         internal static void openSmallTrans()
         {
             SmallTrans f = new SmallTrans();
@@ -32,8 +35,19 @@ namespace Main_Project
         {
             InitializeComponent();
             random = new Random();
+            btnCloseChildForn.Visible = false;
+            button6.Visible = true;
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            
+
 
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private Color SelectThemeColor()
         {
@@ -61,6 +75,11 @@ namespace Main_Project
                     currentButton.Font = new System.Drawing.Font("Bell MT", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     panelTitleBar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    ThemeColor.PrimaryColor = color;
+                    ThemeColor.secondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    btnCloseChildForn.Visible = true;
+                    button6.Visible = false;
+
                 }
             }
         }
@@ -86,7 +105,7 @@ namespace Main_Project
             if ( activeForm != null)
             {
                 activeForm.Close();
-            }
+            } 
             ActivateButton(btnSender);
             activeForm = childForm;
             childForm.TopLevel = false;
@@ -253,21 +272,16 @@ namespace Main_Project
         {
             ActivateButton(sender);
 
+            lblTitle.Text = "Home";
+            
+
             panelDesktopPane.Controls.Clear();
             var homeFrontPage = new HomeFrontPage();
             homeFrontPage.Dock = DockStyle.Fill;
             panelDesktopPane.Controls.Add(homeFrontPage);
         }
 
-        private void butFlatarmatur_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-
-            panelDesktopPane.Controls.Clear();
-            FlatArmitureFrontPage ar = new FlatArmitureFrontPage();
-            ar.Dock = DockStyle.Fill;
-            panelDesktopPane.Controls.Add(ar);
-        }
+        
 
 
  
@@ -275,6 +289,7 @@ namespace Main_Project
         private void button5_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            lblTitle.Text = "Excitation Coil";
 
             panelDesktopPane.Controls.Clear();
             var excitationCoilFrontPage = new excitationCoilFrontPage();
@@ -309,16 +324,26 @@ namespace Main_Project
 
         private void Vahid_MainForm_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void butFlatarmatur(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            lblTitle.Text = "Flat Armature";
+            
+
             panelDesktopPane.Controls.Clear();
-            HomeFrontPage h = new HomeFrontPage();
-            h.Dock = DockStyle.Fill;
-            panelDesktopPane.Controls.Add(h);
+            FlatArmitureFrontPage ar = new FlatArmitureFrontPage();
+            ar.Dock = DockStyle.Fill;
+            panelDesktopPane.Controls.Add(ar);
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender);
-
+            lblTitle.Text = "Horse Shoe";
+            
             panelDesktopPane.Controls.Clear();
             var h = new HorseShoeFrontPage();
             h.Dock = DockStyle.Fill;
@@ -328,6 +353,7 @@ namespace Main_Project
         private void button4_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            lblTitle.Text = "Plunger";
 
             panelDesktopPane.Controls.Clear();
             PlungerFrontPage ar = new PlungerFrontPage();
@@ -338,6 +364,7 @@ namespace Main_Project
         private void button1_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            lblTitle.Text = "Single Phase Trans";
 
             panelDesktopPane.Controls.Clear();
             TransFrontPage ar = new TransFrontPage();
@@ -347,7 +374,7 @@ namespace Main_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            ActivateButton(sender); lblTitle.Text = "Three Phase Transs";
 
             panelDesktopPane.Controls.Clear();
             Trans2Frontpage ar = new Trans2Frontpage();
@@ -358,11 +385,91 @@ namespace Main_Project
         private void button7_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            ActivateButton(sender); lblTitle.Text = "Small Trans";
+            
 
             panelDesktopPane.Controls.Clear();
             SmallTransFrontPage ar = new SmallTransFrontPage();
             ar.Dock = DockStyle.Fill;
             panelDesktopPane.Controls.Add(ar);
+        }
+
+        private void btnCloseChildForn_Click(object sender, EventArgs e)
+        {
+            panelDesktopPane.Controls.Clear();
+            var browser = new WebBrowser();
+            browser.Name = "web";
+            browser.Url = new System.Uri("http://aut.ac.ir");
+            browser.ScriptErrorsSuppressed = true;
+            browser.Dock = DockStyle.Fill;
+            panelDesktopPane.Controls.Add(browser);
+            
+
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                
+            }
+           
+            Rest();
+           
+        }
+
+        private void Rest()
+        {
+            DisableButtn();
+            lblTitle.Text = "";
+            panelTitleBar.BackColor = Color.FromArgb(51, 51, 76);
+            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            currentButton = null;
+            btnCloseChildForn.Visible = false;
+            button6.Visible = true;
+            
+        }
+
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var web = panelDesktopPane.Controls["web"];
+            if (web == null)
+                return;
+
+            ((WebBrowser)(web)).Url = new Uri("http://varzesh3.com");
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.FromArgb(76, 51, 51);
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Red;
         }
     }
 

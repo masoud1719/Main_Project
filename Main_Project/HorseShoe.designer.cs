@@ -559,6 +559,7 @@
             this.label7.Size = new System.Drawing.Size(149, 16);
             this.label7.TabIndex = 116;
             this.label7.Text = "Coil Tube of kraft paper ";
+            this.toolTip1.SetToolTip(this.label7, "Coil Tube of kraft paper ");
             // 
             // label6
             // 
@@ -569,6 +570,7 @@
             this.label6.Size = new System.Drawing.Size(289, 16);
             this.label6.TabIndex = 109;
             this.label6.Text = "Coil\'s height of each paper margins to thickness";
+            this.toolTip1.SetToolTip(this.label6, "Coil\'s height of each paper margins to thickness");
             // 
             // txtCoilsCoverThickness
             // 

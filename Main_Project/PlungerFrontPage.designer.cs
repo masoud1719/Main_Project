@@ -45,7 +45,6 @@ namespace Main
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::Main_Project.Properties.Resources.plunger_3D_view;
             this.pictureBox1.Location = new System.Drawing.Point(356, 44);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -141,7 +140,6 @@ namespace Main
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = global::Main_Project.Properties.Resources.blue_3d_geometric_abstract_background_6815669;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblForce);
             this.Controls.Add(this.button1);
