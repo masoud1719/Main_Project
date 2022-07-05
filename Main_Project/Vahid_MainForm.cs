@@ -21,6 +21,9 @@ namespace Main_Project
         private Button currentButton;
         private Random random;
         private int tempIndex;
+
+        
+
         private Form activeForm;
 
         public Image Green { get; private set; }
@@ -74,7 +77,7 @@ namespace Main_Project
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Bell MT", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     panelTitleBar.BackColor = color;
-                    panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+ 
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.secondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnCloseChildForn.Visible = true;
@@ -322,6 +325,16 @@ namespace Main_Project
             f.ShowDialog();
         }
 
+
+        internal static void choke()
+        {
+            choke f = new choke();
+            f.ShowDialog();
+        }
+
+
+
+
         private void Vahid_MainForm_Load(object sender, EventArgs e)
         {
             
@@ -394,6 +407,27 @@ namespace Main_Project
             panelDesktopPane.Controls.Add(ar);
         }
 
+
+
+
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            ActivateButton(sender); lblTitle.Text = "Coke";
+
+
+            panelDesktopPane.Controls.Clear();
+            chokeFrontPage1 ar = new chokeFrontPage1();
+            ar.Dock = DockStyle.Fill;
+            panelDesktopPane.Controls.Add(ar);
+
+
+        }
+
+
+
+
         private void btnCloseChildForn_Click(object sender, EventArgs e)
         {
             panelDesktopPane.Controls.Clear();
@@ -420,7 +454,7 @@ namespace Main_Project
             DisableButtn();
             lblTitle.Text = "";
             panelTitleBar.BackColor = Color.FromArgb(51, 51, 76);
-            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+   
             currentButton = null;
             btnCloseChildForn.Visible = false;
             button6.Visible = true;
@@ -471,6 +505,8 @@ namespace Main_Project
         {
             btnClose.BackColor = Color.Red;
         }
+
+        
     }
 
 

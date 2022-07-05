@@ -37,7 +37,9 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.web = new System.Windows.Forms.WebBrowser();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -47,19 +49,39 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.btnProduct = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
             btnFlatarmatur = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelDesktopPane.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnFlatarmatur
+            // 
+            btnFlatarmatur.Dock = System.Windows.Forms.DockStyle.Top;
+            btnFlatarmatur.FlatAppearance.BorderSize = 0;
+            btnFlatarmatur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnFlatarmatur.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnFlatarmatur.ForeColor = System.Drawing.Color.Gainsboro;
+            btnFlatarmatur.Image = global::Main_Project.Properties.Resources.AboutIconLogo1;
+            btnFlatarmatur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnFlatarmatur.Location = new System.Drawing.Point(0, 158);
+            btnFlatarmatur.Margin = new System.Windows.Forms.Padding(4);
+            btnFlatarmatur.Name = "btnFlatarmatur";
+            btnFlatarmatur.Size = new System.Drawing.Size(261, 71);
+            btnFlatarmatur.TabIndex = 13;
+            btnFlatarmatur.Text = "Flat Armature";
+            btnFlatarmatur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnFlatarmatur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnFlatarmatur.UseVisualStyleBackColor = true;
+            btnFlatarmatur.Click += new System.EventHandler(this.butFlatarmatur);
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.button8);
             this.panelMenu.Controls.Add(this.button7);
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.button1);
@@ -84,7 +106,7 @@
             this.button7.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Gainsboro;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 658);
+            this.button7.Location = new System.Drawing.Point(0, 581);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
@@ -104,7 +126,7 @@
             this.button2.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Gainsboro;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 588);
+            this.button2.Location = new System.Drawing.Point(0, 511);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
@@ -124,7 +146,7 @@
             this.button1.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Gainsboro;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 518);
+            this.button1.Location = new System.Drawing.Point(0, 441);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
@@ -144,7 +166,7 @@
             this.button5.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Gainsboro;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 448);
+            this.button5.Location = new System.Drawing.Point(0, 371);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
@@ -164,7 +186,7 @@
             this.button4.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Gainsboro;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 377);
+            this.button4.Location = new System.Drawing.Point(0, 300);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
@@ -184,7 +206,7 @@
             this.button3.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Gainsboro;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 306);
+            this.button3.Location = new System.Drawing.Point(0, 229);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
@@ -196,6 +218,28 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // btnProduct
+            // 
+            this.btnProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
+            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProduct.FlatAppearance.BorderSize = 0;
+            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduct.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
+            this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduct.Location = new System.Drawing.Point(0, 87);
+            this.btnProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.btnProduct.Size = new System.Drawing.Size(261, 71);
+            this.btnProduct.TabIndex = 5;
+            this.btnProduct.Text = "   Home";
+            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProduct.UseVisualStyleBackColor = true;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.White;
@@ -204,8 +248,19 @@
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(261, 164);
+            this.panelLogo.Size = new System.Drawing.Size(261, 87);
             this.panelLogo.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(261, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // panelDesktopPane
             // 
@@ -328,58 +383,25 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // btnFlatarmatur
+            // button8
             // 
-            btnFlatarmatur.Dock = System.Windows.Forms.DockStyle.Top;
-            btnFlatarmatur.FlatAppearance.BorderSize = 0;
-            btnFlatarmatur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnFlatarmatur.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnFlatarmatur.ForeColor = System.Drawing.Color.Gainsboro;
-            btnFlatarmatur.Image = global::Main_Project.Properties.Resources.AboutIconLogo1;
-            btnFlatarmatur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnFlatarmatur.Location = new System.Drawing.Point(0, 235);
-            btnFlatarmatur.Margin = new System.Windows.Forms.Padding(4);
-            btnFlatarmatur.Name = "btnFlatarmatur";
-            btnFlatarmatur.Size = new System.Drawing.Size(261, 71);
-            btnFlatarmatur.TabIndex = 13;
-            btnFlatarmatur.Text = "Flat Armature";
-            btnFlatarmatur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnFlatarmatur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            btnFlatarmatur.UseVisualStyleBackColor = true;
-            btnFlatarmatur.Click += new System.EventHandler(this.butFlatarmatur);
-            // 
-            // btnProduct
-            // 
-            this.btnProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
-            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProduct.FlatAppearance.BorderSize = 0;
-            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduct.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProduct.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
-            this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(0, 164);
-            this.btnProduct.Margin = new System.Windows.Forms.Padding(4);
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.btnProduct.Size = new System.Drawing.Size(261, 71);
-            this.btnProduct.TabIndex = 5;
-            this.btnProduct.Text = "   Home";
-            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProduct.UseVisualStyleBackColor = true;
-            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(261, 164);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(0, 651);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
+            this.button8.Name = "button8";
+            this.button8.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.button8.Size = new System.Drawing.Size(261, 70);
+            this.button8.TabIndex = 20;
+            this.button8.Text = "Choke";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Vahid_MainForm
             // 
@@ -396,10 +418,10 @@
             this.Load += new System.EventHandler(this.Vahid_MainForm_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelDesktopPane.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -425,5 +447,6 @@
         private System.Windows.Forms.WebBrowser web;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button8;
     }
 }

@@ -62,6 +62,12 @@
     <Compile Include="choke.Designer.cs">
       <DependentUpon>choke.cs</DependentUpon>
     </Compile>
+    <Compile Include="chokeFrontPage1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="chokeFrontPage1.Designer.cs">
+      <DependentUpon>chokeFrontPage1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exsitationcoil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,7 @@
     <Compile Include="SmallTrans.Designer.cs">
       <DependentUpon>SmallTrans.cs</DependentUpon>
     </Compile>
+    <Compile Include="TextCompositionEventArgs.cs" />
     <Compile Include="ThemeColor.cs" />
     <Compile Include="Trans.cs">
       <SubType>Form</SubType>
@@ -170,6 +177,9 @@
     </Compile>
     <EmbeddedResource Include="choke.resx">
       <DependentUpon>choke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chokeFrontPage1.resx">
+      <DependentUpon>chokeFrontPage1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Exsitationcoil.resx">
       <DependentUpon>Exsitationcoil.cs</DependentUpon>
