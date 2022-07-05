@@ -452,7 +452,7 @@ namespace testmna
 
                 actualMMF = N * I;
 
-                double error = ((actualMMF - mmf) / mmf) * 100;
+                double error = Math.Abs(((actualMMF - mmf) / mmf)) * 100;
                 errors.Add(error);
                 if (error < accurcy)
                 {
@@ -748,7 +748,29 @@ namespace testmna
             }
         }
 
-        
+        private void method1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (method1.Checked)
+            {
+                button2.Visible = true;
+            }
+            else
+            {
+                button2.Visible = false;
+            }
+        }
+
+        private void method2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (method2.Checked)
+            {
+                button1.Visible = true;
+            }
+            else
+            {
+                button1.Visible = false;
+            }
+        }
     }
     }
 

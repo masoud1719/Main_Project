@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label48 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
@@ -45,7 +45,6 @@
             this.labelH = new System.Windows.Forms.Label();
             this.label2D = new System.Windows.Forms.Label();
             this.labelW = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lblPicDy = new System.Windows.Forms.Label();
             this.lblPicWw = new System.Windows.Forms.Label();
             this.lblPicNhv = new System.Windows.Forms.Label();
@@ -74,7 +73,6 @@
             this.label52 = new System.Windows.Forms.Label();
             this.textw = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.txt_doLv = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.txt_diLv = new System.Windows.Forms.TextBox();
@@ -105,13 +103,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_delta = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -119,7 +110,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.maskvoltreg = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Parameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -156,14 +146,38 @@
             this.txt_LowVoltage = new System.Windows.Forms.MaskedTextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
             this.maskEff = new System.Windows.Forms.MaskedTextBox();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.label33 = new System.Windows.Forms.Label();
+            this.maskvoltreg = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.labelb = new System.Windows.Forms.Label();
+            this.labela = new System.Windows.Forms.Label();
+            this.labelf = new System.Windows.Forms.Label();
+            this.labelc = new System.Windows.Forms.Label();
+            this.labele = new System.Windows.Forms.Label();
+            this.labeld = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -171,10 +185,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // label48
@@ -301,17 +313,6 @@
             this.labelW.TabIndex = 230;
             this.labelW.Text = "= 0";
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Main_Project.Properties.Resources.Screenshot__593_;
-            this.pictureBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox9.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(699, 407);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 229;
-            this.pictureBox9.TabStop = false;
-            // 
             // lblPicDy
             // 
             this.lblPicDy.AutoSize = true;
@@ -353,6 +354,7 @@
             this.txt_rating.Name = "txt_rating";
             this.txt_rating.Size = new System.Drawing.Size(85, 22);
             this.txt_rating.TabIndex = 314;
+            this.txt_rating.Text = "0";
             this.txt_rating.Leave += new System.EventHandler(this.txt_rating_Leave);
             // 
             // lblPicHy
@@ -380,6 +382,7 @@
             // label72
             // 
             this.label72.AutoSize = true;
+            this.label72.Enabled = false;
             this.label72.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label72.Location = new System.Drawing.Point(334, 88);
             this.label72.Name = "label72";
@@ -390,6 +393,7 @@
             // label71
             // 
             this.label71.AutoSize = true;
+            this.label71.Enabled = false;
             this.label71.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label71.Location = new System.Drawing.Point(334, 66);
             this.label71.Name = "label71";
@@ -411,6 +415,7 @@
             // label70
             // 
             this.label70.AutoSize = true;
+            this.label70.Enabled = false;
             this.label70.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label70.Location = new System.Drawing.Point(138, 94);
             this.label70.Name = "label70";
@@ -421,6 +426,7 @@
             // label69
             // 
             this.label69.AutoSize = true;
+            this.label69.Enabled = false;
             this.label69.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label69.Location = new System.Drawing.Point(138, 68);
             this.label69.Name = "label69";
@@ -431,8 +437,6 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.checkBox1.Location = new System.Drawing.Point(23, 34);
             this.checkBox1.Name = "checkBox1";
@@ -440,6 +444,7 @@
             this.checkBox1.TabIndex = 116;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label4
             // 
@@ -581,6 +586,7 @@
             this.comboGroup.Name = "comboGroup";
             this.comboGroup.Size = new System.Drawing.Size(87, 24);
             this.comboGroup.TabIndex = 89;
+            this.comboGroup.SelectedIndexChanged += new System.EventHandler(this.comboGroup_SelectedIndexChanged);
             // 
             // label52
             // 
@@ -606,6 +612,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
+            this.label44.Enabled = false;
             this.label44.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label44.Location = new System.Drawing.Point(21, 121);
             this.label44.Name = "label44";
@@ -613,20 +620,9 @@
             this.label44.TabIndex = 4;
             this.label44.Text = "Leakage resistance winding";
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
-            this.pictureBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox8.Location = new System.Drawing.Point(11, 9);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(689, 399);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 179;
-            this.pictureBox8.TabStop = false;
-            // 
             // txt_doLv
             // 
+            this.txt_doLv.Enabled = false;
             this.txt_doLv.Location = new System.Drawing.Point(273, 88);
             this.txt_doLv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_doLv.Name = "txt_doLv";
@@ -637,6 +633,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
+            this.label43.Enabled = false;
             this.label43.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label43.Location = new System.Drawing.Point(213, 89);
             this.label43.Name = "label43";
@@ -646,6 +643,7 @@
             // 
             // txt_diLv
             // 
+            this.txt_diLv.Enabled = false;
             this.txt_diLv.Location = new System.Drawing.Point(81, 90);
             this.txt_diLv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_diLv.Name = "txt_diLv";
@@ -656,6 +654,7 @@
             // label61
             // 
             this.label61.AutoSize = true;
+            this.label61.Enabled = false;
             this.label61.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label61.Location = new System.Drawing.Point(21, 92);
             this.label61.Name = "label61";
@@ -665,6 +664,7 @@
             // 
             // txt_doHv
             // 
+            this.txt_doHv.Enabled = false;
             this.txt_doHv.Location = new System.Drawing.Point(273, 63);
             this.txt_doHv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_doHv.Name = "txt_doHv";
@@ -712,7 +712,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.tabPage1.Size = new System.Drawing.Size(699, 406);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Structure";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // labelHV
@@ -758,6 +758,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
+            this.label60.Enabled = false;
             this.label60.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label60.Location = new System.Drawing.Point(213, 65);
             this.label60.Name = "label60";
@@ -778,6 +779,7 @@
             // 
             // combo_Leakageresistancewinding
             // 
+            this.combo_Leakageresistancewinding.Enabled = false;
             this.combo_Leakageresistancewinding.FormattingEnabled = true;
             this.combo_Leakageresistancewinding.Items.AddRange(new object[] {
             "Sandwitch"});
@@ -789,6 +791,7 @@
             // 
             // txt_diHv
             // 
+            this.txt_diHv.Enabled = false;
             this.txt_diHv.Location = new System.Drawing.Point(81, 65);
             this.txt_diHv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_diHv.Name = "txt_diHv";
@@ -799,6 +802,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
+            this.label41.Enabled = false;
             this.label41.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label41.Location = new System.Drawing.Point(21, 68);
             this.label41.Name = "label41";
@@ -975,85 +979,8 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.tabPage2.Size = new System.Drawing.Size(699, 406);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "B_H Curve";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Main_Project.Properties.Resources.CRGO;
-            this.pictureBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox7.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(699, 400);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Main_Project.Properties.Resources.M15_;
-            this.pictureBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox6.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Main_Project.Properties.Resources.M19_;
-            this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox5.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Main_Project.Properties.Resources.M22_;
-            this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Main_Project.Properties.Resources.M27_;
-            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Main_Project.Properties.Resources.M36_;
-            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Main_Project.Properties.Resources.M43_;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // txt_delta
             // 
@@ -1129,15 +1056,6 @@
             this.label21.TabIndex = 61;
             this.label21.Text = "Window space factor (Kw)";
             // 
-            // maskvoltreg
-            // 
-            this.maskvoltreg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.maskvoltreg.Location = new System.Drawing.Point(200, 498);
-            this.maskvoltreg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskvoltreg.Name = "maskvoltreg";
-            this.maskvoltreg.Size = new System.Drawing.Size(85, 22);
-            this.maskvoltreg.TabIndex = 354;
-            // 
             // dataGridView3
             // 
             this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1157,12 +1075,12 @@
             // Parameter
             // 
             this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle7;
             this.Parameter.HeaderText = "                  Parameter";
             this.Parameter.MinimumWidth = 6;
             this.Parameter.Name = "Parameter";
@@ -1171,12 +1089,12 @@
             // unit
             // 
             this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle8;
             this.unit.HeaderText = "                     unit";
             this.unit.MinimumWidth = 6;
             this.unit.Name = "unit";
@@ -1184,12 +1102,12 @@
             // value
             // 
             this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle9;
             this.value.HeaderText = "                      value";
             this.value.MinimumWidth = 6;
             this.value.Name = "value";
@@ -1525,6 +1443,7 @@
             this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(779, 33);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.tabControl1.Name = "tabControl1";
@@ -1595,20 +1514,9 @@
             this.label34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label34.Location = new System.Drawing.Point(14, 533);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(42, 16);
+            this.label34.Size = new System.Drawing.Size(64, 16);
             this.label34.TabIndex = 357;
-            this.label34.Text = "Efficnt";
-            // 
-            // label33
-            // 
-            this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label33.AutoSize = true;
-            this.label33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label33.Location = new System.Drawing.Point(14, 498);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(61, 16);
-            this.label33.TabIndex = 356;
-            this.label33.Text = "Voltage r";
+            this.label34.Text = "Efficiency";
             // 
             // maskEff
             // 
@@ -1630,12 +1538,245 @@
             this.button2.TabIndex = 350;
             this.button2.Text = "Export to PDF";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label33
+            // 
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label33.AutoSize = true;
+            this.label33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label33.Location = new System.Drawing.Point(14, 498);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(122, 16);
+            this.label33.TabIndex = 356;
+            this.label33.Text = "Voltage Regulation";
+            // 
+            // maskvoltreg
+            // 
+            this.maskvoltreg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.maskvoltreg.Location = new System.Drawing.Point(200, 498);
+            this.maskvoltreg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.maskvoltreg.Name = "maskvoltreg";
+            this.maskvoltreg.Size = new System.Drawing.Size(85, 22);
+            this.maskvoltreg.TabIndex = 354;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(292, 502);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 16);
+            this.label5.TabIndex = 359;
+            this.label5.Text = "%";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(290, 537);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(19, 16);
+            this.label7.TabIndex = 360;
+            this.label7.Text = "%";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Main_Project.Properties.Resources.Screenshot__593_;
+            this.pictureBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox9.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(699, 407);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 229;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
+            this.pictureBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox8.Location = new System.Drawing.Point(11, 9);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(689, 399);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 179;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Main_Project.Properties.Resources.CRGO;
+            this.pictureBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox7.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(699, 400);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Main_Project.Properties.Resources.M15_;
+            this.pictureBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox6.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Main_Project.Properties.Resources.M19_;
+            this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox5.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Main_Project.Properties.Resources.M22_;
+            this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Main_Project.Properties.Resources.M27_;
+            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Main_Project.Properties.Resources.M36_;
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Main_Project.Properties.Resources.M43_;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.labelb);
+            this.tabPage3.Controls.Add(this.labela);
+            this.tabPage3.Controls.Add(this.labelf);
+            this.tabPage3.Controls.Add(this.labelc);
+            this.tabPage3.Controls.Add(this.labele);
+            this.tabPage3.Controls.Add(this.labeld);
+            this.tabPage3.Controls.Add(this.pictureBox10);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(699, 406);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "E_I sheet";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // labelb
+            // 
+            this.labelb.AutoSize = true;
+            this.labelb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelb.Location = new System.Drawing.Point(599, 43);
+            this.labelb.Name = "labelb";
+            this.labelb.Size = new System.Drawing.Size(24, 16);
+            this.labelb.TabIndex = 253;
+            this.labelb.Text = "= 0";
+            // 
+            // labela
+            // 
+            this.labela.AutoSize = true;
+            this.labela.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labela.Location = new System.Drawing.Point(264, 388);
+            this.labela.Name = "labela";
+            this.labela.Size = new System.Drawing.Size(24, 16);
+            this.labela.TabIndex = 252;
+            this.labela.Text = "= 0";
+            // 
+            // labelf
+            // 
+            this.labelf.AutoSize = true;
+            this.labelf.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelf.Location = new System.Drawing.Point(526, 200);
+            this.labelf.Name = "labelf";
+            this.labelf.Size = new System.Drawing.Size(24, 16);
+            this.labelf.TabIndex = 251;
+            this.labelf.Text = "= 0";
+            // 
+            // labelc
+            // 
+            this.labelc.AutoSize = true;
+            this.labelc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelc.Location = new System.Drawing.Point(115, 205);
+            this.labelc.Name = "labelc";
+            this.labelc.Size = new System.Drawing.Size(24, 16);
+            this.labelc.TabIndex = 250;
+            this.labelc.Text = "= 0";
+            // 
+            // labele
+            // 
+            this.labele.AutoSize = true;
+            this.labele.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labele.Location = new System.Drawing.Point(631, 198);
+            this.labele.Name = "labele";
+            this.labele.Size = new System.Drawing.Size(24, 16);
+            this.labele.TabIndex = 249;
+            this.labele.Text = "= 0";
+            // 
+            // labeld
+            // 
+            this.labeld.AutoSize = true;
+            this.labeld.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labeld.Location = new System.Drawing.Point(231, 205);
+            this.labeld.Name = "labeld";
+            this.labeld.Size = new System.Drawing.Size(24, 16);
+            this.labeld.TabIndex = 248;
+            this.labeld.Text = "= 0";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Main_Project.Properties.Resources.Screenshot__621_;
+            this.pictureBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox10.Location = new System.Drawing.Point(-4, 2);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(707, 403);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 247;
+            this.pictureBox10.TabStop = false;
             // 
             // choke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1496, 707);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_rating);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label19);
@@ -1684,13 +1825,19 @@
             this.Name = "choke";
             this.Text = "choke";
             this.Load += new System.EventHandler(this.choke_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1698,12 +1845,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1798,7 +1942,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.MaskedTextBox maskvoltreg;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Parameter;
         private System.Windows.Forms.DataGridViewTextBoxColumn unit;
@@ -1835,8 +1978,19 @@
         private System.Windows.Forms.MaskedTextBox txt_LowVoltage;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.MaskedTextBox maskEff;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.MaskedTextBox maskvoltreg;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label labelb;
+        private System.Windows.Forms.Label labela;
+        private System.Windows.Forms.Label labelf;
+        private System.Windows.Forms.Label labelc;
+        private System.Windows.Forms.Label labele;
+        private System.Windows.Forms.Label labeld;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

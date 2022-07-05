@@ -623,6 +623,16 @@ namespace Main_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__587_1 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot (587)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot__592_ {
             get {
                 object obj = ResourceManager.GetObject("Screenshot (592)", resourceCulture);
@@ -636,6 +646,46 @@ namespace Main_Project.Properties {
         internal static System.Drawing.Bitmap Screenshot__593_ {
             get {
                 object obj = ResourceManager.GetObject("Screenshot (593)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__604_ {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot (604)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__606_ {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot (606)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__619_ {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot (619)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__621_ {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot (621)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -60,7 +60,7 @@ namespace Main_Project
 
         private double kFactor;
 
-        private double sf;
+
 
         private double DiHv;
 
@@ -397,7 +397,7 @@ namespace Main_Project
             //d
             d = Math.Sqrt(Ai / kc);
 
-            double Agi = Ai / sf;
+            double Agi = Ai / ks;
 
 
             a = 0;
@@ -471,7 +471,7 @@ namespace Main_Project
 
                 Dy = a;
 
-                Hy = ((Ww * Ai) / (a * sf)) / 10;
+                Hy = ((Ww * Ai) / (a * ks)) / 10;
 
                 H = Hw + (2 * Hy);
 
@@ -763,7 +763,7 @@ namespace Main_Project
 
             dataGridView3.Rows.Add("  RLv", "  ohm", string.Format("  {0:0.0000}", RLv));
 
-            dataGridView3.Rows.Add("  xHv", "  ohm", string.Format("  {0:0.0000}", xHv));
+            dataGridView3.Rows.Add("  XHv", "  ohm", string.Format("  {0:0.0000}", XHv));
 
             dataGridView3.Rows.Add("  XLv", "  ohm", string.Format("  {0:0.0000}", XLv));
 
@@ -890,7 +890,7 @@ namespace Main_Project
 
 
 
-            sf = Double.Parse(txt_Stackingfactor.Text);
+
 
             DiHv = Double.Parse(txt_diHv.Text);
 
@@ -1588,7 +1588,15 @@ namespace Main_Project
                 labelLv.Visible = false;
 
 
-                
+                label73.Visible = true;
+                label79.Visible = true;
+                label81.Visible = true;
+                label78.Visible = true;
+                label74.Visible = true;
+                label80.Visible = true;
+                label77.Visible = true;
+                label76.Visible = true;
+                label75.Visible = true;
 
 
 
@@ -1782,6 +1790,99 @@ namespace Main_Project
                     txt_Fluxdensity.Text = "1.3";
                 }
             }
+
+
+
+            if (combo_Steel.SelectedIndex == 0)
+            {
+                if (txt_Frequency.Text == "50")
+                {
+
+                    txt_Wi.Text = "2.53";
+                }
+
+                else
+                {
+
+                    txt_Wi.Text = "3.2";
+                }
+
+            }
+            else if (combo_Steel.SelectedIndex == 1)
+            {
+                if (txt_Frequency.Text == "50")
+                {
+
+                    txt_Wi.Text = "2.75";
+                }
+                else
+                {
+
+                    txt_Wi.Text = "3.48";
+                }
+
+            }
+            else if (combo_Steel.SelectedIndex == 2)
+            {
+                if (txt_Frequency.Text == "50")
+                {
+
+                    txt_Wi.Text = "2.93";
+                }
+                else
+                {
+
+                    txt_Wi.Text = "3.7";
+                }
+
+            }
+            else if (combo_Steel.SelectedIndex == 3)
+            {
+                if (txt_Frequency.Text == "50")
+                {
+
+                    txt_Wi.Text = "3.13";
+                }
+                else
+                {
+
+                    txt_Wi.Text = "3.97";
+                }
+
+            }
+            else if (combo_Steel.SelectedIndex == 4)
+            {
+                if (txt_Frequency.Text == "50")
+                {
+
+                    txt_Wi.Text = "3.3";
+                }
+                else
+                {
+
+                    txt_Wi.Text = "4.19";
+                }
+
+            }
+
+            else
+            {
+                if (combo_Steel.SelectedIndex == 5)
+                {
+
+                    txt_Wi.Text = "1.475";
+                }
+                else
+                {
+
+                    txt_Wi.Text = "1.6";
+                }
+
+            }
+
+
+
+
 
 
 
@@ -2477,6 +2578,16 @@ namespace Main_Project
                 txt_LmtLi.Text = Convert.ToString(0.8);
             }
 
+
+        }
+
+        private void label78_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label80_Click(object sender, EventArgs e)
+        {
 
         }
     }

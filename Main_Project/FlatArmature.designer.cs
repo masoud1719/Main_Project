@@ -32,18 +32,18 @@ namespace testmna
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlatArmature));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,16 +79,6 @@ namespace testmna
             this.txtslotSpaceFactor = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lbldc = new System.Windows.Forms.Label();
-            this.lblPicN2 = new System.Windows.Forms.Label();
-            this.lblPicStroke = new System.Windows.Forms.Label();
-            this.lblPicH = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblPicT2 = new System.Windows.Forms.Label();
-            this.lblPicr3 = new System.Windows.Forms.Label();
-            this.lblPicr2 = new System.Windows.Forms.Label();
-            this.lblPicr1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -124,10 +114,22 @@ namespace testmna
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lblpicN = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbldc = new System.Windows.Forms.Label();
+            this.lblPicN2 = new System.Windows.Forms.Label();
+            this.lblPicStroke = new System.Windows.Forms.Label();
+            this.lblPicH = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblPicT2 = new System.Windows.Forms.Label();
+            this.lblPicr3 = new System.Windows.Forms.Label();
+            this.lblPicr2 = new System.Windows.Forms.Label();
+            this.lblPicr1 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -137,6 +139,8 @@ namespace testmna
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -263,6 +267,7 @@ namespace testmna
             this.method1.Text = "Method1";
             this.toolTip1.SetToolTip(this.method1, "Method1 : MMF can be calculated using the experimental factorof 1.2 to 1.35");
             this.method1.UseVisualStyleBackColor = true;
+            this.method1.CheckedChanged += new System.EventHandler(this.method1_CheckedChanged);
             // 
             // method2
             // 
@@ -275,6 +280,7 @@ namespace testmna
             this.method2.Text = "Method2";
             this.toolTip1.SetToolTip(this.method2, "Method 2 : We calculate the fraction using an experimental factor.");
             this.method2.UseVisualStyleBackColor = true;
+            this.method2.CheckedChanged += new System.EventHandler(this.method2_CheckedChanged);
             // 
             // lblForce
             // 
@@ -557,116 +563,6 @@ namespace testmna
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // lbldc
-            // 
-            this.lbldc.AutoSize = true;
-            this.lbldc.Location = new System.Drawing.Point(120, 431);
-            this.lbldc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbldc.Name = "lbldc";
-            this.lbldc.Size = new System.Drawing.Size(21, 16);
-            this.lbldc.TabIndex = 109;
-            this.lbldc.Text = "=0";
-            this.toolTip1.SetToolTip(this.lbldc, "Specifies the required accuracy and percentage");
-            // 
-            // lblPicN2
-            // 
-            this.lblPicN2.AutoSize = true;
-            this.lblPicN2.Location = new System.Drawing.Point(21, 218);
-            this.lblPicN2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicN2.Name = "lblPicN2";
-            this.lblPicN2.Size = new System.Drawing.Size(21, 16);
-            this.lblPicN2.TabIndex = 113;
-            this.lblPicN2.Text = "=0";
-            this.toolTip1.SetToolTip(this.lblPicN2, "Specifies the required accuracy and percentage");
-            // 
-            // lblPicStroke
-            // 
-            this.lblPicStroke.AutoSize = true;
-            this.lblPicStroke.Location = new System.Drawing.Point(556, 297);
-            this.lblPicStroke.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicStroke.Name = "lblPicStroke";
-            this.lblPicStroke.Size = new System.Drawing.Size(21, 16);
-            this.lblPicStroke.TabIndex = 112;
-            this.lblPicStroke.Text = "=0";
-            this.toolTip1.SetToolTip(this.lblPicStroke, "Specifies the required accuracy and percentage");
-            // 
-            // lblPicH
-            // 
-            this.lblPicH.AutoSize = true;
-            this.lblPicH.Location = new System.Drawing.Point(562, 214);
-            this.lblPicH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicH.Name = "lblPicH";
-            this.lblPicH.Size = new System.Drawing.Size(21, 16);
-            this.lblPicH.TabIndex = 109;
-            this.lblPicH.Text = "=0";
-            this.toolTip1.SetToolTip(this.lblPicH, "Specifies the required accuracy and percentage");
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(518, 106);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 16);
-            this.label6.TabIndex = 111;
-            this.label6.Text = "=0";
-            this.toolTip1.SetToolTip(this.label6, "Specifies the required accuracy and percentage");
-            // 
-            // lblPicT2
-            // 
-            this.lblPicT2.AutoSize = true;
-            this.lblPicT2.Location = new System.Drawing.Point(565, 59);
-            this.lblPicT2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicT2.Name = "lblPicT2";
-            this.lblPicT2.Size = new System.Drawing.Size(21, 16);
-            this.lblPicT2.TabIndex = 110;
-            this.lblPicT2.Text = "=0";
-            this.toolTip1.SetToolTip(this.lblPicT2, "Specifies the required accuracy and percentage");
-            // 
-            // lblPicr3
-            // 
-            this.lblPicr3.AutoSize = true;
-            this.lblPicr3.Location = new System.Drawing.Point(330, 441);
-            this.lblPicr3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicr3.Name = "lblPicr3";
-            this.lblPicr3.Size = new System.Drawing.Size(21, 16);
-            this.lblPicr3.TabIndex = 109;
-            this.lblPicr3.Text = "=0";
-            this.toolTip1.SetToolTip(this.lblPicr3, "Specifies the required accuracy and percentage");
-            // 
-            // lblPicr2
-            // 
-            this.lblPicr2.AutoSize = true;
-            this.lblPicr2.Location = new System.Drawing.Point(329, 410);
-            this.lblPicr2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicr2.Name = "lblPicr2";
-            this.lblPicr2.Size = new System.Drawing.Size(21, 16);
-            this.lblPicr2.TabIndex = 109;
-            this.lblPicr2.Text = "=0";
-            this.toolTip1.SetToolTip(this.lblPicr2, "Specifies the required accuracy and percentage");
-            // 
-            // lblPicr1
-            // 
-            this.lblPicr1.AutoSize = true;
-            this.lblPicr1.Location = new System.Drawing.Point(329, 378);
-            this.lblPicr1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicr1.Name = "lblPicr1";
-            this.lblPicr1.Size = new System.Drawing.Size(21, 16);
-            this.lblPicr1.TabIndex = 108;
-            this.lblPicr1.Text = "=0";
-            this.toolTip1.SetToolTip(this.lblPicr1, "Specifies the required accuracy and percentage");
-            // 
-            // pictureBox1
-            // 
-
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(622, 456);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 105;
-            this.pictureBox1.TabStop = false;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.chart1);
@@ -681,19 +577,19 @@ namespace testmna
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(4, 4);
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series1.Legend = "Legend1";
-            series1.Name = "error";
-            this.chart1.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series4.Legend = "Legend1";
+            series4.Name = "error";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(622, 456);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -712,19 +608,19 @@ namespace testmna
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            chartArea5.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea5);
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            legend5.Name = "Legend1";
+            this.chart2.Legends.Add(legend5);
             this.chart2.Location = new System.Drawing.Point(4, 4);
             this.chart2.Margin = new System.Windows.Forms.Padding(4);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series2.Legend = "Legend1";
-            series2.Name = "mmf";
-            this.chart2.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series5.Legend = "Legend1";
+            series5.Name = "mmf";
+            this.chart2.Series.Add(series5);
             this.chart2.Size = new System.Drawing.Size(622, 456);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";
@@ -743,19 +639,19 @@ namespace testmna
             // 
             // chart3
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
+            chartArea6.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea6);
             this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
+            legend6.Name = "Legend1";
+            this.chart3.Legends.Add(legend6);
             this.chart3.Location = new System.Drawing.Point(4, 4);
             this.chart3.Margin = new System.Windows.Forms.Padding(4);
             this.chart3.Name = "chart3";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series3.Legend = "Legend1";
-            series3.Name = "HeighttoDepthRatio";
-            this.chart3.Series.Add(series3);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series6.Legend = "Legend1";
+            series6.Name = "HeighttoDepthRatio";
+            this.chart3.Series.Add(series6);
             this.chart3.Size = new System.Drawing.Size(622, 456);
             this.chart3.TabIndex = 0;
             // 
@@ -1022,12 +918,12 @@ namespace testmna
             // Parameter
             // 
             this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle4;
             this.Parameter.HeaderText = "                  Parameter";
             this.Parameter.MinimumWidth = 6;
             this.Parameter.Name = "Parameter";
@@ -1036,12 +932,12 @@ namespace testmna
             // unit
             // 
             this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle5;
             this.unit.HeaderText = "                     unit";
             this.unit.MinimumWidth = 6;
             this.unit.Name = "unit";
@@ -1049,12 +945,12 @@ namespace testmna
             // value
             // 
             this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle6;
             this.value.HeaderText = "                      value";
             this.value.MinimumWidth = 6;
             this.value.Name = "value";
@@ -1064,7 +960,7 @@ namespace testmna
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.Controls.Add(this.method1);
             this.groupBox3.Controls.Add(this.method2);
-            this.groupBox3.Location = new System.Drawing.Point(35, 238);
+            this.groupBox3.Location = new System.Drawing.Point(35, 235);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1084,11 +980,164 @@ namespace testmna
             this.lblpicN.Size = new System.Drawing.Size(0, 16);
             this.lblpicN.TabIndex = 107;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Main_Project.Properties.Resources.Screenshot__587_1;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(622, 456);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 105;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lbldc
+            // 
+            this.lbldc.AutoSize = true;
+            this.lbldc.Location = new System.Drawing.Point(121, 430);
+            this.lbldc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbldc.Name = "lbldc";
+            this.lbldc.Size = new System.Drawing.Size(21, 16);
+            this.lbldc.TabIndex = 115;
+            this.lbldc.Text = "=0";
+            this.toolTip1.SetToolTip(this.lbldc, "Specifies the required accuracy and percentage");
+            // 
+            // lblPicN2
+            // 
+            this.lblPicN2.AutoSize = true;
+            this.lblPicN2.Location = new System.Drawing.Point(22, 217);
+            this.lblPicN2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPicN2.Name = "lblPicN2";
+            this.lblPicN2.Size = new System.Drawing.Size(21, 16);
+            this.lblPicN2.TabIndex = 122;
+            this.lblPicN2.Text = "=0";
+            this.toolTip1.SetToolTip(this.lblPicN2, "Specifies the required accuracy and percentage");
+            // 
+            // lblPicStroke
+            // 
+            this.lblPicStroke.AutoSize = true;
+            this.lblPicStroke.Location = new System.Drawing.Point(557, 296);
+            this.lblPicStroke.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPicStroke.Name = "lblPicStroke";
+            this.lblPicStroke.Size = new System.Drawing.Size(21, 16);
+            this.lblPicStroke.TabIndex = 121;
+            this.lblPicStroke.Text = "=0";
+            this.toolTip1.SetToolTip(this.lblPicStroke, "Specifies the required accuracy and percentage");
+            // 
+            // lblPicH
+            // 
+            this.lblPicH.AutoSize = true;
+            this.lblPicH.Location = new System.Drawing.Point(563, 213);
+            this.lblPicH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPicH.Name = "lblPicH";
+            this.lblPicH.Size = new System.Drawing.Size(21, 16);
+            this.lblPicH.TabIndex = 116;
+            this.lblPicH.Text = "=0";
+            this.toolTip1.SetToolTip(this.lblPicH, "Specifies the required accuracy and percentage");
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(519, 105);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(21, 16);
+            this.label6.TabIndex = 120;
+            this.label6.Text = "=0";
+            this.toolTip1.SetToolTip(this.label6, "Specifies the required accuracy and percentage");
+            // 
+            // lblPicT2
+            // 
+            this.lblPicT2.AutoSize = true;
+            this.lblPicT2.Location = new System.Drawing.Point(566, 58);
+            this.lblPicT2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPicT2.Name = "lblPicT2";
+            this.lblPicT2.Size = new System.Drawing.Size(21, 16);
+            this.lblPicT2.TabIndex = 119;
+            this.lblPicT2.Text = "=0";
+            this.toolTip1.SetToolTip(this.lblPicT2, "Specifies the required accuracy and percentage");
+            // 
+            // lblPicr3
+            // 
+            this.lblPicr3.AutoSize = true;
+            this.lblPicr3.Location = new System.Drawing.Point(331, 440);
+            this.lblPicr3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPicr3.Name = "lblPicr3";
+            this.lblPicr3.Size = new System.Drawing.Size(21, 16);
+            this.lblPicr3.TabIndex = 117;
+            this.lblPicr3.Text = "=0";
+            this.toolTip1.SetToolTip(this.lblPicr3, "Specifies the required accuracy and percentage");
+            // 
+            // lblPicr2
+            // 
+            this.lblPicr2.AutoSize = true;
+            this.lblPicr2.Location = new System.Drawing.Point(330, 409);
+            this.lblPicr2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPicr2.Name = "lblPicr2";
+            this.lblPicr2.Size = new System.Drawing.Size(21, 16);
+            this.lblPicr2.TabIndex = 118;
+            this.lblPicr2.Text = "=0";
+            this.toolTip1.SetToolTip(this.lblPicr2, "Specifies the required accuracy and percentage");
+            // 
+            // lblPicr1
+            // 
+            this.lblPicr1.AutoSize = true;
+            this.lblPicr1.Location = new System.Drawing.Point(330, 377);
+            this.lblPicr1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPicr1.Name = "lblPicr1";
+            this.lblPicr1.Size = new System.Drawing.Size(21, 16);
+            this.lblPicr1.TabIndex = 114;
+            this.lblPicr1.Text = "=0";
+            this.toolTip1.SetToolTip(this.lblPicr1, "Specifies the required accuracy and percentage");
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.groupBox4.Location = new System.Drawing.Point(449, 439);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(400, 100);
+            this.groupBox4.TabIndex = 90;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "MMF Calculation formula";
+            this.toolTip1.SetToolTip(this.groupBox4, resources.GetString("groupBox4.ToolTip"));
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(11, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(377, 50);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "MMF = 1600000 × Bg × g + 8000 × r1";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(15, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(377, 50);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "MMF = ( 1.2→1.35 ) × 1600000 × Bg × g";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // FlatArmature
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1532, 753);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.lblpicN);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView3);
@@ -1135,7 +1184,6 @@ namespace testmna
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tabPage3.ResumeLayout(false);
@@ -1147,6 +1195,8 @@ namespace testmna
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1225,15 +1275,18 @@ namespace testmna
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private Label lblpicN;
         private PictureBox pictureBox1;
-        private Label lblPicr1;
-        private Label lblPicr3;
-        private Label lblPicr2;
         private Label lbldc;
         private Label lblPicN2;
         private Label lblPicStroke;
         private Label lblPicH;
         private Label label6;
         private Label lblPicT2;
+        private Label lblPicr3;
+        private Label lblPicr2;
+        private Label lblPicr1;
+        private GroupBox groupBox4;
+        private Button button2;
+        private Button button1;
     }
 }
 

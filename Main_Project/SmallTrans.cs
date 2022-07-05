@@ -127,7 +127,6 @@ namespace Main_Project
 
         private double b;
 
-        private double d;
 
         private double diLv;
 
@@ -184,6 +183,19 @@ namespace Main_Project
 
 
 
+
+
+        private double Agi;
+        private double d;
+        private double aE;
+        private double bE;
+        private double cE;
+        private double eE;
+        private double fE;
+        private double De;
+        private double SSFhv;
+        private double SSFlv;
+        private double EI;
 
 
 
@@ -410,17 +422,7 @@ namespace Main_Project
 
             // سطح ناخالص
 
-            double Agi;
-            double d;
-            double aE;
-            double bE;
-            double cE;
-            double eE;
-            double fE;
-            double De;
-            double SSFhv;
-            double SSFlv;
-            double EI;
+            
 
 
             Agi = Ai / ks;
@@ -572,7 +574,10 @@ namespace Main_Project
 
 
 
-
+            kFactor = Double.Parse(maskedTextBox1.Text);
+            delta = Double.Parse(txt_delta.Text);
+            Efficiency = Double.Parse(maskEff.Text);
+            Voltadreg = Double.Parse(maskvoltreg.Text);
 
 
 
@@ -607,19 +612,12 @@ namespace Main_Project
 
             e1 = highVoltage * (1 - (Voltadreg / 100));
 
-            e2 = lowVoltage * (1 - (Voltadreg / 100));
+            e2 = lowVoltage * (1 + (Voltadreg / 100));
 
 
-            NHv = Np * e1;
+            NHv = Math.Round(Np * e1);
 
-            NLv = Np * e2;
-
-
-
-
-
-
-            
+            NLv = Math.Round(Np * e2);
 
 
 
@@ -627,7 +625,16 @@ namespace Main_Project
 
 
 
-            
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -777,8 +784,10 @@ namespace Main_Project
 
                 xLv = (2 * Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI * Math.Pow((NLv / 2), 2) * (Lmt / w) * (((bhv + blv) / 6) + b0)) / 100; ;
 
+                mmf = (4.44 * frequency * (Ai / 10000) * fluxDensity * 1000) / (kFactor * kFactor);
 
-                
+                εx = (((Math.PI * frequency * 4 * Math.Pow(10, -7) * Math.PI) / (n * voltagePerTurn)) * mmf * (Lmt / w) * (((bhv + blv) / 6) + b0)) / 100; ;
+
 
 
             }
@@ -831,6 +840,14 @@ namespace Main_Project
 
 
 
+            MessageBox.Show("Calculation Finished!", "Calculation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+
+
+
+
 
 
 
@@ -839,24 +856,16 @@ namespace Main_Project
             dataGridView3.Rows.Clear();
 
             dataGridView3.Rows.Add("  pho2", "  ohm_cm", string.Format("  {0:0.00000000}", pho2));
-            dataGridView3.Rows.Add("  rating", "  ohm_cm", string.Format("  {0:0.00000000}", rating));
-            dataGridView3.Rows.Add("  kFactor", "  ohm_cm", string.Format("  {0:0.00000000}", kFactor));
-
-            dataGridView3.Rows.Add("  voltagePerTurn", "  V", string.Format("  {0:0.0000}", voltagePerTurn));
 
             dataGridView3.Rows.Add("  Ai", "  cm^2", string.Format("  {0:0.0000}", Ai));
 
-            dataGridView3.Rows.Add("  d", "  cm", string.Format("  {0:0.0000}", d));
-
-            dataGridView3.Rows.Add("  a", "  cm", string.Format("  {0:0.0000}", a));
+            dataGridView3.Rows.Add("  d", "  ", string.Format("  {0:0.0000}", d));
 
             dataGridView3.Rows.Add("  D", "  cm", string.Format("  {0:0.0000}", D));
 
-            dataGridView3.Rows.Add("  b", "  cm", string.Format("  {0:0.0000}", b));
-
             dataGridView3.Rows.Add("  Ww", "  cm", string.Format("  {0:0.0000}", Ww));
 
-            dataGridView3.Rows.Add("  Aw", "  cm^2", string.Format("  {0:0.0000}", Aw));
+            dataGridView3.Rows.Add("  Aw", "  mm^2", string.Format("  {0:0.0000}", Aw));
 
             dataGridView3.Rows.Add("  Hw", "  cm", string.Format("  {0:0.0000}", Hw));
 
@@ -888,6 +897,8 @@ namespace Main_Project
 
             dataGridView3.Rows.Add("  index LV", " ", string.Format("  {0:0}", SWGAWGBWGIndexLv));
 
+            dataGridView3.Rows.Add("  EI", " ", string.Format("  {0:0}", EI));
+
             dataGridView3.Rows.Add("  RHv", "  ohm", string.Format("  {0:0.0000}", RHv));
 
             dataGridView3.Rows.Add("  RLv", "  ohm", string.Format("  {0:0.0000}", RLv));
@@ -907,13 +918,13 @@ namespace Main_Project
 
             labelH.Text = "= " + Convert.ToString(string.Format("{0:0}", H));
 
-            labelHV.Text = "= " + Convert.ToString(string.Format("{0:0.00}", NHv));
+            labelHV.Text = "= " + Convert.ToString(string.Format("{0:0}", NHv));
 
             labelHw.Text = "= " + Convert.ToString(string.Format("{0:0.00}", Hw));
 
             labelHy.Text = "= " + Convert.ToString(string.Format("{0:0.00}", Hy));
 
-            labelLv.Text = "= " + Convert.ToString(string.Format("{0:0.00}", NLv));
+            labelLv.Text = "= " + Convert.ToString(string.Format("{0:0}", NLv));
 
             labelW.Text = "= " + Convert.ToString(string.Format("{0:0.00}", W));
 
@@ -922,6 +933,25 @@ namespace Main_Project
             label2D.Text = "= " + Convert.ToString(string.Format("{0:0.00}", (D * 2)));
 
             labelDy.Text = "= " + Convert.ToString(string.Format("{0:0.00}", Dy));
+
+
+
+
+            // برای ورق
+
+            labela.Text = "= " + Convert.ToString(string.Format("{0:0.00}", aE));
+
+            labelb.Text = "= " + Convert.ToString(string.Format("{0:0.00}", bE));
+
+            labelc.Text = "= " + Convert.ToString(string.Format("{0:0.00}", cE));
+
+            labeld.Text = "= " + Convert.ToString(string.Format("{0:0.00}", d));
+
+            labele.Text = "= " + Convert.ToString(string.Format("{0:0.00}", eE));
+
+            labelf.Text = "= " + Convert.ToString(string.Format("{0:0.00}", fE));
+
+            
 
 
 
@@ -1403,7 +1433,7 @@ namespace Main_Project
             txt_b2.Enabled = false;
             textLmt.Enabled = false;
 
-            textw.Enabled = false;
+            
             comboGroup.Enabled = false;
             textnvalue.Enabled = false;
             label41.Enabled = false;
@@ -1415,11 +1445,21 @@ namespace Main_Project
             label46.Enabled = false;
             label47.Enabled = false;
             
-            label51.Enabled = false;
+            label5.Enabled = false;
             label52.Enabled = false;
             label53.Enabled = false;
             
             label44.Enabled = false;
+
+
+            label69.Enabled = false;
+            label70.Enabled = false;
+            label71.Enabled = false;
+            label72.Enabled = false;
+            textw.Enabled = false;
+
+
+
             combo_Leakageresistancewinding.Enabled = false;
             
 
@@ -1434,9 +1474,16 @@ namespace Main_Project
                 label61.Enabled = true;
                 label60.Enabled = true;
                 label43.Enabled = true;
+                label5.Enabled = true;
+                label65.Enabled = true;
+                textw.Enabled = true;
 
                 combo_Leakageresistancewinding.Enabled = true;
                 label44.Enabled = true;
+                label69.Enabled = true;
+                label70.Enabled = true;
+                label71.Enabled = true;
+                label72.Enabled = true;
 
 
 
@@ -1482,7 +1529,7 @@ namespace Main_Project
                 label45.Enabled = true;
                 label46.Enabled = true;
                 label47.Enabled = true;
-                label51.Enabled = true;
+                label5.Enabled = true;
                 label52.Enabled = true;
                 label53.Enabled = true;
                 textLmt.Enabled = true;
@@ -1646,8 +1693,242 @@ namespace Main_Project
 
         private void txt_ratingvalue_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
+            if (rating <= 200)
+            {
+                maskedTextBox1.Text = "0.56";
 
-            
+            }
+            else if (rating > 200 && rating <= 500)
+            {
+                maskedTextBox1.Text = "0.63";
+
+            }
+            else if (rating > 500 && rating <= 1000)
+            {
+                maskedTextBox1.Text = "0.71";
+
+            }
+            else if (rating > 1000 && rating <= 2000)
+            {
+                maskedTextBox1.Text = "0.78";
+
+            }
+            else if (rating > 2000 && rating <= 4000)
+            {
+                maskedTextBox1.Text = "0.85";
+
+            }
+            else
+            {
+                maskedTextBox1.Text = "1.25";
+
+            }
+
+ 
+
+
+
+            if (rating <= 50)
+            {
+                txt_delta.Text = "4.0";
+
+            }
+            else if (rating > 50 && rating <= 100)
+            {
+                txt_delta.Text = "3.5";
+
+            }
+            else if (rating > 100 && rating <= 200)
+            {
+                txt_delta.Text = "3.0";
+
+            }
+            else if (rating > 200 && rating <= 500)
+            {
+                txt_delta.Text = "2.5";
+
+            }
+            else if (rating > 500 && rating <= 1000)
+            {
+                txt_delta.Text = "2.0";
+
+            }
+            else if (rating > 1000 && rating <= 2000)
+            {
+                txt_delta.Text = "1.75";
+
+            }
+            else if (rating > 2000 && rating <= 3000)
+            {
+                txt_delta.Text = "1.5";
+
+            }
+            else if (rating > 3000 && rating <= 4000)
+            {
+                txt_delta.Text = "1.0";
+
+            }
+            else
+            {
+                txt_delta.Text = "0.85";
+
+            }
+
+
+
+ 
+
+
+
+            if (rating <= 5)
+            {
+
+                maskvoltreg.Text = "20";
+            }
+            else if (rating > 5 && rating <= 10)
+            {
+
+                maskvoltreg.Text = "17";
+            }
+            else if (rating > 10 && rating <= 25)
+            {
+
+                maskvoltreg.Text = "15";
+            }
+            else if (rating > 25 && rating <= 50)
+            {
+
+                maskvoltreg.Text = "12";
+            }
+            else if (rating > 50 && rating <= 75)
+            {
+
+                maskvoltreg.Text = "10";
+            }
+            else if (rating > 75 && rating <= 100)
+            {
+
+                maskvoltreg.Text = "9";
+            }
+            else if (rating > 100 && rating <= 150)
+            {
+
+                maskvoltreg.Text = "8"; ;
+            }
+            else if (rating > 150 && rating <= 200)
+            {
+
+                maskvoltreg.Text = "7.5";
+            }
+            else if (rating > 200 && rating <= 300)
+            {
+
+                maskvoltreg.Text = "7";
+            }
+            else if (rating > 300 && rating <= 400)
+            {
+
+                maskvoltreg.Text = "6.5";
+            }
+            else if (rating > 400 && rating <= 500)
+            {
+
+                maskvoltreg.Text = "6";
+            }
+            else if (rating > 500 && rating <= 750)
+            {
+
+                maskvoltreg.Text = "5";
+            }
+            else if (rating > 750 && rating <= 1000)
+            {
+
+                maskvoltreg.Text = "4";
+            }
+            else if (rating > 1000 && rating <= 1500)
+            {
+
+                maskvoltreg.Text = "3";
+            }
+            else if (rating > 1500 && rating <= 2000)
+            {
+
+                maskvoltreg.Text = "2";
+            }
+            else if (rating > 2000 && rating <= 3000)
+            {
+
+                maskvoltreg.Text = "1.5";
+            }
+            else
+            {
+
+                maskvoltreg.Text = "1.5";
+            }
+
+ 
+
+
+
+
+
+
+
+            if (rating <= 30)
+            {
+                maskEff.Text = "86.4";
+
+            }
+            else if (rating > 30 && rating <= 50)
+            {
+                maskEff.Text = "87.6";
+
+            }
+            else if (rating > 50 && rating <= 100)
+            {
+                maskEff.Text = "89.6";
+
+            }
+            else if (rating > 100 && rating <= 150)
+            {
+                maskEff.Text = "90.9";
+
+            }
+            else if (rating > 150 && rating <= 200)
+            {
+                maskEff.Text = "91.3";
+
+            }
+            else if (rating > 200 && rating <= 300)
+            {
+                maskEff.Text = "92.3";
+
+            }
+            else if (rating > 300 && rating <= 500)
+            {
+                maskEff.Text = "93";
+
+            }
+            else if (rating > 500 && rating <= 750)
+            {
+                maskEff.Text = "93.5";
+
+            }
+            else if (rating > 750 && rating <= 1000)
+            {
+                maskEff.Text = "94";
+
+            }
+            else
+            {
+                maskEff.Text = "94";
+
+            }
+
+
+
+ 
+
 
 
 
@@ -1940,11 +2221,9 @@ namespace Main_Project
             
         }
 
+        private void labeld_Click(object sender, EventArgs e)
+        {
 
-
-
-
-
-
+        }
     }
 }

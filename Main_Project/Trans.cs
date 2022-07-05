@@ -59,8 +59,6 @@ namespace trans_1
 
         private double kFactor;
 
-        private double sf;
-
         private double DiHv;
 
         private double DoHv;
@@ -397,7 +395,7 @@ namespace trans_1
             //d
             d = Math.Sqrt(Ai / kc);
 
-            double Agi = Ai / sf;
+            double Agi = Ai / ks;
 
 
             a = 0;
@@ -471,7 +469,7 @@ namespace trans_1
 
                  Dy = a;
 
-                 Hy = ((Ww * Ai) / (a * sf)) / 10;
+                 Hy = ((Ww * Ai) / (a * ks)) / 10;
 
                  H = Hw + (2 * Hy);
 
@@ -907,7 +905,7 @@ namespace trans_1
 
             
 
-            sf = Double.Parse(txt_Stackingfactor.Text);
+
 
             DiHv = Double.Parse(txt_diHv.Text);
 
@@ -1383,7 +1381,101 @@ namespace trans_1
 
 
 
-            if(combo_Steel.SelectedIndex == 1)
+
+
+
+            if (combo_Steel.SelectedIndex == 0)
+            {
+                if (txt_Frequency.Text == "50")
+                {
+
+                    txt_Wi.Text = "2.53";
+                }
+
+                else
+                {
+
+                    txt_Wi.Text = "3.2";
+                }
+
+            }
+            else if (combo_Steel.SelectedIndex == 1)
+            {
+                if (txt_Frequency.Text == "50")
+                {
+
+                    txt_Wi.Text = "2.75";
+                }
+                else
+                {
+
+                    txt_Wi.Text = "3.48";
+                }
+
+            }
+            else if (combo_Steel.SelectedIndex == 2)
+            {
+                if (txt_Frequency.Text == "50")
+                {
+
+                    txt_Wi.Text = "2.93";
+                }
+                else
+                {
+
+                    txt_Wi.Text = "3.7";
+                }
+
+            }
+            else if (combo_Steel.SelectedIndex == 3)
+            {
+                if (txt_Frequency.Text == "50")
+                {
+
+                    txt_Wi.Text = "3.13";
+                }
+                else
+                {
+
+                    txt_Wi.Text = "3.97";
+                }
+
+            }
+            else if (combo_Steel.SelectedIndex == 4)
+            {
+                if (txt_Frequency.Text == "50")
+                {
+
+                    txt_Wi.Text = "3.3";
+                }
+                else
+                {
+
+                    txt_Wi.Text = "4.19";
+                }
+
+            }
+
+            else
+            {
+                if (combo_Steel.SelectedIndex == 5)
+                {
+
+                    txt_Wi.Text = "1.475";
+                }
+                else
+                {
+
+                    txt_Wi.Text = "1.6";
+                }
+
+            }
+
+
+
+
+
+            if (combo_Steel.SelectedIndex == 1)
             {
                 pictureBox1.Visible = false;
                 pictureBox2.Visible = false;

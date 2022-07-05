@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SmallTrans));
             this.label19 = new System.Windows.Forms.Label();
             this.txt_tr = new System.Windows.Forms.MaskedTextBox();
@@ -53,13 +53,6 @@
             this.combo_insulation = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.maskvoltreg = new System.Windows.Forms.MaskedTextBox();
             this.labelDy = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -119,7 +112,6 @@
             this.txt_doHv = new System.Windows.Forms.TextBox();
             this.labelH = new System.Windows.Forms.Label();
             this.label2D = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lblPicDy = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.labelWw = new System.Windows.Forms.Label();
@@ -142,7 +134,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lblPicHw = new System.Windows.Forms.Label();
             this.lblPicW = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblPT2 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -150,8 +141,6 @@
             this.textnvalue = new System.Windows.Forms.TextBox();
             this.comboGroup = new System.Windows.Forms.ComboBox();
             this.label52 = new System.Windows.Forms.Label();
-            this.textw = new System.Windows.Forms.TextBox();
-            this.label51 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.textLmt = new System.Windows.Forms.TextBox();
             this.txt_b1 = new System.Windows.Forms.TextBox();
@@ -161,8 +150,36 @@
             this.txt_LowVoltage = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.textw = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.labeld = new System.Windows.Forms.Label();
+            this.labele = new System.Windows.Forms.Label();
+            this.labelc = new System.Windows.Forms.Label();
+            this.labelf = new System.Windows.Forms.Label();
+            this.labela = new System.Windows.Forms.Label();
+            this.labelb = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -170,14 +187,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.groupBox6.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // label19
@@ -413,85 +423,8 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.tabPage2.Size = new System.Drawing.Size(699, 406);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "B_H Curve";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Main_Project.Properties.Resources.CRGO;
-            this.pictureBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox7.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(699, 400);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Main_Project.Properties.Resources.M15_;
-            this.pictureBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox6.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Main_Project.Properties.Resources.M19_;
-            this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox5.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Main_Project.Properties.Resources.M22_;
-            this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Main_Project.Properties.Resources.M27_;
-            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Main_Project.Properties.Resources.M36_;
-            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Main_Project.Properties.Resources.M43_;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // maskvoltreg
             // 
@@ -532,12 +465,12 @@
             // Parameter
             // 
             this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
             this.Parameter.HeaderText = "                  Parameter";
             this.Parameter.MinimumWidth = 6;
             this.Parameter.Name = "Parameter";
@@ -546,12 +479,12 @@
             // unit
             // 
             this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
             this.unit.HeaderText = "                     unit";
             this.unit.MinimumWidth = 6;
             this.unit.Name = "unit";
@@ -559,12 +492,12 @@
             // value
             // 
             this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle3;
             this.value.HeaderText = "                      value";
             this.value.MinimumWidth = 6;
             this.value.Name = "value";
@@ -963,6 +896,7 @@
             // label72
             // 
             this.label72.AutoSize = true;
+            this.label72.Enabled = false;
             this.label72.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label72.Location = new System.Drawing.Point(334, 88);
             this.label72.Name = "label72";
@@ -973,6 +907,7 @@
             // label71
             // 
             this.label71.AutoSize = true;
+            this.label71.Enabled = false;
             this.label71.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label71.Location = new System.Drawing.Point(334, 66);
             this.label71.Name = "label71";
@@ -983,6 +918,7 @@
             // label70
             // 
             this.label70.AutoSize = true;
+            this.label70.Enabled = false;
             this.label70.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label70.Location = new System.Drawing.Point(138, 94);
             this.label70.Name = "label70";
@@ -993,6 +929,7 @@
             // label69
             // 
             this.label69.AutoSize = true;
+            this.label69.Enabled = false;
             this.label69.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label69.Location = new System.Drawing.Point(138, 68);
             this.label69.Name = "label69";
@@ -1084,6 +1021,7 @@
             // 
             // txt_doLv
             // 
+            this.txt_doLv.Enabled = false;
             this.txt_doLv.Location = new System.Drawing.Point(273, 88);
             this.txt_doLv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_doLv.Name = "txt_doLv";
@@ -1094,6 +1032,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
+            this.label43.Enabled = false;
             this.label43.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label43.Location = new System.Drawing.Point(213, 89);
             this.label43.Name = "label43";
@@ -1103,6 +1042,7 @@
             // 
             // txt_diLv
             // 
+            this.txt_diLv.Enabled = false;
             this.txt_diLv.Location = new System.Drawing.Point(81, 90);
             this.txt_diLv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_diLv.Name = "txt_diLv";
@@ -1113,6 +1053,7 @@
             // label61
             // 
             this.label61.AutoSize = true;
+            this.label61.Enabled = false;
             this.label61.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label61.Location = new System.Drawing.Point(21, 92);
             this.label61.Name = "label61";
@@ -1122,6 +1063,7 @@
             // 
             // txt_doHv
             // 
+            this.txt_doHv.Enabled = false;
             this.txt_doHv.Location = new System.Drawing.Point(273, 63);
             this.txt_doHv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_doHv.Name = "txt_doHv";
@@ -1149,18 +1091,6 @@
             this.label2D.TabIndex = 231;
             this.label2D.Text = "= 0";
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Main_Project.Properties.Resources.Screenshot__593_;
-            this.pictureBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox9.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(699, 407);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 229;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
-            // 
             // lblPicDy
             // 
             this.lblPicDy.AutoSize = true;
@@ -1175,6 +1105,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
+            this.label60.Enabled = false;
             this.label60.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label60.Location = new System.Drawing.Point(213, 65);
             this.label60.Name = "label60";
@@ -1205,8 +1136,6 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.checkBox1.Location = new System.Drawing.Point(23, 34);
             this.checkBox1.Name = "checkBox1";
@@ -1248,9 +1177,9 @@
             this.label34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label34.Location = new System.Drawing.Point(18, 531);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(42, 16);
+            this.label34.Size = new System.Drawing.Size(64, 16);
             this.label34.TabIndex = 312;
-            this.label34.Text = "Efficnt";
+            this.label34.Text = "Efficiency";
             // 
             // label33
             // 
@@ -1259,9 +1188,9 @@
             this.label33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label33.Location = new System.Drawing.Point(18, 496);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(61, 16);
+            this.label33.Size = new System.Drawing.Size(122, 16);
             this.label33.TabIndex = 311;
-            this.label33.Text = "Voltage r";
+            this.label33.Text = "Voltage Regulation";
             // 
             // maskEff
             // 
@@ -1320,6 +1249,7 @@
             // 
             // combo_Leakageresistancewinding
             // 
+            this.combo_Leakageresistancewinding.Enabled = false;
             this.combo_Leakageresistancewinding.FormattingEnabled = true;
             this.combo_Leakageresistancewinding.Items.AddRange(new object[] {
             "Sandwitch"});
@@ -1331,6 +1261,7 @@
             // 
             // txt_diHv
             // 
+            this.txt_diHv.Enabled = false;
             this.txt_diHv.Location = new System.Drawing.Point(81, 65);
             this.txt_diHv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_diHv.Name = "txt_diHv";
@@ -1341,6 +1272,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
+            this.label41.Enabled = false;
             this.label41.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label41.Location = new System.Drawing.Point(21, 68);
             this.label41.Name = "label41";
@@ -1382,13 +1314,14 @@
             this.tabPage1.Controls.Add(this.lblPicH);
             this.tabPage1.Controls.Add(this.pictureBox8);
             this.tabPage1.Controls.Add(this.lblPT2);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.tabPage1.Size = new System.Drawing.Size(699, 406);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Structure";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // lblPicHw
@@ -1413,18 +1346,6 @@
             this.lblPicW.TabIndex = 181;
             this.lblPicW.Text = "=0";
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
-            this.pictureBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox8.Location = new System.Drawing.Point(11, 9);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(689, 399);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 179;
-            this.pictureBox8.TabStop = false;
-            // 
             // lblPT2
             // 
             this.lblPT2.AutoSize = true;
@@ -1438,6 +1359,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
+            this.label44.Enabled = false;
             this.label44.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label44.Location = new System.Drawing.Point(21, 121);
             this.label44.Name = "label44";
@@ -1448,6 +1370,8 @@
             // groupBox6
             // 
             this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox6.Controls.Add(this.textw);
+            this.groupBox6.Controls.Add(this.label5);
             this.groupBox6.Controls.Add(this.label72);
             this.groupBox6.Controls.Add(this.label71);
             this.groupBox6.Controls.Add(this.label70);
@@ -1468,8 +1392,6 @@
             this.groupBox6.Controls.Add(this.textnvalue);
             this.groupBox6.Controls.Add(this.comboGroup);
             this.groupBox6.Controls.Add(this.label52);
-            this.groupBox6.Controls.Add(this.textw);
-            this.groupBox6.Controls.Add(this.label51);
             this.groupBox6.Controls.Add(this.label47);
             this.groupBox6.Controls.Add(this.textLmt);
             this.groupBox6.Controls.Add(this.txt_b1);
@@ -1537,27 +1459,6 @@
             this.label52.TabIndex = 107;
             this.label52.Text = "Group";
             // 
-            // textw
-            // 
-            this.textw.Enabled = false;
-            this.textw.Location = new System.Drawing.Point(244, 254);
-            this.textw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textw.Name = "textw";
-            this.textw.Size = new System.Drawing.Size(86, 22);
-            this.textw.TabIndex = 106;
-            this.textw.Text = "8";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Enabled = false;
-            this.label51.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label51.Location = new System.Drawing.Point(21, 257);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(16, 16);
-            this.label51.TabIndex = 105;
-            this.label51.Text = "w";
-            // 
             // label47
             // 
             this.label47.AutoSize = true;
@@ -1615,6 +1516,7 @@
             this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(783, 31);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.tabControl1.Name = "tabControl1";
@@ -1646,6 +1548,217 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Enabled = false;
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(22, 255);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 16);
+            this.label5.TabIndex = 126;
+            this.label5.Text = "w";
+            // 
+            // textw
+            // 
+            this.textw.Enabled = false;
+            this.textw.Location = new System.Drawing.Point(243, 253);
+            this.textw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textw.Name = "textw";
+            this.textw.Size = new System.Drawing.Size(85, 22);
+            this.textw.TabIndex = 127;
+            this.textw.Text = "12";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.labelb);
+            this.tabPage3.Controls.Add(this.labela);
+            this.tabPage3.Controls.Add(this.labelf);
+            this.tabPage3.Controls.Add(this.labelc);
+            this.tabPage3.Controls.Add(this.labele);
+            this.tabPage3.Controls.Add(this.labeld);
+            this.tabPage3.Controls.Add(this.pictureBox10);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(699, 406);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "E_I sheet";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Main_Project.Properties.Resources.Screenshot__593_;
+            this.pictureBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox9.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(699, 407);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 229;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
+            this.pictureBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox8.Location = new System.Drawing.Point(11, 9);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(689, 399);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 179;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Main_Project.Properties.Resources.CRGO;
+            this.pictureBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox7.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(699, 400);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Main_Project.Properties.Resources.M15_;
+            this.pictureBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox6.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Main_Project.Properties.Resources.M19_;
+            this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox5.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Main_Project.Properties.Resources.M22_;
+            this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Main_Project.Properties.Resources.M27_;
+            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Main_Project.Properties.Resources.M36_;
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Main_Project.Properties.Resources.M43_;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Main_Project.Properties.Resources.Screenshot__621_;
+            this.pictureBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox10.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(707, 403);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 230;
+            this.pictureBox10.TabStop = false;
+            // 
+            // labeld
+            // 
+            this.labeld.AutoSize = true;
+            this.labeld.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labeld.Location = new System.Drawing.Point(231, 203);
+            this.labeld.Name = "labeld";
+            this.labeld.Size = new System.Drawing.Size(24, 16);
+            this.labeld.TabIndex = 239;
+            this.labeld.Text = "= 0";
+            this.labeld.Click += new System.EventHandler(this.labeld_Click);
+            // 
+            // labele
+            // 
+            this.labele.AutoSize = true;
+            this.labele.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labele.Location = new System.Drawing.Point(631, 196);
+            this.labele.Name = "labele";
+            this.labele.Size = new System.Drawing.Size(24, 16);
+            this.labele.TabIndex = 240;
+            this.labele.Text = "= 0";
+            // 
+            // labelc
+            // 
+            this.labelc.AutoSize = true;
+            this.labelc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelc.Location = new System.Drawing.Point(115, 203);
+            this.labelc.Name = "labelc";
+            this.labelc.Size = new System.Drawing.Size(24, 16);
+            this.labelc.TabIndex = 241;
+            this.labelc.Text = "= 0";
+            // 
+            // labelf
+            // 
+            this.labelf.AutoSize = true;
+            this.labelf.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelf.Location = new System.Drawing.Point(526, 198);
+            this.labelf.Name = "labelf";
+            this.labelf.Size = new System.Drawing.Size(24, 16);
+            this.labelf.TabIndex = 242;
+            this.labelf.Text = "= 0";
+            // 
+            // labela
+            // 
+            this.labela.AutoSize = true;
+            this.labela.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labela.Location = new System.Drawing.Point(264, 386);
+            this.labela.Name = "labela";
+            this.labela.Size = new System.Drawing.Size(24, 16);
+            this.labela.TabIndex = 243;
+            this.labela.Text = "= 0";
+            // 
+            // labelb
+            // 
+            this.labelb.AutoSize = true;
+            this.labelb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelb.Location = new System.Drawing.Point(599, 41);
+            this.labelb.Name = "labelb";
+            this.labelb.Size = new System.Drawing.Size(24, 16);
+            this.labelb.TabIndex = 246;
+            this.labelb.Text = "= 0";
             // 
             // SmallTrans
             // 
@@ -1704,6 +1817,19 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1711,17 +1837,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1846,8 +1962,8 @@
         private System.Windows.Forms.TextBox textnvalue;
         private System.Windows.Forms.ComboBox comboGroup;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.TextBox textw;
-        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TextBox label51;
+
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox textLmt;
         private System.Windows.Forms.TextBox txt_b1;
@@ -1857,5 +1973,15 @@
         private System.Windows.Forms.MaskedTextBox txt_LowVoltage;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox textw;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label labelb;
+        private System.Windows.Forms.Label labela;
+        private System.Windows.Forms.Label labelf;
+        private System.Windows.Forms.Label labelc;
+        private System.Windows.Forms.Label labele;
+        private System.Windows.Forms.Label labeld;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

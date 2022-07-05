@@ -1,8 +1,11 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -115,8 +118,6 @@ namespace Main_Project
 
         private double b;
 
-        private double d;
-
         private double diLv;
 
         private double diHv;
@@ -172,14 +173,28 @@ namespace Main_Project
 
 
 
-
         private double Np;
 
         private double Voltadreg;
 
         private double Efficiency;
+        private double Awreal;
 
 
+
+
+
+        private double Agi;
+        private double d;
+        private double aE;
+        private double bE;
+        private double cE;
+        private double eE;
+        private double fE;
+        private double De;
+        private double SSFhv;
+        private double SSFlv;
+        private double EI;
 
 
 
@@ -400,17 +415,7 @@ namespace Main_Project
 
             // سطح ناخالص
 
-            double Agi;
-            double d;
-            double aE;
-            double bE;
-            double cE;
-            double eE;
-            double fE;
-            double De;
-            double SSFhv;
-            double SSFlv;
-            double EI;
+
 
 
             Agi = Ai / ks;
@@ -539,7 +544,7 @@ namespace Main_Project
 
 
 
-            Aw = cE * eE;
+            Awreal = cE * eE;
 
 
 
@@ -600,11 +605,9 @@ namespace Main_Project
             e2 = lowVoltage * (1 - (Voltadreg / 100));
 
 
-            NHv = Np * e1;
+            NHv = Math.Round(Np * highVoltage);
 
-            NLv = Np * e2;
-
-
+            NLv = Math.Round(Np * lowVoltage);
 
 
 
@@ -615,6 +618,11 @@ namespace Main_Project
 
 
 
+
+            kFactor = Double.Parse(maskedTextBox1.Text);
+            delta = Double.Parse(txt_delta.Text);
+            Efficiency = Double.Parse(maskEff.Text);
+            Voltadreg = Double.Parse(maskvoltreg.Text);
 
 
 
@@ -784,24 +792,24 @@ namespace Main_Project
 
 
 
-            
+            // 1.25 ..................1.3     mm^2
+            Aw = 1.3 * (NHv * aHv) / SSFhv;
 
             Z = highVoltage / IHv;
             
 
             // 1.1 ......1.2
-            MMFg = 1.1 * MMF;
 
-            MMF = (NHv * NHv) / (Np * Z);
+            MMFg = (NHv * NHv) / (Np * Z);
+            MMF = MMFg / 1.1;
 
             // mm
-            g = (Math.Sqrt(2) * MMF) / (800000 * fluxDensity);
+            g = ((Math.Sqrt(2) * MMF) / (800000 * fluxDensity)) * 1000;
 
-            L = Z / (2 * Math.PI * fluxDensity);
+            L = (Z / (2 * Math.PI * frequency)) * 1000;
 
 
-            // 1.25 ..................1.3     mm^2
-            Aw = 1.25 * (NHv * aHv) / SSFhv;
+            
 
 
 
@@ -824,6 +832,7 @@ namespace Main_Project
 
 
 
+            MessageBox.Show("Calculation Finished!", "Calculation", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
@@ -833,24 +842,24 @@ namespace Main_Project
             dataGridView3.Rows.Clear();
 
             dataGridView3.Rows.Add("  pho2", "  ohm_cm", string.Format("  {0:0.00000000}", pho2));
-            dataGridView3.Rows.Add("  rating", "  ohm_cm", string.Format("  {0:0.00000000}", rating));
-            dataGridView3.Rows.Add("  kFactor", "  ohm_cm", string.Format("  {0:0.00000000}", kFactor));
 
-            dataGridView3.Rows.Add("  voltagePerTurn", "  V", string.Format("  {0:0.0000}", voltagePerTurn));
+            dataGridView3.Rows.Add("  Np", "  ", string.Format("  {0:0.0000}", Np));
 
             dataGridView3.Rows.Add("  Ai", "  cm^2", string.Format("  {0:0.0000}", Ai));
+            dataGridView3.Rows.Add("  Awreal", "  mm^2", string.Format("  {0:0.0000}", Awreal));
+            dataGridView3.Rows.Add("  Aw", "  mm^2", string.Format("  {0:0.0000}", Aw));
+            dataGridView3.Rows.Add("  Z", "  ohm", string.Format("  {0:0.0000}", Z));
+            dataGridView3.Rows.Add("  MMF", "  A", string.Format("  {0:0.0000}", MMF));
+            dataGridView3.Rows.Add("  MMFg", "  A", string.Format("  {0:0.0000}", MMFg));
+            dataGridView3.Rows.Add("  Airgap", "  mm", string.Format("  {0:0.0000}", g));
+            dataGridView3.Rows.Add("  inductance", "  mm", string.Format("  {0:0.0000}", L));
 
-            dataGridView3.Rows.Add("  d", "  cm", string.Format("  {0:0.0000}", d));
-
-            dataGridView3.Rows.Add("  a", "  cm", string.Format("  {0:0.0000}", a));
+            dataGridView3.Rows.Add("  d", "  ", string.Format("  {0:0}", d));
+            dataGridView3.Rows.Add("  EI", "  ", string.Format("  {0:0}", EI));
 
             dataGridView3.Rows.Add("  D", "  cm", string.Format("  {0:0.0000}", D));
 
-            dataGridView3.Rows.Add("  b", "  cm", string.Format("  {0:0.0000}", b));
-
             dataGridView3.Rows.Add("  Ww", "  cm", string.Format("  {0:0.0000}", Ww));
-
-            dataGridView3.Rows.Add("  Aw", "  cm^2", string.Format("  {0:0.0000}", Aw));
 
             dataGridView3.Rows.Add("  Hw", "  cm", string.Format("  {0:0.0000}", Hw));
 
@@ -888,8 +897,6 @@ namespace Main_Project
 
             dataGridView3.Rows.Add("  xHv", "  ohm", string.Format("  {0:0.0000}", xHv));
 
-            dataGridView3.Rows.Add("  XLv", "  ohm", string.Format("  {0:0.0000}", XLv));
-
             dataGridView3.Rows.Add("  XHv_2n", "  ohm", string.Format("  {0:0.0000}", XHv_2n));
 
             dataGridView3.Rows.Add("  εx", "  ", string.Format("  {0:0.0000}", εx));
@@ -916,6 +923,23 @@ namespace Main_Project
             label2D.Text = "= " + Convert.ToString(string.Format("{0:0.00}", (D * 2)));
 
             labelDy.Text = "= " + Convert.ToString(string.Format("{0:0.00}", Dy));
+
+
+
+
+            // برای ورق
+
+            labela.Text = "= " + Convert.ToString(string.Format("{0:0.00}", aE));
+
+            labelb.Text = "= " + Convert.ToString(string.Format("{0:0.00}", bE));
+
+            labelc.Text = "= " + Convert.ToString(string.Format("{0:0.00}", cE));
+
+            labeld.Text = "= " + Convert.ToString(string.Format("{0:0.00}", d));
+
+            labele.Text = "= " + Convert.ToString(string.Format("{0:0.00}", eE));
+
+            labelf.Text = "= " + Convert.ToString(string.Format("{0:0.00}", fE));
 
 
 
@@ -1042,251 +1066,7 @@ namespace Main_Project
 
         }
 
-        private void txt_rating_Leave(object sender, EventArgs e)
-        {
-
-
-
-            if (rating <= 200)
-            {
-                maskedTextBox1.Text = "0.56";
-
-            }
-            else if (rating > 200 && rating <= 500)
-            {
-                maskedTextBox1.Text = "0.63";
-
-            }
-            else if (rating > 500 && rating <= 1000)
-            {
-                maskedTextBox1.Text = "0.71";
-
-            }
-            else if (rating > 1000 && rating <= 2000)
-            {
-                maskedTextBox1.Text = "0.78";
-
-            }
-            else if (rating > 2000 && rating <= 4000)
-            {
-                maskedTextBox1.Text = "0.85";
-
-            }
-            else
-            {
-                maskedTextBox1.Text = "1.25";
-
-            }
-
-
-            kFactor = Double.Parse(maskedTextBox1.Text);
-
-
-
-            if (rating <= 50)
-            {
-                txt_delta.Text = "4.0";
-
-            }
-            else if (rating > 50 && rating <= 100)
-            {
-                txt_delta.Text = "3.5";
-
-            }
-            else if (rating > 100 && rating <= 200)
-            {
-                txt_delta.Text = "3.0";
-
-            }
-            else if (rating > 200 && rating <= 500)
-            {
-                txt_delta.Text = "2.5";
-
-            }
-            else if (rating > 500 && rating <= 1000)
-            {
-                txt_delta.Text = "2.0";
-
-            }
-            else if (rating > 1000 && rating <= 2000)
-            {
-                txt_delta.Text = "1.75";
-
-            }
-            else if (rating > 2000 && rating <= 3000)
-            {
-                txt_delta.Text = "1.5";
-
-            }
-            else if (rating > 3000 && rating <= 4000)
-            {
-                txt_delta.Text = "1.0";
-
-            }
-            else
-            {
-                txt_delta.Text = "0.85";
-
-            }
-
-
-
-            delta = Double.Parse(txt_delta.Text);
-
-
-
-            if (rating <= 5)
-            {
-
-                maskvoltreg.Text = "20";
-            }
-            else if (rating > 5 && rating <= 10)
-            {
-
-                maskvoltreg.Text = "17";
-            }
-            else if (rating > 10 && rating <= 25)
-            {
-
-                maskvoltreg.Text = "15";
-            }
-            else if (rating > 25 && rating <= 50)
-            {
-
-                maskvoltreg.Text = "12";
-            }
-            else if (rating > 50 && rating <= 75)
-            {
-
-                maskvoltreg.Text = "10";
-            }
-            else if (rating > 75 && rating <= 100)
-            {
-
-                maskvoltreg.Text = "9";
-            }
-            else if (rating > 100 && rating <= 150)
-            {
-
-                maskvoltreg.Text = "8"; ;
-            }
-            else if (rating > 150 && rating <= 200)
-            {
-
-                maskvoltreg.Text = "7.5";
-            }
-            else if (rating > 200 && rating <= 300)
-            {
-
-                maskvoltreg.Text = "7";
-            }
-            else if (rating > 300 && rating <= 400)
-            {
-
-                maskvoltreg.Text = "6.5";
-            }
-            else if (rating > 400 && rating <= 500)
-            {
-
-                maskvoltreg.Text = "6";
-            }
-            else if (rating > 500 && rating <= 750)
-            {
-
-                maskvoltreg.Text = "5";
-            }
-            else if (rating > 750 && rating <= 1000)
-            {
-
-                maskvoltreg.Text = "4";
-            }
-            else if (rating > 1000 && rating <= 1500)
-            {
-
-                maskvoltreg.Text = "3";
-            }
-            else if (rating > 1500 && rating <= 2000)
-            {
-
-                maskvoltreg.Text = "2";
-            }
-            else if (rating > 2000 && rating <= 3000)
-            {
-
-                maskvoltreg.Text = "1.5";
-            }
-            else
-            {
-
-                maskvoltreg.Text = "1.5";
-            }
-
-            Voltadreg = Double.Parse(maskvoltreg.Text);
-
-
-
-
-
-
-
-            if (rating <= 30)
-            {
-                maskEff.Text = "86.4";
-
-            }
-            else if (rating > 30 && rating <= 50)
-            {
-                maskEff.Text = "87.6";
-
-            }
-            else if (rating > 50 && rating <= 100)
-            {
-                maskEff.Text = "89.6";
-
-            }
-            else if (rating > 100 && rating <= 150)
-            {
-                maskEff.Text = "90.9";
-
-            }
-            else if (rating > 150 && rating <= 200)
-            {
-                maskEff.Text = "91.3";
-
-            }
-            else if (rating > 200 && rating <= 300)
-            {
-                maskEff.Text = "92.3";
-
-            }
-            else if (rating > 300 && rating <= 500)
-            {
-                maskEff.Text = "93";
-
-            }
-            else if (rating > 500 && rating <= 750)
-            {
-                maskEff.Text = "93.5";
-
-            }
-            else if (rating > 750 && rating <= 1000)
-            {
-                maskEff.Text = "94";
-
-            }
-            else
-            {
-                maskEff.Text = "94";
-
-            }
-
-
-
-            Efficiency = Double.Parse(maskEff.Text);
-
-
-        }
-
+        
         private void choke_Load(object sender, EventArgs e)
         {
             creteSWGInsulations();
@@ -1538,6 +1318,500 @@ namespace Main_Project
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = true;
                 pictureBox7.Visible = false;
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txt_diHv.Enabled = false;
+            txt_doHv.Enabled = false;
+            txt_diLv.Enabled = false;
+            txt_diLv.Enabled = false;
+            txt_b0.Enabled = false;
+            txt_b1.Enabled = false;
+            txt_b2.Enabled = false;
+            textLmt.Enabled = false;
+
+
+            comboGroup.Enabled = false;
+            textnvalue.Enabled = false;
+            label41.Enabled = false;
+            label61.Enabled = false;
+            label60.Enabled = false;
+            label43.Enabled = false;
+            label49.Enabled = false;
+            label45.Enabled = false;
+            label46.Enabled = false;
+            label47.Enabled = false;
+
+            label51.Enabled = false;
+            label52.Enabled = false;
+            label53.Enabled = false;
+
+            label44.Enabled = false;
+
+
+            label69.Enabled = false;
+            label70.Enabled = false;
+            label71.Enabled = false;
+            label72.Enabled = false;
+            textw.Enabled = false;
+
+
+
+            combo_Leakageresistancewinding.Enabled = false;
+
+
+
+            if (checkBox1.Checked)
+            {
+                txt_diHv.Enabled = true;
+                txt_doHv.Enabled = true;
+                txt_diLv.Enabled = true;
+                txt_doLv.Enabled = true;
+                label41.Enabled = true;
+                label61.Enabled = true;
+                label60.Enabled = true;
+                label43.Enabled = true;
+                label51.Enabled = true;
+                label65.Enabled = true;
+                textw.Enabled = true;
+
+                combo_Leakageresistancewinding.Enabled = true;
+                label44.Enabled = true;
+                label69.Enabled = true;
+                label70.Enabled = true;
+                label71.Enabled = true;
+                label72.Enabled = true;
+
+
+
+
+                if (checkBox1.Checked)
+                {
+                    Lmt = Math.PI * (DoHv + DiLv) / 2;
+                    b0 = (DiHv - DoLv) / 2;
+                    bhv = (DoHv - DiHv) / 2;
+                    blv = (DoLv - DiLv) / 2;
+                }
+                else
+                {
+                    Lmt = Double.Parse(textLmt.Text);
+                }
+
+
+
+
+            }
+            else
+            {
+
+                txt_diHv.Enabled = false;
+                txt_doHv.Enabled = false;
+                txt_diLv.Enabled = false;
+                txt_doLv.Enabled = false;
+                label41.Enabled = false;
+                label61.Enabled = false;
+                label60.Enabled = false;
+                label43.Enabled = false;
+
+                combo_Leakageresistancewinding.Enabled = true;
+                label44.Enabled = true;
+
+
+
+                txt_b0.Enabled = true;
+                txt_b1.Enabled = true;
+                txt_b2.Enabled = true;
+                textLmt.Enabled = true;
+                label49.Enabled = true;
+                label45.Enabled = true;
+                label46.Enabled = true;
+                label47.Enabled = true;
+                label51.Enabled = true;
+                label52.Enabled = true;
+                label53.Enabled = true;
+                textLmt.Enabled = true;
+                textnvalue.Enabled = true;
+                comboGroup.Enabled = true;
+                textw.Enabled = true;
+
+
+
+                txt_diHv.Enabled = true;
+                txt_doHv.Enabled = true;
+                txt_diLv.Enabled = true;
+                txt_doLv.Enabled = true;
+                label41.Enabled = true;
+                label61.Enabled = true;
+                label60.Enabled = true;
+                label43.Enabled = true;
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF files|*.pdf" })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        Document doc = new Document(iTextSharp.text.PageSize.A4, 10, 10, 42, 35);
+
+                        PdfWriter pdfWriter = PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+
+                        doc.Open();
+
+                        PdfContentByte pdfContent = pdfWriter.DirectContent;
+
+                        iTextSharp.text.Rectangle rectangle = new iTextSharp.text.Rectangle(doc.PageSize);
+
+                        //customized border sizes
+                        rectangle.Left += doc.LeftMargin - 5;
+
+                        rectangle.Right -= doc.RightMargin - 5;
+
+                        rectangle.Top -= doc.TopMargin - 5;
+
+                        rectangle.Bottom += doc.BottomMargin - 5;
+
+                        pdfContent.SetColorStroke(BaseColor.WHITE);//setting the color of the border to white
+
+                        pdfContent.Rectangle(rectangle.Left, rectangle.Bottom, rectangle.Width, rectangle.Height);
+
+                        pdfContent.Stroke();
+
+                        using (Bitmap bmp = new Bitmap(tabPage1.Size.Width, tabPage1.Size.Height))
+                        {
+
+                            tabPage1.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, tabPage1.Size.Width, tabPage1.Size.Height));
+
+                            bmp.Save(@"Resources\report.jpg", ImageFormat.Png);
+
+                            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(@"Resources\report.jpg");
+
+                            doc.Add(img);
+                        }
+                        //setting font type, font size and font color
+                        iTextSharp.text.Font headerFont = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 25, BaseColor.LIGHT_GRAY);
+
+                        Paragraph p = new Paragraph();
+
+                        p.Alignment = Element.ALIGN_CENTER;//adjust the alignment of the heading
+
+                        p.Add(new Chunk("Report", headerFont));//adding a heading to the PDF
+
+                        doc.Add(p);//adding component to the document
+
+                        Paragraph p2 = new Paragraph();
+
+                        p2.Add(new Chunk("                      ", headerFont));//adding a heading to the PDF
+
+                        doc.Add(p2);//adding component to the document
+
+                        iTextSharp.text.Font font = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_ROMAN, 12, BaseColor.LIGHT_GRAY);
+
+                        //creating pdf table
+                        PdfPTable table = new PdfPTable(dataGridView3.Columns.Count);
+
+                        for (int j = 0; j < dataGridView3.Columns.Count; j++)
+
+                        {
+                            PdfPCell cell = new PdfPCell(); //create object from the pdfpcell
+
+                            cell.BackgroundColor = BaseColor.WHITE;//set color of cells
+
+                            cell.AddElement(new Chunk(dataGridView3.Columns[j].HeaderText.ToUpper(), font));
+
+                            table.AddCell(cell);
+                        }
+
+                        //adding rows from gridview to table
+                        for (int i = 0; i < dataGridView3.Rows.Count; i++)
+                        {
+                            table.WidthPercentage = 100;//set width of the table
+
+                            for (int j = 0; j < dataGridView3.Columns.Count; j++)
+                            {
+                                if (dataGridView3[j, i].Value != null)
+
+                                    table.AddCell(new Phrase(dataGridView3[j, i].Value.ToString()));
+                            }
+                        }
+                        //adding table to document
+                        doc.Add(table);
+
+
+                        doc.Close();
+                        MessageBox.Show("You have successfully exported the file.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        
+
+        private void txt_rating_Leave(object sender, EventArgs e)
+        {
+
+            rating = Double.Parse(txt_rating.Text);
+            
+
+            if (rating <= 200)
+            {
+                maskedTextBox1.Text = "0.56";
+
+            }
+            else if (rating > 200 && rating <= 500)
+            {
+                maskedTextBox1.Text = "0.63";
+
+            }
+            else if (rating > 500 && rating <= 1000)
+            {
+                maskedTextBox1.Text = "0.71";
+
+            }
+            else if (rating > 1000 && rating <= 2000)
+            {
+                maskedTextBox1.Text = "0.78";
+
+            }
+            else if (rating > 2000 && rating <= 4000)
+            {
+                maskedTextBox1.Text = "0.85";
+
+            }
+            else
+            {
+                maskedTextBox1.Text = "1.25";
+
+            }
+
+
+
+
+
+
+            
+            if (rating <= 50)
+            {
+                txt_delta.Text = "4.0";
+
+            }
+            else if (rating > 50 && rating <= 100)
+            {
+                txt_delta.Text = "3.5";
+
+            }
+            else if (rating > 100 && rating <= 200)
+            {
+                txt_delta.Text = "3.0";
+
+            }
+            else if (rating > 200 && rating <= 500)
+            {
+                txt_delta.Text = "2.5";
+
+            }
+            else if (rating > 500 && rating <= 1000)
+            {
+                txt_delta.Text = "2.0";
+
+            }
+            else if (rating > 1000 && rating <= 2000)
+            {
+                txt_delta.Text = "1.75";
+
+            }
+            else if (rating > 2000 && rating <= 3000)
+            {
+                txt_delta.Text = "1.5";
+
+            }
+            else if (rating > 3000 && rating <= 4000)
+            {
+                txt_delta.Text = "1.0";
+
+            }
+            else
+            {
+                txt_delta.Text = "0.85";
+
+            }
+
+
+
+            
+
+
+
+            if (rating <= 5)
+            {
+
+                maskvoltreg.Text = "20";
+            }
+            else if (rating > 5 && rating <= 10)
+            {
+
+                maskvoltreg.Text = "17";
+            }
+            else if (rating > 10 && rating <= 25)
+            {
+
+                maskvoltreg.Text = "15";
+            }
+            else if (rating > 25 && rating <= 50)
+            {
+
+                maskvoltreg.Text = "12";
+            }
+            else if (rating > 50 && rating <= 75)
+            {
+
+                maskvoltreg.Text = "10";
+            }
+            else if (rating > 75 && rating <= 100)
+            {
+
+                maskvoltreg.Text = "9";
+            }
+            else if (rating > 100 && rating <= 150)
+            {
+
+                maskvoltreg.Text = "8"; ;
+            }
+            else if (rating > 150 && rating <= 200)
+            {
+
+                maskvoltreg.Text = "7.5";
+            }
+            else if (rating > 200 && rating <= 300)
+            {
+
+                maskvoltreg.Text = "7";
+            }
+            else if (rating > 300 && rating <= 400)
+            {
+
+                maskvoltreg.Text = "6.5";
+            }
+            else if (rating > 400 && rating <= 500)
+            {
+
+                maskvoltreg.Text = "6";
+            }
+            else if (rating > 500 && rating <= 750)
+            {
+
+                maskvoltreg.Text = "5";
+            }
+            else if (rating > 750 && rating <= 1000)
+            {
+
+                maskvoltreg.Text = "4";
+            }
+            else if (rating > 1000 && rating <= 1500)
+            {
+
+                maskvoltreg.Text = "3";
+            }
+            else if (rating > 1500 && rating <= 2000)
+            {
+
+                maskvoltreg.Text = "2";
+            }
+            else if (rating > 2000 && rating <= 3000)
+            {
+
+                maskvoltreg.Text = "1.5";
+            }
+            else
+            {
+
+                maskvoltreg.Text = "1.5";
+            }
+
+            
+
+
+
+
+            
+
+            if (rating <= 30)
+            {
+                maskEff.Text = "86.4";
+
+            }
+            else if (rating > 30 && rating <= 50)
+            {
+                maskEff.Text = "87.6";
+
+            }
+            else if (rating > 50 && rating <= 100)
+            {
+                maskEff.Text = "89.6";
+
+            }
+            else if (rating > 100 && rating <= 150)
+            {
+                maskEff.Text = "90.9";
+
+            }
+            else if (rating > 150 && rating <= 200)
+            {
+                maskEff.Text = "91.3";
+
+            }
+            else if (rating > 200 && rating <= 300)
+            {
+                maskEff.Text = "92.3";
+
+            }
+            else if (rating > 300 && rating <= 500)
+            {
+                maskEff.Text = "93";
+
+            }
+            else if (rating > 500 && rating <= 750)
+            {
+                maskEff.Text = "93.5";
+
+            }
+            else if (rating > 750 && rating <= 1000)
+            {
+                maskEff.Text = "94";
+
+            }
+            else
+            {
+                maskEff.Text = "94";
+
+            }
+
+
+
+            
+        }
+
+        private void comboGroup_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboGroup.SelectedIndex == 0)
+            {
+                label53.Visible = false;
+                textnvalue.Visible = false;
+            }
+            else
+            {
+                label53.Visible = true;
+                textnvalue.Visible = true;
             }
         }
     }
