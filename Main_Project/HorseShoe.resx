@@ -120,20 +120,25 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="label20.ToolTip" xml:space="preserve">
-    <value>Indicates of height to depth ratio of the coil. Its value is between 3 and 5. It consists of three parts.
-If we want to select it by default, it sets the value to 4. In the Fix the factor, Have the user's choice.
-Finally, we can limit the range between 3 and 5 by selecting option Consider Limits.
-</value>
+  <data name="groupBox4.ToolTip" xml:space="preserve">
+    <value>In this section, the amount of MMF can be calculated using two methods.
+Method1 : MMF can be calculated using the experimental factorof 1.2 to 1.35
+Method 2 : We calculate the fraction using an experimental factor.</value>
+  </data>
+  <data name="label49.ToolTip" xml:space="preserve">
+    <value>This item is determined by the duty cycle of the device and depends on the operating mode of the device.
+If the device works continuously, its value is 1, and if the device works in turns, the number 0.25 can be assigned to it.</value>
   </data>
   <data name="label54.ToolTip" xml:space="preserve">
     <value>The value of this coefficient can be changed between 0.5 and 0.7 Of course, this value also depends on the voltage.
 If the voltage is low, the default value is 0.7 and if the voltage is high, the default value is 0.5 . But the user can change it.
 </value>
   </data>
-  <data name="label49.ToolTip" xml:space="preserve">
-    <value>This item is determined by the duty cycle of the device and depends on the operating mode of the device.
-If the device works continuously, its value is 1, and if the device works in turns, the number 0.25 can be assigned to it.</value>
+  <data name="label20.ToolTip" xml:space="preserve">
+    <value>Indicates of height to depth ratio of the coil. Its value is between 3 and 5. It consists of three parts.
+If we want to select it by default, it sets the value to 4. In the Fix the factor, Have the user's choice.
+Finally, we can limit the range between 3 and 5 by selecting option Consider Limits.
+</value>
   </data>
   <metadata name="Parameter.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

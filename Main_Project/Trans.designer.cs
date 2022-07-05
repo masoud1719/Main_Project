@@ -31,9 +31,9 @@ namespace trans_1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinglePhaseTransformer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.combo_structure = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -189,15 +189,15 @@ namespace trans_1
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Parameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label48 = new System.Windows.Forms.Label();
             this.wireGauge = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.combo_application = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Parameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -280,7 +280,6 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_HighVoltage, "txt_HighVoltage");
             this.txt_HighVoltage.Name = "txt_HighVoltage";
-            this.txt_HighVoltage.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_HighVoltage_MaskInputRejected);
             // 
             // label10
             // 
@@ -313,7 +312,6 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_LowVoltage, "txt_LowVoltage");
             this.txt_LowVoltage.Name = "txt_LowVoltage";
-            this.txt_LowVoltage.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_LowVoltage_MaskInputRejected);
             // 
             // label8
             // 
@@ -330,7 +328,6 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_Frequency, "txt_Frequency");
             this.txt_Frequency.Name = "txt_Frequency";
-            this.txt_Frequency.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_Frequency_MaskInputRejected);
             // 
             // label12
             // 
@@ -347,7 +344,6 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_Fluxdensity, "txt_Fluxdensity");
             this.txt_Fluxdensity.Name = "txt_Fluxdensity";
-            this.txt_Fluxdensity.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_Fluxdensity_MaskInputRejected);
             this.txt_Fluxdensity.Validated += new System.EventHandler(this.txt_Fluxdensity_Validated);
             // 
             // label14
@@ -365,7 +361,6 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_delta, "txt_delta");
             this.txt_delta.Name = "txt_delta";
-            this.txt_delta.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_delta_MaskInputRejected);
             // 
             // label16
             // 
@@ -431,7 +426,6 @@ namespace trans_1
             // 
             resources.ApplyResources(this.maskedTextBox1, "maskedTextBox1");
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // txtSLL
             // 
@@ -442,11 +436,13 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label56, "label56");
             this.label56.Name = "label56";
+            this.toolTip1.SetToolTip(this.label56, resources.GetString("label56.ToolTip"));
             // 
             // label24
             // 
             resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
+            this.toolTip1.SetToolTip(this.label24, resources.GetString("label24.ToolTip"));
             // 
             // txt_KwValue
             // 
@@ -472,6 +468,7 @@ namespace trans_1
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.groupBox3, resources.GetString("groupBox3.ToolTip"));
             // 
             // txt_Kc
             // 
@@ -522,6 +519,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label29, "label29");
             this.label29.Name = "label29";
+            this.toolTip1.SetToolTip(this.label29, resources.GetString("label29.ToolTip"));
             // 
             // label28
             // 
@@ -572,6 +570,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label21, "label21");
             this.label21.Name = "label21";
+            this.toolTip1.SetToolTip(this.label21, resources.GetString("label21.ToolTip"));
             // 
             // label3
             // 
@@ -717,7 +716,6 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_gcugi, "txt_gcugi");
             this.txt_gcugi.Name = "txt_gcugi";
-            this.txt_gcugi.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_gcugi_MaskInputRejected);
             // 
             // label35
             // 
@@ -728,7 +726,6 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_LmtLi, "txt_LmtLi");
             this.txt_LmtLi.Name = "txt_LmtLi";
-            this.txt_LmtLi.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_LmtLi_MaskInputRejected);
             this.txt_LmtLi.Validated += new System.EventHandler(this.txt_LmtLi_Validated);
             // 
             // label34
@@ -740,7 +737,6 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_Gi_Gcu, "txt_Gi_Gcu");
             this.txt_Gi_Gcu.Name = "txt_Gi_Gcu";
-            this.txt_Gi_Gcu.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_Gi_Gcu_MaskInputRejected);
             // 
             // label33
             // 
@@ -752,7 +748,6 @@ namespace trans_1
             // 
             resources.ApplyResources(this.txt_AiValue, "txt_AiValue");
             this.txt_AiValue.Name = "txt_AiValue";
-            this.txt_AiValue.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txt_AiValue_MaskInputRejected);
             // 
             // combo_Ai
             // 
@@ -801,6 +796,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label41, "label41");
             this.label41.Name = "label41";
+            this.toolTip1.SetToolTip(this.label41, resources.GetString("label41.ToolTip"));
             // 
             // txt_diHv
             // 
@@ -811,6 +807,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label44, "label44");
             this.label44.Name = "label44";
+            this.toolTip1.SetToolTip(this.label44, resources.GetString("label44.ToolTip"));
             // 
             // combo_Leakageresistancewinding
             // 
@@ -826,6 +823,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label49, "label49");
             this.label49.Name = "label49";
+            this.toolTip1.SetToolTip(this.label49, resources.GetString("label49.ToolTip"));
             // 
             // txt_b2
             // 
@@ -836,6 +834,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label45, "label45");
             this.label45.Name = "label45";
+            this.toolTip1.SetToolTip(this.label45, resources.GetString("label45.ToolTip"));
             // 
             // txt_b0
             // 
@@ -846,6 +845,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label46, "label46");
             this.label46.Name = "label46";
+            this.toolTip1.SetToolTip(this.label46, resources.GetString("label46.ToolTip"));
             // 
             // txt_b1
             // 
@@ -861,11 +861,13 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label47, "label47");
             this.label47.Name = "label47";
+            this.toolTip1.SetToolTip(this.label47, resources.GetString("label47.ToolTip"));
             // 
             // label50
             // 
             resources.ApplyResources(this.label50, "label50");
             this.label50.Name = "label50";
+            this.toolTip1.SetToolTip(this.label50, resources.GetString("label50.ToolTip"));
             // 
             // texthc
             // 
@@ -876,6 +878,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label51, "label51");
             this.label51.Name = "label51";
+            this.toolTip1.SetToolTip(this.label51, resources.GetString("label51.ToolTip"));
             // 
             // textw
             // 
@@ -886,6 +889,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label52, "label52");
             this.label52.Name = "label52";
+            this.toolTip1.SetToolTip(this.label52, resources.GetString("label52.ToolTip"));
             // 
             // comboGroup
             // 
@@ -895,7 +899,6 @@ namespace trans_1
             resources.GetString("comboGroup.Items"),
             resources.GetString("comboGroup.Items1")});
             this.comboGroup.Name = "comboGroup";
-            this.comboGroup.SelectedIndexChanged += new System.EventHandler(this.comboGroup_SelectedIndexChanged);
             // 
             // textnvalue
             // 
@@ -906,11 +909,13 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label53, "label53");
             this.label53.Name = "label53";
+            this.toolTip1.SetToolTip(this.label53, resources.GetString("label53.ToolTip"));
             // 
             // label60
             // 
             resources.ApplyResources(this.label60, "label60");
             this.label60.Name = "label60";
+            this.toolTip1.SetToolTip(this.label60, resources.GetString("label60.ToolTip"));
             // 
             // txt_doHv
             // 
@@ -921,6 +926,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label61, "label61");
             this.label61.Name = "label61";
+            this.toolTip1.SetToolTip(this.label61, resources.GetString("label61.ToolTip"));
             // 
             // txt_diLv
             // 
@@ -931,6 +937,7 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label43, "label43");
             this.label43.Name = "label43";
+            this.toolTip1.SetToolTip(this.label43, resources.GetString("label43.ToolTip"));
             // 
             // txt_doLv
             // 
@@ -979,6 +986,7 @@ namespace trans_1
             this.groupBox6.Controls.Add(this.label41);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
+            this.toolTip1.SetToolTip(this.groupBox6, resources.GetString("groupBox6.ToolTip"));
             // 
             // label72
             // 
@@ -1252,54 +1260,6 @@ namespace trans_1
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dataGridView3
-            // 
-            resources.ApplyResources(this.dataGridView3, "dataGridView3");
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Parameter,
-            this.unit,
-            this.value});
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 25;
-            // 
-            // Parameter
-            // 
-            this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
-            resources.ApplyResources(this.Parameter, "Parameter");
-            this.Parameter.Name = "Parameter";
-            this.Parameter.ReadOnly = true;
-            // 
-            // unit
-            // 
-            this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.unit, "unit");
-            this.unit.Name = "unit";
-            // 
-            // value
-            // 
-            this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle3;
-            resources.ApplyResources(this.value, "value");
-            this.value.Name = "value";
-            // 
             // label48
             // 
             resources.ApplyResources(this.label48, "label48");
@@ -1330,7 +1290,55 @@ namespace trans_1
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.toolTip1.SetToolTip(this.label4, resources.GetString("label4.ToolTip"));
+            // 
+            // value
+            // 
+            this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle19;
+            resources.ApplyResources(this.value, "value");
+            this.value.Name = "value";
+            // 
+            // unit
+            // 
+            this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle20;
+            resources.ApplyResources(this.unit, "unit");
+            this.unit.Name = "unit";
+            // 
+            // Parameter
+            // 
+            this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle21;
+            resources.ApplyResources(this.Parameter, "Parameter");
+            this.Parameter.Name = "Parameter";
+            this.Parameter.ReadOnly = true;
+            // 
+            // dataGridView3
+            // 
+            resources.ApplyResources(this.dataGridView3, "dataGridView3");
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Parameter,
+            this.unit,
+            this.value});
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 25;
             // 
             // SinglePhaseTransformer
             // 
@@ -1526,10 +1534,6 @@ namespace trans_1
         private Label lblPT2;
         private TabPage tabPage2;
         private Button button2;
-        private DataGridView dataGridView3;
-        private DataGridViewTextBoxColumn Parameter;
-        private DataGridViewTextBoxColumn unit;
-        private DataGridViewTextBoxColumn value;
         private Label label48;
         private ComboBox wireGauge;
         private PictureBox pictureBox1;
@@ -1579,5 +1583,9 @@ namespace trans_1
         private ToolTip toolTip1;
         private ComboBox combo_application;
         private Label label4;
+        private DataGridViewTextBoxColumn value;
+        private DataGridViewTextBoxColumn unit;
+        private DataGridViewTextBoxColumn Parameter;
+        private DataGridView dataGridView3;
     }
 }

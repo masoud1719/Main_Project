@@ -693,6 +693,26 @@ namespace Main_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__624_ {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot (624)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__626_ {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot (626)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap single_phase_transformers_500x500 {
             get {
                 object obj = ResourceManager.GetObject("single-phase-transformers-500x500", resourceCulture);

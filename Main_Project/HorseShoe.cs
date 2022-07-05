@@ -293,8 +293,10 @@ namespace second
 
 
 
-        private void btncalc_Click(object sender, EventArgs e)
+        private void btncalc_Click_1(object sender, EventArgs e)
         {
+
+
             errors = new List<double>();
             hratios = new List<double>();
             mmfs = new List<double>();
@@ -334,7 +336,7 @@ namespace second
 
                 // 1.1 ---- 1.2
 
-                
+
 
                 double value;
                 if (method1.Checked)
@@ -394,14 +396,14 @@ namespace second
                 r2 = dc + r1;
 
 
-                
 
 
-                t2 = (r1 * r1 * Math.PI)  / (widthofPoleFace * 100);
+
+                t2 = (r1 * r1 * Math.PI) / (widthofPoleFace * 100);
 
                 // d.............mm
                 d = Math.Sqrt((4 * pho2 * (r1 + r2) * mmf) / voltage) * 10;
-                
+
 
 
                 double fileD;
@@ -474,7 +476,7 @@ namespace second
                 P = R * I * I;
 
                 actualMMF = N * I;
-                double error = ((actualMMF - mmf) / mmf) * 100;
+                double error = Math.Abs((actualMMF - mmf) / mmf) * 100;
                 errors.Add(error);
                 if (error < accurcy)
                 {
@@ -506,6 +508,11 @@ namespace second
             }
 
 
+
+
+
+
+            MessageBox.Show("Calculation Finished!", "Calculation", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             dataGridView3.Rows.Clear();
@@ -563,13 +570,13 @@ namespace second
 
             dataGridView3.Rows.Add("  di", "  mm", string.Format("  {0:0.0000}", di));
 
-            dataGridView3.Rows.Add("  netHeightofCoil", "  cm", string.Format("  {0:0.0000}", netHeightofCoil));
+            dataGridView3.Rows.Add("  net Height of Coil", "  cm", string.Format("  {0:0.0000}", netHeightofCoil));
 
-            dataGridView3.Rows.Add("  numberofLayerDepth", "", string.Format("  {0:0}", numberofLayerDepth));
+            dataGridView3.Rows.Add("  number of Layer Depth", "", string.Format("  {0:0}", numberofLayerDepth));
 
-            dataGridView3.Rows.Add("  netwindingDepth", "  cm", string.Format("  {0:0.0000}", netwindingDepth));
+            dataGridView3.Rows.Add("  net winding Depth", "  cm", string.Format("  {0:0.0000}", netwindingDepth));
 
-            dataGridView3.Rows.Add("  numberofLayerHeightWise", "", string.Format("  {0:0}", numberofLayerHeightWise));
+            dataGridView3.Rows.Add("  number of Layer Height Wise", "", string.Format("  {0:0}", numberofLayerHeightWise));
 
             dataGridView3.Rows.Add("  N", "", string.Format("  {0:0}", N));
 
@@ -581,7 +588,7 @@ namespace second
 
             dataGridView3.Rows.Add("  I", "  Amper", string.Format("  {0:0.0000}", I));
 
-            dataGridView3.Rows.Add("  actualMMF", "  A", string.Format("  {0:0}", actualMMF));
+            dataGridView3.Rows.Add("  actual MMF", "  A", string.Format("  {0:0.0000}", actualMMF));
 
             dataGridView3.Rows.Add("  Wire gauge index", " ", string.Format("  {0:0}", SWGAWGBWGIndex));
 
@@ -598,6 +605,7 @@ namespace second
                 chart2.Series["mmf"].Points.AddXY(i, mmfs[i]);
                 chart3.Series["HeighttoDepthRatio"].Points.AddXY(i, hratios[i]);
             }
+
 
 
 
@@ -669,8 +677,11 @@ namespace second
 
 
 
-        private void btnExport_Click(object sender, EventArgs e)
+        
+
+        private void btnExport_Click_1(object sender, EventArgs e)
         {
+
             using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF files|*.pdf" })
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
@@ -772,13 +783,41 @@ namespace second
                     }
                 }
             }
+
+
         }
 
+        private void method1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (method1.Checked)
+            {
+                button2.Visible = true;
+            }
+            else
+            {
+                button2.Visible = false;
+            }
+        }
 
+        private void method2_CheckedChanged(object sender, EventArgs e)
+        {
 
+            if (method2.Checked)
+            {
+                button1.Visible = true;
+            }
+            else
+            {
+                button1.Visible = false;
+            }
+        }
 
-
-
+        private void HorseShoe_Load(object sender, EventArgs e)
+        {
+            wireGauge.SelectedIndex = 0;
+            forceTypeCombo.SelectedIndex = 0;
+        }
     }
-}
+    }
+
 

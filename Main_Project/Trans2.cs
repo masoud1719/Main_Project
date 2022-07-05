@@ -2590,6 +2590,16 @@ namespace Main_Project
         {
 
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label50_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

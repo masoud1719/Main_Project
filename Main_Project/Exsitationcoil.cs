@@ -553,7 +553,7 @@ namespace Excitation_Coil
 
             dataGridView3.Rows.Clear();
 
-            dataGridView3.Rows.Add("  ro", "  ohm_cm", string.Format("  {0:0.00000000}", ro));
+            dataGridView3.Rows.Add("  Pho2", "  ohm_cm", string.Format("  {0:0.00000000}", ro));
 
             dataGridView3.Rows.Add("  W", "  cm", string.Format("  {0:0.0000}", W));
 
@@ -571,13 +571,13 @@ namespace Excitation_Coil
 
             dataGridView3.Rows.Add("  lmt", "  cm", string.Format("  {0:0.0000}", lmt));
 
-            dataGridView3.Rows.Add("  az", "  cm^2", string.Format("  {0:0.00000000}", az));
+            dataGridView3.Rows.Add("  az", "  cm^2", string.Format("  {0:0.0000}", az));
 
             dataGridView3.Rows.Add("  Nh", "", string.Format("  {0:0}", Nh));
 
             dataGridView3.Rows.Add("  Nd", "", string.Format("  {0:0}", Nd));
 
-            dataGridView3.Rows.Add("  N", "", string.Format("  {0:0.0}", N));
+            dataGridView3.Rows.Add("  N", "", string.Format("  {0:0}", N));
 
             dataGridView3.Rows.Add("  P", "", string.Format("  {0:0.0000}", P));
 
@@ -585,9 +585,9 @@ namespace Excitation_Coil
 
             dataGridView3.Rows.Add("  I", "  Amper", string.Format("  {0:0.0000}", I));
 
-            dataGridView3.Rows.Add("  actualMMF", "  A", string.Format("  {0:0}", actualMMF));
+            dataGridView3.Rows.Add("  actual MMF", "  A", string.Format("  {0:0}", actualMMF));
 
-            dataGridView3.Rows.Add("  index", " ", string.Format("  {0:0}", SWGAWGBWGIndex));
+            dataGridView3.Rows.Add("  Wire gauge index", " ", string.Format("  {0:0}", SWGAWGBWGIndex));
 
 
 

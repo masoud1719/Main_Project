@@ -258,7 +258,7 @@ namespace testmna
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            comboBox1.SelectedIndex = 0;
             chkDutyCycle.SelectedIndex = 0;
             wireGauge.SelectedIndex = 0;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -331,7 +331,7 @@ namespace testmna
                 mmfs.Add(mmf);
 
                 double pho = 2.1e-6;
-                double RT1 = 234.5 + temperature;
+                double RT1 = 234.5 + 75;
                 double RT2 = 234.5 + (temperature + ambientTemperature);
                 pho2 = pho / (RT1 / RT2);
 
@@ -482,6 +482,9 @@ namespace testmna
 
 
 
+            MessageBox.Show("Calculation Finished", "Calculation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
 
 
             lblPicr1.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r1));
@@ -490,7 +493,7 @@ namespace testmna
 
             lblPicr3.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r3));
 
-            lblPicT2.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t1));
+            lblPicT1.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t1));
 
             lblPicT2.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t2));
 
@@ -525,17 +528,17 @@ namespace testmna
 
             dataGridView3.Rows.Add("  di", "  cm", string.Format("  {0:0.0000}", di));
 
-            dataGridView3.Rows.Add("  NetheightOfCoil", "", string.Format("  {0:0}", NetheightOfCoil));
+            dataGridView3.Rows.Add("  Net height Of Coil", "", string.Format("  {0:0}", NetheightOfCoil));
 
-            dataGridView3.Rows.Add("  Numberofroundsperlayer", "", string.Format("  {0:0}", Numberofroundsperlayer));
+            dataGridView3.Rows.Add("  Number of rounds per layer", "", string.Format("  {0:0}", Numberofroundsperlayer));
 
-            dataGridView3.Rows.Add("  NetDepthOfCoil", "", string.Format("  {0:0}", NetDepthOfCoil));
+            dataGridView3.Rows.Add("  Net Depth Of Coil", "", string.Format("  {0:0.0000}", NetDepthOfCoil));
 
-            dataGridView3.Rows.Add("  NumberOfLayer", "", string.Format("  {0:0}", NumberOfLayer));
+            dataGridView3.Rows.Add("  Number Of Layer", "", string.Format("  {0:0}", NumberOfLayer));
 
             dataGridView3.Rows.Add("  N", "", string.Format("  {0:0.0000}", N));
 
-            dataGridView3.Rows.Add("  az", "  cm^2", string.Format("  {0:0.0000}", az));
+            dataGridView3.Rows.Add("  az", "  mm^2", string.Format("  {0:0.0000}", az));
 
             dataGridView3.Rows.Add("  lmt", "  cm", string.Format("  {0:0.0000}", lmt));
 
@@ -543,9 +546,9 @@ namespace testmna
 
             dataGridView3.Rows.Add("  I", "  Amper", string.Format("  {0:0.0000}", I));
 
-            dataGridView3.Rows.Add("  actualMMF", "  A", string.Format("  {0:0}", actualMMF));
+            dataGridView3.Rows.Add("  actual MMF", "  A", string.Format("  {0:0.0000}", actualMMF));
 
-            dataGridView3.Rows.Add("  index", " ", string.Format("  {0:0}", SWGAWGBWGIndex));
+            dataGridView3.Rows.Add("   Wire gauge index", " ", string.Format("  {0:0}", SWGAWGBWGIndex));
 
 
 

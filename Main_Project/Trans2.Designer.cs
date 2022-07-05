@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Trans2));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle112 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle113 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle114 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label71 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txt_doLv = new System.Windows.Forms.TextBox();
@@ -198,6 +199,7 @@
             this.lblPT2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -262,6 +264,7 @@
             this.label43.Size = new System.Drawing.Size(53, 16);
             this.label43.TabIndex = 114;
             this.label43.Text = "Do (L.v)";
+            this.toolTip1.SetToolTip(this.label43, "Outside diameter of L .V winding\r\n");
             // 
             // txt_diLv
             // 
@@ -281,6 +284,7 @@
             this.label61.Size = new System.Drawing.Size(48, 16);
             this.label61.TabIndex = 112;
             this.label61.Text = "Di (L.v)";
+            this.toolTip1.SetToolTip(this.label61, "Inside diameter of L .V winding");
             // 
             // txt_doHv
             // 
@@ -300,6 +304,7 @@
             this.label60.Size = new System.Drawing.Size(56, 16);
             this.label60.TabIndex = 110;
             this.label60.Text = "Do (H.v)";
+            this.toolTip1.SetToolTip(this.label60, "Outside diameter of H .V winding");
             // 
             // label53
             // 
@@ -311,6 +316,7 @@
             this.label53.Size = new System.Drawing.Size(50, 16);
             this.label53.TabIndex = 109;
             this.label53.Text = "n value";
+            this.toolTip1.SetToolTip(this.label53, "n value");
             // 
             // textnvalue
             // 
@@ -345,6 +351,8 @@
             this.label52.Size = new System.Drawing.Size(44, 16);
             this.label52.TabIndex = 107;
             this.label52.Text = "Group";
+            this.toolTip1.SetToolTip(this.label52, "To calculate the leakage resistance of winding in sandwich type, we have two part" +
+        "s, one group and the next one for 2n groups\r\n");
             // 
             // label32
             // 
@@ -355,6 +363,7 @@
             this.label32.Size = new System.Drawing.Size(138, 16);
             this.label32.TabIndex = 84;
             this.label32.Text = "Calculate Ai based on";
+            this.toolTip1.SetToolTip(this.label32, resources.GetString("label32.ToolTip"));
             // 
             // txt_calculate
             // 
@@ -400,6 +409,7 @@
             this.label51.Size = new System.Drawing.Size(16, 16);
             this.label51.TabIndex = 105;
             this.label51.Text = "w";
+            this.toolTip1.SetToolTip(this.label51, "Width of winding\r\n\r\n");
             // 
             // texthc
             // 
@@ -419,6 +429,8 @@
             this.label50.Size = new System.Drawing.Size(21, 16);
             this.label50.TabIndex = 103;
             this.label50.Text = "hc";
+            this.toolTip1.SetToolTip(this.label50, "Height of coils\r\n");
+            this.label50.Click += new System.EventHandler(this.label50_Click);
             // 
             // label47
             // 
@@ -430,6 +442,7 @@
             this.label47.Size = new System.Drawing.Size(115, 16);
             this.label47.TabIndex = 100;
             this.label47.Text = "Lmt(H.v) = Lmt(L.v)";
+            this.toolTip1.SetToolTip(this.label47, "length of mean turn\r\n");
             // 
             // textLmt
             // 
@@ -461,6 +474,7 @@
             this.label46.Size = new System.Drawing.Size(40, 16);
             this.label46.TabIndex = 97;
             this.label46.Text = "b(L.v)";
+            this.toolTip1.SetToolTip(this.label46, "Depth of l.v coil.\r\n\r\n");
             // 
             // txt_b0
             // 
@@ -482,6 +496,7 @@
             this.label45.Size = new System.Drawing.Size(43, 16);
             this.label45.TabIndex = 95;
             this.label45.Text = "b(H.v)";
+            this.toolTip1.SetToolTip(this.label45, "Depth of h.v coil.\r\n");
             // 
             // txt_b2
             // 
@@ -503,6 +518,7 @@
             this.label49.Size = new System.Drawing.Size(22, 16);
             this.label49.TabIndex = 93;
             this.label49.Text = "b0";
+            this.toolTip1.SetToolTip(this.label49, "Depth of duct between h.v and l.v windings.\r\n");
             // 
             // combo_Leakageresistancewinding
             // 
@@ -526,6 +542,9 @@
             this.label44.Size = new System.Drawing.Size(174, 16);
             this.label44.TabIndex = 4;
             this.label44.Text = "Leakage resistance winding";
+            this.toolTip1.SetToolTip(this.label44, "Winding is done in two ways:\r\n1. Concentric : We have this type of winding when t" +
+        "he structure is core type\r\n2. Sandwitch : We have this type of winding when the " +
+        "structure is shell type\r\n\r\n");
             // 
             // txt_diHv
             // 
@@ -545,6 +564,7 @@
             this.label41.Size = new System.Drawing.Size(51, 16);
             this.label41.TabIndex = 0;
             this.label41.Text = "Di (H.v)";
+            this.toolTip1.SetToolTip(this.label41, "Inside diameter of H .V winding\r\n");
             // 
             // label72
             // 
@@ -685,12 +705,12 @@
             // Parameter
             // 
             this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle112.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle112.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle112.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle112.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle112.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle112;
             this.Parameter.HeaderText = "                  Parameter";
             this.Parameter.MinimumWidth = 6;
             this.Parameter.Name = "Parameter";
@@ -699,12 +719,12 @@
             // unit
             // 
             this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle113.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle113.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle113.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle113.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle113.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle113;
             this.unit.HeaderText = "                     unit";
             this.unit.MinimumWidth = 6;
             this.unit.Name = "unit";
@@ -712,12 +732,12 @@
             // value
             // 
             this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle114.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle114.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle114.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle114.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle114.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle114;
             this.value.HeaderText = "                      value";
             this.value.MinimumWidth = 6;
             this.value.Name = "value";
@@ -746,6 +766,8 @@
             this.label48.Size = new System.Drawing.Size(70, 16);
             this.label48.TabIndex = 213;
             this.label48.Text = "Wire gage";
+            this.toolTip1.SetToolTip(this.label48, "Specifies the wire standard\r\nSWG : Standard Wire Gauge\r\nAWG : American Wire Gauge" +
+        "\r\nBWG : Birmingham Wire Gauge\r\n\r\n");
             // 
             // wireGauge
             // 
@@ -793,6 +815,7 @@
             this.groupBox2.TabIndex = 197;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Factors";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // maskedTextBox1
             // 
@@ -819,9 +842,11 @@
             this.label56.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label56.Location = new System.Drawing.Point(19, 389);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(30, 16);
+            this.label56.Size = new System.Drawing.Size(96, 16);
             this.label56.TabIndex = 89;
-            this.label56.Text = "SLL";
+            this.label56.Text = "Stray load loss";
+            this.toolTip1.SetToolTip(this.label56, "The value is between 10 and 20%, which is added to the specific losses of copper." +
+        "\r\n");
             // 
             // label24
             // 
@@ -832,6 +857,7 @@
             this.label24.Size = new System.Drawing.Size(51, 16);
             this.label24.TabIndex = 85;
             this.label24.Text = "K factor";
+            this.toolTip1.SetToolTip(this.label24, "K factor");
             // 
             // txt_KwValue
             // 
@@ -868,6 +894,7 @@
             this.groupBox3.TabIndex = 66;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Core iron space factor (Kc)";
+            this.toolTip1.SetToolTip(this.groupBox3, "This factor can have different values based on the core cross section.\r\n");
             // 
             // txt_Kc
             // 
@@ -948,6 +975,7 @@
             this.label29.Size = new System.Drawing.Size(22, 16);
             this.label29.TabIndex = 81;
             this.label29.Text = "Ks";
+            this.toolTip1.SetToolTip(this.label29, "Accumulation factor changes based on the thickness of sheets and insulation.\r\n");
             // 
             // label28
             // 
@@ -981,6 +1009,8 @@
             this.label27.Size = new System.Drawing.Size(115, 16);
             this.label27.TabIndex = 79;
             this.label27.Text = "Thickness of steel";
+            this.toolTip1.SetToolTip(this.label27, "There are two thicknesses of 0.5 and 0.35 mm for steel, which can affect the accu" +
+        "mulation factor.\r\n");
             // 
             // combo_insulation
             // 
@@ -1007,6 +1037,7 @@
             this.label23.Size = new System.Drawing.Size(63, 16);
             this.label23.TabIndex = 76;
             this.label23.Text = "insulation";
+            this.toolTip1.SetToolTip(this.label23, resources.GetString("label23.ToolTip"));
             // 
             // label25
             // 
@@ -1027,6 +1058,8 @@
             this.label21.Size = new System.Drawing.Size(160, 16);
             this.label21.TabIndex = 61;
             this.label21.Text = "Window space factor (Kw)";
+            this.toolTip1.SetToolTip(this.label21, "This factor can be calculated by two methods:\r\n1. User selection\r\n 2. Using the f" +
+        "ormula, this method is dependent on high voltage and power.\r\n");
             // 
             // label19
             // 
@@ -1059,6 +1092,7 @@
             this.label20.Size = new System.Drawing.Size(155, 16);
             this.label20.TabIndex = 194;
             this.label20.Text = "Ambient temperature (Tr)";
+            this.toolTip1.SetToolTip(this.label20, "Ambient temperature with a default value of 40 degrees Celsius\r\n\r\n");
             // 
             // label17
             // 
@@ -1091,6 +1125,7 @@
             this.label18.Size = new System.Drawing.Size(141, 16);
             this.label18.TabIndex = 191;
             this.label18.Text = "Temperature rise (Tm)";
+            this.toolTip1.SetToolTip(this.label18, "Temperature rise in degrees Celsius\r\n\r\n");
             // 
             // label15
             // 
@@ -1122,6 +1157,8 @@
             this.label16.Size = new System.Drawing.Size(117, 16);
             this.label16.TabIndex = 188;
             this.label16.Text = "Current density ( 𝛿 )";
+            this.toolTip1.SetToolTip(this.label16, "It specifies the type of cooling, based on which the Current density value can be" +
+        " obtained.\r\n");
             // 
             // label13
             // 
@@ -1153,6 +1190,7 @@
             this.label14.Size = new System.Drawing.Size(108, 16);
             this.label14.TabIndex = 185;
             this.label14.Text = "Flux density (Bm)";
+            this.toolTip1.SetToolTip(this.label14, "Flux density is determined based on the type of sheet or desired value.\r\n");
             // 
             // label11
             // 
@@ -1202,6 +1240,7 @@
             this.label12.Size = new System.Drawing.Size(85, 16);
             this.label12.TabIndex = 182;
             this.label12.Text = "Frequency (f)";
+            this.toolTip1.SetToolTip(this.label12, "Its unit is Hertz. Its default value is equal to 50\r\n");
             // 
             // label2
             // 
@@ -1213,6 +1252,7 @@
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 173;
             this.label2.Text = "Conductor";
+            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // label1
             // 
@@ -1224,6 +1264,7 @@
             this.label1.Size = new System.Drawing.Size(59, 16);
             this.label1.TabIndex = 171;
             this.label1.Text = "Structure";
+            this.toolTip1.SetToolTip(this.label1, "There are two types of transoms, shell type and core type\r\n\r\n");
             // 
             // combo_structure
             // 
@@ -1277,6 +1318,8 @@
             this.label4.Size = new System.Drawing.Size(74, 16);
             this.label4.TabIndex = 175;
             this.label4.Text = "Application";
+            this.toolTip1.SetToolTip(this.label4, "We have two modes : power and Distribution\r\nThis part affects the current density" +
+        " value.\r\n");
             // 
             // combo_application
             // 
@@ -1396,6 +1439,7 @@
             this.label10.Size = new System.Drawing.Size(119, 16);
             this.label10.TabIndex = 176;
             this.label10.Text = "High Voltage(Vh.v)";
+            this.toolTip1.SetToolTip(this.label10, "High side voltage. Its unit is the volt\r\n");
             // 
             // label8
             // 
@@ -1407,6 +1451,7 @@
             this.label8.Size = new System.Drawing.Size(114, 16);
             this.label8.TabIndex = 179;
             this.label8.Text = "Low Voltage(Vl.v) ";
+            this.toolTip1.SetToolTip(this.label8, "Low side voltage. Its unit is the volt\r\n\r\n");
             // 
             // groupBox5
             // 
@@ -1614,6 +1659,7 @@
             this.label3.Size = new System.Drawing.Size(38, 16);
             this.label3.TabIndex = 200;
             this.label3.Text = "Steel";
+            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // combo_Steel
             // 
@@ -1683,6 +1729,8 @@
             this.groupBox6.TabIndex = 204;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Resistance and Leakage resistance of winding ";
+            this.toolTip1.SetToolTip(this.groupBox6, "By using the information in this part, you can get the resistance and Leakage res" +
+        "istance of winding .\r\n");
             // 
             // label54
             // 
@@ -1694,6 +1742,7 @@
             this.label54.Size = new System.Drawing.Size(23, 16);
             this.label54.TabIndex = 205;
             this.label54.Text = "Wi";
+            this.toolTip1.SetToolTip(this.label54, "It indicates iron losses\r\n");
             // 
             // label30
             // 
@@ -1724,6 +1773,8 @@
             this.groupBox4.TabIndex = 198;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Raiting and Voltage per turn";
+            this.toolTip1.SetToolTip(this.groupBox4, "This part includes raiting and voltage per turn.\r\nBy entering the value of each, " +
+        "the other expression is calculated automatically.\r\n");
             // 
             // combo_Currentdensity
             // 
@@ -2199,7 +2250,7 @@
             this.Controls.Add(this.combo_Currentdensity);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Trans2";
-            this.Text = "Trans2";
+            this.Text = "Three Phase Transformer";
             this.Load += new System.EventHandler(this.Trans2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -2402,5 +2453,6 @@
         private System.Windows.Forms.Label labelD;
         private System.Windows.Forms.Label labelW;
         private System.Windows.Forms.Label labelH;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

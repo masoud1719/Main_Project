@@ -57,6 +57,8 @@ namespace testmna
         private double t2;
         private double t3;
         private double t4;
+        private double t5;
+        private double t6;
         private double stroke;
         private double N;
         private double hc;
@@ -342,6 +344,11 @@ namespace testmna
                 t2 = ((Inferior / (100 * 2)) * (Math.Pow(r1, 2) / r2));
 
 
+                t4 = (1.25 * r1 * r1) / ((r3 * r3) - (r2 * r2));
+
+
+                t3 = (1.25 * r1 * r1) / (lgc + r1 + t4);
+
 
                 // واحد: وبر
                 double phi0 = leakagefactor * Math.PI * Math.Pow(r1, 2) * Math.Pow(10, -4) * Bg;
@@ -359,12 +366,26 @@ namespace testmna
 
 
                 // واحد: سانتی متر
-                t4 = ((800000 * phi0 * lgc * Math.Pow(10, -3)) / (mmfgc)) * 100;
+                t5 = ((800000 * phi0 * lgc * Math.Pow(10, -3)) / (mmfgc)) * 100;
+
+                
+                t6 = (0.625 * r1 * r1) / r2;  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
                 // واحد: متر مربع
-                double Areaoffluxpatchthoughcylindricalgap = Math.PI * ((2 * r1) + lgc) * t4 * Math.Pow(10, -5);
+                double Areaoffluxpatchthoughcylindricalgap = Math.PI * ((2 * r1) + lgc) * t5 * Math.Pow(10, -5);
 
 
 
@@ -459,7 +480,7 @@ namespace testmna
 
 
                 actualMMF = N * I;
-                double error = ((actualMMF - mmf) / mmf) * 100;
+                double error = Math.Abs((actualMMF - mmf) / mmf) * 100;
 
                 errors.Add(error);
                 if (error < accuracy)
@@ -491,8 +512,12 @@ namespace testmna
 
 
 
+            MessageBox.Show("Calculation Finished", "Calculation", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            lblPicT1.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r1));
+
+
+
+            lblPicr1.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r1));
 
             lblPicr2.Text = "= " + Convert.ToString(string.Format("{0:0.00}", r2));
 
@@ -506,13 +531,19 @@ namespace testmna
 
             lblPicT4.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t4));
 
-            lblPicStroke.Text = "= " + Convert.ToString(string.Format("{0:0.00}", stroke));
+            lblPicT5.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t5));
+
+            lblPicT6.Text = "= " + Convert.ToString(string.Format("{0:0.00}", t6));
+
+            lblPicLgc.Text = "= " + Convert.ToString(string.Format("{0:0.00}", lgc));
 
             lblPicN2.Text = "= " + Convert.ToString(string.Format("{0:0}", N));
 
             lblPicH.Text = "= " + Convert.ToString(string.Format("{0:0.00}", hc));
 
             lbldc.Text = "= " + Convert.ToString(string.Format("{0:0.00}", dc));
+
+            lblLg.Text = "= " + Convert.ToString(string.Format("{0:0.00}", stroke));
 
 
 
@@ -536,25 +567,31 @@ namespace testmna
 
             dataGridView3.Rows.Add("  r2", "  cm", string.Format("  {0:0.0000}", r2));
 
-            dataGridView3.Rows.Add("  r2", "  cm", string.Format("  {0:0.0000}", r3));
+            dataGridView3.Rows.Add("  r3", "  cm", string.Format("  {0:0.0000}", r3));
 
             dataGridView3.Rows.Add("  t1", "  cm", string.Format("  {0:0.0000}", t1));
 
             dataGridView3.Rows.Add("  t2", "  cm", string.Format("  {0:0.0000}", t2));
 
+            dataGridView3.Rows.Add("  t3", "  cm", string.Format("  {0:0.0000}", t3));
+
             dataGridView3.Rows.Add("  t4", "  cm", string.Format("  {0:0.0000}", t4));
+
+            dataGridView3.Rows.Add("  t5", "  cm", string.Format("  {0:0.0000}", t5));
+
+            dataGridView3.Rows.Add("  t6", "  cm", string.Format("  {0:0.0000}", t6));
 
             dataGridView3.Rows.Add("  d", "  mm", string.Format("  {0:0.0000}", d));
 
             dataGridView3.Rows.Add("  di", "  mm", string.Format("  {0:0.0000}", di));
 
-            dataGridView3.Rows.Add("  Netwindingdepht", "  cm", string.Format("  {0:0.0000}", Netwindingdepht));
+            dataGridView3.Rows.Add("  Net winding depht", "  cm", string.Format("  {0:0.0000}", Netwindingdepht));
 
-            dataGridView3.Rows.Add("  Numberoflayersdephtwise", "", string.Format("  {0:0}", Numberoflayersdephtwise));
+            dataGridView3.Rows.Add("  Number of layers depht wise", "", string.Format("  {0:0}", Numberoflayersdephtwise));
 
-            dataGridView3.Rows.Add("  Netwindingheight", "  cm", string.Format("  {0:0.0000}", Netwindingheight));
+            dataGridView3.Rows.Add("  Net winding height", "  cm", string.Format("  {0:0.0000}", Netwindingheight));
 
-            dataGridView3.Rows.Add("  Numberoflayersheightwise", "", string.Format("  {0:0}", Numberoflayersheightwise));
+            dataGridView3.Rows.Add("  Number of layers height wise", "", string.Format("  {0:0}", Numberoflayersheightwise));
 
             dataGridView3.Rows.Add("  N", "", string.Format("  {0:0}", N));
 
@@ -584,7 +621,7 @@ namespace testmna
                 chart1.Series["error"].Points.AddXY(i, errors[i]);
                 chart2.Series["mmf"].Points.AddXY(i, mmfs[i]);
                 chart3.Series["HeighttoDepthRatio"].Points.AddXY(i, hratios[i]);
-            }// اینجا ارور داره
+            }
 
 
 
@@ -772,7 +809,7 @@ namespace testmna
 
 
                         doc.Close();
-                        MessageBox.Show("You have successfully exported the file.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("You have successfully exported the file.", "PDF Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
@@ -794,6 +831,41 @@ namespace testmna
                 isNeuton = true;
                 lblForce.Text = "N";
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void method1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (method1.Checked)
+            {
+                button2.Visible = true;
+            }
+            else
+            {
+                button2.Visible = false;
+            }
+        }
+
+        private void method2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (method2.Checked)
+            {
+                button1.Visible = true;
+            }
+            else
+            {
+                button1.Visible = false;
+            }
+        }
+
+        private void Plunger_Load(object sender, EventArgs e)
+        {
+            txt_wire.SelectedIndex = 0;
+            comboBox1.SelectedIndex = 0;
         }
     }
     }
