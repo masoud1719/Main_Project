@@ -40,6 +40,7 @@ namespace Main_Project
             random = new Random();
             btnCloseChildForn.Visible = false;
             button6.Visible = true;
+            button9.Visible = true;
             this.Text = string.Empty;
             this.ControlBox = false;
             
@@ -82,6 +83,7 @@ namespace Main_Project
                     ThemeColor.secondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnCloseChildForn.Visible = true;
                     button6.Visible = false;
+                    button9.Visible = false;
 
                 }
             }
@@ -135,19 +137,19 @@ namespace Main_Project
             {
                 if (indexNumber >= 7500)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Good Choice", "Some Title", MessageBoxButtons.OK);
+                    DialogResult dialogResult = MessageBox.Show("Good choice! According to the entered information and the Magnet shape criteria, You have chosen the most suitable option.", "Magnet shape criteria", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FlatArmature f = new FlatArmature(force, stroke, isMass);
                     f.ShowDialog();
                 }
                 else if (indexNumber < 7500)
                 {
-                    DialogResult dialogResult = MessageBox.Show("bad Choice plunger should be chosen", "Some Title", MessageBoxButtons.OKCancel);
-                    if (dialogResult == DialogResult.OK)
+                    DialogResult dialogResult = MessageBox.Show("According to the entered information and the Magnet shape criteria,You didn't make a right choice.\n\nDo you want us to offer you a better option? ", "Magnet shape criteria warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.Yes)
                     {
                         Plunger f = new Plunger(force, stroke, isMass);
                         f.ShowDialog();
                     }
-                    else if (dialogResult == DialogResult.Cancel)
+                    else if (dialogResult == DialogResult.No)
                     {
                         FlatArmature f = new FlatArmature(force, stroke, isMass);
                         f.ShowDialog();
@@ -156,13 +158,13 @@ namespace Main_Project
                 }
                 else
                 {
-                    DialogResult dialogResult = MessageBox.Show("bad Choice HorseShoe should be chosen", "Some Title", MessageBoxButtons.OKCancel);
-                    if (dialogResult == DialogResult.OK)
+                    DialogResult dialogResult = MessageBox.Show("According to the entered information and the Magnet shape criteria,You didn't make a right choice.\n\nDo you want us to offer you a better option? ", "Magnet shape criteria warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.Yes)
                     {
                         HorseShoe h = new HorseShoe(force, stroke, isMass);
                         h.ShowDialog();
                     }
-                    else if (dialogResult == DialogResult.Cancel)
+                    else if (dialogResult == DialogResult.No)
                     {
                         FlatArmature f = new FlatArmature(force, stroke, isMass);
                         f.ShowDialog();
@@ -176,7 +178,7 @@ namespace Main_Project
             {
                 if (indexNumber >= 200 && indexNumber < 20000)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Good Choice", "Some Title", MessageBoxButtons.OK);
+                    DialogResult dialogResult = MessageBox.Show("Good choice! According to the entered information and the Magnet shape criteria, You have chosen the most suitable option.", "Magnet shape criteria", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (dialogResult == DialogResult.OK)
                     {
                         HorseShoe h = new HorseShoe(force, stroke, isMass);
@@ -186,13 +188,13 @@ namespace Main_Project
                 }
                 else if (indexNumber < 200)
                 {
-                    DialogResult dialogResult = MessageBox.Show("bad Choice Plunger should be chosen", "Some Title", MessageBoxButtons.OKCancel);
-                    if (dialogResult == DialogResult.OK)
+                    DialogResult dialogResult = MessageBox.Show("According to the entered information and the Magnet shape criteria,You didn't make a right choice.\n\nDo you want us to offer you a better option? ", "Magnet shape criteria warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.Yes)
                     {
                         Plunger f = new Plunger(force, stroke, isMass);
                         f.ShowDialog();
                     }
-                    else if (dialogResult == DialogResult.Cancel)
+                    else if (dialogResult == DialogResult.No)
                     {
                         HorseShoe h = new HorseShoe(force, stroke, isMass);
                         h.ShowDialog();
@@ -201,13 +203,13 @@ namespace Main_Project
                 }
                 else
                 {
-                    DialogResult dialogResult = MessageBox.Show("bad Choice FlatArmature should be chosen", "Some Title", MessageBoxButtons.OKCancel);
-                    if (dialogResult == DialogResult.OK)
+                    DialogResult dialogResult = MessageBox.Show("According to the entered information and the Magnet shape criteria,You didn't make a right choice.\n\nDo you want us to offer you a better option? ", "Magnet shape criteria warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.Yes)
                     {
                         FlatArmature f = new FlatArmature(force, stroke, isMass);
                         f.ShowDialog();
                     }
-                    else if (dialogResult == DialogResult.Cancel)
+                    else if (dialogResult == DialogResult.No)
                     {
                         HorseShoe h = new HorseShoe(force, stroke, isMass);
                         h.ShowDialog();
@@ -220,7 +222,7 @@ namespace Main_Project
             {
                 if (indexNumber > 1400 && indexNumber < 7500)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Good Choice", "Some Title", MessageBoxButtons.OK);
+                    DialogResult dialogResult = MessageBox.Show("Good choice! According to the entered information and the Magnet shape criteria, You have chosen the most suitable option.", "Magnet shape criteria", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (dialogResult == DialogResult.OK)
                     {
                         Plunger f = new Plunger(force, stroke, isMass);
@@ -230,13 +232,13 @@ namespace Main_Project
                 }
                 else if (indexNumber > 7500)
                 {
-                    DialogResult dialogResult = MessageBox.Show("bad Choice FlatArmature should be chosen", "Some Title", MessageBoxButtons.OKCancel);
-                    if (dialogResult == DialogResult.OK)
+                    DialogResult dialogResult = MessageBox.Show("According to the entered information and the Magnet shape criteria,You didn't make a right choice.\n\nDo you want us to offer you a better option? ", "Magnet shape criteria warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.Yes)
                     {
                         FlatArmature f = new FlatArmature(force, stroke, isMass);
                         f.ShowDialog();
                     }
-                    else if (dialogResult == DialogResult.Cancel)
+                    else if (dialogResult == DialogResult.No)
                     {
                         Plunger f = new Plunger(force, stroke, isMass);
                         f.ShowDialog();
@@ -245,13 +247,13 @@ namespace Main_Project
                 }
                 else
                 {
-                    DialogResult dialogResult = MessageBox.Show("bad Choice HorseShoe should be chosen", "Some Title", MessageBoxButtons.OKCancel);
-                    if (dialogResult == DialogResult.OK)
+                    DialogResult dialogResult = MessageBox.Show("According to the entered information and the Magnet shape criteria,You didn't make a right choice.\n\nDo you want us to offer you a better option? ", "Magnet shape criteria warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.Yes)
                     {
                         HorseShoe h = new HorseShoe(force, stroke, isMass);
                         h.ShowDialog();
                     }
-                    else if (dialogResult == DialogResult.Cancel)
+                    else if (dialogResult == DialogResult.No)
                     {
                         Plunger f = new Plunger(force, stroke, isMass);
                         f.ShowDialog();
@@ -458,6 +460,7 @@ namespace Main_Project
             currentButton = null;
             btnCloseChildForn.Visible = false;
             button6.Visible = true;
+            button9.Visible = true;
             
         }
 
@@ -493,7 +496,7 @@ namespace Main_Project
             if (web == null)
                 return;
 
-            ((WebBrowser)(web)).Url = new Uri("http://varzesh3.com");
+            ((WebBrowser)(web)).Url = new Uri("http://emtrl.aut.ac.ir");
         }
 
         private void btnClose_MouseLeave(object sender, EventArgs e)
@@ -504,6 +507,20 @@ namespace Main_Project
         private void btnClose_MouseEnter(object sender, EventArgs e)
         {
             btnClose.BackColor = Color.Red;
+        }
+
+        private void web_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            var web = panelDesktopPane.Controls["web"];
+            if (web == null)
+                return;
+
+            ((WebBrowser)(web)).Url = new Uri("http://aut.ac.ir");
         }
 
         

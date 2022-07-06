@@ -467,5 +467,74 @@
   <ItemGroup>
     <None Include="Resources\Screenshot %28626%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flat armature_preview_rev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s-l400_preview_rev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s-l400_preview_rev_1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horse shoe12 %281%29_preview_rev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s-l400 %281%29_preview_rev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s-l400 %281%29_preview_rev_1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\single-phase-transformers-500x500_preview_rev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\single-phase-transformers-500x500_preview_rev_1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22412572.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\بارگیری_preview_rev_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\بارگیری_preview_rev_2 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\بارگیری_preview_rev_2 %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\330px-Common_mode_choke_2A_with_20mH_inductance %281%29_preview_rev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-icon-placed-in-blue-circle-vector-23387008_preview_rev_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_en %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s-l400 %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singlepahse1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\single-phase-transformers-500x5001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\single-phase-transformers-500x5002.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\330px-Common_mode_choke_2A_with_20mH_inductance %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\330px-Common_mode_choke_2A_with_20mH_inductance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\باز-کردن-موتور-الکتریکی.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\باز-کردن-موتور-الکتریکی1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,5 +22,10 @@ namespace Main_Project
         {
             Vahid_MainForm.openTrans2();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Vahid_MainForm.openTrans2();
+        }
     }
 }

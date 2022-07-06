@@ -44,6 +44,7 @@ namespace Main
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Main_Project.Properties.Resources.lifting_elctromagnet_on_excavator;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -57,20 +58,23 @@ namespace Main
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(513, 457);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(350, 458);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 16);
+            this.label1.Size = new System.Drawing.Size(32, 20);
             this.label1.TabIndex = 15;
             this.label1.Text = "cm";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblForce
             // 
             this.lblForce.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblForce.AutoSize = true;
             this.lblForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblForce.Location = new System.Drawing.Point(515, 415);
+            this.lblForce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblForce.Location = new System.Drawing.Point(353, 409);
             this.lblForce.Name = "lblForce";
-            this.lblForce.Size = new System.Drawing.Size(23, 16);
+            this.lblForce.Size = new System.Drawing.Size(29, 20);
             this.lblForce.TabIndex = 14;
             this.lblForce.Text = "Kg";
             // 
@@ -78,10 +82,11 @@ namespace Main
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button1.Location = new System.Drawing.Point(307, 503);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button1.Location = new System.Drawing.Point(127, 505);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 46);
+            this.button1.Size = new System.Drawing.Size(163, 55);
             this.button1.TabIndex = 13;
             this.button1.Text = "Calculate";
             this.button1.UseVisualStyleBackColor = false;
@@ -92,9 +97,10 @@ namespace Main
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label2.Location = new System.Drawing.Point(291, 455);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(106, 458);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 12;
             this.label2.Text = "Stroke (g)";
             // 
@@ -102,34 +108,37 @@ namespace Main
             // 
             this.txtStroke.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStroke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtStroke.Location = new System.Drawing.Point(396, 453);
+            this.txtStroke.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtStroke.Location = new System.Drawing.Point(216, 455);
             this.txtStroke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStroke.Name = "txtStroke";
-            this.txtStroke.Size = new System.Drawing.Size(93, 22);
+            this.txtStroke.Size = new System.Drawing.Size(116, 27);
             this.txtStroke.TabIndex = 11;
             // 
             // txtForce
             // 
             this.txtForce.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtForce.Location = new System.Drawing.Point(395, 412);
+            this.txtForce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtForce.Location = new System.Drawing.Point(216, 406);
             this.txtForce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtForce.Name = "txtForce";
-            this.txtForce.Size = new System.Drawing.Size(95, 22);
+            this.txtForce.Size = new System.Drawing.Size(116, 27);
             this.txtForce.TabIndex = 10;
             // 
             // comboBoxForce
             // 
             this.comboBoxForce.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxForce.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxForce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.comboBoxForce.FormattingEnabled = true;
             this.comboBoxForce.Items.AddRange(new object[] {
             "Mass",
             "Force"});
-            this.comboBoxForce.Location = new System.Drawing.Point(267, 412);
+            this.comboBoxForce.Location = new System.Drawing.Point(73, 406);
             this.comboBoxForce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxForce.Name = "comboBoxForce";
-            this.comboBoxForce.Size = new System.Drawing.Size(88, 24);
+            this.comboBoxForce.Size = new System.Drawing.Size(116, 30);
             this.comboBoxForce.TabIndex = 9;
             this.comboBoxForce.SelectedIndexChanged += new System.EventHandler(this.comboBoxForce_SelectedIndexChanged_1);
             // 

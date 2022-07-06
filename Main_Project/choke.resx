@@ -129,13 +129,29 @@
   <metadata name="value.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Parameter.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="unit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="value.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAD///////////////////////////7+/v/+/v7///////7+/v/+/v7/////////////////////////
+        //////////////////////////////////////////////7+/v///////v7+//39/f//////////////
+        //////////////////////////////7+/v/5+fn/9PT0/9zc3P/IxcX/zszM//Pz8///////////////
+        //////////////////////////////7+/v//////+/v7/3V0df8+PD7/QD0//1VVVv+Xlpf/yMrL//z8
+        /P/9/f3///////////////////////7+/v//////6enp/2ZkZv8wLS//KSgq/xMTFf8WFhn/Jyku/01P
+        Uf/b29v///////7+/v/////////////////9/f3//////8rJyv8aFxr/OTg5/zs9Pf8kJij/HyIm/yYr
+        M/8bGx3/T1JY/7a2t////////v7+/////////////f39///////NzM3/KScp/zo5Of88Pj//ho+V/3R5
+        f/8wOkf/IyUq/0RJUv+FhYb////////////////////////////+/v7//////2NhY/8xMDH/NDQ4/6mw
+        s//f6vL/hZy7/0tXYv+wuMH///////39/f///////////////////////Pz8//////9tbW7/MjEz/y8v
+        Mv+Xmpv/2OTu/5Ow0/+jvtj/u87h///////+/v7///////////////////////z8/P//////cW9x/zc1
+        Nv87PUD/pK+1/7LI3f+FoMH/q8Pb/6G92f/7/f3///////////////////////7+/v//////9fX1/2Bf
+        YP9DQkL/Ojw//1pkb/9/nLz/or/b/5Sz0P+Ys9D///////7+///////////////////9/P3//////8bG
+        x/8oJij/QUFC/1teX/8tLzD/KzE4/25/kP95nL//z9/q///////9/v7///////////////////////7+
+        /v//////x8fI/3p8ff9wcnL/h4qL/19iYf8mJyj/MDc+/8XHyP///////f39////////////////////
+        ///////////////////+/v7/ycnK/46Oj/+Fh4j/iIyM/0xPT/+3ubn///////z8/P//////////////
+        ///////////////////9/f3//f39///////+/v7/0dDR/5+foP/HyMn/7u/w///////+/v7/////////
+        ///////////////////////////////////9/f3//v7+////////////////////////////////////
+        ////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>

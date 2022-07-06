@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SmallTrans));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label19 = new System.Windows.Forms.Label();
             this.txt_tr = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -53,6 +53,13 @@
             this.combo_insulation = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.maskvoltreg = new System.Windows.Forms.MaskedTextBox();
             this.labelDy = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -120,6 +127,7 @@
             this.lblPicH = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label48 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.maskEff = new System.Windows.Forms.MaskedTextBox();
@@ -132,11 +140,15 @@
             this.label41 = new System.Windows.Forms.Label();
             this.lblPicD = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lblPicHw = new System.Windows.Forms.Label();
             this.lblPicW = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblPT2 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textw = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.textnvalue = new System.Windows.Forms.TextBox();
             this.comboGroup = new System.Windows.Forms.ComboBox();
@@ -147,39 +159,18 @@
             this.label46 = new System.Windows.Forms.Label();
             this.txt_b0 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.txt_LowVoltage = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.textw = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.labeld = new System.Windows.Forms.Label();
-            this.labele = new System.Windows.Forms.Label();
-            this.labelc = new System.Windows.Forms.Label();
-            this.labelf = new System.Windows.Forms.Label();
-            this.labela = new System.Windows.Forms.Label();
             this.labelb = new System.Windows.Forms.Label();
+            this.labela = new System.Windows.Forms.Label();
+            this.labelf = new System.Windows.Forms.Label();
+            this.labelc = new System.Windows.Forms.Label();
+            this.labele = new System.Windows.Forms.Label();
+            this.labeld = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.txt_LowVoltage = new System.Windows.Forms.MaskedTextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -187,7 +178,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label19
@@ -221,6 +221,7 @@
             this.label20.Size = new System.Drawing.Size(155, 16);
             this.label20.TabIndex = 291;
             this.label20.Text = "Ambient temperature (Tr)";
+            this.toolTip1.SetToolTip(this.label20, "Ambient temperature with a default value of 40 degrees Celsius\r\n\r\n");
             // 
             // label17
             // 
@@ -253,6 +254,7 @@
             this.label18.Size = new System.Drawing.Size(141, 16);
             this.label18.TabIndex = 288;
             this.label18.Text = "Temperature rise (Tm)";
+            this.toolTip1.SetToolTip(this.label18, "Temperature rise in degrees Celsius\r\n\r\n");
             // 
             // label15
             // 
@@ -381,6 +383,8 @@
             this.label27.Size = new System.Drawing.Size(115, 16);
             this.label27.TabIndex = 79;
             this.label27.Text = "Thickness of steel";
+            this.toolTip1.SetToolTip(this.label27, "There are two thicknesses of 0.5 and 0.35 mm for steel, which can affect the accu" +
+        "mulation factor.\r\n");
             // 
             // combo_insulation
             // 
@@ -407,6 +411,7 @@
             this.label23.Size = new System.Drawing.Size(63, 16);
             this.label23.TabIndex = 76;
             this.label23.Text = "insulation";
+            this.toolTip1.SetToolTip(this.label23, resources.GetString("label23.ToolTip"));
             // 
             // tabPage2
             // 
@@ -425,6 +430,76 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "B_H Curve";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox7.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(699, 400);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox6.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox5.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(699, 403);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // maskvoltreg
             // 
@@ -465,12 +540,12 @@
             // Parameter
             // 
             this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle4;
             this.Parameter.HeaderText = "                  Parameter";
             this.Parameter.MinimumWidth = 6;
             this.Parameter.Name = "Parameter";
@@ -479,12 +554,12 @@
             // unit
             // 
             this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle5;
             this.unit.HeaderText = "                     unit";
             this.unit.MinimumWidth = 6;
             this.unit.Name = "unit";
@@ -492,12 +567,12 @@
             // value
             // 
             this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle6;
             this.value.HeaderText = "                      value";
             this.value.MinimumWidth = 6;
             this.value.Name = "value";
@@ -575,6 +650,7 @@
             this.label16.Size = new System.Drawing.Size(117, 16);
             this.label16.TabIndex = 285;
             this.label16.Text = "Current density ( 𝛿 )";
+            this.toolTip1.SetToolTip(this.label16, "The recommended range for it is between 1 and 1.25");
             // 
             // label6
             // 
@@ -592,11 +668,12 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(18, 31);
+            this.label1.Location = new System.Drawing.Point(18, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 16);
             this.label1.TabIndex = 270;
             this.label1.Text = "Structure";
+            this.toolTip1.SetToolTip(this.label1, "Shell type structure is usually used for small transformers");
             // 
             // label55
             // 
@@ -629,6 +706,7 @@
             this.label54.Size = new System.Drawing.Size(23, 16);
             this.label54.TabIndex = 301;
             this.label54.Text = "Wi";
+            this.toolTip1.SetToolTip(this.label54, "It indicates iron losses\r\n");
             // 
             // wireGauge
             // 
@@ -695,6 +773,7 @@
             this.label12.Size = new System.Drawing.Size(85, 16);
             this.label12.TabIndex = 279;
             this.label12.Text = "Frequency (f)";
+            this.toolTip1.SetToolTip(this.label12, "Its unit is Hertz. Its default value is equal to 50\r\n");
             // 
             // txt_Fluxdensity
             // 
@@ -715,6 +794,8 @@
             this.label14.Size = new System.Drawing.Size(108, 16);
             this.label14.TabIndex = 282;
             this.label14.Text = "Flux density (Bm)";
+            this.toolTip1.SetToolTip(this.label14, "Flux density is determined based on the type of sheet or desired value.\r\nThe reco" +
+        "mmended range for it is between 1 and 1.25\r\n");
             // 
             // label26
             // 
@@ -769,6 +850,7 @@
             this.label8.Size = new System.Drawing.Size(114, 16);
             this.label8.TabIndex = 276;
             this.label8.Text = "Low Voltage(Vl.v) ";
+            this.toolTip1.SetToolTip(this.label8, "Low side voltage. Its unit is the volt\r\n\r\n");
             // 
             // label9
             // 
@@ -801,17 +883,19 @@
             this.label10.Size = new System.Drawing.Size(119, 16);
             this.label10.TabIndex = 273;
             this.label10.Text = "High Voltage(Vh.v)";
+            this.toolTip1.SetToolTip(this.label10, "High side voltage. Its unit is the volt\r\n");
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(18, 57);
+            this.label2.Location = new System.Drawing.Point(18, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 272;
             this.label2.Text = "Conductor";
+            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // combo_conductor
             // 
@@ -849,6 +933,7 @@
             this.label3.Size = new System.Drawing.Size(38, 16);
             this.label3.TabIndex = 297;
             this.label3.Text = "Steel";
+            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // button1
             // 
@@ -1168,7 +1253,19 @@
             this.label48.TabIndex = 308;
             this.label48.Text = "Wire gage";
             this.toolTip1.SetToolTip(this.label48, "Specifies the wire standard\r\nSWG : Standard Wire Gauge\r\nAWG : American Wire Gauge" +
-        "\r\nBWG : Birmingham Wire Gauge\r\n");
+        "\r\nBWG : Birmingham Wire Gauge\r\n\r\n");
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(18, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 16);
+            this.label4.TabIndex = 313;
+            this.label4.Text = "Raiting (S)";
+            this.toolTip1.SetToolTip(this.label4, "The power of small transformers is usually lower than 4000 VA");
             // 
             // label34
             // 
@@ -1180,6 +1277,8 @@
             this.label34.Size = new System.Drawing.Size(64, 16);
             this.label34.TabIndex = 312;
             this.label34.Text = "Efficiency";
+            this.toolTip1.SetToolTip(this.label34, "This value can include different values based on power, but its suggested range i" +
+        "s between 80 and 94%.");
             // 
             // label33
             // 
@@ -1191,6 +1290,7 @@
             this.label33.Size = new System.Drawing.Size(122, 16);
             this.label33.TabIndex = 311;
             this.label33.Text = "Voltage Regulation";
+            this.toolTip1.SetToolTip(this.label33, "The considered range for this value is between 1.5 and 20%");
             // 
             // maskEff
             // 
@@ -1324,6 +1424,17 @@
             this.tabPage1.Text = "Structure";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox9.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(699, 407);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 229;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
             // lblPicHw
             // 
             this.lblPicHw.AutoSize = true;
@@ -1345,6 +1456,17 @@
             this.lblPicW.Size = new System.Drawing.Size(21, 16);
             this.lblPicW.TabIndex = 181;
             this.lblPicW.Text = "=0";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox8.Location = new System.Drawing.Point(11, 9);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(689, 399);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 179;
+            this.pictureBox8.TabStop = false;
             // 
             // lblPT2
             // 
@@ -1412,6 +1534,27 @@
             this.groupBox6.TabIndex = 300;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Resistance and Leakage resistance of winding ";
+            // 
+            // textw
+            // 
+            this.textw.Enabled = false;
+            this.textw.Location = new System.Drawing.Point(243, 253);
+            this.textw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textw.Name = "textw";
+            this.textw.Size = new System.Drawing.Size(85, 22);
+            this.textw.TabIndex = 127;
+            this.textw.Text = "12";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Enabled = false;
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(22, 255);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 16);
+            this.label5.TabIndex = 126;
+            this.label5.Text = "w";
             // 
             // label53
             // 
@@ -1524,52 +1667,6 @@
             this.tabControl1.Size = new System.Drawing.Size(707, 435);
             this.tabControl1.TabIndex = 304;
             // 
-            // txt_LowVoltage
-            // 
-            this.txt_LowVoltage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_LowVoltage.Location = new System.Drawing.Point(205, 192);
-            this.txt_LowVoltage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_LowVoltage.Name = "txt_LowVoltage";
-            this.txt_LowVoltage.Size = new System.Drawing.Size(85, 22);
-            this.txt_LowVoltage.TabIndex = 277;
-            this.txt_LowVoltage.Text = "400";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(18, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 16);
-            this.label4.TabIndex = 313;
-            this.label4.Text = "Raiting (S)";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Enabled = false;
-            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(22, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 16);
-            this.label5.TabIndex = 126;
-            this.label5.Text = "w";
-            // 
-            // textw
-            // 
-            this.textw.Enabled = false;
-            this.textw.Location = new System.Drawing.Point(243, 253);
-            this.textw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textw.Name = "textw";
-            this.textw.Size = new System.Drawing.Size(85, 22);
-            this.textw.TabIndex = 127;
-            this.textw.Text = "12";
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.labelb);
@@ -1587,117 +1684,55 @@
             this.tabPage3.Text = "E_I sheet";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // pictureBox9
+            // labelb
             // 
-            this.pictureBox9.Image = global::Main_Project.Properties.Resources.Screenshot__593_;
-            this.pictureBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox9.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(699, 407);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 229;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            this.labelb.AutoSize = true;
+            this.labelb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelb.Location = new System.Drawing.Point(599, 41);
+            this.labelb.Name = "labelb";
+            this.labelb.Size = new System.Drawing.Size(24, 16);
+            this.labelb.TabIndex = 246;
+            this.labelb.Text = "= 0";
             // 
-            // pictureBox8
+            // labela
             // 
-            this.pictureBox8.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
-            this.pictureBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox8.Location = new System.Drawing.Point(11, 9);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(689, 399);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 179;
-            this.pictureBox8.TabStop = false;
+            this.labela.AutoSize = true;
+            this.labela.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labela.Location = new System.Drawing.Point(264, 386);
+            this.labela.Name = "labela";
+            this.labela.Size = new System.Drawing.Size(24, 16);
+            this.labela.TabIndex = 243;
+            this.labela.Text = "= 0";
             // 
-            // pictureBox7
+            // labelf
             // 
-            this.pictureBox7.Image = global::Main_Project.Properties.Resources.CRGO;
-            this.pictureBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox7.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(699, 400);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
+            this.labelf.AutoSize = true;
+            this.labelf.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelf.Location = new System.Drawing.Point(526, 198);
+            this.labelf.Name = "labelf";
+            this.labelf.Size = new System.Drawing.Size(24, 16);
+            this.labelf.TabIndex = 242;
+            this.labelf.Text = "= 0";
             // 
-            // pictureBox6
+            // labelc
             // 
-            this.pictureBox6.Image = global::Main_Project.Properties.Resources.M15_;
-            this.pictureBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox6.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
+            this.labelc.AutoSize = true;
+            this.labelc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelc.Location = new System.Drawing.Point(115, 203);
+            this.labelc.Name = "labelc";
+            this.labelc.Size = new System.Drawing.Size(24, 16);
+            this.labelc.TabIndex = 241;
+            this.labelc.Text = "= 0";
             // 
-            // pictureBox5
+            // labele
             // 
-            this.pictureBox5.Image = global::Main_Project.Properties.Resources.M19_;
-            this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox5.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Main_Project.Properties.Resources.M22_;
-            this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Main_Project.Properties.Resources.M27_;
-            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Main_Project.Properties.Resources.M36_;
-            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Main_Project.Properties.Resources.M43_;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(699, 403);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::Main_Project.Properties.Resources.Screenshot__621_;
-            this.pictureBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox10.Location = new System.Drawing.Point(-4, 0);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(707, 403);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 230;
-            this.pictureBox10.TabStop = false;
+            this.labele.AutoSize = true;
+            this.labele.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labele.Location = new System.Drawing.Point(631, 196);
+            this.labele.Name = "labele";
+            this.labele.Size = new System.Drawing.Size(24, 16);
+            this.labele.TabIndex = 240;
+            this.labele.Text = "= 0";
             // 
             // labeld
             // 
@@ -1710,55 +1745,29 @@
             this.labeld.Text = "= 0";
             this.labeld.Click += new System.EventHandler(this.labeld_Click);
             // 
-            // labele
+            // pictureBox10
             // 
-            this.labele.AutoSize = true;
-            this.labele.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labele.Location = new System.Drawing.Point(631, 196);
-            this.labele.Name = "labele";
-            this.labele.Size = new System.Drawing.Size(24, 16);
-            this.labele.TabIndex = 240;
-            this.labele.Text = "= 0";
+            this.pictureBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox10.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(707, 403);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 230;
+            this.pictureBox10.TabStop = false;
             // 
-            // labelc
+            // txt_LowVoltage
             // 
-            this.labelc.AutoSize = true;
-            this.labelc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelc.Location = new System.Drawing.Point(115, 203);
-            this.labelc.Name = "labelc";
-            this.labelc.Size = new System.Drawing.Size(24, 16);
-            this.labelc.TabIndex = 241;
-            this.labelc.Text = "= 0";
+            this.txt_LowVoltage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_LowVoltage.Location = new System.Drawing.Point(205, 192);
+            this.txt_LowVoltage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_LowVoltage.Name = "txt_LowVoltage";
+            this.txt_LowVoltage.Size = new System.Drawing.Size(85, 22);
+            this.txt_LowVoltage.TabIndex = 277;
+            this.txt_LowVoltage.Text = "400";
             // 
-            // labelf
+            // errorProvider1
             // 
-            this.labelf.AutoSize = true;
-            this.labelf.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelf.Location = new System.Drawing.Point(526, 198);
-            this.labelf.Name = "labelf";
-            this.labelf.Size = new System.Drawing.Size(24, 16);
-            this.labelf.TabIndex = 242;
-            this.labelf.Text = "= 0";
-            // 
-            // labela
-            // 
-            this.labela.AutoSize = true;
-            this.labela.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labela.Location = new System.Drawing.Point(264, 386);
-            this.labela.Name = "labela";
-            this.labela.Size = new System.Drawing.Size(24, 16);
-            this.labela.TabIndex = 243;
-            this.labela.Text = "= 0";
-            // 
-            // labelb
-            // 
-            this.labelb.AutoSize = true;
-            this.labelb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelb.Location = new System.Drawing.Point(599, 41);
-            this.labelb.Name = "labelb";
-            this.labelb.Size = new System.Drawing.Size(24, 16);
-            this.labelb.TabIndex = 246;
-            this.labelb.Text = "= 0";
+            this.errorProvider1.ContainerControl = this;
             // 
             // SmallTrans
             // 
@@ -1812,24 +1821,11 @@
             this.Controls.Add(this.txt_LowVoltage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SmallTrans";
-            this.Text = "Form1";
+            this.Text = "Small Transformer";
             this.Load += new System.EventHandler(this.SmallTrans_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1837,7 +1833,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

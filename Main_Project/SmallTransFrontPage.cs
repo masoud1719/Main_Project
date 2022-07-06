@@ -19,7 +19,17 @@ namespace Main_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             Vahid_MainForm.openSmallTrans();
+        }
+
+        private void SmallTransFrontPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

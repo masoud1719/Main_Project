@@ -61,6 +61,26 @@ namespace Main
                 lblForce.Text = "N";
             }
         }
+
+        private void txtForce_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblForce_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtStroke_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

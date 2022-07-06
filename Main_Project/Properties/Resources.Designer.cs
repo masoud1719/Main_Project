@@ -83,6 +83,46 @@ namespace Main_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _22412571 {
+            get {
+                object obj = ResourceManager.GetObject("22412571", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _330px_Common_mode_choke_2A_with_20mH_inductance {
+            get {
+                object obj = ResourceManager.GetObject("330px-Common_mode_choke_2A_with_20mH_inductance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _330px_Common_mode_choke_2A_with_20mH_inductance__1_ {
+            get {
+                object obj = ResourceManager.GetObject("330px-Common_mode_choke_2A_with_20mH_inductance (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _330px_Common_mode_choke_2A_with_20mH_inductance__1__preview_rev_1 {
+            get {
+                object obj = ResourceManager.GetObject("330px-Common_mode_choke_2A_with_20mH_inductance (1)_preview_rev_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _575082898_UThiarGRmUpXP0Vsed5CrJZO6Nn8f6LNTaHYpE3p9c4 {
             get {
                 object obj = ResourceManager.GetObject("575082898_UThiarGRmUpXP0Vsed5CrJZO6Nn8f6LNTaHYpE3p9c4", resourceCulture);
@@ -96,6 +136,16 @@ namespace Main_Project.Properties {
         internal static System.Drawing.Bitmap AboutIconLogo1 {
             get {
                 object obj = ResourceManager.GetObject("AboutIconLogo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AUTEE__1_ {
+            get {
+                object obj = ResourceManager.GetObject("AUTEE (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +206,16 @@ namespace Main_Project.Properties {
         internal static System.Drawing.Bitmap flat_armature__1_ {
             get {
                 object obj = ResourceManager.GetObject("flat armature (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flat_armature_preview_rev_1 {
+            get {
+                object obj = ResourceManager.GetObject("flat armature_preview_rev_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,6 +333,16 @@ namespace Main_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_icon_placed_in_blue_circle_vector_23387008_preview_rev_1 {
+            get {
+                object obj = ResourceManager.GetObject("home-icon-placed-in-blue-circle-vector-23387008_preview_rev_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_icon_placed_in_blue_circle_vector_233870081 {
             get {
                 object obj = ResourceManager.GetObject("home-icon-placed-in-blue-circle-vector-233870081", resourceCulture);
@@ -343,6 +413,16 @@ namespace Main_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap horse_shoe12__1__preview_rev_1 {
+            get {
+                object obj = ResourceManager.GetObject("horse shoe12 (1)_preview_rev_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HorseshoeLogo1 {
             get {
                 object obj = ResourceManager.GetObject("HorseshoeLogo1", resourceCulture);
@@ -406,6 +486,16 @@ namespace Main_Project.Properties {
         internal static System.Drawing.Bitmap lifting_elctromagnet_on_excavator {
             get {
                 object obj = ResourceManager.GetObject("lifting-elctromagnet-on-excavator", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_en__1_ {
+            get {
+                object obj = ResourceManager.GetObject("logo_en (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -506,6 +596,56 @@ namespace Main_Project.Properties {
         internal static System.Drawing.Bitmap s_l400__1_ {
             get {
                 object obj = ResourceManager.GetObject("s-l400 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap s_l400__1__preview_rev_1 {
+            get {
+                object obj = ResourceManager.GetObject("s-l400 (1)_preview_rev_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap s_l400__1__preview_rev_1__1_ {
+            get {
+                object obj = ResourceManager.GetObject("s-l400 (1)_preview_rev_1 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap s_l400__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("s-l400 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap s_l400_preview_rev_1 {
+            get {
+                object obj = ResourceManager.GetObject("s-l400_preview_rev_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap s_l400_preview_rev_1__1_ {
+            get {
+                object obj = ResourceManager.GetObject("s-l400_preview_rev_1 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -723,9 +863,59 @@ namespace Main_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap single_phase_transformers_500x500_preview_rev_1 {
+            get {
+                object obj = ResourceManager.GetObject("single-phase-transformers-500x500_preview_rev_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap single_phase_transformers_500x500_preview_rev_1__1_ {
+            get {
+                object obj = ResourceManager.GetObject("single-phase-transformers-500x500_preview_rev_1 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap single_phase_transformers_500x5001 {
+            get {
+                object obj = ResourceManager.GetObject("single-phase-transformers-500x5001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap single_phase_transformers_500x5002 {
+            get {
+                object obj = ResourceManager.GetObject("single-phase-transformers-500x5002", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap singlepahse {
             get {
                 object obj = ResourceManager.GetObject("singlepahse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap singlepahse1 {
+            get {
+                object obj = ResourceManager.GetObject("singlepahse1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -756,6 +946,56 @@ namespace Main_Project.Properties {
         internal static System.Drawing.Bitmap w2kcfslsblm1 {
             get {
                 object obj = ResourceManager.GetObject("w2kcfslsblm1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap بارگیری_preview_rev_2 {
+            get {
+                object obj = ResourceManager.GetObject("بارگیری_preview_rev_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap بارگیری_preview_rev_2__1_ {
+            get {
+                object obj = ResourceManager.GetObject("بارگیری_preview_rev_2 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap بارگیری_preview_rev_2__1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("بارگیری_preview_rev_2 (1) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap باز_کردن_موتور_الکتریکی {
+            get {
+                object obj = ResourceManager.GetObject("باز-کردن-موتور-الکتریکی", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap باز_کردن_موتور_الکتریکی1 {
+            get {
+                object obj = ResourceManager.GetObject("باز-کردن-موتور-الکتریکی1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

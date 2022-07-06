@@ -30,56 +30,83 @@ namespace Main
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblForce = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtStroke = new System.Windows.Forms.TextBox();
-            this.txtForce = new System.Windows.Forms.TextBox();
             this.comboBoxForce = new System.Windows.Forms.ComboBox();
+            this.txtForce = new System.Windows.Forms.TextBox();
+            this.txtStroke = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblForce = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(356, 44);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Image = global::Main_Project.Properties.Resources.s_l400__1_1;
+            this.pictureBox1.Location = new System.Drawing.Point(485, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(472, 485);
+            this.pictureBox1.Size = new System.Drawing.Size(550, 579);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // comboBoxForce
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(732, 592);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 16);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "cm";
+            this.comboBoxForce.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboBoxForce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.comboBoxForce.FormattingEnabled = true;
+            this.comboBoxForce.Items.AddRange(new object[] {
+            "Mass",
+            "Force"});
+            this.comboBoxForce.Location = new System.Drawing.Point(96, 420);
+            this.comboBoxForce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxForce.Name = "comboBoxForce";
+            this.comboBoxForce.Size = new System.Drawing.Size(113, 28);
+            this.comboBoxForce.TabIndex = 39;
+            this.comboBoxForce.SelectedIndexChanged += new System.EventHandler(this.comboBoxForce_SelectedIndexChanged);
             // 
-            // lblForce
+            // txtForce
             // 
-            this.lblForce.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblForce.AutoSize = true;
-            this.lblForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblForce.Location = new System.Drawing.Point(732, 549);
-            this.lblForce.Name = "lblForce";
-            this.lblForce.Size = new System.Drawing.Size(23, 16);
-            this.lblForce.TabIndex = 44;
-            this.lblForce.Text = "Kg";
+            this.txtForce.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtForce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtForce.Location = new System.Drawing.Point(240, 422);
+            this.txtForce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtForce.Name = "txtForce";
+            this.txtForce.Size = new System.Drawing.Size(113, 27);
+            this.txtForce.TabIndex = 40;
+            // 
+            // txtStroke
+            // 
+            this.txtStroke.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtStroke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtStroke.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtStroke.Location = new System.Drawing.Point(240, 462);
+            this.txtStroke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtStroke.Name = "txtStroke";
+            this.txtStroke.Size = new System.Drawing.Size(113, 27);
+            this.txtStroke.TabIndex = 41;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(126, 467);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Stroke (g)";
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button1.Location = new System.Drawing.Point(529, 630);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button1.Location = new System.Drawing.Point(163, 509);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 55);
@@ -88,58 +115,37 @@ namespace Main
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
+            // lblForce
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(490, 592);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Stroke (g)";
+            this.lblForce.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblForce.AutoSize = true;
+            this.lblForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblForce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lblForce.Location = new System.Drawing.Point(376, 424);
+            this.lblForce.Name = "lblForce";
+            this.lblForce.Size = new System.Drawing.Size(29, 20);
+            this.lblForce.TabIndex = 44;
+            this.lblForce.Text = "Kg";
             // 
-            // txtStroke
+            // label1
             // 
-            this.txtStroke.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStroke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtStroke.Location = new System.Drawing.Point(596, 587);
-            this.txtStroke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtStroke.Name = "txtStroke";
-            this.txtStroke.Size = new System.Drawing.Size(113, 22);
-            this.txtStroke.TabIndex = 41;
-            // 
-            // txtForce
-            // 
-            this.txtForce.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtForce.Location = new System.Drawing.Point(596, 547);
-            this.txtForce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtForce.Name = "txtForce";
-            this.txtForce.Size = new System.Drawing.Size(113, 22);
-            this.txtForce.TabIndex = 40;
-            // 
-            // comboBoxForce
-            // 
-            this.comboBoxForce.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxForce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.comboBoxForce.FormattingEnabled = true;
-            this.comboBoxForce.Items.AddRange(new object[] {
-            "Mass",
-            "Force"});
-            this.comboBoxForce.Location = new System.Drawing.Point(452, 545);
-            this.comboBoxForce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxForce.Name = "comboBoxForce";
-            this.comboBoxForce.Size = new System.Drawing.Size(103, 24);
-            this.comboBoxForce.TabIndex = 39;
-            this.comboBoxForce.SelectedIndexChanged += new System.EventHandler(this.comboBoxForce_SelectedIndexChanged);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label1.Location = new System.Drawing.Point(376, 467);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 20);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "cm";
             // 
             // PlungerFrontPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblForce);
             this.Controls.Add(this.button1);
@@ -147,10 +153,9 @@ namespace Main
             this.Controls.Add(this.txtStroke);
             this.Controls.Add(this.txtForce);
             this.Controls.Add(this.comboBoxForce);
-            this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PlungerFrontPage";
-            this.Size = new System.Drawing.Size(1199, 746);
+            this.Size = new System.Drawing.Size(1038, 605);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -159,13 +164,14 @@ namespace Main
         }
 
         #endregion
+
         private PictureBox pictureBox1;
-        private Label label1;
-        private Label lblForce;
-        private Button button1;
-        private Label label2;
-        private TextBox txtStroke;
-        private TextBox txtForce;
         private ComboBox comboBoxForce;
+        private TextBox txtForce;
+        private TextBox txtStroke;
+        private Label label2;
+        private Button button1;
+        private Label lblForce;
+        private Label label1;
     }
 }
