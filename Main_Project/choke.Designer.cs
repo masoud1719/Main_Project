@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(choke));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label48 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
@@ -40,21 +40,9 @@
             this.label59 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.labelLv = new System.Windows.Forms.Label();
-            this.labelWw = new System.Windows.Forms.Label();
-            this.labelHy = new System.Windows.Forms.Label();
-            this.labelH = new System.Windows.Forms.Label();
-            this.label2D = new System.Windows.Forms.Label();
-            this.labelW = new System.Windows.Forms.Label();
-            this.lblPicDy = new System.Windows.Forms.Label();
-            this.lblPicWw = new System.Windows.Forms.Label();
-            this.lblPicNhv = new System.Windows.Forms.Label();
             this.txt_rating = new System.Windows.Forms.MaskedTextBox();
-            this.lblPicHy = new System.Windows.Forms.Label();
-            this.lblPicH = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -64,10 +52,7 @@
             this.txt_b1 = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.txt_b0 = new System.Windows.Forms.TextBox();
-            this.lblPicD = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.lblPicHw = new System.Windows.Forms.Label();
-            this.lblPicW = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.textnvalue = new System.Windows.Forms.TextBox();
             this.comboGroup = new System.Windows.Forms.ComboBox();
@@ -81,11 +66,6 @@
             this.txt_doHv = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.labelHV = new System.Windows.Forms.Label();
-            this.labelDy = new System.Windows.Forms.Label();
-            this.labelHw = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblPT2 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
@@ -170,9 +150,17 @@
             this.maskvoltreg = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.labelHV = new System.Windows.Forms.Label();
+            this.labelDy = new System.Windows.Forms.Label();
+            this.labelHw = new System.Windows.Forms.Label();
+            this.labelLv = new System.Windows.Forms.Label();
+            this.labelWw = new System.Windows.Forms.Label();
+            this.labelHy = new System.Windows.Forms.Label();
+            this.labelH = new System.Windows.Forms.Label();
+            this.label2D = new System.Windows.Forms.Label();
+            this.labelW = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -188,6 +176,7 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // label48
@@ -201,8 +190,7 @@
             this.label48.Size = new System.Drawing.Size(70, 16);
             this.label48.TabIndex = 353;
             this.label48.Text = "Wire gage";
-            this.toolTip1.SetToolTip(this.label48, "Specifies the wire standard\r\nSWG : Standard Wire Gauge\r\nAWG : American Wire Gauge" +
-        "\r\nBWG : Birmingham Wire Gauge\r\n");
+            this.toolTip1.SetToolTip(this.label48, resources.GetString("label48.ToolTip"));
             // 
             // label65
             // 
@@ -254,99 +242,6 @@
             this.label40.TabIndex = 82;
             this.label40.Text = "cm";
             // 
-            // labelLv
-            // 
-            this.labelLv.AutoSize = true;
-            this.labelLv.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelLv.Location = new System.Drawing.Point(244, 337);
-            this.labelLv.Name = "labelLv";
-            this.labelLv.Size = new System.Drawing.Size(24, 16);
-            this.labelLv.TabIndex = 235;
-            this.labelLv.Text = "= 0";
-            // 
-            // labelWw
-            // 
-            this.labelWw.AutoSize = true;
-            this.labelWw.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelWw.Location = new System.Drawing.Point(209, 386);
-            this.labelWw.Name = "labelWw";
-            this.labelWw.Size = new System.Drawing.Size(24, 16);
-            this.labelWw.TabIndex = 234;
-            this.labelWw.Text = "= 0";
-            // 
-            // labelHy
-            // 
-            this.labelHy.AutoSize = true;
-            this.labelHy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelHy.Location = new System.Drawing.Point(67, 339);
-            this.labelHy.Name = "labelHy";
-            this.labelHy.Size = new System.Drawing.Size(24, 16);
-            this.labelHy.TabIndex = 233;
-            this.labelHy.Text = "= 0";
-            // 
-            // labelH
-            // 
-            this.labelH.AutoSize = true;
-            this.labelH.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelH.Location = new System.Drawing.Point(40, 225);
-            this.labelH.Name = "labelH";
-            this.labelH.Size = new System.Drawing.Size(24, 16);
-            this.labelH.TabIndex = 232;
-            this.labelH.Text = "= 0";
-            // 
-            // label2D
-            // 
-            this.label2D.AutoSize = true;
-            this.label2D.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2D.Location = new System.Drawing.Point(265, 54);
-            this.label2D.Name = "label2D";
-            this.label2D.Size = new System.Drawing.Size(24, 16);
-            this.label2D.TabIndex = 231;
-            this.label2D.Text = "= 0";
-            // 
-            // labelW
-            // 
-            this.labelW.AutoSize = true;
-            this.labelW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelW.Location = new System.Drawing.Point(264, 17);
-            this.labelW.Name = "labelW";
-            this.labelW.Size = new System.Drawing.Size(24, 16);
-            this.labelW.TabIndex = 230;
-            this.labelW.Text = "= 0";
-            // 
-            // lblPicDy
-            // 
-            this.lblPicDy.AutoSize = true;
-            this.lblPicDy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblPicDy.Location = new System.Drawing.Point(628, 39);
-            this.lblPicDy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicDy.Name = "lblPicDy";
-            this.lblPicDy.Size = new System.Drawing.Size(21, 16);
-            this.lblPicDy.TabIndex = 188;
-            this.lblPicDy.Text = "=0";
-            // 
-            // lblPicWw
-            // 
-            this.lblPicWw.AutoSize = true;
-            this.lblPicWw.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblPicWw.Location = new System.Drawing.Point(228, 380);
-            this.lblPicWw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicWw.Name = "lblPicWw";
-            this.lblPicWw.Size = new System.Drawing.Size(21, 16);
-            this.lblPicWw.TabIndex = 187;
-            this.lblPicWw.Text = "=0";
-            // 
-            // lblPicNhv
-            // 
-            this.lblPicNhv.AutoSize = true;
-            this.lblPicNhv.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblPicNhv.Location = new System.Drawing.Point(139, 169);
-            this.lblPicNhv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicNhv.Name = "lblPicNhv";
-            this.lblPicNhv.Size = new System.Drawing.Size(76, 16);
-            this.lblPicNhv.TabIndex = 186;
-            this.lblPicNhv.Text = "(0 HvTurns)";
-            // 
             // txt_rating
             // 
             this.txt_rating.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -357,28 +252,6 @@
             this.txt_rating.TabIndex = 314;
             this.txt_rating.Text = "0";
             this.txt_rating.Leave += new System.EventHandler(this.txt_rating_Leave);
-            // 
-            // lblPicHy
-            // 
-            this.lblPicHy.AutoSize = true;
-            this.lblPicHy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblPicHy.Location = new System.Drawing.Point(354, 89);
-            this.lblPicHy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicHy.Name = "lblPicHy";
-            this.lblPicHy.Size = new System.Drawing.Size(21, 16);
-            this.lblPicHy.TabIndex = 183;
-            this.lblPicHy.Text = "=0";
-            // 
-            // lblPicH
-            // 
-            this.lblPicH.AutoSize = true;
-            this.lblPicH.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblPicH.Location = new System.Drawing.Point(30, 231);
-            this.lblPicH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicH.Name = "lblPicH";
-            this.lblPicH.Size = new System.Drawing.Size(21, 16);
-            this.lblPicH.TabIndex = 180;
-            this.lblPicH.Text = "=0";
             // 
             // label72
             // 
@@ -401,17 +274,6 @@
             this.label71.Size = new System.Drawing.Size(25, 16);
             this.label71.TabIndex = 124;
             this.label71.Text = "cm";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label62.Location = new System.Drawing.Point(306, 169);
-            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(73, 16);
-            this.label62.TabIndex = 185;
-            this.label62.Text = "(0 LvTurns)";
             // 
             // label70
             // 
@@ -457,6 +319,7 @@
             this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 358;
             this.label4.Text = "Raiting (S)";
+            this.toolTip1.SetToolTip(this.label4, "The power of small transformers is usually lower than 4000 VA\r\n");
             // 
             // label47
             // 
@@ -468,6 +331,7 @@
             this.label47.Size = new System.Drawing.Size(115, 16);
             this.label47.TabIndex = 100;
             this.label47.Text = "Lmt(H.v) = Lmt(L.v)";
+            this.toolTip1.SetToolTip(this.label47, "length of mean turn\r\n\r\n");
             // 
             // textLmt
             // 
@@ -499,6 +363,8 @@
             this.label46.Size = new System.Drawing.Size(40, 16);
             this.label46.TabIndex = 97;
             this.label46.Text = "b(L.v)";
+            this.toolTip1.SetToolTip(this.label46, "Depth of h.v coil.\r\n");
+            this.label46.Click += new System.EventHandler(this.label46_Click);
             // 
             // txt_b0
             // 
@@ -510,17 +376,6 @@
             this.txt_b0.TabIndex = 96;
             this.txt_b0.Text = "3.2";
             // 
-            // lblPicD
-            // 
-            this.lblPicD.AutoSize = true;
-            this.lblPicD.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblPicD.Location = new System.Drawing.Point(215, 62);
-            this.lblPicD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicD.Name = "lblPicD";
-            this.lblPicD.Size = new System.Drawing.Size(21, 16);
-            this.lblPicD.TabIndex = 182;
-            this.lblPicD.Text = "=0";
-            // 
             // label51
             // 
             this.label51.AutoSize = true;
@@ -531,28 +386,7 @@
             this.label51.Size = new System.Drawing.Size(16, 16);
             this.label51.TabIndex = 105;
             this.label51.Text = "w";
-            // 
-            // lblPicHw
-            // 
-            this.lblPicHw.AutoSize = true;
-            this.lblPicHw.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblPicHw.Location = new System.Drawing.Point(354, 251);
-            this.lblPicHw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicHw.Name = "lblPicHw";
-            this.lblPicHw.Size = new System.Drawing.Size(21, 16);
-            this.lblPicHw.TabIndex = 184;
-            this.lblPicHw.Text = "=0";
-            // 
-            // lblPicW
-            // 
-            this.lblPicW.AutoSize = true;
-            this.lblPicW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblPicW.Location = new System.Drawing.Point(215, 23);
-            this.lblPicW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPicW.Name = "lblPicW";
-            this.lblPicW.Size = new System.Drawing.Size(21, 16);
-            this.lblPicW.TabIndex = 181;
-            this.lblPicW.Text = "=0";
+            this.toolTip1.SetToolTip(this.label51, "Width of winding");
             // 
             // label53
             // 
@@ -564,6 +398,7 @@
             this.label53.Size = new System.Drawing.Size(50, 16);
             this.label53.TabIndex = 109;
             this.label53.Text = "n value";
+            this.toolTip1.SetToolTip(this.label53, "n value");
             // 
             // textnvalue
             // 
@@ -599,6 +434,8 @@
             this.label52.Size = new System.Drawing.Size(44, 16);
             this.label52.TabIndex = 107;
             this.label52.Text = "Group";
+            this.toolTip1.SetToolTip(this.label52, "To calculate the leakage resistance of winding in sandwich type, we have two part" +
+        "s, one group and the next one for 2n groups\r\n\r\n");
             // 
             // textw
             // 
@@ -620,6 +457,7 @@
             this.label44.Size = new System.Drawing.Size(174, 16);
             this.label44.TabIndex = 4;
             this.label44.Text = "Leakage resistance winding";
+            this.toolTip1.SetToolTip(this.label44, resources.GetString("label44.ToolTip"));
             // 
             // txt_doLv
             // 
@@ -641,6 +479,7 @@
             this.label43.Size = new System.Drawing.Size(53, 16);
             this.label43.TabIndex = 114;
             this.label43.Text = "Do (L.v)";
+            this.toolTip1.SetToolTip(this.label43, "Outside diameter of L .V winding");
             // 
             // txt_diLv
             // 
@@ -662,6 +501,7 @@
             this.label61.Size = new System.Drawing.Size(48, 16);
             this.label61.TabIndex = 112;
             this.label61.Text = "Di (L.v)";
+            this.toolTip1.SetToolTip(this.label61, "Inside diameter of L .V winding\r\n\r\n");
             // 
             // txt_doHv
             // 
@@ -683,6 +523,7 @@
             this.label45.Size = new System.Drawing.Size(43, 16);
             this.label45.TabIndex = 95;
             this.label45.Text = "b(H.v)";
+            this.toolTip1.SetToolTip(this.label45, "Depth of h.v coil.\r\n\r\n");
             // 
             // tabPage1
             // 
@@ -696,16 +537,6 @@
             this.tabPage1.Controls.Add(this.label2D);
             this.tabPage1.Controls.Add(this.labelW);
             this.tabPage1.Controls.Add(this.pictureBox9);
-            this.tabPage1.Controls.Add(this.lblPicDy);
-            this.tabPage1.Controls.Add(this.lblPicWw);
-            this.tabPage1.Controls.Add(this.lblPicNhv);
-            this.tabPage1.Controls.Add(this.label62);
-            this.tabPage1.Controls.Add(this.lblPicHw);
-            this.tabPage1.Controls.Add(this.lblPicHy);
-            this.tabPage1.Controls.Add(this.lblPicD);
-            this.tabPage1.Controls.Add(this.lblPicW);
-            this.tabPage1.Controls.Add(this.lblPicH);
-            this.tabPage1.Controls.Add(this.pictureBox8);
             this.tabPage1.Controls.Add(this.lblPT2);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
@@ -715,59 +546,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Structure";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // labelHV
-            // 
-            this.labelHV.AutoSize = true;
-            this.labelHV.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelHV.Location = new System.Drawing.Point(265, 113);
-            this.labelHV.Name = "labelHV";
-            this.labelHV.Size = new System.Drawing.Size(24, 16);
-            this.labelHV.TabIndex = 238;
-            this.labelHV.Text = "= 0";
-            // 
-            // labelDy
-            // 
-            this.labelDy.AutoSize = true;
-            this.labelDy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelDy.Location = new System.Drawing.Point(538, 26);
-            this.labelDy.Name = "labelDy";
-            this.labelDy.Size = new System.Drawing.Size(24, 16);
-            this.labelDy.TabIndex = 237;
-            this.labelDy.Text = "= 0";
-            // 
-            // labelHw
-            // 
-            this.labelHw.AutoSize = true;
-            this.labelHw.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelHw.Location = new System.Drawing.Point(459, 324);
-            this.labelHw.Name = "labelHw";
-            this.labelHw.Size = new System.Drawing.Size(24, 16);
-            this.labelHw.TabIndex = 236;
-            this.labelHw.Text = "= 0";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Main_Project.Properties.Resources.Screenshot__593_;
-            this.pictureBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox9.Location = new System.Drawing.Point(6, 7);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(699, 407);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 229;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Main_Project.Properties.Resources.Screenshot__585_;
-            this.pictureBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox8.Location = new System.Drawing.Point(11, 9);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(689, 399);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 179;
-            this.pictureBox8.TabStop = false;
             // 
             // lblPT2
             // 
@@ -789,6 +567,7 @@
             this.label60.Size = new System.Drawing.Size(56, 16);
             this.label60.TabIndex = 110;
             this.label60.Text = "Do (H.v)";
+            this.toolTip1.SetToolTip(this.label60, "Outside diameter of H .V winding\r\n\r\n");
             // 
             // label49
             // 
@@ -800,6 +579,7 @@
             this.label49.Size = new System.Drawing.Size(22, 16);
             this.label49.TabIndex = 93;
             this.label49.Text = "b0";
+            this.toolTip1.SetToolTip(this.label49, "Depth of duct between h.v and l.v windings.\r\n\r\n");
             // 
             // combo_Leakageresistancewinding
             // 
@@ -833,6 +613,7 @@
             this.label41.Size = new System.Drawing.Size(51, 16);
             this.label41.TabIndex = 0;
             this.label41.Text = "Di (H.v)";
+            this.toolTip1.SetToolTip(this.label41, "Inside diameter of H .V winding");
             // 
             // txt_b2
             // 
@@ -950,6 +731,8 @@
             this.label27.Size = new System.Drawing.Size(115, 16);
             this.label27.TabIndex = 79;
             this.label27.Text = "Thickness of steel";
+            this.toolTip1.SetToolTip(this.label27, "There are two thicknesses of 0.5 and 0.35 mm for steel, which can affect the accu" +
+        "mulation factor.\r\n\r\n");
             // 
             // combo_insulation
             // 
@@ -966,6 +749,7 @@
             this.combo_insulation.Name = "combo_insulation";
             this.combo_insulation.Size = new System.Drawing.Size(328, 24);
             this.combo_insulation.TabIndex = 77;
+            this.combo_insulation.SelectedIndexChanged += new System.EventHandler(this.combo_insulation_SelectedIndexChanged);
             // 
             // label23
             // 
@@ -976,6 +760,7 @@
             this.label23.Size = new System.Drawing.Size(63, 16);
             this.label23.TabIndex = 76;
             this.label23.Text = "insulation";
+            this.toolTip1.SetToolTip(this.label23, resources.GetString("label23.ToolTip"));
             // 
             // label26
             // 
@@ -1102,6 +887,7 @@
             this.label20.Size = new System.Drawing.Size(155, 16);
             this.label20.TabIndex = 339;
             this.label20.Text = "Ambient temperature (Tr)";
+            this.toolTip1.SetToolTip(this.label20, "Ambient temperature with a default value of 40 degrees Celsius\r\n\r\n\r\n");
             // 
             // label17
             // 
@@ -1134,6 +920,7 @@
             this.label18.Size = new System.Drawing.Size(141, 16);
             this.label18.TabIndex = 336;
             this.label18.Text = "Temperature rise (Tm)";
+            this.toolTip1.SetToolTip(this.label18, "Temperature rise in degrees Celsius\r\n\r\n\r\n");
             // 
             // label15
             // 
@@ -1156,6 +943,8 @@
             this.label21.Size = new System.Drawing.Size(160, 16);
             this.label21.TabIndex = 61;
             this.label21.Text = "Window space factor (Kw)";
+            this.toolTip1.SetToolTip(this.label21, "This factor can be calculated by two methods:\r\n1. User selection\r\n 2. Using the f" +
+        "ormula, this method is dependent on high voltage and power.\r\n\r\n");
             // 
             // dataGridView3
             // 
@@ -1176,12 +965,12 @@
             // Parameter
             // 
             this.Parameter.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.Parameter.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle100.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle100.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle100.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle100.SelectionForeColor = System.Drawing.Color.Black;
+            this.Parameter.DefaultCellStyle = dataGridViewCellStyle100;
             this.Parameter.HeaderText = "                  Parameter";
             this.Parameter.MinimumWidth = 6;
             this.Parameter.Name = "Parameter";
@@ -1190,12 +979,12 @@
             // unit
             // 
             this.unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.unit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle101.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle101.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle101.SelectionForeColor = System.Drawing.Color.Black;
+            this.unit.DefaultCellStyle = dataGridViewCellStyle101;
             this.unit.HeaderText = "                     unit";
             this.unit.MinimumWidth = 6;
             this.unit.Name = "unit";
@@ -1203,12 +992,12 @@
             // value
             // 
             this.value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.value.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle102.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle102.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle102.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle102.SelectionForeColor = System.Drawing.Color.Black;
+            this.value.DefaultCellStyle = dataGridViewCellStyle102;
             this.value.HeaderText = "                      value";
             this.value.MinimumWidth = 6;
             this.value.Name = "value";
@@ -1252,6 +1041,7 @@
             this.label24.Size = new System.Drawing.Size(51, 16);
             this.label24.TabIndex = 85;
             this.label24.Text = "K factor";
+            this.toolTip1.SetToolTip(this.label24, resources.GetString("label24.ToolTip"));
             // 
             // txt_KwValue
             // 
@@ -1286,6 +1076,7 @@
             this.label16.Size = new System.Drawing.Size(117, 16);
             this.label16.TabIndex = 333;
             this.label16.Text = "Current density ( 𝛿 )";
+            this.toolTip1.SetToolTip(this.label16, "The recommended range for it is between 1 and 1.25\r\n");
             // 
             // label6
             // 
@@ -1308,6 +1099,7 @@
             this.label1.Size = new System.Drawing.Size(59, 16);
             this.label1.TabIndex = 318;
             this.label1.Text = "Structure";
+            this.toolTip1.SetToolTip(this.label1, "Shell type structure is usually used for choke transformers\r\n");
             // 
             // txt_Wi
             // 
@@ -1329,6 +1121,7 @@
             this.label54.Size = new System.Drawing.Size(23, 16);
             this.label54.TabIndex = 346;
             this.label54.Text = "Wi";
+            this.toolTip1.SetToolTip(this.label54, "It indicates iron losses\r\n\r\n");
             // 
             // wireGauge
             // 
@@ -1395,6 +1188,8 @@
             this.label12.Size = new System.Drawing.Size(85, 16);
             this.label12.TabIndex = 327;
             this.label12.Text = "Frequency (f)";
+            this.toolTip1.SetToolTip(this.label12, "Its unit is Hertz. Its default value is equal to 50\r\n\r\n");
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // txt_Fluxdensity
             // 
@@ -1415,6 +1210,9 @@
             this.label14.Size = new System.Drawing.Size(108, 16);
             this.label14.TabIndex = 330;
             this.label14.Text = "Flux density (Bm)";
+            this.toolTip1.SetToolTip(this.label14, "Flux density is determined based on the type of sheet or desired value.\r\nThe reco" +
+        "mmended range for it is between 1 and 1.25\r\n\r\n");
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label13
             // 
@@ -1437,6 +1235,7 @@
             this.label8.Size = new System.Drawing.Size(114, 16);
             this.label8.TabIndex = 324;
             this.label8.Text = "Low Voltage(Vl.v) ";
+            this.toolTip1.SetToolTip(this.label8, "Low side voltage. Its unit is the volt\r\n\r\n\r\n");
             // 
             // label9
             // 
@@ -1480,6 +1279,7 @@
             this.label10.Size = new System.Drawing.Size(119, 16);
             this.label10.TabIndex = 321;
             this.label10.Text = "High Voltage(Vh.v)";
+            this.toolTip1.SetToolTip(this.label10, "High side voltage. Its unit is the volt\r\n\r\n");
             // 
             // label2
             // 
@@ -1491,6 +1291,7 @@
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 320;
             this.label2.Text = "Conductor";
+            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // combo_conductor
             // 
@@ -1527,6 +1328,7 @@
             this.label3.Size = new System.Drawing.Size(38, 16);
             this.label3.TabIndex = 344;
             this.label3.Text = "Steel";
+            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // button1
             // 
@@ -1695,6 +1497,8 @@
             this.groupBox6.TabIndex = 345;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Resistance and Leakage resistance of winding ";
+            this.toolTip1.SetToolTip(this.groupBox6, "By using the information in this part, you can get the resistance and Leakage res" +
+        "istance of winding .\r\n\r\n");
             // 
             // label34
             // 
@@ -1706,6 +1510,8 @@
             this.label34.Size = new System.Drawing.Size(64, 16);
             this.label34.TabIndex = 357;
             this.label34.Text = "Efficiency";
+            this.toolTip1.SetToolTip(this.label34, "This value can include different values based on power, but its suggested range i" +
+        "s between 80 and 94%.\r\n");
             // 
             // maskEff
             // 
@@ -1739,6 +1545,7 @@
             this.label33.Size = new System.Drawing.Size(122, 16);
             this.label33.TabIndex = 356;
             this.label33.Text = "Voltage Regulation";
+            this.toolTip1.SetToolTip(this.label33, "The considered range for this value is between 1.5 and 20%\r\n");
             // 
             // maskvoltreg
             // 
@@ -1770,6 +1577,107 @@
             this.label7.Size = new System.Drawing.Size(19, 16);
             this.label7.TabIndex = 360;
             this.label7.Text = "%";
+            // 
+            // labelHV
+            // 
+            this.labelHV.AutoSize = true;
+            this.labelHV.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelHV.Location = new System.Drawing.Point(259, 106);
+            this.labelHV.Name = "labelHV";
+            this.labelHV.Size = new System.Drawing.Size(24, 16);
+            this.labelHV.TabIndex = 248;
+            this.labelHV.Text = "= 0";
+            // 
+            // labelDy
+            // 
+            this.labelDy.AutoSize = true;
+            this.labelDy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelDy.Location = new System.Drawing.Point(532, 19);
+            this.labelDy.Name = "labelDy";
+            this.labelDy.Size = new System.Drawing.Size(24, 16);
+            this.labelDy.TabIndex = 247;
+            this.labelDy.Text = "= 0";
+            // 
+            // labelHw
+            // 
+            this.labelHw.AutoSize = true;
+            this.labelHw.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelHw.Location = new System.Drawing.Point(453, 317);
+            this.labelHw.Name = "labelHw";
+            this.labelHw.Size = new System.Drawing.Size(24, 16);
+            this.labelHw.TabIndex = 246;
+            this.labelHw.Text = "= 0";
+            // 
+            // labelLv
+            // 
+            this.labelLv.AutoSize = true;
+            this.labelLv.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelLv.Location = new System.Drawing.Point(238, 330);
+            this.labelLv.Name = "labelLv";
+            this.labelLv.Size = new System.Drawing.Size(24, 16);
+            this.labelLv.TabIndex = 245;
+            this.labelLv.Text = "= 0";
+            // 
+            // labelWw
+            // 
+            this.labelWw.AutoSize = true;
+            this.labelWw.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelWw.Location = new System.Drawing.Point(203, 379);
+            this.labelWw.Name = "labelWw";
+            this.labelWw.Size = new System.Drawing.Size(24, 16);
+            this.labelWw.TabIndex = 244;
+            this.labelWw.Text = "= 0";
+            // 
+            // labelHy
+            // 
+            this.labelHy.AutoSize = true;
+            this.labelHy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelHy.Location = new System.Drawing.Point(61, 332);
+            this.labelHy.Name = "labelHy";
+            this.labelHy.Size = new System.Drawing.Size(24, 16);
+            this.labelHy.TabIndex = 243;
+            this.labelHy.Text = "= 0";
+            // 
+            // labelH
+            // 
+            this.labelH.AutoSize = true;
+            this.labelH.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelH.Location = new System.Drawing.Point(34, 218);
+            this.labelH.Name = "labelH";
+            this.labelH.Size = new System.Drawing.Size(24, 16);
+            this.labelH.TabIndex = 242;
+            this.labelH.Text = "= 0";
+            // 
+            // label2D
+            // 
+            this.label2D.AutoSize = true;
+            this.label2D.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2D.Location = new System.Drawing.Point(259, 47);
+            this.label2D.Name = "label2D";
+            this.label2D.Size = new System.Drawing.Size(24, 16);
+            this.label2D.TabIndex = 241;
+            this.label2D.Text = "= 0";
+            // 
+            // labelW
+            // 
+            this.labelW.AutoSize = true;
+            this.labelW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelW.Location = new System.Drawing.Point(258, 10);
+            this.labelW.Name = "labelW";
+            this.labelW.Size = new System.Drawing.Size(24, 16);
+            this.labelW.TabIndex = 240;
+            this.labelW.Text = "= 0";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Main_Project.Properties.Resources.Screenshot__593_;
+            this.pictureBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox9.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(699, 407);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 239;
+            this.pictureBox9.TabStop = false;
             // 
             // choke
             // 
@@ -1829,8 +1737,6 @@
             this.Load += new System.EventHandler(this.choke_Load);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -1850,6 +1756,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1864,22 +1771,9 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label labelLv;
-        private System.Windows.Forms.Label labelWw;
-        private System.Windows.Forms.Label labelHy;
-        private System.Windows.Forms.Label labelH;
-        private System.Windows.Forms.Label label2D;
-        private System.Windows.Forms.Label labelW;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label lblPicDy;
-        private System.Windows.Forms.Label lblPicWw;
-        private System.Windows.Forms.Label lblPicNhv;
         private System.Windows.Forms.MaskedTextBox txt_rating;
-        private System.Windows.Forms.Label lblPicHy;
-        private System.Windows.Forms.Label lblPicH;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -1889,17 +1783,13 @@
         private System.Windows.Forms.TextBox txt_b1;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox txt_b0;
-        private System.Windows.Forms.Label lblPicD;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label lblPicHw;
-        private System.Windows.Forms.Label lblPicW;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.TextBox textnvalue;
         private System.Windows.Forms.ComboBox comboGroup;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.TextBox textw;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.TextBox txt_doLv;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox txt_diLv;
@@ -1907,9 +1797,6 @@
         private System.Windows.Forms.TextBox txt_doHv;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label labelHV;
-        private System.Windows.Forms.Label labelDy;
-        private System.Windows.Forms.Label labelHw;
         private System.Windows.Forms.Label lblPT2;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label49;
@@ -1994,5 +1881,15 @@
         private System.Windows.Forms.Label labele;
         private System.Windows.Forms.Label labeld;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label labelHV;
+        private System.Windows.Forms.Label labelDy;
+        private System.Windows.Forms.Label labelHw;
+        private System.Windows.Forms.Label labelLv;
+        private System.Windows.Forms.Label labelWw;
+        private System.Windows.Forms.Label labelHy;
+        private System.Windows.Forms.Label labelH;
+        private System.Windows.Forms.Label label2D;
+        private System.Windows.Forms.Label labelW;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }

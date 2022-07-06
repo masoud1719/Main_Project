@@ -120,6 +120,42 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="label48.ToolTip" xml:space="preserve">
+    <value>Specifies the wire standard
+SWG : Standard Wire Gauge
+AWG : American Wire Gauge
+BWG : Birmingham Wire Gauge
+Specifies the wire standard
+SWG : Standard Wire Gauge
+AWG : American Wire Gauge
+BWG : Birmingham Wire Gauge
+
+
+</value>
+  </data>
+  <data name="label44.ToolTip" xml:space="preserve">
+    <value>Winding is done in two ways:
+1. Concentric : We have this type of winding when the structure is core type
+2. Sandwitch : We have this type of winding when the structure is shell type
+
+Because the structure is shell type, we only have the second method.</value>
+  </data>
+  <data name="label23.ToolTip" xml:space="preserve">
+    <value>Insulation is determined based on the thickness of the sheets.
+For the thickness of 0.5 mm, we have these items:
+Single layer varnish
+Two layer varnish
+Three layer varnish
+
+For the thickness of 0.35 mm, we have these items:
+Single layer varnish
+Two layer varnish
+Three layer varnish
+Heat resistance coating
+Single layer varnish+Heat resistance coating
+
+</value>
+  </data>
   <metadata name="Parameter.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -129,6 +165,42 @@
   <metadata name="value.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Parameter.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="unit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="value.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="label24.ToolTip" xml:space="preserve">
+    <value>This value is between 1 and 1.25 for shell type trans.By default, this value is equal to 1.
+
+For economic design with power less than 4000 VA instead of constant 1 of the coefficients in the range of 0.56 to 0.85
+
+</value>
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value>The conductors used are copper and aluminum.
+Aluminum is used in small transformers, whose power is less than 6 MVA.
+Copper can also be used in medium and large transformers whose power is greater than 6 MVA.
+
+</value>
+  </data>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value>The available sheets include two categories:
+1. Non Grain oriented seed sheets included:
+Low silicon : M36, M43
+Medium silicone : : M19, M27
+High silicon : : M15, M22
+
+Cold Rolled Grain Oriented (CRGO)
+
+By changing the type of steel, the value of flux density and iron loss (Wi) changes.
+
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

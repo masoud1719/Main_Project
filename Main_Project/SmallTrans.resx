@@ -123,6 +123,9 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>23, 17</value>
   </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>23, 17</value>
+  </metadata>
   <data name="label23.ToolTip" xml:space="preserve">
     <value>Insulation is determined based on the thickness of the sheets.
 For the thickness of 0.5 mm, we have these items:
@@ -173,6 +176,13 @@ Cold Rolled Grain Oriented (CRGO)
 
 By changing the type of steel, the value of flux density and iron loss (Wi) changes.
 </value>
+  </data>
+  <data name="label44.ToolTip" xml:space="preserve">
+    <value>Winding is done in two ways:
+1. Concentric : We have this type of winding when the structure is core type
+2. Sandwitch : We have this type of winding when the structure is shell type
+
+Because the structure is shell type, we only have the second method.</value>
   </data>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>136, 17</value>

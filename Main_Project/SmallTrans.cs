@@ -1553,7 +1553,7 @@ namespace Main_Project
 
         private void combo_structure_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pictureBox8.Visible = false;
+
             pictureBox9.Visible = true;
 
             labelHy.Visible = true;
@@ -2222,6 +2222,26 @@ namespace Main_Project
         }
 
         private void labeld_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label52_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label44_Click(object sender, EventArgs e)
         {
 
         }

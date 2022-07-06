@@ -1814,5 +1814,69 @@ namespace Main_Project
                 textnvalue.Visible = true;
             }
         }
+
+        private void label2D_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelW_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelHV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelHy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelWw_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelHw_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelLv_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPicNhv_Click(object sender, EventArgs e)
+        {
+                    }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combo_insulation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
